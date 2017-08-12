@@ -1,0 +1,758 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>回滚操作 API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Some-tips-when-using-the-FAWE-API.html" />
+    
+    
+    <link rel="prev" href="Registering-Custom-Masks,-Patterns-and-Transforms.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Commands.html">
+            
+                <a href="Commands.html">
+            
+                    
+                    命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Permissions.html">
+            
+                <a href="Permissions.html">
+            
+                    
+                    权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Configuration.html">
+            
+                <a href="Configuration.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    API
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="Anvil-API.html">
+            
+                <a href="Anvil-API.html">
+            
+                    
+                    Anvil API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="AsyncWorld.html">
+            
+                <a href="AsyncWorld.html">
+            
+                    
+                    AsyncWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="Brushes.html">
+            
+                <a href="Brushes.html">
+            
+                    
+                    笔刷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="Clipboard-API.html">
+            
+                <a href="Clipboard-API.html">
+            
+                    
+                    剪切板 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="Copying-a-region-to-another-world..html">
+            
+                <a href="Copying-a-region-to-another-world..html">
+            
+                    
+                    将区域复制到另一个世界中
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="CreateFromImage.html">
+            
+                <a href="CreateFromImage.html">
+            
+                    
+                    从图片中获取地形
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="Fawe-TaskManager.html">
+            
+                <a href="Fawe-TaskManager.html">
+            
+                    
+                    Fawe TaskManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="FawePlayer.html">
+            
+                <a href="FawePlayer.html">
+            
+                    
+                    FawePlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.9" data-path="FaweQueue.html">
+            
+                <a href="FaweQueue.html">
+            
+                    
+                    FaweQueue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.10" data-path="Features.html">
+            
+                <a href="Features.html">
+            
+                    
+                    特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.11" data-path="Jobs-API.html">
+            
+                <a href="Jobs-API.html">
+            
+                    
+                    任务 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.12" data-path="Light-API.html">
+            
+                <a href="Light-API.html">
+            
+                    
+                    光照 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.13" data-path="NBT-stream-API.html">
+            
+                <a href="NBT-stream-API.html">
+            
+                    
+                    NBT字串 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.14" data-path="Packet-sending.html">
+            
+                <a href="Packet-sending.html">
+            
+                    
+                    发包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.15" data-path="Pasting-a-schematic.html">
+            
+                <a href="Pasting-a-schematic.html">
+            
+                    
+                    粘贴schematic文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.16" data-path="Progress-API.html">
+            
+                <a href="Progress-API.html">
+            
+                    
+                    任务进度 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.17" data-path="Recovering-corrupt-NBT-files-MCA-Schematic-etc.html">
+            
+                <a href="Recovering-corrupt-NBT-files-MCA-Schematic-etc.html">
+            
+                    
+                    恢复错误的NBT文件(MCA Schematic)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.18" data-path="Region-restriction-API.html">
+            
+                <a href="Region-restriction-API.html">
+            
+                    
+                    区域限制 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.19" data-path="Registering-custom-brushes-or-commands.html">
+            
+                <a href="Registering-custom-brushes-or-commands.html">
+            
+                    
+                    注册自定义笔刷和命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.20" data-path="Registering-Custom-Masks,-Patterns-and-Transforms.html">
+            
+                <a href="Registering-Custom-Masks,-Patterns-and-Transforms.html">
+            
+                    
+                    注册自定义蒙版，模板和变换式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.21" data-path="Rollback-API.html">
+            
+                <a href="Rollback-API.html">
+            
+                    
+                    回滚操作 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.22" data-path="Some-tips-when-using-the-FAWE-API.html">
+            
+                <a href="Some-tips-when-using-the-FAWE-API.html">
+            
+                    
+                    一些使用 FAWE API 的小提示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.23" data-path="TaskBuilder.html">
+            
+                <a href="TaskBuilder.html">
+            
+                    
+                    TaskBuilder
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.24" data-path="TextureUtil---block-and-biome-coloring.html">
+            
+                <a href="TextureUtil---block-and-biome-coloring.html">
+            
+                    
+                    TextureUtil 方块和生物群系着色
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.25" data-path="Transforms.html">
+            
+                <a href="Transforms.html">
+            
+                    
+                    变换式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.26" data-path="Web-API.html">
+            
+                <a href="Web-API.html">
+            
+                    
+                    网页接口 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.27" data-path="WorldEdit---FAWE-mask-list.html">
+            
+                <a href="WorldEdit---FAWE-mask-list.html">
+            
+                    
+                    WorldEdit FAWE 蒙版列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.28" data-path="WorldEdit-and-FAWE-patterns.html">
+            
+                <a href="WorldEdit-and-FAWE-patterns.html">
+            
+                    
+                    WorldEdit 和 FAWE 的模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.29" data-path="WorldEdit-EditSession.html">
+            
+                <a href="WorldEdit-EditSession.html">
+            
+                    
+                    WorldEdit EditSession
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.30" data-path="WorldEdit-World-Player.html">
+            
+                <a href="WorldEdit-World-Player.html">
+            
+                    
+                    WorldEdit World Player
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Tutorials.html">
+            
+                <a href="Tutorials.html">
+            
+                    
+                    教程(作者编写中)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >回滚操作 API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x5982;&#x679C;&#x4F60;&#x6CA1;&#x6709;&#x4F7F;&#x7528; WorldEdit &#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x8BB0;&#x5F55;&#x63D2;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982; BlocksHub &#x7684;&#x8BDD;&#xFF0C;FAWE &#x63D2;&#x4EF6;&#x5185;&#x7F6E;&#x4E86;&#x660E;&#x663E;&#x66F4;&#x5FEB;&#xFF0C;&#x4E14;&#x5360;&#x7528;&#x786C;&#x76D8;&#x7A7A;&#x95F4;&#x66F4;&#x5C11;&#xFF08;&#x538B;&#x7F29;&#xFF09;&#x7684;&#x8BB0;&#x5F55;&#x5668;&#x3002;</p>
+<h4 id="&#x9700;&#x6C42;">&#x9700;&#x6C42;</h4>
+<ul>
+<li>Settings.HISTORY.USE_DISK=true</li>
+<li>Settings.HISTORY.USE_DATABASE=true</li>
+</ul>
+<h3 id="&#x5B9E;&#x73B0;&#x4E00;&#x6B21;&#x67E5;&#x627E;">&#x5B9E;&#x73B0;&#x4E00;&#x6B21;&#x67E5;&#x627E;</h3>
+<p>&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x53EA;&#x5305;&#x542B;&#x4E86;&#x7F16;&#x8F91;&#x7684;&#x5217;&#x8868;&#x548C;&#x5F71;&#x54CD;&#x7684;&#x533A;&#x57DF;&#xFF0C;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x6539;&#x53D8;&#x7684;&#x65B9;&#x5757;&#x3002;</p>
+<p>&#x8981;&#x60F3;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x5B8C;&#x5168;&#x56DE;&#x6EDA;&#x4F60;&#x9700;&#x8981;&#x8BFB;&#x53D6;&#x6BCF;&#x4E00;&#x6B21;&#x6F5C;&#x5728;&#x7684;&#x7F16;&#x8F91;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<pre><code class="lang-Java">RollbackDatabase db = DBHandler.IMP.getDatabase(worldName);
+<span class="hljs-keyword">boolean</span> deleteAfterLookup = <span class="hljs-keyword">false</span>;
+<span class="hljs-comment">// &#x641C;&#x7D22;&#x6240;&#x6709;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;uuid&#x7684;&#x73A9;&#x5BB6;</span>
+<span class="hljs-comment">// &#x5168;&#x90E8;&#x65F6;&#x95F4;&#x641C;&#x7D22;&#xFF0C;&#x4F7F;&#x7528; 0 &#x4E3A;&#x6700;&#x5C0F;&#x65F6;&#x95F4;</span>
+<span class="hljs-comment">// pos1 &#x548C; pos2 &#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E3A;&#x5355;&#x4E2A;&#x70B9;</span>
+db.getPotentialEdits(uuid, minTime, pos1, pos2, <span class="hljs-keyword">new</span> RunnableVal&lt;DiskStorageHistory&gt;() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">(DiskStorageHistory potentialEdit)</span> </span>{
+        <span class="hljs-keyword">try</span> {
+            UUID uuid = potentialEdit.getUUID();
+            String name = Fawe.imp().getName(uuid);
+            <span class="hljs-keyword">int</span> index = potentialEdit.getIndex();
+            <span class="hljs-keyword">long</span> age = System.currentTimeMillis() - potentialEdit.getBDFile().lastModified();
+            String ageFormatted = MainUtil.secToTime(age / <span class="hljs-number">1000</span>);
+            <span class="hljs-comment">// &#x6211;&#x73B0;&#x5728;&#x60F3;&#x8981;&#x8BFB;&#x53D6;&#x7F16;&#x8F91;&#x4E2D;&#x6BCF;&#x4E2A;&#x65B9;&#x5757;&#x7684;&#x53D8;&#x5316;</span>
+            <span class="hljs-comment">// &#x6CE8;&#x610F;&#xFF1A;&#x4E5F;&#x4F1A;&#x6709;&#x5173;&#x4E8E;&#x5B9E;&#x4F53;&#x548C;&#x6389;&#x843D;&#x7269;&#x7684;&#x8FED;&#x4EE3;&#x5668;&#x7684;&#x53D8;&#x5316;</span>
+            <span class="hljs-comment">//  - &#x6216;&#x662F;&#x4F7F;&#x7528; `potentialEdit.getIterator(dir)` &#x6765;&#x68C0;&#x6D4B;&#x6240;&#x6709;&#x53D8;&#x5316;</span>
+            Iterator&lt;MutableFullBlockChange&gt; iter = potentialEdit.getFullBlockIterator(<span class="hljs-keyword">false</span>);
+            <span class="hljs-keyword">while</span> (iter.hasNext()) {
+                MutableFullBlockChange change = iter.next();
+                <span class="hljs-comment">/* Maybe you only want to do something if the block is in a certain position?
+                if (change.x != x || change.y != y || change.z != z) {
+                    continue;
+                }
+                */</span>
+                <span class="hljs-comment">// combinedId (&#x67E5;&#x770B; FaweCache#getId(combined), FaweCache#getData(combined))</span>
+                <span class="hljs-keyword">int</span> from = change.from;
+                <span class="hljs-keyword">int</span> to = change.to;
+                <span class="hljs-comment">// &#x7528;&#x8FD9;&#x4E2A;&#x4FE1;&#x606F;&#x6765;&#x505A;&#x4E9B;&#x4EC0;&#x4E48;&#xFF1F;</span>
+            }
+        } <span class="hljs-keyword">catch</span> (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}, <span class="hljs-keyword">new</span> Runnable() {
+    <span class="hljs-meta">@Override</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-comment">// &#x5728;&#x67E5;&#x9605;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#x4F1A;&#x8FD0;&#x884C;&#x8FD9;&#x4E2A;</span>
+    }
+}, deleteAfterLookup);
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Registering-Custom-Masks,-Patterns-and-Transforms.html" class="navigation navigation-prev " aria-label="Previous page: 注册自定义蒙版，模板和变换式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Some-tips-when-using-the-FAWE-API.html" class="navigation navigation-next " aria-label="Next page: 一些使用 FAWE API 的小提示">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"回滚操作 API","level":"2.1.21","depth":2,"next":{"title":"一些使用 FAWE API 的小提示","level":"2.1.22","depth":2,"path":"Some-tips-when-using-the-FAWE-API.md","ref":"Some-tips-when-using-the-FAWE-API.md","articles":[]},"previous":{"title":"注册自定义蒙版，模板和变换式","level":"2.1.20","depth":2,"path":"Registering-Custom-Masks,-Patterns-and-Transforms.md","ref":"Registering-Custom-Masks,-Patterns-and-Transforms.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Rollback-API.md","mtime":"2017-08-12T11:36:44.634Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-12T13:41:13.788Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
