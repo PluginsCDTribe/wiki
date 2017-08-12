@@ -1,0 +1,602 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>从其他插件迁移 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="GM-&-PEX-Command-Equivalents.html" />
+    
+    
+    <link rel="prev" href="Command-Usage.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Why-LuckPerms.html">
+            
+                <a href="Why-LuckPerms.html">
+            
+                    
+                    为什么选择 LuckPerms?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Setup.html">
+            
+                <a href="Setup.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Choosing-a-Storage-type.html">
+            
+                <a href="Choosing-a-Storage-type.html">
+            
+                    
+                    选择存储类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Usage.html">
+            
+                <a href="Usage.html">
+            
+                    
+                    使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Configuration.html">
+            
+                <a href="Configuration.html">
+            
+                    
+                    配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Command-Usage.html">
+            
+                <a href="Command-Usage.html">
+            
+                    
+                    命令使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="Migration.html">
+            
+                <a href="Migration.html">
+            
+                    
+                    从其他插件迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="GM-&-PEX-Command-Equivalents.html">
+            
+                <a href="GM-&-PEX-Command-Equivalents.html">
+            
+                    
+                    GM&PEX对应等效指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="FAQ.html">
+            
+                <a href="FAQ.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">特性</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Verbose.html">
+            
+                <a href="Verbose.html">
+            
+                    
+                    权限检查系统（Verbose）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Bulk-Editing.html">
+            
+                <a href="Bulk-Editing.html">
+            
+                    
+                    块编辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Instant-Update-Propagation.html">
+            
+                <a href="Instant-Update-Propagation.html">
+            
+                    
+                    即时更新权限变更
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="Switching-storage-types.html">
+            
+                <a href="Switching-storage-types.html">
+            
+                    
+                    切换存储 & 备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="Tracks.html">
+            
+                <a href="Tracks.html">
+            
+                    
+                    权限组路线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="Prefixes,-Suffixes-&-Meta.html">
+            
+                <a href="Prefixes,-Suffixes-&-Meta.html">
+            
+                    
+                    前缀，后缀与元数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="Prefix-&-Suffix-Stacking.html">
+            
+                <a href="Prefix-&-Suffix-Stacking.html">
+            
+                    
+                    前缀与后缀的堆叠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="Advanced-Setup.html">
+            
+                <a href="Advanced-Setup.html">
+            
+                    
+                    高级设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="Default-Groups.html">
+            
+                <a href="Default-Groups.html">
+            
+                    
+                    默认组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开发者</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Developer-API.html">
+            
+                <a href="Developer-API.html">
+            
+                    
+                    开发者 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="Locale-and-Translations.html">
+            
+                <a href="Locale-and-Translations.html">
+            
+                    
+                    本地化与语言文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="PlaceholderAPI.html">
+            
+                <a href="PlaceholderAPI.html">
+            
+                    
+                    PlaceholderAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >从其他插件迁移</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>LuckPerms &#x6709;&#x5185;&#x7F6E;&#x7684;&#x652F;&#x6301;&#x5176;&#x4ED6;&#x7684;&#x6743;&#x9650;&#x63D2;&#x4EF6;&#x8F7B;&#x677E;&#x8FC1;&#x79FB;&#x5230; LuckPerms &#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="&#x5F00;&#x59CB;&#x4E4B;&#x524D;">&#x5F00;&#x59CB;&#x4E4B;&#x524D;</h2>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x8FD9;&#x4E2A;&#x7CFB;&#x7EDF;&#x8FD8;&#x4E0D;&#x662F;&#x90A3;&#x4E48;&#x7684;&#x5B8C;&#x7F8E;&#xFF0C;&#x5728;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x5728;&#x8F6C;&#x53D8;&#x6570;&#x636E;&#x65F6;&#x76F8;&#x5F53;&#x4E0D;&#x9519;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x662F;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x90FD;&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x6709;&#x65F6;&#x6211;&#x53EF;&#x80FD;&#x6CA1;&#x6709;&#x8003;&#x8651;&#x8FD9;&#x4E48;&#x591A;&#x3002;</p>
+<p>LuckPerms &#x6709;&#x548C;&#x5176;&#x4ED6;&#x6743;&#x9650;&#x63D2;&#x4EF6;&#x76F8;&#x540C;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E9B;&#x90E8;&#x5206;&#x4ECE;&#x6839;&#x672C;&#x4E0A;&#x4E0D;&#x540C;&#xFF0C;&#x6709;&#x4E9B;&#x8FC1;&#x79FB;&#x8FD0;&#x7528;&#x4E86;&#x4E00;&#x4E9B;&#x6280;&#x5DE7;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x8BA9;&#x63D2;&#x4EF6;&#x8FC1;&#x79FB;&#x4F60;&#x7684;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x610F;&#x5473;&#x7740;&#x4F60;&#x6CA1;&#x6709;&#x673A;&#x4F1A;&#x5B66;&#x4E60;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A; LuckPerms &#x547D;&#x4EE4;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x4F1A;&#x662F;&#x4E00;&#x4E2A;&#x9EBB;&#x70E6;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x662F;&#x4ECE; PermissionsEx &#x6216;&#x8005; GroupManager &#x8FC1;&#x79FB;&#x6765;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x770B;&#x770B; <a href="GM-&amp;-PEX-Command-Equivalents.html">GM PEX &#x7684;&#x7B49;&#x540C;&#x547D;&#x4EE4;</a></p>
+<p>&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E86;&#x8001;&#x7248;&#x672C;&#x7684;&#x6743;&#x9650;&#x63D2;&#x4EF6;&#xFF0C;&#x6216;&#x8005;&#x4F60;&#x6839;&#x672C;&#x4E0D;&#x559C;&#x6B22;&#x7684;&#xFF0C;&#x73B0;&#x5728;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x673A;&#x4F1A;&#x6765;&#x91CD;&#x65B0;&#x6784;&#x5EFA;&#x6E05;&#x7406;&#xFF0C;&#x987A;&#x4FBF;&#x5B66;&#x4E60; LuckPerms &#x7684;&#x547D;&#x4EE4;&#xFF01;</p>
+<p>&#x4E0D;&#xFF1F;&#xFF01;&#x5C31;&#x559C;&#x6B22;&#x4F60;&#x73B0;&#x5728;&#x7684;&#x6743;&#x9650;&#x63D2;&#x4EF6;&#xFF1F;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x8FC1;&#x79FB;&#x3002;</p>
+<h2 id="&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x63D2;&#x4EF6;">&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x63D2;&#x4EF6;</h2>
+<table>
+<thead>
+<tr>
+<th>Bukkit / Spigot</th>
+<th>BungeeCord</th>
+<th>Sponge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GroupManager</td>
+<td>BungeePerms</td>
+<td>PermissionsEx</td>
+</tr>
+<tr>
+<td>PermissionsEx</td>
+<td></td>
+<td>PermissionManager</td>
+</tr>
+<tr>
+<td>zPermissions</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>PowerfulPerms</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>bPermissions</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1 id="&#x5982;&#x4F55;">&#x5982;&#x4F55;</h1>
+<p>&#x8FC1;&#x79FB;&#x7684;&#x5904;&#x7406;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x662F;&#x6BCF;&#x4E2A;&#x5E73;&#x53F0;&#x53EF;&#x80FD;&#x6709;&#x4E0D;&#x540C;&#x3002;</p>
+<ol>
+<li>&#x5C06; LuckPerms jar &#x6587;&#x4EF6;&#x653E;&#x5165;&#x4F60;&#x7684;&#x670D;&#x52A1;&#x5668;&#x6587;&#x4EF6;&#x5939;&#x3002;</li>
+<li>&#x4FDD;&#x8BC1;&#x4E24;&#x4E2A;&#x6743;&#x9650;&#x63D2;&#x4EF6;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x91CC;&#xFF08;&#x73B0;&#x5728;&#x8FD8;&#x4E0D;&#x8981;&#x5378;&#x8F7D;&#xFF09;</li>
+<li>&#x5F00;&#x542F;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6D3B;&#x8DC3;&#x7684;&#x670D;&#x52A1;&#x5668;&#x6765;&#x8FDB;&#x884C;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x5EFA;&#x8BAE;&#x5728;&#x6CA1;&#x6709;&#x4EBA;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x8FDB;&#x884C;&#x3002;</li>
+</ol>
+<p><strong>&#x8FD0;&#x884C;&#x4E00;&#x4E0B;&#x547D;&#x4EE4;: <code>lp migration &lt;&#x63D2;&#x4EF6;&#x540D;&gt;</code></strong></p>
+<p>&#x6709;&#x4E9B;&#x63D2;&#x4EF6;&#x9700;&#x8981;&#x4F60;&#x586B;&#x5199;&#x989D;&#x5916;&#x7684;&#x9009;&#x9879;/&#x6807;&#x7B7E;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#xFF0C;&#x4F60;&#x4F1A;&#x5728;&#x8FC1;&#x79FB;&#x4E4B;&#x524D;&#x88AB;&#x901A;&#x77E5;&#x3002;</p>
+<p>&#x63A5;&#x7740;&#x53EA;&#x9700;&#x8981;&#x8BA9; LuckPerms &#x5904;&#x7406;&#x5269;&#x4E0B;&#x7684;&#x4E8B;&#x4E86;&#xFF01;&#x4F60;&#x5C06;&#x4F1A;&#x88AB;&#x63D0;&#x793A;&#x8FC1;&#x79FB;&#x8FDB;&#x5EA6;&#xFF0C;&#x5B8C;&#x6210;&#x65F6;&#x4E5F;&#x4F1A;&#x88AB;&#x63D0;&#x793A;&#x3002;</p>
+<p>&#x5F53;&#x5904;&#x7406;&#x5B8C;&#x6210;&#xFF0C;&#x505C;&#x6B62;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x79FB;&#x9664;&#x5176;&#x4ED6;&#x6743;&#x9650;&#x63D2;&#x4EF6;&#x7684; jar&#xFF0C;&#x518D;&#x6B21;&#x5F00;&#x542F;&#x4F60;&#x7684;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x53F0;&#x7684;&#x8F93;&#x51FA;&#x4E00;&#x5B9A;&#x662F;&#x5197;&#x957F;&#x7E41;&#x6742;&#x7684;&#xFF0C;&#x4EE5; &quot;(LP) LOG&quot; &#x5F00;&#x5934;&#x7684;&#x547D;&#x4EE4;&#x90FD;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#xFF0C;&#x4F46;&#x662F;&#x6808;&#x5806;&#x4FE1;&#x606F;&#x4E0D;&#x5E94;&#x8BE5;&#x5FFD;&#x7565;&#xFF08;&#x4E00;&#x822C;&#x8868;&#x793A;&#x51FA;&#x73B0;&#x4E86;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF09;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684;&#x8FC1;&#x79FB;&#x8F93;&#x51FA;&#x542B;&#x6709;&#x6808;&#x5806;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53CD;&#x9988;&#x7ED9;&#x6211;&#xFF0C;&#x66F4;&#x591A;&#x7684;&#x4FE1;&#x606F;&#x5728;&#x8FD9;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x7684;&#x5E95;&#x90E8;&#x3002;</p>
+<h2 id="powerfulperms">PowerfulPerms</h2>
+<p>&#x5904;&#x7406; PowerfulPerms &#x7684;&#x8FC7;&#x7A0B;&#x66F4;&#x52A0;&#x590D;&#x6742;&#x3002;</p>
+<p>&#x73A9;&#x5BB6;&#x7684;&#x4FE1;&#x606F;&#x53EA;&#x6709;&#x5728;&#x52A0;&#x5165;&#x670D;&#x52A1;&#x5668;&#x65F6;&#x624D;&#x88AB;&#x52A0;&#x8F7D;&#xFF0C;&#x63D2;&#x4EF6; API &#x6CA1;&#x6709;&#x65B9;&#x6CD5;&#x4E00;&#x6B21;&#x6027;&#x83B7;&#x5F97;&#x6240;&#x6709;&#x7684;&#x73A9;&#x5BB6;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#x6211;&#x4EEC;&#x5728;&#x5BFC;&#x5165;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x5F97;&#x67E5;&#x8BE2; PowerfulPerms MySQL &#x8868;&#x6765;&#x83B7;&#x5F97;&#x6240;&#x6709;&#x73A9;&#x5BB6;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x5C06;&#x4F1A;&#x4E0D;&#x540C;&#x3002;</p>
+<p><code>/luckperms migration powerfulperms [address] [database] [username] [password] [db table]</code></p>
+<p>&#x89E3;&#x91CA;&#xFF1A;</p>
+<ul>
+<li>address = MySQL &#x670D;&#x52A1;&#x5668;&#x7684; IP &#x5730;&#x5740;&#xFF0C;&#x6BD4;&#x5982; 127.0.0.1:3306</li>
+<li>database = PowerfulPerms &#x63D2;&#x4EF6;&#x4F7F;&#x7528;&#x7684;&#x6570;&#x636E;&#x5E93;&#x7684;&#x540D;&#x79F0;</li>
+<li>username = SQL &#x670D;&#x52A1;&#x5668;&#x767B;&#x5165;&#x9700;&#x8981;&#x7684;&#x7528;&#x6237;&#x540D;</li>
+<li>password = SQL &#x670D;&#x52A1;&#x5668;&#x767B;&#x5165;&#x9700;&#x8981;&#x7684;&#x5BC6;&#x7801;</li>
+<li>db table = &#x5B58;&#x50A8;&#x73A9;&#x5BB6;&#x6570;&#x636E;&#x7684;&#x8868;&#x540D;&#xFF08;&#x5C3D;&#x7BA1;&#x6211;&#x4EEC;&#x53EA;&#x5173;&#x6CE8; UUID &#x5217;&#x8868;&#xFF09;</li>
+</ul>
+<p>&#x9ED8;&#x8BA4;&#x7684;&#x8868;&#x540D;&#xFF0C;&#x636E;&#x6211;&#x6240;&#x77E5;&#xFF0C;&#x662F; &quot;players&quot;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4F60;&#x6DFB;&#x52A0;&#x4E86;&#x8868;&#x540D;&#x7684;&#x524D;&#x7F00;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x4ED6;&#x4EEC;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x5982;&#x679C;&#x6211;&#x7684;&#x8868;&#x7684;&#x524D;&#x7F00;&#x662F; &quot;pp_&quot;&#xFF0C;&#x90A3;&#x4E48; db table = &quot;pp_players&quot;&#xFF08;&#x4E0D;&#x9700;&#x8981;&#x5F15;&#x53F7;&#xFF09;</p>
+<p>&#x6BD4;&#x5982;: <code>/luckperms migration powerfulperms 127.0.0.1:3306 minecraft root passw0rd players</code></p>
+<h1 id="&#x9519;&#x8BEF;">&#x9519;&#x8BEF;</h1>
+<p>&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x8BF7;&#x68C0;&#x67E5;&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x662F;&#x5426;&#x6B63;&#x786E;&#x52A0;&#x8F7D;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5904;&#x7406;&#x6CA1;&#x6709;&#x5B8C;&#x6210;&#xFF0C;&#x5E76;&#x4E14;&#x6253;&#x5370;&#x4E86;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#xFF0C;&#x8BF7;&#x5728; GitHub &#x63D0;&#x4EA4; issue &#x6216;&#x8005; <a href="https://github.com/lucko/LuckPerms/wiki#cant-find-something" target="_blank">&#x5728;&#x8FD9;&#x91CC;&#x8054;&#x7CFB;&#x6211;</a>&#xFF0C;&#x6211;&#x5C06;&#x5C3D;&#x529B;&#x5C3D;&#x53EF;&#x80FD;&#x5FEB;&#x7684;&#x56DE;&#x590D;&#x4F60;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Command-Usage.html" class="navigation navigation-prev " aria-label="Previous page: 命令使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="GM-&-PEX-Command-Equivalents.html" class="navigation navigation-next " aria-label="Next page: GM&PEX对应等效指令">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"从其他插件迁移","level":"1.8","depth":1,"next":{"title":"GM&PEX对应等效指令","level":"1.9","depth":1,"path":"GM-&-PEX-Command-Equivalents.md","ref":"GM-&-PEX-Command-Equivalents.md","articles":[]},"previous":{"title":"命令使用","level":"1.7","depth":1,"path":"Command-Usage.md","ref":"Command-Usage.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Migration.md","mtime":"2017-08-12T13:46:28.358Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-12T13:46:52.627Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

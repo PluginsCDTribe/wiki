@@ -1,0 +1,610 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>前缀，后缀与元数据 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Prefix-&-Suffix-Stacking.html" />
+    
+    
+    <link rel="prev" href="Tracks.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Why-LuckPerms.html">
+            
+                <a href="Why-LuckPerms.html">
+            
+                    
+                    为什么选择 LuckPerms?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Setup.html">
+            
+                <a href="Setup.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Choosing-a-Storage-type.html">
+            
+                <a href="Choosing-a-Storage-type.html">
+            
+                    
+                    选择存储类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Usage.html">
+            
+                <a href="Usage.html">
+            
+                    
+                    使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Configuration.html">
+            
+                <a href="Configuration.html">
+            
+                    
+                    配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Command-Usage.html">
+            
+                <a href="Command-Usage.html">
+            
+                    
+                    命令使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Migration.html">
+            
+                <a href="Migration.html">
+            
+                    
+                    从其他插件迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="GM-&-PEX-Command-Equivalents.html">
+            
+                <a href="GM-&-PEX-Command-Equivalents.html">
+            
+                    
+                    GM&PEX对应等效指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="FAQ.html">
+            
+                <a href="FAQ.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">特性</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Verbose.html">
+            
+                <a href="Verbose.html">
+            
+                    
+                    权限检查系统（Verbose）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Bulk-Editing.html">
+            
+                <a href="Bulk-Editing.html">
+            
+                    
+                    块编辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Instant-Update-Propagation.html">
+            
+                <a href="Instant-Update-Propagation.html">
+            
+                    
+                    即时更新权限变更
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="Switching-storage-types.html">
+            
+                <a href="Switching-storage-types.html">
+            
+                    
+                    切换存储 & 备份
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="Tracks.html">
+            
+                <a href="Tracks.html">
+            
+                    
+                    权限组路线
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6" data-path="Prefixes,-Suffixes-&-Meta.html">
+            
+                <a href="Prefixes,-Suffixes-&-Meta.html">
+            
+                    
+                    前缀，后缀与元数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="Prefix-&-Suffix-Stacking.html">
+            
+                <a href="Prefix-&-Suffix-Stacking.html">
+            
+                    
+                    前缀与后缀的堆叠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="Advanced-Setup.html">
+            
+                <a href="Advanced-Setup.html">
+            
+                    
+                    高级设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="Default-Groups.html">
+            
+                <a href="Default-Groups.html">
+            
+                    
+                    默认组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开发者</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Developer-API.html">
+            
+                <a href="Developer-API.html">
+            
+                    
+                    开发者 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">其他</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="Locale-and-Translations.html">
+            
+                <a href="Locale-and-Translations.html">
+            
+                    
+                    本地化与语言文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="PlaceholderAPI.html">
+            
+                <a href="PlaceholderAPI.html">
+            
+                    
+                    PlaceholderAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >前缀，后缀与元数据</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x8FD9;&#x6559;&#x7A0B;&#x5305;&#x62EC;&#x5982;&#x4F55;&#x4F7F;&#x7528;LuckPerms&#x63D2;&#x4EF6;&#x8BBE;&#x7F6E;&#x548C;&#x7BA1;&#x7406;&#x73A9;&#x5BB6;&#x7684;&#x524D;&#x7F00;&#xFF0C;&#x540E;&#x7F00;&#x4EE5;&#x53CA;&#x5143;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x5BF9;&#x8FD9;&#x4E9B;&#x6982;&#x5FF5;&#x5F88;&#x719F;&#x6089;&#x4E86;&#xFF0C;&#x6216;&#x662F;&#x53EA;&#x60F3;&#x67E5;&#x770B;&#x672C;&#x63D2;&#x4EF6;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x66F4;&#x6539;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x9605;&#x8BFB;<a href="Command-Usage.html#meta---lp-user-user-meta---lp-group-group-meta-">&#x547D;&#x4EE4;&#x4F7F;&#x7528;</a> &#x9875;&#x9762;&#x7684; &#x201C;section&#x201D; &#x5C0F;&#x8282;&#x3002;</p>
+<h1 id="&#x5173;&#x952E;&#x672F;&#x8BED;">&#x5173;&#x952E;&#x672F;&#x8BED;</h1>
+<h3 id="&#x524D;&#x7F00;&#x540E;&#x7F00;">&#x524D;&#x7F00;/&#x540E;&#x7F00;</h3>
+<p>Minecraft&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x524D;&#x7F00;&#x548C;&#x540E;&#x7F00;&#x4EE3;&#x6307;&#x4F60;&#x804A;&#x5929;&#x7528;&#x6237;&#x540D;&#x524D;&#x540E;&#x7684;&#x6587;&#x672C;&#x3002;</p>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5728;&#x4E0B;&#x5217;&#x7684;&#x804A;&#x5929;&#x4E2D;&#xFF1A;</p>
+<pre><code>[Admin] Luck the great: Hello!
+</code></pre><p>&#x73A9;&#x5BB6;&#x7684;&#x524D;&#x7F00;&#x662F;<code>&quot;[Admin] &quot;</code>&#x90E8;&#x5206;&#xFF0C;&#x73A9;&#x5BB6;&#x7684;&#x540E;&#x7F00;&#x662F;<code>&quot; the great&quot;</code>&#x90E8;&#x5206;&#x3002;</p>
+<h3 id="&#x5143;&#x6570;&#x636E;">&#x5143;&#x6570;&#x636E;</h3>
+<p>&#x6709;&#x65F6;&#x5143;&#x6570;&#x636E;&#x6307;&#x201C;&#x9009;&#x9879;&#x201D;&#x6216;&#x201C;&#x53D8;&#x91CF;&#x201D;&#xFF0C;&#x5143;&#x6570;&#x636E;&#x662F;&#x8DDF;&#x6743;&#x9650;&#x7EC4;&#x6709;&#x5173;&#x7684;&#x989D;&#x5916;&#x6570;&#x636E;&#x90E8;&#x5206;&#x3002;&#x4E0E;&#x6743;&#x9650;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x5143;&#x6570;&#x636E;&#x5206;&#x6210;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x4E00;&#x90E8;&#x5206;&#x662F;&#x201C;&#x5173;&#x952E;&#x5B57;&#x201D;&#xFF0C;&#x53E6;&#x4E00;&#x90E8;&#x5206;&#x662F;&#x201C;&#x503C;&#x201D;&#x3002;</p>
+<p>&#x5173;&#x952E;&#x5B57;&#x5C31;&#x662F;&#x5143;&#x6570;&#x636E;&#x7684;&#x540D;&#x5B57;&#xFF0C;&#x503C;&#x5C31;&#x662F;&#x5173;&#x952E;&#x5B57;&#x6240;&#x4EE3;&#x8868;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x6211;&#x7684;&#x7528;&#x6237;&#x6709;&#x4E0B;&#x5217;&#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x5143;&#x6570;&#x636E;&#x4EE3;&#x8868;&#x6211;&#x6700;&#x591A;&#x80FD;&#x8BBE;&#x7F6E;5&#x4E2A;&#x5BB6;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x7684;&#x7528;&#x6237;&#x540D;&#x5E94;&#x8BE5;&#x662F;&#x84DD;&#x8272;&#x7684;&#x3002;</p>
+<pre><code>max-homes = 5
+username-color: blue
+</code></pre><h2 id="&#x662F;&#x8C01;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x8FD9;&#x4E9B;&#x7684;&#x652F;&#x6301;&#xFF1F;">&#x662F;&#x8C01;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x8FD9;&#x4E9B;&#x7684;&#x652F;&#x6301;&#xFF1F;</h2>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x5668;&#x7BA1;&#x7406;&#x6743;&#x9650;&#x7684;&#x63D2;&#x4EF6;&#x5C31;&#x6709;&#x80FD;&#x591F;&#x8BA9;&#x4F60;&#x8BBE;&#x7F6E;&#xFF0C;&#x7BA1;&#x7406;&#x548C;&#x50A8;&#x5B58;&#x73A9;&#x5BB6;&#x7684;&#x524D;&#x7F00;&#xFF0C;&#x540E;&#x7F00;&#x548C;&#x5143;&#x6570;&#x636E;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x8FD9;&#x5BF9;&#x4E8E;LuckPerms&#x63D2;&#x4EF6;&#x6765;&#x8BF4;&#x4E5F;&#x4E00;&#x6837;&#x3002;&#x3001;</p>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x63D0;&#x4F9B;&#x8FD9;&#x4E9B;&#x8BBE;&#x7F6E;&#x7684;&#x6743;&#x9650;&#x63D2;&#x4EF6;&#x4E5F;&#x80FD;&#x591F;&#x76F4;&#x63A5;&#x5728;&#x6E38;&#x620F;&#x4E2D;&#x5E94;&#x7528;&#x8FD9;&#x4E9B;&#x503C;&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x5BF9;&#x4E8E;LuckPerms&#x6765;&#x8BF4;&#x4E0D;&#x662F;&#x5B83;&#x80FD;&#x505A;&#x5230;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x53E6;&#x4E00;&#x6B3E;&#x989D;&#x5916;&#x7684;&#x63D2;&#x4EF6;&#x6765;&#x5728;&#x6E38;&#x620F;&#x804A;&#x5929;&#x4E2D;&#x5E94;&#x7528;&#xFF0C;&#x5173;&#x4E8E;&#x8FD9;&#x70B9;&#x6211;&#x4EEC;&#x7A0D;&#x540E;&#x8BE6;&#x8FF0;&#x3002;</p>
+<h2 id="&#x524D;&#x7F00;&#x540E;&#x7F00;&#x5143;&#x6570;&#x636E;&#x662F;&#x600E;&#x4E48;&#x5B58;&#x50A8;&#x7684;">&#x524D;&#x7F00;/&#x540E;&#x7F00;/&#x5143;&#x6570;&#x636E;&#x662F;&#x600E;&#x4E48;&#x5B58;&#x50A8;&#x7684;</h2>
+<p>LuckPerms &#x63D2;&#x4EF6;&#x5C06;&#x524D;&#x7F00;&#x548C;&#x540E;&#x7F00;&#x8F6C;&#x6362;&#x6210;&#x6743;&#x9650;&#x8282;&#x70B9;&#x6765;&#x5B58;&#x50A8;&#x3002;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x5F53;&#x4F60;&#x7ED9;&#x4E00;&#x4F4D;&#x7528;&#x6237;&#x6216;&#x4E00;&#x4E2A;&#x6743;&#x9650;&#x7EC4;&#x6DFB;&#x52A0;&#x6743;&#x9650;&#x7684;&#x6076;&#x5316;&#xFF0C;&#x4ED6;&#x4EEC;&#x7684;&#x6743;&#x9650;&#x4FE1;&#x606F;&#x4E2D;&#x4F1A;&#x591A;&#x51FA;&#x4E00;&#x6761;&#x8DDF;&#x4F60;&#x8BBE;&#x7F6E;&#x7684;&#x503C;&#x76F8;&#x540C;&#x7684;&#x6743;&#x9650;&#x6570;&#x636E;&#x3002;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FD9;&#x6837;&#x505A;&#x5462;&#xFF1F;&#x597D;&#x7684;&#xFF0C;&#x4ECE;&#x7F16;&#x7A0B;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x8BF4;&#xFF0C;&#x8BA9;&#x6240;&#x6709;&#x4E1C;&#x897F;&#x90FD;&#x50A8;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#xFF0C;&#x7528;&#x76F8;&#x540C;&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x8FD9;&#x6837;&#x505A;&#x66F4;&#x7B80;&#x5355;&#x3002;&#x8FD9;&#x4E5F;&#x610F;&#x5473;&#x7740;&#x4F60;&#x80FD;&#x591F;&#x7B80;&#x5355;&#x7684;&#x66F4;&#x6539;&#x524D;&#x7F00;&#x548C;&#x540E;&#x7F00;&#xFF0C;&#x5C31;&#x50CF;&#x4F60;&#x6539;&#x6743;&#x9650;&#x7684;&#x65B9;&#x5F0F;&#x4E00;&#x6837;&#x3002;</p>
+<p>&#x524D;&#x7F00;&#x548C;&#x540E;&#x7F00;&#x5206;&#x6210;&#x4E86;&#x4E24;&#x90E8;&#x5206;</p>
+<ul>
+<li><strong>Weight</strong> &#x2014;&#x2014; &#x8FD9;&#x662F;&#x51B3;&#x5B9A;&#x7740;&#x524D;&#x7F00;&#x548C;&#x540E;&#x7F00;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x8F83;&#x5927;&#x7684;&#x6570;&#x4EE3;&#x8868;&#x7740;&#x8F83;&#x5927;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x3002;</li>
+<li><strong>Value</strong> &#x2014;&#x2014; &#x8FD9;&#x662F;&#x771F;&#x6B63;&#x7684;&#x524D;&#x7F00;&#x7684;&#x503C;&#x3002;</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#x4E00;&#x4E2A;&#x53EB;&#x505A; &quot;[Admin] &quot; &#x7684;&#x524D;&#x7F00;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x8BBE;&#x7F6E;&#x4E3A;100&#xFF0C;&#x8F6C;&#x6362;&#x6210;&#x6743;&#x9650;&#x5C31;&#x662F;&#xFF1A; <code>&quot;prefix.100.[Admin] &quot;</code>&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x5143;&#x6570;&#x636E;&#x6765;&#x8BF4;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x7CFB;&#x7EDF;&#x4E5F;&#x76F8;&#x4F3C;&#xFF0C;&#x5143;&#x6570;&#x636E;&#x7EC4;&#x5408; <code>favourite-color = red</code> &#xFF0C;&#x8F6C;&#x6362;&#x6210;&#x6743;&#x9650;&#x5C31;&#x662F;&#xFF1A;<code>&quot;meta.favourite-color.red&quot;</code>.</p>
+<h2 id="&#x524D;&#x7F00;&#x548C;&#x540E;&#x7F00;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x662F;&#x600E;&#x4E48;&#x5DE5;&#x4F5C;&#x7684;">&#x524D;&#x7F00;&#x548C;&#x540E;&#x7F00;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x662F;&#x600E;&#x4E48;&#x5DE5;&#x4F5C;&#x7684;</h2>
+<p>&#x524D;&#x7F00;&#x548C;&#x540E;&#x7F00;&#x548C;&#x6743;&#x9650;&#x4E00;&#x6837;&#xFF0C;&#x4E5F;&#x80FD;&#x591F;&#x7EE7;&#x627F;&#x3002;&#x8FD9;&#x610F;&#x5473;&#x7740;LuckPerms&#x63D2;&#x4EF6;&#x9700;&#x8981;&#x51B3;&#x5B9A;&#xFF0C;&#x5F53;&#x9700;&#x8981;&#x663E;&#x793A;&#x524D;&#x7F00;&#x6216;&#x540E;&#x7F00;&#x65F6;&#xFF0C;&#x771F;&#x6B63;&#x4E3A;&#x73A9;&#x5BB6;&#x663E;&#x793A;&#x54EA;&#x4E00;&#x4E2A;&#x3002;</p>
+<p>&#x5F53;&#x53E6;&#x5916;&#x4E00;&#x6B3E;&#x63D2;&#x4EF6;&#x8BF7;&#x6C42;&#x73A9;&#x5BB6;&#x7684;&#x524D;&#x7F00;&#x6216;&#x540E;&#x7F00;&#x65F6;&#xFF0C;LuckPerms&#x63D2;&#x4EF6;&#x4F1A;&#xFF1A;</p>
+<ul>
+<li>&#x6536;&#x96C6;&#x73A9;&#x5BB6;&#x7684;&#x6240;&#x6709;&#x524D;&#x7F00;&#x4E0E;&#x540E;&#x7F00;&#xFF0C;&#x5305;&#x62EC;&#x7EE7;&#x627F;&#x7684;</li>
+<li>&#x6839;&#x636E;&#x4ED6;&#x4EEC;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x6765;&#x8FDB;&#x884C;&#x5206;&#x7C7B;&#xFF0C;&#x9AD8;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x6570;&#x503C;&#x4EE3;&#x8868;&#x9AD8;&#x7684;&#x4F18;&#x5148;&#x7EA7;</li>
+<li>&#x7136;&#x540E;&#x51B3;&#x5B9A;&#x51FA;&#x6700;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#x524D;&#x7F00;&#x6216;&#x540E;&#x7F00;&#x6765;&#x4E3A;&#x73A9;&#x5BB6;&#x5C55;&#x793A;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x53D1;&#x73B0;&#x4E86;&#x4E24;&#x4E2A;&#x76F8;&#x540C;&#x4F18;&#x5148;&#x7EA7;&#x7684;&#x524D;&#x7F00;&#x6216;&#x540E;&#x7F00;&#x7684;&#x8BDD;&#xFF0C;&#x6700;&#x63A5;&#x8FD1;&#x4E8E;&#x7528;&#x6237;&#x7684;&#x90A3;&#x4E00;&#x4E2A;&#x4F1A;&#x88AB;&#x4F7F;&#x7528;&#xFF0C;&#x63A5;&#x8FD1;&#x7684;&#x610F;&#x601D;&#x5C31;&#x662F;&#x63D2;&#x4EF6;&#x5728;&#x641C;&#x7D22;&#x7EE7;&#x627F;&#x6570;&#x636E;&#x65F6;&#x6700;&#x5148;&#x627E;&#x5230;&#x7684;&#x90A3;&#x4E00;&#x4E2A;&#x3002;</p>
+<h2 id="&#x6211;&#x600E;&#x4E48;&#x4E3A;&#x73A9;&#x5BB6;&#x8BBE;&#x7F6E;&#x524D;&#x7F00;&#x6216;&#x540E;&#x7F00;">&#x6211;&#x600E;&#x4E48;&#x4E3A;&#x73A9;&#x5BB6;&#x8BBE;&#x7F6E;&#x524D;&#x7F00;&#x6216;&#x540E;&#x7F00;</h2>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x60F3;&#x8BA9;admin&#x6743;&#x9650;&#x7EC4;&#x7684;&#x73A9;&#x5BB6;&#x62E5;&#x6709; &quot;&amp;c[Admin] &quot; &#x524D;&#x7F00;&#xFF0C;&#x5728;mod&#x6743;&#x9650;&#x7EC4;&#x7684;&#x73A9;&#x5BB6;&#x62E5;&#x6709; &quot;&amp;d[Mod] &quot; &#x524D;&#x7F00;&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x9700;&#x8981;&#x8FD0;&#x884C;&#xFF1A;</p>
+<ul>
+<li>/lp creategroup admin</li>
+<li>/lp creategroup mod</li>
+<li>/lp group admin parent add mod</li>
+<li>/lp group admin meta addprefix 100 &quot;&amp;c[Admin] &quot;</li>
+<li>/lp group mod meta addprefix 90 &quot;&amp;d[Mod] &quot;</li>
+</ul>
+<p>&#x7136;&#x540E;&#x5982;&#x679C;&#x6211;&#x51B3;&#x5B9A;&#x60F3;&#x8981;&#x5C06;admin&#x7528;&#x6237;&#x7EC4;&#x7684;&#x79F0;&#x53F7;&#x6539;&#x4E3A;&#x4F7F;&#x7528; &quot;&amp;4&quot; &#x8FD9;&#x4E2A;&#x989C;&#x8272;&#x4EE3;&#x7801;&#x7684;&#x8BDD;&#xFF0C;&#x8981;&#x60F3;&#x5220;&#x9664;&#x4E4B;&#x524D;&#x8BBE;&#x5B9A;&#x7684;&#x503C;&#xFF0C;&#x6211;&#x9700;&#x8981;&#x8FD0;&#x884C;&#xFF1A;</p>
+<ul>
+<li>/lp group admin meta removeprefix 100</li>
+</ul>
+<p>&#x8FD9;&#x4F1A;&#x5C06;&#x6240;&#x6709;&#x8BBE;&#x5B9A;&#x7ED9;admin&#x6743;&#x9650;&#x7EC4;&#x7684;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x4E3A;100&#x7684;&#x524D;&#x7F00;&#x5168;&#x90E8;&#x79FB;&#x9664;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x5C31;&#x80FD;&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#x65B0;&#x7684;&#x524D;&#x7F00;&#x503C;&#x4E86;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4E34;&#x65F6;&#x8BBE;&#x5B9A;&#x7528;&#x6237;&#x524D;&#x7F00;&#x6216;&#x540E;&#x7F00;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x589E;&#x52A0;&#x4E34;&#x65F6;&#x6743;&#x9650;&#x6216;&#x4E34;&#x65F6;&#x6743;&#x9650;&#x7EC4;&#x7684;&#x65B9;&#x6CD5;&#x5DEE;&#x4E0D;&#x591A;&#x3002;</p>
+<p>&#x6240;&#x6709;&#x7684;&#x6743;&#x9650;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x5728;<a href="Command-Usage.html#meta---lp-user-user-meta---lp-group-group-meta-"><strong>&#x6743;&#x9650;&#x4F7F;&#x7528;&#x9875;&#x9762;</strong></a>&#x627E;&#x5230;&#x3002;&#x589E;&#x52A0;&#x548C;&#x79FB;&#x9664;&#x5143;&#x6570;&#x636E;&#x7684;&#x65B9;&#x6CD5;&#x4E5F;&#x5217;&#x5728;&#x4E86;&#x90A3;&#x91CC;&#x3002;</p>
+<h2 id="&#x6211;&#x600E;&#x4E48;&#x67E5;&#x770B;&#x4E00;&#x4F4D;&#x73A9;&#x5BB6;&#x6216;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x7EC4;&#x6240;&#x6709;&#x7684;&#x524D;&#x7F00;&#x6216;&#x540E;&#x7F00;">&#x6211;&#x600E;&#x4E48;&#x67E5;&#x770B;&#x4E00;&#x4F4D;&#x73A9;&#x5BB6;&#x6216;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x7EC4;&#x6240;&#x6709;&#x7684;&#x524D;&#x7F00;&#x6216;&#x540E;&#x7F00;</h2>
+<p>&#x89E3;&#x51B3;&#x524D;&#x7F00;&#x6216;&#x540E;&#x7F00;&#x76F8;&#x5173;&#x95EE;&#x9898;&#x6700;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x4F7F;&#x7528;info&#x547D;&#x4EE4;&#x3002;</p>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A; <code>/lp user Luck meta info</code>&#x3002;&#x8FD9;&#x4F1A;&#x5C06;&#x7528;&#x6237;&#x6240;&#x6709;&#x7684;&#x524D;&#x7F00;&#xFF0C;&#x540E;&#x7F00;&#x548C;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x4EE5;&#x53CA;&#x7EE7;&#x627F;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x5217;&#x4E3E;&#x51FA;&#x6765;&#x3002;</p>
+<p>&#x6309;&#x7167;&#x4F18;&#x5148;&#x7EA7;&#x6765;&#x6392;&#x5E8F;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x5C31;&#x80FD;&#x5F88;&#x6E05;&#x695A;&#x7684;&#x770B;&#x5230;&#x76EE;&#x524D;&#x5E94;&#x7528;&#x7684;&#x503C;&#x662F;&#x54EA;&#x4E00;&#x4E2A;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x4E00;&#x6761;&#x6709;&#x8DA3;&#x7684;&#x547D;&#x4EE4;&#x5C31;&#x662F;&#x73A9;&#x5BB6;&#x7684;&#x5168;&#x5C40;&#x4FE1;&#x606F;&#x547D;&#x4EE4;&#xFF1A; <code>/lp user Luck info</code>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x73A9;&#x5BB6;&#x5728;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5728;&#x7EBF;&#x7684;&#x8BDD;&#xFF0C;&#x8FD9;&#x4F1A;&#x76F4;&#x63A5;&#x7ED9;&#x4F60;&#x5C55;&#x793A;&#x6240;&#x63D0;&#x4F9B;&#x7ED9;&#x8981;&#x8BFB;&#x53D6;LuckPerms&#x4FE1;&#x606F;&#x7684;&#x63D2;&#x4EF6;&#x7684;&#x524D;&#x7F00;&#x6216;&#x540E;&#x7F00;&#x3002;</p>
+<h2 id="&#x5C55;&#x793A;&#x524D;&#x7F00;&#x548C;&#x540E;&#x7F00;">&#x5C55;&#x793A;&#x524D;&#x7F00;&#x548C;&#x540E;&#x7F00;</h2>
+<p>&#x5C31;&#x50CF;&#x65E9;&#x4E9B;&#x65F6;&#x5019;&#x63D0;&#x5230;&#x7684;&#x90A3;&#x6837;&#xFF0C;LuckPerms&#x63D2;&#x4EF6;&#x4E0D;&#x4F1A;&#x4E3A;&#x4F60;&#x5904;&#x7406;&#x4EFB;&#x4F55;&#x7684;&#x804A;&#x5929;&#x683C;&#x5F0F;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x4F60;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x989D;&#x5916;&#x7684;&#x63D2;&#x4EF6;&#x6765;&#x505A;&#x5230;&#x8FD9;&#x4E2A;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x4E3A;&#x4F60;&#x5217;&#x51FA;&#x4E86;&#x4E00;&#x4E9B;&#x63A8;&#x8350;&#x7684;&#x804A;&#x5929;&#x7BA1;&#x7406;&#x63D2;&#x4EF6;&#x3002;</p>
+<h3 id="bukkitspigot">Bukkit/Spigot</h3>
+<p>LuckPerms &#x76EE;&#x524D;&#x5DF2;&#x7ECF;&#x652F;&#x6301;<strong>&#x6240;&#x6709;</strong>&#x80FD;&#x591F;&#x4ECE; <a href="https://dev.bukkit.org/projects/vault" target="_blank">Vault</a> &#x63D2;&#x4EF6;&#x8BFB;&#x53D6;&#x4FE1;&#x606F;&#x7684;&#x804A;&#x5929;&#x7BA1;&#x7406;&#x63D2;&#x4EF6;&#x4E86;&#x3002;</p>
+<p>&#x4F60;&#x9700;&#x8981;&#x5728;&#x4F60;&#x7684;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5B89;&#x88C5;Vault&#x6765;&#x8BA9;&#x5176;&#x5DE5;&#x4F5C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x53D1;&#x73B0;&#x67D0;&#x6B3E;&#x63D2;&#x4EF6;&#x6240;&#x83B7;&#x53D6;&#x7684;&#x6570;&#x636E;&#x4E0D;&#x6B63;&#x786E;&#x7684;&#x8BDD;&#xFF0C;&#x8BF7;&#x786E;&#x4FDD; <code>/vault-info</code> &#x63D2;&#x4EF6;&#x8F93;&#x51FA;&#x7684;&#x4FE1;&#x606F;&#x5C55;&#x793A;&#x7684;&#x6570;&#x636E;&#x662F;&#x4ECE;LuckPerms&#x63D2;&#x4EF6;&#x5904;&#x8BFB;&#x53D6;&#x7684;&#x3002;</p>
+<p>&#x4E00;&#x4E9B;&#x8F83;&#x4E3A;&#x53D7;&#x6B22;&#x8FCE;&#x7684;&#xFF0C;&#x4E14;&#x652F;&#x6301;Vault&#x7684;&#x804A;&#x5929;&#x7BA1;&#x7406;&#x63D2;&#x4EF6;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li><a href="https://ci.drtshock.net/job/EssentialsX/" target="_blank">EssentialsXChat</a> &#x2014;&#x2014; &#x539F;&#x6765;&#x7684;Essentials&#x63D2;&#x4EF6;&#x7684;&#x5347;&#x7EA7;&#x590D;&#x523B;&#x7248;&#x672C;&#x3002;&#xFF08;&#x201C;X&#x201D; &#x662F;&#x5F88;&#x91CD;&#x8981;&#x7684;&#xFF01;&#xFF09;</li>
+<li><a href="https://dev.bukkit.org/projects/chatex" target="_blank">ChatEx</a></li>
+<li><a href="https://www.spigotmc.org/resources/deluxechat.1277/" target="_blank">DeluxeChat</a> &#x2014;&#x2014; &#x4F60;&#x80FD;&#x591F;&#x4F7F;&#x7528;Vault&#x6216;LuckPerms&#x6240;&#x63D0;&#x4F9B;&#x7684;Placeholder&#x53D8;&#x91CF;&#x3002;</li>
+<li><a href="https://www.spigotmc.org/resources/10258/" target="_blank">ChatControl</a> &#x2014;&#x2014; &#x4E5F;&#x652F;&#x6301;&#x5176;&#x4ED6;&#x9009;&#x9879;&#x7684;&#x8BBE;&#x7F6E;&#x6765;&#x5E2E;&#x52A9;&#x7BA1;&#x7406;&#x804A;&#x5929;&#x3002;</li>
+</ul>
+<p>&#x5217;&#x4E3E;&#x51FA;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;&#x63D2;&#x4EF6;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x610F;&#x4E49;&#xFF0C;&#x518D;&#x8BF4;&#x4E00;&#x904D;&#xFF0C;&#x6240;&#x6709;&#x652F;&#x6301;Vault&#x7684;&#x804A;&#x5929;&#x7BA1;&#x7406;&#x63D2;&#x4EF6;&#x90FD;&#x652F;&#x6301;LuckPerms&#xFF01;</p>
+<h3 id="bungeecord">BungeeCord</h3>
+<ul>
+<li><a href="https://github.com/lucko/gChat" target="_blank">gChat</a> (&#x6211;&#x5199;&#x7684; :wink:)</li>
+<li><a href="https://www.spigotmc.org/resources/multichat.26204/" target="_blank">MultiChat</a></li>
+<li><a href="https://www.spigotmc.org/resources/bungee-chat.12592/" target="_blank">BungeeChat</a></li>
+</ul>
+<h3 id="sponge">Sponge</h3>
+<ul>
+<li><a href="http://nucleuspowered.org/" target="_blank">Nucleus</a> &#x2014;&#x2014; &#x5C31;&#x50CF;&#x662F;&#x201C;Essentials&#x201D;&#x4E00;&#x6837;&#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x5305;&#x62EC; <a href="http://nucleuspowered.org/docs/modules/chat.html" target="_blank">&#x804A;&#x5929;&#x7BA1;&#x7406;&#x6A21;&#x5757;</a>.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Tracks.html" class="navigation navigation-prev " aria-label="Previous page: 权限组路线">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Prefix-&-Suffix-Stacking.html" class="navigation navigation-next " aria-label="Next page: 前缀与后缀的堆叠">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"前缀，后缀与元数据","level":"2.6","depth":1,"next":{"title":"前缀与后缀的堆叠","level":"2.7","depth":1,"path":"Prefix-&-Suffix-Stacking.md","ref":"Prefix-&-Suffix-Stacking.md","articles":[]},"previous":{"title":"权限组路线","level":"2.5","depth":1,"path":"Tracks.md","ref":"Tracks.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Prefixes,-Suffixes-&-Meta.md","mtime":"2017-08-12T13:46:28.387Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-12T13:46:52.627Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
