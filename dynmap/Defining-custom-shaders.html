@@ -1,0 +1,1161 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>自定义着色器 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Defining-custom-lightings.html" />
+    
+    
+    <link rel="prev" href="Defining-custom-perspectives.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="Setting-up-without-the-Internal-Web-Server.html">
+            
+                <a href="Setting-up-without-the-Internal-Web-Server.html">
+            
+                    
+                    不使用内部服务器建立
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="Setting-up-the-Dynamic-Map-plugin-under-Linux.html">
+            
+                <a href="Setting-up-the-Dynamic-Map-plugin-under-Linux.html">
+            
+                    
+                    在Linux下建立动态地图插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Setting-up-Dynamic-Map-with-apache2-under-Debian.html">
+            
+                <a href="Setting-up-Dynamic-Map-with-apache2-under-Debian.html">
+            
+                    
+                    Debian+Apache
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="Setting-up-Dynamic-Map-with-Apache-httpd-under-Arch-Linux.html">
+            
+                <a href="Setting-up-Dynamic-Map-with-Apache-httpd-under-Arch-Linux.html">
+            
+                    
+                    Arch Linux+apache/httpd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="Setting-up-Dynamic-Map-with-lighttpd-under-Arch-Linux.html">
+            
+                <a href="Setting-up-Dynamic-Map-with-lighttpd-under-Arch-Linux.html">
+            
+                    
+                    Arch Linux+Lighttpd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="Setting-up-with-Nginx-server-on-Centos.html">
+            
+                <a href="Setting-up-with-Nginx-server-on-Centos.html">
+            
+                    
+                    Centos+Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
+            
+                <a href="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="Setting-up-the-Dynamic-Map-plugin-under-Windows.html">
+            
+                <a href="Setting-up-the-Dynamic-Map-plugin-under-Windows.html">
+            
+                    
+                    在Windows下建立动态地图插件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Setting-up-dynamic-map-with-iis-using-url-rewrite-and-applicationrequestrouting.html">
+            
+                <a href="Setting-up-dynamic-map-with-iis-using-url-rewrite-and-applicationrequestrouting.html">
+            
+                    
+                    IIS+URL重写+ARR模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Setting-up-Dynamic-Map-with-IIS.html">
+            
+                <a href="Setting-up-Dynamic-Map-with-IIS.html">
+            
+                    
+                    IIS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="Setting-up-Dynmap-through-hosting-services.html">
+            
+                <a href="Setting-up-Dynmap-through-hosting-services.html">
+            
+                    
+                    通过托管服务建立Dynmap
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="Dynmap-On-Xenon-Hosting-Service,--courtesy-of-mavbear.html">
+            
+                <a href="Dynmap-On-Xenon-Hosting-Service,--courtesy-of-mavbear.html">
+            
+                    
+                    Xenon 托管服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="Configuration.html">
+            
+                <a href="Configuration.html">
+            
+                    
+                    配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="Base-Plugin-Settings.html">
+            
+                <a href="Base-Plugin-Settings.html">
+            
+                    
+                    基础插件设定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="Component-Configuration.html">
+            
+                <a href="Component-Configuration.html">
+            
+                    
+                    部件设定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="World-and-template-settings.html">
+            
+                <a href="World-and-template-settings.html">
+            
+                    
+                    世界&模板设定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="Color-Schemes.html">
+            
+                <a href="Color-Schemes.html">
+            
+                    
+                    颜色主题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.2" data-path="Configuration-of-worlds.html">
+            
+                <a href="Configuration-of-worlds.html">
+            
+                    
+                    世界配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="HD-Map-Configuration.html">
+            
+                <a href="HD-Map-Configuration.html">
+            
+                    
+                    高分辨率地图设定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1" data-path="Full-list-of-predefined-perspectives.html">
+            
+                <a href="Full-list-of-predefined-perspectives.html">
+            
+                    
+                    所有可用的预设
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2" data-path="Defining-custom-perspectives.html">
+            
+                <a href="Defining-custom-perspectives.html">
+            
+                    
+                    自定义预设
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.4.3" data-path="Defining-custom-shaders.html">
+            
+                <a href="Defining-custom-shaders.html">
+            
+                    
+                    自定义着色器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.4" data-path="Defining-custom-lightings.html">
+            
+                <a href="Defining-custom-lightings.html">
+            
+                    
+                    自定义光照
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="Support-for-MinecraftForge-based-mods.html">
+            
+                <a href="Support-for-MinecraftForge-based-mods.html">
+            
+                    
+                    支持的基于Forge的Mod
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="Support-for-Minecraft-Servers-other-than-CraftBukkit.html">
+            
+                <a href="Support-for-Minecraft-Servers-other-than-CraftBukkit.html">
+            
+                    
+                    支持的服务端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.6.1" data-path="Support-for-Tekkit.html">
+            
+                <a href="Support-for-Tekkit.html">
+            
+                    
+                    Tekkit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Commands.html">
+            
+                <a href="Commands.html">
+            
+                    
+                    命令
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="Configuring-Maps-and-Worlds-using-dmap.html">
+            
+                <a href="Configuring-Maps-and-Worlds-using-dmap.html">
+            
+                    
+                    使用dmap配置地图和世界
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="Permissions.html">
+            
+                <a href="Permissions.html">
+            
+                    
+                    权限
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="Web-ui-login-support-and-permissions.html">
+            
+                <a href="Web-ui-login-support-and-permissions.html">
+            
+                    
+                    网页登录支持与权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="Web-UI-Parameters.html">
+            
+                <a href="Web-UI-Parameters.html">
+            
+                    
+                    网页参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="Using-markers.html">
+            
+                <a href="Using-markers.html">
+            
+                    
+                    使用标记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="Custom-Block-Definitions.html">
+            
+                <a href="Custom-Block-Definitions.html">
+            
+                    
+                    自定义方块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="Common-Features-for-Texture-and-Model-Definition-Files.html">
+            
+                <a href="Common-Features-for-Texture-and-Model-Definition-Files.html">
+            
+                    
+                    材质和模型文件的基础特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="Texture-Definition-Files.html">
+            
+                <a href="Texture-Definition-Files.html">
+            
+                    
+                    材质定义文件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.2.1" data-path="Special-texture-file-types.html">
+            
+                <a href="Special-texture-file-types.html">
+            
+                    
+                    特殊材质文件种类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="Model-Definition-Files.html">
+            
+                <a href="Model-Definition-Files.html">
+            
+                    
+                    模型定义文件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.1" data-path="Defining-cuboid-models.html">
+            
+                <a href="Defining-cuboid-models.html">
+            
+                    
+                    定义长方体模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2" data-path="Using-custom-block-renderers.html">
+            
+                <a href="Using-custom-block-renderers.html">
+            
+                    
+                    使用自定方块着色器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.3.2.1" data-path="Class-org.dynmap.hdmap.renderer.boxrenderer.html">
+            
+                <a href="Class-org.dynmap.hdmap.renderer.boxrenderer.html">
+            
+                    
+                    BoxRender类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2.2" data-path="Class-org.dynmap.hdmap.renderer.FenceWallBlockRenderer.html">
+            
+                <a href="Class-org.dynmap.hdmap.renderer.FenceWallBlockRenderer.html">
+            
+                    
+                    FenceWallBlockRenderer类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2.3" data-path="Class-org.dynmap.hdmap.renderer.PaneRenderer.html">
+            
+                <a href="Class-org.dynmap.hdmap.renderer.PaneRenderer.html">
+            
+                    
+                    PaneRenderer类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2.4" data-path="Class-org.dynmap.hdmap.renderer.RedstoneWireRenderer.html">
+            
+                <a href="Class-org.dynmap.hdmap.renderer.RedstoneWireRenderer.html">
+            
+                    
+                    RedstoneWireRenderer类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2.5" data-path="Class-org.dynmap.hdmap.renderer.SkullRenderer.html">
+            
+                <a href="Class-org.dynmap.hdmap.renderer.SkullRenderer.html">
+            
+                    
+                    SkullRenderer类
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.2.6" data-path="Class-org.dynmap.hdmap.renderer.StairBlockRenderer.html">
+            
+                <a href="Class-org.dynmap.hdmap.renderer.StairBlockRenderer.html">
+            
+                    
+                    StairBlockRenderer类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.3" data-path="Defining-volumetric-models.html">
+            
+                <a href="Defining-volumetric-models.html">
+            
+                    
+                    定义立体模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.4" data-path="Defining-patch-models.md">
+            
+                <span>
+            
+                    
+                    定义补丁模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3.5" data-path="Coding-Custom-Block-Renderer.md">
+            
+                <span>
+            
+                    
+                    编写自定方块着色器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="Defining-a-Simple-Block.html">
+            
+                <a href="Defining-a-Simple-Block.html">
+            
+                    
+                    定义一个简单的方块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="Defining-a-Cuboid-Block.html">
+            
+                <a href="Defining-a-Cuboid-Block.html">
+            
+                    
+                    定义长方体方块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="Defining-a-Block-using-a-Custom-Block-Renderer.html">
+            
+                <a href="Defining-a-Block-using-a-Custom-Block-Renderer.html">
+            
+                    
+                    自定义方块着色器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="Defining-a-block-using-a-volumetric-block-model.html">
+            
+                <a href="Defining-a-block-using-a-volumetric-block-model.html">
+            
+                    
+                    使用立体方块模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="Exporting-World-Data-in-Wavefront-OBJ-Format.html">
+            
+                <a href="Exporting-World-Data-in-Wavefront-OBJ-Format.html">
+            
+                    
+                    导出世界为WavefrontOBJ格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开发者</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="How-to-compile-Dynmap.html">
+            
+                <a href="How-to-compile-Dynmap.html">
+            
+                    
+                    如何编译Dynmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">链接</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://github.com/webbukkit/DynmapCoreAPI">
+            
+                    
+                    DynmapCoreAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://github.com/webbukkit/DynmapCore">
+            
+                    
+                    DynmapCore
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <a target="_blank" href="https://github.com/webbukkit/dynmap-api">
+            
+                    
+                    dynmap-api
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <a target="_blank" href="https://github.com/webbukkit/dynmap">
+            
+                    
+                    dynmap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >自定义着色器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Custom shader definitions can be made by modifying the standard shader definitions, found in <strong>shaders.txt</strong>, or by adding new or updated definitions to the <strong>custom-shaders.txt</strong> file (the preferred method).</p>
+<p>There are currently three basic classes of shaders, any of which can be used to define a custom shader:</p>
+<ul>
+<li><p><strong>org.dynmap.hdmap.DefaultHDShader</strong> - this shader supports the equivalents of the FlatMap and KzedMap color models, including the use of colorschemes, and various biome-based coloring</p>
+</li>
+<li><p><strong>org.dynmap.hdmap.CaveHDShader</strong> - this shader supports the cave-based coloring scheme</p>
+</li>
+<li><p><strong>org.dynmap.hdmap.TexturePackHDShader</strong> - this shader allows the use of Minecraft Texture Packs, including the default texture pack for the Minecraft client</p>
+</li>
+<li><p><strong>org.dynmap.hdmap.TopoHDShader</strong> - this shader colors the map to present a topographical map view, based on altitude of the blocks rendered.</p>
+</li>
+</ul>
+<h2 id="defining-a-custom-defaulthdshader-shader">Defining a custom DefaultHDShader shader</h2>
+<p>The DefaultHDShader class supports the following configuration settings:</p>
+<pre><code>shaders:
+  - class: org.dynmap.hdmap.DefaultHDShader
+    name: myshadername
+    colorscheme: ovocean
+</code></pre><p>As with other definitions, the <em>name</em> attribute is required and must be unique.  If a custom shader definition provided in the <strong>custom-shaders.txt</strong> file has the same name as a standard shader, the standard shader will be replaced.</p>
+<p>The additional attributes are all optional, with corresponding default behaviors:</p>
+<ul>
+<li><p><em>colorscheme</em> : this defines which colorscheme is used for coloring data.  These correspond to the files found in the <strong>colorschemes/</strong> directory, and include <strong>default</strong>, <strong>ovocean</strong>, <strong>flames</strong>, and <strong>sk89q</strong>.  These files define coloring data for both normal block coloring, or the various biome-based coloring options.  The default value is <strong>default</strong>.</p>
+</li>
+<li><p><em>biomecolored</em> : this defines what biome-data based coloring is done, if any.  The defined values include <strong>none</strong> (the default, which results in blocks being colored based on their block type), <strong>biome</strong> (which colors the blocks based on their biome type), <strong>temperature</strong> (which colors the blocks based on the raw biome temperature data), or <strong>rainfall</strong> (which colors the blocks based on the raw biome rainfall/humidity data).</p>
+</li>
+<li><p><em>transparency</em> : this controls whether transparency information is used or ignored.  Defined values are <strong>true</strong> (the default, where transparency is processed normally) or <strong>false</strong> (where all blocks are treated as opaque).</p>
+</li>
+</ul>
+<h2 id="defining-a-custom-cavehdshader-shader">Defining a custom CaveHDShader shader</h2>
+<p>The CaveHDShader currently supports no options beyond the name of the shader, so defining a custom CaveHDShader currently serves no useful purpose.  Future Dynmap releases expect to add options for defining the colors used for cave shading.</p>
+<h2 id="defining-a-custom-texturepackhdshader-shader">Defining a custom TexturePackHDShader shader</h2>
+<p>The TexturePackHDShader class is the most likely shader to be customized, as this is required in order to make use of an add-on Minecraft Texture pack.  The TexturePackHDShader class supports the standard texture pack features, as well as many of the add-on features provided through the MCPatcher client patcher, including hi-resolution textures, custom water and lava, and custom biome shading for grass and leaves.</p>
+<p>An example of a typical texture pack shader configuration is shown below:</p>
+<pre><code>shaders:
+  - class: org.dynmap.hdmap.TexturePackHDShader
+    name: mytexturepackshader
+    texturepack: my-favorite-texturepack-v2.1.zip
+    biomeshaded: true
+    better-grass: false
+    grid-scale: 0
+</code></pre><p>The settings for the TexturePackHDShader include:</p>
+<ul>
+<li><p><em>name</em> : the unique name of the shader</p>
+</li>
+<li><p><em>texturepack</em> : The name of the texture pack file (if it is a ZIP file), or the directory containing the extracted texture pack (which must include the minimum texture pack files - <strong>terrain.png</strong>, <strong>misc/grasscolor.png</strong>, <strong>misc/foliagecolor.png</strong>, and <strong>misc/water.png</strong>).  Texture pack ZIP files or directories must be in the <strong>texturepacks</strong> directory under <strong>plugins/dynmap</strong>.</p>
+</li>
+<li><p><em>biomeshaded</em> : This setting controls whether grass and leaves are colored based on raw biome data (temperature and rainfall).  If set to <strong>true</strong> (the default), biome-shading is enabled.  If set to <strong>false</strong>, all grass and leaves are shaded consistently, based on the averaged colors from the <strong>misc/grasscolor.png</strong> and <strong>misc/foliagecolor.png#</strong>files, respectively.</p>
+</li>
+<li><p><em>better-grass</em> : This setting controls the option to render the sides of grass and snow blocks as done by the BetterGrass client mod.  If not defined, the value for <em>better-grass</em> set in <strong>configuration.txt</strong> applies (which defaults to false).</p>
+</li>
+<li><p><em>grid-scale</em> : This setting, if defined and greater that zero, will result in a grid being drawn on the map tiles, with a white row and column of blocks every N tiles (so <em>grid-scale: 16</em> would result in a grid with whitened blocks on every chunk border).  Since the block color is changed, the grid will conform to the contour of the map.</p>
+</li>
+</ul>
+<p>An example of a typical topological shader configuration is shown below:</p>
+<pre><code>shaders:
+  - class: org.dynmap.hdmap.TopoHDShader
+    name: topo
+    color127: &quot;#FFFFFF&quot;
+    color111: &quot;#8B4513&quot;
+    color95: &quot;#D2B48C&quot;
+    color79: &quot;#FFFF00&quot;
+    color63: &quot;#008000&quot;
+    color47: &quot;#228B22&quot;
+    color31: &quot;#104010&quot;
+    color15: &quot;#6B8E23&quot;
+    color0: &quot;#696969&quot;
+    linecolor: &quot;#000000&quot;
+    watercolor: &quot;#0000FF&quot;
+    hiddenids: [ 0 ]
+</code></pre><p>The settings for the TopoHDShader include:</p>
+<ul>
+<li><p><em>name</em> : the unique name of the shader</p>
+</li>
+<li><p><em>linecolor</em> : The #RRGGBB color of the line used to draw the border of areas with common altitides (Y coordinate).  If not defined, no border outline is drawn.</p>
+</li>
+<li><p><em>watercolor</em> : The #RRGGBB color to be used for any water blocks.  If defined, this color overrides the color that would otherwise be shown for blocks at the altitude (Y coordinate).  If not defined, water is rendered in the same way as any other block.</p>
+</li>
+<li><p><em>colorN</em> : For N is from 0 to 255, and corresponds to the Y coordinate.  Each value provided is an #RRGGBB color to be used for blocks with an altitude of N (Y=N).  By default, <em>color0</em> is #000000 and <em>color255</em> is #FFFFFF.  Any values not provided will be interpolated based on the two nearest values that are defined.</p>
+</li>
+<li><p><em>hiddenids</em> : Optional parameter, providing a list of block IDs to be hidden during generation of the topological map.  Default value is just air - [ 0 ].  Value should be list of comma separated numbers, enclosed with square brackets (e.g. &quot;[ 6, 17, 18, 31, 32, 37, 38, 39, 40, 50, 55, 78, 81, 83, 86, 99, 100, 103, 104, 105, 111, 115 ]&quot;).</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Defining-custom-perspectives.html" class="navigation navigation-prev " aria-label="Previous page: 自定义预设">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Defining-custom-lightings.html" class="navigation navigation-next " aria-label="Next page: 自定义光照">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"自定义着色器","level":"1.6.4.3","depth":3,"next":{"title":"自定义光照","level":"1.6.4.4","depth":3,"path":"Defining-custom-lightings.md","ref":"Defining-custom-lightings.md","articles":[]},"previous":{"title":"自定义预设","level":"1.6.4.2","depth":3,"path":"Defining-custom-perspectives.md","ref":"Defining-custom-perspectives.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Defining-custom-shaders.md","mtime":"2017-08-12T04:39:31.055Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-17T07:33:14.102Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
