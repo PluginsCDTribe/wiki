@@ -993,30 +993,30 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>The StairBlockRender class defines a renderer for rendering standard stair blocks.  When used, it should be set to handle all metadata values for the given stair blocks.  The renderer handles all stair connection behaviors for corners, and all orientations (inverted and otherwise).</p>
-<p>The render can select the textures to use for each surface of the stairs in one of two ways:</p>
+                                <p>StairBlockRender &#x7C7B;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x6807;&#x51C6;&#x53F0;&#x9636;&#x65B9;&#x5757;&#x7684;&#x6E32;&#x67D3;&#x5668;&#x3002;&#x5F53;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x4ED6;&#x5E94;&#x8BE5;&#x5904;&#x7406;&#x53F0;&#x9636;&#x65B9;&#x5757;&#x7684;&#x6240;&#x6709;&#x5143;&#x6570;&#x636E;&#x3002;&#x6E32;&#x67D3;&#x5668;&#x5904;&#x7406;&#x6240;&#x6709;&#x7684;&#x53F0;&#x9636;&#x8FDE;&#x63A5;&#x3001;&#x8F6C;&#x89D2;&#x548C;&#x65B9;&#x4F4D;&#xFF08;&#x5012;&#x7F6E;&#x6216;&#x5176;&#x4ED6;&#xFF09;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x6E32;&#x67D3;&#x5668;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x53F0;&#x9636;&#x6BCF;&#x4E2A;&#x8868;&#x9762;&#x4F7F;&#x7528;&#x7684;&#x6750;&#x8D28;&#xFF0C;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#xFF1A;</p>
 <ul>
-<li>For normal (non-TileEntity blocks), by the patch textures provided by the (one for the sides, on for the top, and one for the bottom faces)</li>
-<li>For TileEntity based blocks, by reading a specified field in the TileEntity and doing a map lookup to see which of the provided patch textures to use for all faces of the given block.</li>
+<li>&#x666E;&#x901A;&#x60C5;&#x51B5;&#xFF08;&#x975E; TileEntity &#x65B9;&#x5757;&#xFF09;&#xFF0C;&#x901A;&#x8FC7;&#x6253;&#x5305;&#x63D0;&#x4F9B;&#x7684;&#x6750;&#x8D28;&#xFF08;&#x4E00;&#x4E2A;&#x4FA7;&#x9762;&#xFF0C;&#x4E00;&#x4E2A;&#x9876;&#x90E8;&#xFF0C;&#x4E00;&#x4E2A;&#x5E95;&#x90E8;&#xFF09;&#x3002;</li>
+<li>&#x5BF9;&#x57FA;&#x4E8E; TileEntity &#x7684;&#x65B9;&#x5757;&#xFF0C;&#x901A;&#x8FC7;&#x8BFB;&#x53D6; TileEntity &#x7684;&#x7279;&#x6B8A;&#x5B57;&#x6BB5;&#xFF0C;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x6620;&#x5C04;&#x5BFB;&#x627E;&#x6765;&#x67E5;&#x770B;&#x6BCF;&#x4E2A;&#x8868;&#x9762;&#x4F7F;&#x7528;&#x4EC0;&#x4E48;&#x6750;&#x8D28;&#x3002;</li>
 </ul>
-<h3 id="attributes">Attributes</h3>
+<h3 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h3>
 <ul>
-<li><em>textureindex</em> - This optional parameter is used to specify the name of a TileEntity attribute defined for the block that contains a value (number or string) that can be used to select which patch textures to use for rendering the block.</li>
-<li><em>texturecnt</em> - This optional parameter is only relevant in conjunction with the <em>textureindex</em> parameter.  It specifies the number of mapped patch textures that are defined for the <em>textureindex</em>:  values will be defined for &apos;textmap0&apos; through &apos;textmap<em>(texturecnt-1)</em>&apos;.</li>
-<li><em>textmap\<n\></n\></em> - Each of these values, from N=0 to N=(<em>texturecnt</em>-1), contains the value for the TileEntity field identified by <em>textureindex</em> that indicates that the stairs should be textured by the texures for &apos;patch\<n\>&apos;.</n\></li>
+<li><em>textureindex</em> - &#x6B64;&#x53EF;&#x9009;&#x7684;&#x53C2;&#x6570;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x6216;&#x5B57;&#x7B26;&#x4E32;&#x7684; TileEntity &#x5C5E;&#x6027;&#x80FD;&#x7528;&#x4E8E;&#x9009;&#x62E9;&#x6E32;&#x67D3;&#x65B9;&#x5757;&#x4F7F;&#x7528;&#x7684;&#x6750;&#x8D28;&#x3002;</li>
+<li><em>texturecnt</em> - &#x6B64;&#x53EF;&#x9009;&#x7684;&#x53C2;&#x6570;&#x4EC5;&#x4E0E; <em>textureindex</em> &#x53C2;&#x6570;&#x76F8;&#x5173;&#xFF0C;&#x6B64;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x4E86;&#x6620;&#x5C04;&#x7684;&#x6750;&#x8D28;&#x7684;&#x6570;&#x91CF;&#x7528;&#x4E8E;&#x786E;&#x5B9A; <em>textureindex</em>&#xFF1A;&#x901A;&#x8FC7; &apos;textmap<em>(texturecnt-1)</em>&apos; &#x786E;&#x5B9A; &apos;textmap0&apos;&#x3002;</li>
+<li><em>textmap&lt;N&gt;</em> - &#x6BCF;&#x4E2A;&#x4ECE; N=0 &#x5230; N=(<em>texturecnt</em>-1)&#xFF0C;&#x5305;&#x542B;&#x4E86; TileEntity &#x5B57;&#x6BB5;&#x901A;&#x8FC7; <em>textureindex</em> &#x6807;&#x8BB0;&#x7684;&#x5E94;&#x8BE5;&#x4F7F;&#x7528; &apos;patch&lt;N&gt;&apos; &#x7684;&#x53F0;&#x9636;&#x6750;&#x8D28;&#x3002;</li>
 </ul>
-<h3 id="patches-requiring-textures">Patches Requiring Textures</h3>
-<p>If <em>textureindex</em> is not defined:</p>
+<h3 id="&#x6750;&#x8D28;&#x8865;&#x4E01;">&#x6750;&#x8D28;&#x8865;&#x4E01;</h3>
+<p>&#x5982;&#x679C; <em>textureindex</em> &#x6CA1;&#x6709;&#x88AB;&#x8BBE;&#x7F6E;&#xFF1A;</p>
 <ul>
-<li><em>patch0</em> - the texture to be used for any of the sides (vertical faces) of the block</li>
-<li><em>patch1</em> - the texture to be used for the tops of the block</li>
-<li><em>patch2</em> - the texture to be used for the bottom of the block</li>
+<li><em>patch0</em> - &#x4F7F;&#x7528;&#x4E8E;&#x4FA7;&#x9762;&#x7684;&#xFF08;&#x5782;&#x76F4;&#x9762;&#xFF09;&#x65B9;&#x5757;&#x7684;&#x6750;&#x8D28;</li>
+<li><em>patch1</em> - &#x4F7F;&#x7528;&#x4E8E;&#x9876;&#x90E8;&#x7684;&#x65B9;&#x5757;&#x7684;&#x6750;&#x8D28;</li>
+<li><em>patch2</em> - &#x4F7F;&#x7528;&#x4E8E;&#x5E95;&#x90E8;&#x7684;&#x65B9;&#x5757;&#x7684;&#x6750;&#x8D28;</li>
 </ul>
-<p>If <em>textureindex</em> is defined:</p>
+<p>&#x5982;&#x679C; <em>textureindex</em> &#x88AB;&#x8BBE;&#x7F6E;&#xFF1A;</p>
 <ul>
-<li><em>patch0</em> - the texture to be used for all sides when the <em>textureindex</em> field in the TileEntity for the block is equal to the value of the <em>textmap0</em> attribute.  This is also used if the <em>textureindex</em> TileEntity field matches none of the <em>textmap\<n\></n\></em> attributes.</li>
-<li><em>patch1</em> - the texture to be used for all sides when the <em>textureindex</em> attribute in the TileEntity for the block is equal to the value of the <em>textmap1</em> attribute.</li>
-<li><em>patch\<n\></n\></em> - the texture to be used for all sides when the <em>textureindex</em> attribute in the TileEntity for the block is equal to the value of the <em>textmap\<n\></n\></em> attribute.</li>
+<li><em>patch0</em> - &#x5F53;&#x65B9;&#x5757;&#x7684; TileEntity &#x7684; <em>textureindex</em> &#x5B57;&#x6BB5;&#x4E0E; <em>textmap0</em> &#x5C5E;&#x6027;&#x76F8;&#x540C;&#x65F6;&#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x4FA7;&#x9762;&#x7684;&#x6750;&#x8D28;&#x3002;&#x6B64;&#x9009;&#x9879;&#x4E5F;&#x7528;&#x4E8E;&#x5982;&#x679C; <em>textureindex</em> TileEntity &#x5B57;&#x6BB5;&#x6CA1;&#x6709;&#x5339;&#x914D;&#x4EFB;&#x4F55; <em>textmap&lt;N&gt;</em> &#x5C5E;&#x6027;&#x7684;&#x60C5;&#x51B5;&#x3002;</li>
+<li><em>patch1</em> - &#x5F53;&#x65B9;&#x5757;&#x7684; TileEntity &#x7684; <em>textureindex</em> &#x5B57;&#x6BB5;&#x4E0E; <em>textmap1</em> &#x5C5E;&#x6027;&#x76F8;&#x540C;&#x65F6;&#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x4FA7;&#x9762;&#x7684;&#x6750;&#x8D28;&#x3002;</li>
+<li><em>patch&lt;N&gt;</em> - &#x5F53;&#x65B9;&#x5757;&#x7684; TileEntity &#x7684; <em>textureindex</em> &#x5B57;&#x6BB5;&#x4E0E; <em>textmap&lt;N&gt;</em> &#x5C5E;&#x6027;&#x76F8;&#x540C;&#x65F6;&#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x4FA7;&#x9762;&#x7684;&#x6750;&#x8D28;&#x3002;</li>
 </ul>
 
                                 
@@ -1061,7 +1061,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"StairBlockRenderer类","level":"1.11.3.2.6","depth":4,"next":{"title":"定义立体模型","level":"1.11.3.3","depth":3,"path":"Defining-volumetric-models.md","ref":"Defining-volumetric-models.md","articles":[]},"previous":{"title":"SkullRenderer类","level":"1.11.3.2.5","depth":4,"path":"Class-org.dynmap.hdmap.renderer.SkullRenderer.md","ref":"Class-org.dynmap.hdmap.renderer.SkullRenderer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","mtime":"2017-08-12T04:39:31.048Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-19T03:19:42.000Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"StairBlockRenderer类","level":"1.11.3.2.6","depth":4,"next":{"title":"定义立体模型","level":"1.11.3.3","depth":3,"path":"Defining-volumetric-models.md","ref":"Defining-volumetric-models.md","articles":[]},"previous":{"title":"SkullRenderer类","level":"1.11.3.2.5","depth":4,"path":"Class-org.dynmap.hdmap.renderer.SkullRenderer.md","ref":"Class-org.dynmap.hdmap.renderer.SkullRenderer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","mtime":"2017-08-20T01:54:41.143Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T08:39:43.036Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

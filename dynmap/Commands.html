@@ -993,67 +993,67 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="commands">Commands</h1>
-<h2 id="hiding-and-showing-players">Hiding and showing players</h2>
+                                <h1 id="&#x547D;&#x4EE4;">&#x547D;&#x4EE4;</h1>
+<h2 id="&#x9690;&#x85CF;&#x663E;&#x793A;&#x73A9;&#x5BB6;">&#x9690;&#x85CF;/&#x663E;&#x793A;&#x73A9;&#x5BB6;</h2>
 <ul>
-<li><code>/dynmap hide</code>: Hides the player from the map.</li>
-<li><code>/dynmap hide thedude</code>: Hides the player <em>thedude</em> from the map.</li>
-<li><code>/dynmap show</code>: Shows the player on the map again.</li>
-<li><code>/dynmap show thedude</code>: Shows the player <em>thedude</em> on the map again.</li>
+<li><code>/dynmap hide</code>: &#x5C06;&#x6B64;&#x73A9;&#x5BB6;&#x4ECE;&#x5730;&#x56FE;&#x9690;&#x85CF;&#x3002;</li>
+<li><code>/dynmap hide thedude</code>: &#x5C06;&#x73A9;&#x5BB6; <em>thedude</em> &#x4ECE;&#x5730;&#x56FE;&#x9690;&#x85CF;&#x3002;</li>
+<li><code>/dynmap show</code>: &#x5C06;&#x6B64;&#x73A9;&#x5BB6;&#x91CD;&#x65B0;&#x4ECE;&#x5730;&#x56FE;&#x663E;&#x793A;&#x3002;</li>
+<li><code>/dynmap show thedude</code>: &#x5C06;&#x73A9;&#x5BB6; <em>thedude</em> &#x91CD;&#x65B0;&#x4ECE;&#x5730;&#x56FE;&#x663E;&#x793A;&#x3002;</li>
 </ul>
-<h2 id="rendering">Rendering</h2>
+<h2 id="&#x6E32;&#x67D3;">&#x6E32;&#x67D3;</h2>
 <ul>
-<li><code>/dynmap render</code>: renders one tile of the map where you are standing.</li>
-<li><code>/dynmap fullrender</code>: Attempts to render all maps of the entire world from your location (or from the center of that world, if issued from the server console).</li>
-<li><code>/dynmap fullrender world</code>: Attempts to render all maps of the world named <code>world</code> from the center of that world.</li>
-<li><code>/dynmap fullrender world:surface</code>: Attempts to render the map named <code>surface</code> for the world named <code>world</code> from the center of that world.</li>
-<li><code>/dynmap radiusrender radius</code>: attempts to render at least a <code>radius</code> block area, centered on your current location.</li>
-<li><code>/dynmap radiusrender radius mapname</code>: attempts to render at least a <code>radius</code> block area, centered on your current location of map &apos;mapname&apos;</li>
-<li><code>/dynmap radiusrender world x z radius</code>: attempts to render at least a <code>radius</code> block area, centered on &apos;x,64,z&apos; on world &apos;world&apos;.</li>
-<li><code>/dynmap updaterender</code>: attempts to render tiles needing updating, starting at current location, for all maps.  Stops at edge of map and at tiles that don&apos;t need updating.</li>
-<li><code>/dynmap updaterender mapname</code>: attempts to render tiles needing updating, starting at current location, for given map.  Stops at edge of map and at tiles that don&apos;t need updating.</li>
-<li><code>/dynmap updaterender world x z</code>: attempts to render tiles needing updating, starting at given location <x,z> on given world, for all maps.  Stops at edge of map and at tiles that don&apos;t need updating.</x,z></li>
-<li><code>/dynmap updaterender world x z mapname</code>: attempts to render tiles needing updating, starting at given location <x,z> on given world, for given map.  Stops at edge of map and at tiles that don&apos;t need updating.</x,z></li>
-<li><code>/dynmap cancelrender world</code>: cancels any active fullrender or radiusrender on the given world.</li>
-<li><code>/dynmap purgequeue</code>: clears the tile update queue</li>
-<li><code>/dynmap purgeworld world</code>: purge all the map files for world &apos;world&apos;</li>
-<li><code>/dynmap purgemap world map</code>: purge all the map files for map &apos;map&apos; on world &apos;world&apos;</li>
-<li><code>/dynmap pause all</code>: pause all map rendering (updates and full/radius renders)</li>
-<li><code>/dynmap pause none</code>: resume all map rendering</li>
+<li><code>/dynmap render</code>: &#x6E32;&#x67D3;&#x4F60;&#x7684;&#x4F4D;&#x7F6E;&#x7684;&#x4E00;&#x4E2A;tile&#x3002;</li>
+<li><code>/dynmap fullrender</code>: &#x5C1D;&#x8BD5;&#x4ECE;&#x4F60;&#x7684;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x6E32;&#x67D3;&#x6574;&#x4E2A;&#x4E16;&#x754C;&#x7684;&#x5168;&#x90E8;&#x5730;&#x56FE;&#xFF08;&#x5982;&#x679C;&#x4ECE;&#x63A7;&#x5236;&#x53F0;&#x4F7F;&#x7528;&#x5219;&#x4ECE;&#x4E16;&#x754C;&#x4E2D;&#x5FC3;&#x5F00;&#x59CB;&#xFF09;&#x3002;</li>
+<li><code>/dynmap fullrender world</code>: &#x5C1D;&#x8BD5;&#x4ECE;&#x4F60;&#x7684;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x6E32;&#x67D3; <code>world</code> &#x4E16;&#x754C;&#x7684;&#x5168;&#x90E8;&#x5730;&#x56FE;&#xFF08;&#x5982;&#x679C;&#x4ECE;&#x63A7;&#x5236;&#x53F0;&#x4F7F;&#x7528;&#x5219;&#x4ECE;&#x4E16;&#x754C;&#x4E2D;&#x5FC3;&#x5F00;&#x59CB;&#xFF09;&#x3002;</li>
+<li><code>/dynmap fullrender world:surface</code>: &#x5C1D;&#x8BD5;&#x4ECE;&#x4F60;&#x7684;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x6E32;&#x67D3; <code>world</code> &#x4E16;&#x754C;&#x7684; <code>surface</code> &#x5730;&#x56FE;&#xFF08;&#x5982;&#x679C;&#x4ECE;&#x63A7;&#x5236;&#x53F0;&#x4F7F;&#x7528;&#x5219;&#x4ECE;&#x4E16;&#x754C;&#x4E2D;&#x5FC3;&#x5F00;&#x59CB;&#xFF09;&#x3002;</li>
+<li><code>/dynmap radiusrender radius</code>: &#x5C1D;&#x8BD5;&#x4ECE;&#x4F60;&#x7684;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x6E32;&#x67D3;&#x534A;&#x5F84;&#x4E3A; <code>radius</code> &#x7684;&#x6240;&#x6709;&#x65B9;&#x5757;&#x7684;&#x533A;&#x57DF;&#x3002;</li>
+<li><code>/dynmap radiusrender radius mapname</code>: &#x5C1D;&#x8BD5;&#x4ECE;&#x4F60;&#x7684;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x6E32;&#x67D3;&#x534A;&#x5F84;&#x4E3A; <code>radius</code> &#x7684;&#x6240;&#x6709;&#x65B9;&#x5757;&#x7684;&#x533A;&#x57DF;&#x7684; <code>mapname</code> &#x5730;&#x56FE;&#x3002;</li>
+<li><code>/dynmap radiusrender world x z radius</code>: &#x5C1D;&#x8BD5;&#x4ECE; (x,64,z) &#x5F00;&#x59CB;&#x6E32;&#x67D3; <code>world</code> &#x4E16;&#x754C;&#x534A;&#x5F84;&#x4E3A; <code>radius</code> &#x7684;&#x6240;&#x6709;&#x65B9;&#x5757;&#x7684;&#x533A;&#x57DF;&#x3002;</li>
+<li><code>/dynmap updaterender</code>: &#x5C1D;&#x8BD5;&#x4ECE;&#x4F60;&#x7684;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x6E32;&#x67D3; &#x6240;&#x6709;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;tiles&#xFF0C;&#x5230;&#x5730;&#x56FE;&#x7684;&#x8FB9;&#x7F18;&#x6216;&#x662F;&#x6CA1;&#x6709;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;tiles&#x505C;&#x6B62;&#x3002;</li>
+<li><code>/dynmap updaterender mapname</code>: &#x5C1D;&#x8BD5;&#x4ECE;&#x4F60;&#x7684;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x6E32;&#x67D3; <code>mapname</code> &#x5730;&#x56FE;&#x6240;&#x6709;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;tiles&#xFF0C;&#x5230;&#x5730;&#x56FE;&#x7684;&#x8FB9;&#x7F18;&#x6216;&#x662F;&#x6CA1;&#x6709;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;tiles&#x505C;&#x6B62;&#x3002;</li>
+<li><code>/dynmap updaterender world x z</code>: &#x5C1D;&#x8BD5;&#x4ECE; (x,64,z) &#x5F00;&#x59CB;&#x6E32;&#x67D3; <code>world</code> &#x4E16;&#x754C;&#x6240;&#x6709;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;tiles&#xFF0C;&#x5230;&#x5730;&#x56FE;&#x7684;&#x8FB9;&#x7F18;&#x6216;&#x662F;&#x6CA1;&#x6709;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;tiles&#x505C;&#x6B62;&#x3002;</li>
+<li><code>/dynmap updaterender world x z mapname</code>: &#x5C1D;&#x8BD5;&#x4ECE; (x,64,z) &#x5F00;&#x59CB;&#x6E32;&#x67D3; <code>world</code> &#x4E16;&#x754C; <code>mapname</code> &#x5730;&#x56FE;&#x6240;&#x6709;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;tiles&#xFF0C;&#x5230;&#x5730;&#x56FE;&#x7684;&#x8FB9;&#x7F18;&#x6216;&#x662F;&#x6CA1;&#x6709;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x7684;tiles&#x505C;&#x6B62;&#x3002;</li>
+<li><code>/dynmap cancelrender world</code>: &#x53D6;&#x6D88;&#x6307;&#x5B9A;&#x4E16;&#x754C;&#x6240;&#x6709;&#x6FC0;&#x6D3B;&#x7684;&#x6E32;&#x67D3;&#x4EFB;&#x52A1;&#x3002;</li>
+<li><code>/dynmap purgequeue</code>: &#x6E05;&#x9664;tile&#x66F4;&#x65B0;&#x961F;&#x5217;</li>
+<li><code>/dynmap purgeworld world</code>: &#x6E05;&#x9664; &apos;world&apos; &#x4E16;&#x754C;&#x7684;&#x6240;&#x6709;&#x5730;&#x56FE;&#x6587;&#x4EF6;</li>
+<li><code>/dynmap purgemap world map</code>: &#x6E05;&#x9664; &apos;world&apos; &#x4E16;&#x754C;&#x7684; &apos;map&apos; &#x5730;&#x56FE;&#x6587;&#x4EF6;</li>
+<li><code>/dynmap pause all</code>: &#x6682;&#x505C;&#x6240;&#x6709;&#x7684;&#x6E32;&#x67D3;&#xFF08;&#x66F4;&#x65B0;&#x548C;&#x5168;&#x90E8;/&#x8303;&#x56F4;&#x6E32;&#x67D3;&#xFF09;</li>
+<li><code>/dynmap pause none</code>: &#x6062;&#x590D;&#x6240;&#x6709;&#x6E32;&#x67D3;</li>
 </ul>
-<h2 id="statistics">Statistics</h2>
+<h2 id="&#x7EDF;&#x8BA1;">&#x7EDF;&#x8BA1;</h2>
 <ul>
-<li><code>/dynmap stats</code>: shows rendering statistics for all maps on all worlds.</li>
-<li><code>/dynmap stats world</code> : shows rendering statistics for maps on world <em>world</em>.</li>
-<li><code>/dynmap triggerstats</code> : shows triggered render statistics for all worlds.</li>
-<li><code>/dynmap resetstats</code> : resets rendering statistics for all maps on all worlds.</li>
-<li><code>/dynmap resetstats world</code> : resets rendering statistics for maps on world <em>world</em>.</li>
+<li><code>/dynmap stats</code>: &#x663E;&#x793A;&#x6240;&#x6709;&#x4E16;&#x754C;&#x7684;&#x6240;&#x6709;&#x5730;&#x56FE;&#x7684;&#x6E32;&#x67D3;&#x7EDF;&#x8BA1;</li>
+<li><code>/dynmap stats world</code> : &#x663E;&#x793A; <em>world</em> &#x4E16;&#x754C;&#x7684;&#x6240;&#x6709;&#x5730;&#x56FE;&#x7684;&#x6E32;&#x67D3;&#x7EDF;&#x8BA1;</li>
+<li><code>/dynmap triggerstats</code> : &#x663E;&#x793A;&#x6240;&#x6709;&#x4E16;&#x754C;&#x7684;&#x89E6;&#x53D1;&#x5668;&#x7684;&#x6E32;&#x67D3;&#x7EDF;&#x8BA1;</li>
+<li><code>/dynmap resetstats</code> : &#x91CD;&#x7F6E;&#x6240;&#x6709;&#x4E16;&#x754C;&#x7684;&#x6240;&#x6709;&#x5730;&#x56FE;&#x7684;&#x6E32;&#x67D3;&#x7EDF;&#x8BA1;</li>
+<li><code>/dynmap resetstats world</code> : &#x91CD;&#x7F6E; <em>world</em> &#x4E16;&#x754C;&#x7684;&#x6240;&#x6709;&#x5730;&#x56FE;&#x7684;&#x6E32;&#x67D3;&#x7EDF;&#x8BA1;</li>
 </ul>
-<h2 id="markers">Markers</h2>
-<p>These commands are only available if the Markers Component has been enabled (v0.22 or later required).</p>
+<h2 id="&#x8BB0;&#x53F7;">&#x8BB0;&#x53F7;</h2>
+<p>&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x53EA;&#x80FD;&#x5728;&#x6807;&#x8BB0;&#x90E8;&#x4EF6;&#x542F;&#x7528;&#x540E;&#x4F7F;&#x7528;&#xFF08;v0.22&#x6216;&#x4E4B;&#x540E;&#x7684;&#x7248;&#x672C;&#xFF09;&#x3002;</p>
 <ul>
-<li><code>/dmarker add &lt;label&gt; icon:&lt;icon&gt; set:&lt;set-id&gt;</code> : adds a new marker at the player&apos;s current location, with a given label and optional icon and optional marker set</li>
-<li><code>/dmarker add id:&lt;id&gt; &lt;label&gt; icon:&lt;icon&gt; set:&lt;set-id&gt;</code> : adds a new marker at the player&apos;s current location, with the given ID, the given label and optional icon and optional marker set</li>
-<li><code>/dmarker add id:&lt;id&gt; &lt;label&gt; icon:&lt;icon&gt; set:&lt;set-id&gt; x:&lt;x-coord&gt; y:&lt;y-coord&gt; z:&lt;z-coord&gt; world:&lt;Worldname&gt;</code> : adds a new marker at the given location, with the given ID, the given label and optional icon and optional marker set</li>
-<li><code>/dmarker movehere &lt;label&gt;</code> : updates the location of the first marker matching the given label to match the current player&apos;s position</li>
-<li><code>/dmarker movehere id:&lt;id&gt;</code> : updates the location of the marker with the given ID to match the current player&apos;s position</li>
-<li><code>/dmarker update &lt;label&gt; icon:&lt;newicon&gt; newlabel:&lt;newlabel&gt;</code> : updates the icon and/or label of the first marker matching the given label</li>
-<li><code>/dmarker update id:&lt;id&gt; icon:&lt;newicon&gt; newlabel:&lt;newlabel&gt;</code> : updates the icon and/or label of the marker with the given ID</li>
-<li><code>/dmarker delete &lt;label&gt;</code> : deletes the first marker matching the given label</li>
-<li><code>/dmarker delete id:&lt;id&gt;</code> : deletes the marker with the given ID</li>
-<li><code>/dmarker list</code> : lists the attributes of all the defined markers in the default marker set</li>
-<li><code>/dmarker list set:&lt;set-id&gt;</code> : lists the attributes of all the defined markers in the given marker set</li>
+<li><code>/dmarker add &lt;label&gt; icon:&lt;icon&gt; set:&lt;set-id&gt;</code> : &#x5728;&#x73A9;&#x5BB6;&#x7684;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#xFF0C;&#x53EF;&#x9009;&#x7684;&#x56FE;&#x6807;&#x548C;&#x53EF;&#x9009;&#x7684;&#x8BB0;&#x53F7;&#x96C6;&#x7684;&#x8BB0;&#x53F7;</li>
+<li><code>/dmarker add id:&lt;id&gt; &lt;label&gt; icon:&lt;icon&gt; set:&lt;set-id&gt;</code> : &#x5728;&#x73A9;&#x5BB6;&#x7684;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x548C; ID&#xFF0C;&#x53EF;&#x9009;&#x7684;&#x56FE;&#x6807;&#x548C;&#x53EF;&#x9009;&#x7684;&#x8BB0;&#x53F7;&#x96C6;&#x7684;&#x8BB0;&#x53F7;</li>
+<li><code>/dmarker add id:&lt;id&gt; &lt;label&gt; icon:&lt;icon&gt; set:&lt;set-id&gt; x:&lt;x-coord&gt; y:&lt;y-coord&gt; z:&lt;z-coord&gt; world:&lt;Worldname&gt;</code> : &#x5728;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x548C; ID&#xFF0C;&#x53EF;&#x9009;&#x7684;&#x56FE;&#x6807;&#x548C;&#x53EF;&#x9009;&#x7684;&#x8BB0;&#x53F7;&#x96C6;&#x7684;&#x8BB0;&#x53F7;</li>
+<li><code>/dmarker movehere &lt;label&gt;</code> : &#x5C06;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x7684;&#x8BB0;&#x53F7;&#x79FB;&#x52A8;&#x81F3;&#x73A9;&#x5BB6;&#x7684;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;</li>
+<li><code>/dmarker movehere id:&lt;id&gt;</code> : &#x5C06;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x6307;&#x5B9A; ID &#x7684;&#x8BB0;&#x53F7;&#x79FB;&#x52A8;&#x81F3;&#x73A9;&#x5BB6;&#x7684;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;</li>
+<li><code>/dmarker update &lt;label&gt; icon:&lt;newicon&gt; newlabel:&lt;newlabel&gt;</code> : &#x66F4;&#x65B0;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x7684;&#x8BB0;&#x53F7;&#x7684;&#x56FE;&#x6807;&#x548C;/&#x6216;&#x6807;&#x7B7E;</li>
+<li><code>/dmarker update id:&lt;id&gt; icon:&lt;newicon&gt; newlabel:&lt;newlabel&gt;</code> : &#x66F4;&#x65B0;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x6307;&#x5B9A; ID &#x7684;&#x8BB0;&#x53F7;&#x7684;&#x56FE;&#x6807;&#x548C;/&#x6216;&#x6807;&#x7B7E;</li>
+<li><code>/dmarker delete &lt;label&gt;</code> : &#x5220;&#x9664;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x7684;&#x8BB0;&#x53F7;</li>
+<li><code>/dmarker delete id:&lt;id&gt;</code> : &#x5220;&#x9664;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x6307;&#x5B9A; ID &#x7684;&#x8BB0;&#x53F7;</li>
+<li><code>/dmarker list</code> : &#x5217;&#x51FA;&#x9ED8;&#x8BA4;&#x8BB0;&#x53F7;&#x96C6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x6240;&#x6709;&#x8BB0;&#x53F7;&#x7684;&#x5C5E;&#x6027;</li>
+<li><code>/dmarker list set:&lt;set-id&gt;</code> : &#x5217;&#x51FA;&#x6307;&#x5B9A;&#x8BB0;&#x53F7;&#x96C6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x6240;&#x6709;&#x8BB0;&#x53F7;&#x7684;&#x5C5E;&#x6027;</li>
 <li><code>/dmarker icons</code> : lists the attributes of all the icons defined for use by markers</li>
-<li><code>/dmarker addset &lt;label&gt; hide:&lt;hide-by-def&gt; prio:&lt;priority&gt; minzoom:&lt;minzoom&gt;</code> : add new marker set with given label (ID = label)</li>
-<li><code>/dmarker addset id:&lt;id&gt; &lt;label&gt; hide:&lt;hide-by-def&gt; prio:&lt;priority&gt; minzoom:&lt;minzoom&gt;</code> : add new marker set with given ID and label</li>
-<li><code>/dmarker updateset &lt;label&gt; newlabel:&lt;new-label&gt; hide:&lt;hide-by-def&gt; prio:&lt;priority&gt; minzoom:&lt;minzoom&gt;</code> : update marker set with given label (ID = label)</li>
-<li><code>/dmarker updateset id:&lt;id&gt; newlabel:&lt;new-label&gt; hide:&lt;hide-by-def&gt; prio:&lt;priority&gt; minzoom:&lt;minzoom&gt;</code> : update marker set with given ID</li>
-<li><code>/dmarker deleteset &lt;label&gt;</code> : delete marker set with given label</li>
-<li><code>/dmarker deleteset id:&lt;id&gt;</code> : delete marker set with given ID</li>
-<li><code>/dmarker listsets</code> : list all markers</li>
-<li><code>/dmarker addicon id:&lt;id&gt; &lt;label&gt; file:&quot;filename&quot;</code> : Install new icon, with given ID and label, and using given file (path is handled relative to MC server directory, and file contents are copied).</li>
-<li><code>/dmarker updateicon id:&lt;id&gt; newlabel:&lt;label&gt; file:&quot;filename&quot;</code> : Update icon, replacing existing settings with provided new values.</li>
-<li><code>/dmarker deleteicon id:&lt;id&gt;</code> : delete icon with given ID</li>
+<li><code>/dmarker addset &lt;label&gt; hide:&lt;hide-by-def&gt; prio:&lt;priority&gt; minzoom:&lt;minzoom&gt;</code> : &#x6DFB;&#x52A0;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x7684;&#x65B0;&#x8BB0;&#x53F7;&#x96C6; (ID = &#x6807;&#x7B7E;)</li>
+<li><code>/dmarker addset id:&lt;id&gt; &lt;label&gt; hide:&lt;hide-by-def&gt; prio:&lt;priority&gt; minzoom:&lt;minzoom&gt;</code> : &#x6DFB;&#x52A0;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x548C; ID &#x7684;&#x65B0;&#x8BB0;&#x53F7;&#x96C6;</li>
+<li><code>/dmarker updateset &lt;label&gt; newlabel:&lt;new-label&gt; hide:&lt;hide-by-def&gt; prio:&lt;priority&gt; minzoom:&lt;minzoom&gt;</code> : &#x66F4;&#x65B0;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x7684;&#x8BB0;&#x53F7;&#x96C6; (ID = &#x6807;&#x7B7E;)</li>
+<li><code>/dmarker updateset id:&lt;id&gt; newlabel:&lt;new-label&gt; hide:&lt;hide-by-def&gt; prio:&lt;priority&gt; minzoom:&lt;minzoom&gt;</code> : &#x66F4;&#x65B0;&#x6307;&#x5B9A; ID &#x7684;&#x8BB0;&#x53F7;&#x96C6;</li>
+<li><code>/dmarker deleteset &lt;label&gt;</code> : &#x5220;&#x9664;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#x7684;&#x8BB0;&#x53F7;&#x96C6;</li>
+<li><code>/dmarker deleteset id:&lt;id&gt;</code> : &#x5220;&#x9664;&#x6307;&#x5B9A; ID &#x7684;&#x8BB0;&#x53F7;&#x96C6;</li>
+<li><code>/dmarker listsets</code> : &#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x8BB0;&#x53F7;</li>
+<li><code>/dmarker addicon id:&lt;id&gt; &lt;label&gt; file:&quot;filename&quot;</code> : &#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x6DFB;&#x52A0;&#x6307;&#x5B9A; ID &#x548C;&#x6807;&#x7B7E;&#x7684;&#x65B0;&#x56FE;&#x6807;&#xFF08;&#x8DEF;&#x5F84;&#x76F8;&#x5BF9;&#x4E8E; MC &#x670D;&#x52A1;&#x5668;&#x6587;&#x4EF6;&#x5939;&#xFF09;&#x3002;</li>
+<li><code>/dmarker updateicon id:&lt;id&gt; newlabel:&lt;label&gt; file:&quot;filename&quot;</code> : &#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x66F4;&#x65B0;&#x6307;&#x5B9A; ID &#x548C;&#x6807;&#x7B7E;&#x7684;&#x56FE;&#x6807;&#xFF08;&#x8DEF;&#x5F84;&#x76F8;&#x5BF9;&#x4E8E; MC &#x670D;&#x52A1;&#x5668;&#x6587;&#x4EF6;&#x5939;&#xFF09;&#x3002;</li>
+<li><code>/dmarker deleteicon id:&lt;id&gt;</code> : &#x5220;&#x9664;&#x6307;&#x5B9A; ID &#x7684;&#x56FE;&#x6807;</li>
 <li><code>/dmarker addcorner</code> : add corner to corner list using current location</li>
 <li><code>/dmarker addcorner &lt;x&gt; &lt;z&gt; &lt;world&gt;</code> : add corner with given x and z coordinate on given world to corner list</li>
 <li><code>/dmarker clearcorners</code> : clear corner list</li>
@@ -1072,41 +1072,41 @@
 <li><code>/dmarker updateline &lt;label&gt; &lt;arg&gt;:&lt;value&gt; ...</code> : update attributes of line with given label</li>
 <li><code>/dmarker updateline id:&lt;id&gt; &lt;arg&gt;:&lt;value&gt; ...</code> : update attributes of line with given ID           </li>
 </ul>
-<h2 id="mapworld-configuration-commands">Map/World Configuration Commands</h2>
+<h2 id="&#x5730;&#x56FE;&#x4E16;&#x754C;&#x914D;&#x7F6E;&#x547D;&#x4EE4;">&#x5730;&#x56FE;/&#x4E16;&#x754C;&#x914D;&#x7F6E;&#x547D;&#x4EE4;</h2>
 <ul>
-<li><code>/dmap worldlist</code> : list all worlds configured (enabled or disabled)</li>
-<li><code>/dmap worldset worldname enabled:&lt;true|false&gt;</code> : Set world &apos;worldname&apos; enabled or disabled</li>
-<li><code>/dmap worldset worldname center:&lt;x/y/z|here|default&gt;</code> : Set map center position for world &apos;worldname&apos;</li>
-<li><code>/dmap worldset worldname extrazoomout:&lt;N&gt;</code> : set extra zoom out levels for world &apos;worldname&apos;</li>
-<li><code>/dmap worldset worldname title:&lt;label&gt;</code> : set title for  world &apos;worldname&apos;</li>
-<li><code>/dmap worldset worldname sendposition:&lt;true|false&gt; sendhealth:&lt;true|false&gt;</code> : set send-position and/or send-health flags for world &apos;worldname&apos;</li>
-<li><code>/dmap worldset worldname order:&lt;N&gt;</code> : set position of world &apos;worldname&apos; to Nth position in world list</li>
-<li><code>/dmap worldreset worldname</code> : Reset world &apos;worldname&apos; to its default template configuration</li>
-<li><code>/dmap worldreset worldname templatename</code> : Reset world &apos;worldname&apos; to template &apos;templatename&apos; configuration</li>
-<li><code>/dmap maplist worldname</code> : List details of all maps for world &apos;worldname&apos;</li>
-<li><code>/dmap mapdelete worldname:mapname</code> : Delete map &apos;mapname&apos; of world &apos;worldname&apos;</li>
-<li><code>/dmap mapadd worldname:mapname attrib:val attrib:val</code> : Create new map &apos;mapname&apos; on world &apos;worldname&apos;, with given attributes (all &apos;mapset&apos; parameters are usable)</li>
-<li><code>/dmap mapset worldname:mapname order:&lt;N&gt;</code> : Set position of map &apos;mapname&apos; to Nth in the list of maps for world &apos;worldname&apos;</li>
-<li><code>/dmap mapset worldname:mapname prefix:&lt;prefix&gt;</code> : Set filename prefix for map &apos;mapname&apos; of world &apos;worldname&apos;</li>
-<li><code>/dmap mapset worldname:mapname title:&lt;label&gt;</code> : Set title for map &apos;mapname&apos; of world &apos;worldname&apos;</li>
-<li><code>/dmap mapset worldname:mapname icon:&lt;icon-file&gt;</code> : Set icon filename for map &apos;mapname&apos; of world &apos;worldname&apos; (relative to &apos;webpath&apos; directory)</li>
-<li><code>/dmap mapset worldname:mapname mapzoomin:&lt;N&gt;</code> : Set the map zoom in level for map &apos;mapname&apos; of world &apos;worldname&apos;</li>
-<li><code>/dmap mapset worldname:mapname perspective:&lt;perspective&gt; shader:&lt;shader&gt; lighting:&lt;lighting&gt;</code> : Set perspective, shader and/or lighting for map &apos;mapname&apos; of world &apos;worldname&apos;</li>
-<li><code>/dmap mapset worldname:mapname img-format:&lt;format&gt;</code> : Set the image format for map &apos;mapname&apos; of world &apos;worldname&apos; (png, jpg, jpg-q90, jpq-q95, etc).</li>
-<li><code>/dmap perspectivelist</code> : List all defined perspectives</li>
-<li><code>/dmap shaderlist</code> : List all defined shaders</li>
-<li><code>/dmap lightinglist</code> : List all defined lightings</li>
+<li><code>/dmap worldlist</code> : &#x663E;&#x793A;&#x6240;&#x6709;&#x914D;&#x7F6E;&#x4E86;&#x7684;&#x4E16;&#x754C;&#xFF08;&#x542F;&#x7528;&#x6216;&#x7981;&#x7528;&#xFF09;</li>
+<li><code>/dmap worldset worldname enabled:&lt;true|false&gt;</code> : &#x8BBE;&#x7F6E; &apos;worldname&apos; &#x4E16;&#x754C;&#x542F;&#x7528;&#x6216;&#x7981;&#x7528;</li>
+<li><code>/dmap worldset worldname center:&lt;x/y/z|here|default&gt;</code> : &#x8BBE;&#x7F6E; &apos;worldname&apos; &#x4E16;&#x754C;&#x7684;&#x5730;&#x56FE;&#x4E2D;&#x5FC3;</li>
+<li><code>/dmap worldset worldname extrazoomout:&lt;N&gt;</code> : &#x8BBE;&#x7F6E; &apos;worldname&apos; &#x4E16;&#x754C;&#x7684;&#x989D;&#x5916;&#x7F29;&#x5C0F;&#x7B49;&#x7EA7;</li>
+<li><code>/dmap worldset worldname title:&lt;label&gt;</code> : &#x8BBE;&#x7F6E; &apos;worldname&apos; &#x4E16;&#x754C;&#x7684;&#x6807;&#x9898;&#x540D;&#x79F0;</li>
+<li><code>/dmap worldset worldname sendposition:&lt;true|false&gt; sendhealth:&lt;true|false&gt;</code> : &#x8BBE;&#x7F6E; &apos;world&apos; &#x4E16;&#x754C;&#x7684; sendposition &#x548C; sendhealth &#x6807;&#x7B7E;</li>
+<li><code>/dmap worldset worldname order:&lt;N&gt;</code> : &#x8BBE;&#x7F6E; &apos;worldname&apos; &#x4E16;&#x754C;&#x7684;&#x987A;&#x5E8F;</li>
+<li><code>/dmap worldreset worldname</code> : &#x91CD;&#x7F6E; &apos;worldname&apos; &#x4E16;&#x754C;&#x4E3A;&#x6A21;&#x677F;&#x8BBE;&#x5B9A;</li>
+<li><code>/dmap worldreset worldname templatename</code> : &#x8BBE;&#x7F6E; &apos;worldname&apos; &#x4E16;&#x754C;&#x4E3A; &apos;templatename&apos; &#x6A21;&#x677F;&#x8BBE;&#x5B9A;</li>
+<li><code>/dmap maplist worldname</code> : &#x5217;&#x51FA; &apos;worldname&apos; &#x4E16;&#x754C;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</li>
+<li><code>/dmap mapdelete worldname:mapname</code> : &#x5220;&#x9664; &apos;worldname&apos; &#x4E16;&#x754C;&#x7684; &apos;mapname&apos; &#x5730;&#x56FE;</li>
+<li><code>/dmap mapadd worldname:mapname attrib:val attrib:val</code> : &#x5728;&#x4E16;&#x754C; &apos;worldname&apos; &#x521B;&#x5EFA;&#x65B0;&#x7684;&#x5730;&#x56FE; &apos;mapname&apos;&#xFF0C;&#x4F7F;&#x7528;&#x6240;&#x6709;&#x7ED9;&#x51FA;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x6240;&#x6709;&#x7684; &apos;mapset&apos; &#x5C5E;&#x6027;&#x90FD;&#x53EF;&#x7528;&#xFF09;</li>
+<li><code>/dmap mapset worldname:mapname order:&lt;N&gt;</code> : &#x8BBE;&#x7F6E;&#x5730;&#x56FE; &apos;mapname&apos; &#x5728;&#x4E16;&#x754C; &apos;worldname&apos; &#x4E2D;&#x7684;&#x987A;&#x5E8F;</li>
+<li><code>/dmap mapset worldname:mapname prefix:&lt;prefix&gt;</code> : &#x8BBE;&#x7F6E;&#x4E16;&#x754C; &apos;worldname&apos; &#x7684;&#x5730;&#x56FE; &apos;mapname&apos; &#x7684;&#x6587;&#x4EF6;&#x524D;&#x7F00;</li>
+<li><code>/dmap mapset worldname:mapname title:&lt;label&gt;</code> : &#x8BBE;&#x7F6E;&#x4E16;&#x754C; &apos;worldname&apos; &#x7684;&#x5730;&#x56FE; &apos;mapname&apos; &#x7684;&#x6807;&#x9898;</li>
+<li><code>/dmap mapset worldname:mapname icon:&lt;icon-file&gt;</code> : &#x8BBE;&#x7F6E;&#x4E16;&#x754C; &apos;worldname&apos; &#x7684;&#x5730;&#x56FE; &apos;mapname&apos; &#x7684;&#x56FE;&#x6807;&#x6587;&#x4EF6;&#xFF08;&#x76F8;&#x5BF9;&#x4E8E; &apos;webpath&apos; &#x76EE;&#x5F55;&#xFF09;</li>
+<li><code>/dmap mapset worldname:mapname mapzoomin:&lt;N&gt;</code> : &#x8BBE;&#x7F6E;&#x4E16;&#x754C; &apos;worldname&apos; &#x7684;&#x5730;&#x56FE; &apos;mapname&apos; &#x7684;&#x7F29;&#x653E;&#x7B49;&#x7EA7;</li>
+<li><code>/dmap mapset worldname:mapname perspective:&lt;perspective&gt; shader:&lt;shader&gt; lighting:&lt;lighting&gt;</code> : &#x8BBE;&#x7F6E;&#x4E16;&#x754C; &apos;worldname&apos; &#x7684;&#x5730;&#x56FE; &apos;mapname&apos; &#x7684;&#x9884;&#x8BBE;&#x3001;&#x5149;&#x7167;&#x548C;&#x7740;&#x8272;</li>
+<li><code>/dmap mapset worldname:mapname img-format:&lt;format&gt;</code> : &#x8BBE;&#x7F6E;&#x4E16;&#x754C; &apos;worldname&apos; &#x7684;&#x5730;&#x56FE; &apos;mapname&apos; &#x7684;&#x56FE;&#x7247;&#x683C;&#x5F0F;</li>
+<li><code>/dmap perspectivelist</code> : &#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x9884;&#x8BBE;</li>
+<li><code>/dmap shaderlist</code> : &#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x7740;&#x8272;&#x5668;</li>
+<li><code>/dmap lightinglist</code> : &#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x5149;&#x7167;</li>
 </ul>
-<h2 id="miscellaneous">Miscellaneous</h2>
-<p>Various other commands.</p>
+<h2 id="&#x6742;&#x9879;">&#x6742;&#x9879;</h2>
+<p>&#x5176;&#x4ED6;&#x7684;&#x547D;&#x4EE4;&#x3002;</p>
 <ul>
-<li><code>/dynmap sendtoweb message ...</code> : Send a message to the web UIs only </li>
-<li><code>/dynmap ids-for-ip ip-address</code> : List player IDs that have logged in from given IP address (most recent to least)</li>
-<li><code>/dynmap ips-for-id player-id</code> : List IP addresses that have been used to connect to server by given player ID</li>
-<li><code>/dynmap add-id-for-ip player-id ip-address</code> : Add given player ID to front of list of known IDs for given IP address</li>
-<li><code>/dynmap del-id-for-ip player-id ip-address</code> : Remove given player ID from list of known IDs for given IP address.</li>
-<li><code>/dynmap webregister</code> : Start registration of own account for login on web interface</li>
-<li><code>/dynmap webregister player-id</code> : Start registration of another user&apos;s account for login on web interface</li>
+<li><code>/dynmap sendtoweb message ...</code> : &#x5411;&#x7F51;&#x9875;&#x53D1;&#x9001;&#x4E00;&#x6761;&#x6D88;&#x606F;</li>
+<li><code>/dynmap ids-for-ip ip-address</code> : &#x5217;&#x51FA;&#x6307;&#x5B9A; IP &#x6700;&#x8FD1;&#x767B;&#x5F55;&#x7684;&#x6240;&#x6709;&#x73A9;&#x5BB6;</li>
+<li><code>/dynmap ips-for-id player-id</code> : &#x5217;&#x51FA;&#x73A9;&#x5BB6;&#x7684;&#x6240;&#x6709;&#x8FDE;&#x63A5;&#x5230;&#x670D;&#x52A1;&#x5668;&#x8FC7;&#x7684; IP &#x5730;&#x5740;</li>
+<li><code>/dynmap add-id-for-ip player-id ip-address</code> : &#x5C06;&#x6307;&#x5B9A;&#x73A9;&#x5BB6;&#x6DFB;&#x52A0;&#x5230;&#x6307;&#x5B9A; IP &#x7684;&#x5DF2;&#x77E5;&#x73A9;&#x5BB6;&#x5217;&#x8868;&#x4E2D;</li>
+<li><code>/dynmap del-id-for-ip player-id ip-address</code> : &#x5C06;&#x6307;&#x5B9A;&#x73A9;&#x5BB6;&#x79FB;&#x9664;&#x4E8E;&#x6307;&#x5B9A; IP &#x7684;&#x5DF2;&#x77E5;&#x73A9;&#x5BB6;&#x5217;&#x8868;&#x4E2D;</li>
+<li><code>/dynmap webregister</code> : &#x5F00;&#x59CB;&#x6CE8;&#x518C;&#x81EA;&#x5DF1;&#x7684;&#x7F51;&#x9875;&#x767B;&#x5F55;&#x8D26;&#x6237;</li>
+<li><code>/dynmap webregister player-id</code> : &#x5F00;&#x59CB;&#x6CE8;&#x518C;&#x6307;&#x5B9A;&#x73A9;&#x5BB6;&#x7684;&#x7F51;&#x9875;&#x767B;&#x5F55;&#x8D26;&#x6237;</li>
 </ul>
 
                                 
@@ -1151,7 +1151,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"命令","level":"1.7","depth":1,"next":{"title":"使用dmap配置地图和世界","level":"1.7.1","depth":2,"path":"Configuring-Maps-and-Worlds-using-dmap.md","ref":"Configuring-Maps-and-Worlds-using-dmap.md","articles":[]},"previous":{"title":"Tekkit","level":"1.6.6.1","depth":3,"path":"Support-for-Tekkit.md","ref":"Support-for-Tekkit.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Commands.md","mtime":"2017-08-12T04:39:31.049Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-19T03:19:42.000Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"命令","level":"1.7","depth":1,"next":{"title":"使用dmap配置地图和世界","level":"1.7.1","depth":2,"path":"Configuring-Maps-and-Worlds-using-dmap.md","ref":"Configuring-Maps-and-Worlds-using-dmap.md","articles":[]},"previous":{"title":"Tekkit","level":"1.6.6.1","depth":3,"path":"Support-for-Tekkit.md","ref":"Support-for-Tekkit.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Commands.md","mtime":"2017-08-19T07:21:47.194Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T08:39:43.036Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

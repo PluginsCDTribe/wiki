@@ -993,20 +993,20 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>The SkullRenderer class is used to render heads/skulls.  The renderer specifically uses the TileEntity fields for the head orientation (&apos;Rot&apos;) and for selecting the type of skull to render (&apos;SkullType&apos;).  Each skull requires 6 textures - all derived from &apos;SKIN&apos; type texture files (texture files containing all the surfaces of a human shaped model).  To load these, the skin must be loaded using an appropriate &apos;texturefile:&apos; line in the Texture Definition file - for example, for the zombie head:</p>
+                                <p>SkullRenderer &#x7C7B;&#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x5934;&#x9885;&#x3002;&#x6E32;&#x67D3;&#x5668;&#x4F7F;&#x7528; TileEntity &#x5B57;&#x6BB5;&#x7528;&#x4E8E;&#x786E;&#x5B9A;&#x5934;&#x90E8;&#x65B9;&#x5411;&#xFF08;&quot;Rot&quot;&#xFF09;&#xFF0C;&#x5E76;&#x786E;&#x5B9A;&#x5934;&#x9885;&#x7C7B;&#x578B;&#xFF08;&quot;SkullType&quot;&#xFF09;&#x3002;&#x6BCF;&#x4E2A;&#x5934;&#x9885;&#x9700;&#x8981; 6 &#x4E2A;&#x6750;&#x8D28; -  &#x6765;&#x81EA; &apos;SKIN&apos; &#x79CD;&#x7C7B;&#x7684;&#x91C7;&#x6307;&#x7EB9;&#x952E;&#xFF08;&#x5305;&#x542B;&#x4EBA;&#x4F53;&#x6A21;&#x578B;&#x7684;&#x7EB9;&#x7406;&#x6587;&#x4EF6;&#xFF09;&#x3002;&#x4F60;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x6B63;&#x786E;&#x7684; &apos;texturefile:&apos; &#x6765;&#x52A0;&#x8F7D;&#x6B64;&#x6587;&#x4EF6; - &#x6BD4;&#x5982;&#x50F5;&#x5C38;&#x5934;&#x9885;&#x5C31;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
 <pre><code> texturefile:id=zombie,filename=mob/zombie.png,format=SKIN
-</code></pre><p>The &quot;block:&quot; record tied to the custom block using the SkullRenderer needs to supply 6 texture references for each value defined for &apos;SkullType&apos;: patch0 to patch5 for the first index (0), patch6 to patch11 for the second (1), etc.</p>
-<h3 id="attributes">Attributes</h3>
-<p>None</p>
-<h3 id="patches-requiring-textures">Patches Requiring Textures</h3>
-<p>For each value of &apos;SkullType&apos;, consecutively from N=0 to N=highest-value:</p>
+</code></pre><p>&#x4F7F;&#x7528; SkullRender &#x8FDE;&#x63A5;&#x5230; &quot;block:&quot; &#x9700;&#x8981;&#x63D0;&#x4F9B; 6 &#x4E2D;&#x6750;&#x8D28;&#x5F15;&#x7528;&#x7ED9; SkullType &#x7684;&#x6BCF;&#x4E2A;&#x5B9A;&#x4E49;&#x7684;&#x503C;&#xFF1A;patch0 &#x5230; patch5 &#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x7D22;&#x5F15; (0)&#xFF0C;patch6 &#x5230; patch11 &#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A; (1)&#xFF0C;&#x7B49;&#x7B49;&#x3002;</p>
+<h3 id="&#x5C5E;&#x6027;">&#x5C5E;&#x6027;</h3>
+<p>&#x65E0;</p>
+<h3 id="&#x6750;&#x8D28;&#x8865;&#x4E01;">&#x6750;&#x8D28;&#x8865;&#x4E01;</h3>
+<p>SkullType &#x7684;&#x6BCF;&#x4E2A;&#x503C;&#x5BF9;&#x5E94; N=0 &#x5230; N=&#x6700;&#x5927;&#x503C;&#xFF1A;</p>
 <ul>
-<li><em>patch\<6 x="" n\=""></6></em> - Bottom of head (texture index 5 in SKIN texture)</li>
-<li><em>patch\<6 x="" n="" +="" 1\=""></6></em> - Top of head (texture index 4 in SKIN texture)</li>
-<li><em>patch\<6 x="" n="" +="" 2\=""></6></em> - Back of head (texture index 1 in SKIN texture)</li>
-<li><em>patch\<6 x="" n="" +="" 3\=""></6></em> - Front of head (texture index 0 in SKIN texture)</li>
-<li><em>patch\<6 x="" n="" +="" 4\=""></6></em> - Side of head (texture index 2 in SKIN texture)</li>
-<li><em>patch\<6 x="" n="" +="" 5\=""></6></em> - Side of head (texture index 3 in SKIN texture)</li>
+<li><em>patch&lt;6 x N&gt;</em> - &#x5934;&#x9885;&#x5E95;&#x90E8; (SKIN &#x6750;&#x8D28;&#x7D22;&#x5F15; 5)</li>
+<li><em>patch&lt;6 x N + 1&gt;</em> - &#x5934;&#x9885;&#x9876;&#x90E8; (SKIN &#x6750;&#x8D28;&#x7D22;&#x5F15; 4)</li>
+<li><em>patch&lt;6 x N + 2&gt;</em> - &#x5934;&#x9885;&#x540E;&#x9762; (SKIN &#x6750;&#x8D28;&#x7D22;&#x5F15; 1)</li>
+<li><em>patch&lt;6 x N + 3&gt;</em> - &#x5934;&#x9885;&#x524D;&#x9762; (SKIN &#x6750;&#x8D28;&#x7D22;&#x5F15; 0)</li>
+<li><em>patch&lt;6 x N + 4&gt;</em> - &#x5934;&#x9885;&#x4FA7;&#x9762; (SKIN &#x6750;&#x8D28;&#x7D22;&#x5F15; 2)</li>
+<li><em>patch&lt;6 x N + 5&gt;</em> - &#x5934;&#x9885;&#x4FA7;&#x9762; (SKIN &#x6750;&#x8D28;&#x7D22;&#x5F15; 3)</li>
 </ul>
 
                                 
@@ -1051,7 +1051,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"SkullRenderer类","level":"1.11.3.2.5","depth":4,"next":{"title":"StairBlockRenderer类","level":"1.11.3.2.6","depth":4,"path":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","ref":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","articles":[]},"previous":{"title":"RedstoneWireRenderer类","level":"1.11.3.2.4","depth":4,"path":"Class-org.dynmap.hdmap.renderer.RedstoneWireRenderer.md","ref":"Class-org.dynmap.hdmap.renderer.RedstoneWireRenderer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Class-org.dynmap.hdmap.renderer.SkullRenderer.md","mtime":"2017-08-12T04:39:31.048Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-19T03:19:42.000Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SkullRenderer类","level":"1.11.3.2.5","depth":4,"next":{"title":"StairBlockRenderer类","level":"1.11.3.2.6","depth":4,"path":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","ref":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","articles":[]},"previous":{"title":"RedstoneWireRenderer类","level":"1.11.3.2.4","depth":4,"path":"Class-org.dynmap.hdmap.renderer.RedstoneWireRenderer.md","ref":"Class-org.dynmap.hdmap.renderer.RedstoneWireRenderer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Class-org.dynmap.hdmap.renderer.SkullRenderer.md","mtime":"2017-08-20T01:34:36.317Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T08:39:43.036Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
