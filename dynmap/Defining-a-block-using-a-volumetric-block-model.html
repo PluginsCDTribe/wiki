@@ -181,19 +181,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
-            
-                <a href="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
-            
-                    
-                    Nginx
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -993,79 +980,80 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>Blocks based on volumetric models can have relatively complex shapes, while still using the same texture definition scheme as used for <a href="Defining-a-Simple-Block">simple, solid blocks</a> or <a href="Defining-a-Cuboid-Block">cuboid blocks</a>.  The application of textures to the volumetric models follow the same pattern as is done for simple cubes and for cubiod models - the texture for each of the 6 faces is applied to the corresponding side of any of the subblocks within the model, with the texture scaled to the full size of the cube face. Consequently, the texture definitions in the Texture Definition Files are defined in the same way as for simple solid blocks and for cubiod models.</p>
-<p>A volumetric model is defined by first cutting the full cube into a number of subblocks, based on a provided <em>scale</em> attribute - resulting in the block being represented by <em>scale</em> x <em>scale</em> x <em>scale</em> subblocks.  Then, each of the subblocks that are occupied, or filled, by the shape of the model is marked, allowing any arrangement of the subblocks to be created.  For details, see [[Defining Volumetric Models]].  An example of a block representable by a volumetric model is the Hopper block;</p>
-<pre><code> block:id=154,data=*,scale=16
- layer:0,1,2,3
- ----------------
- ----------------
- ----------------
- ----------------
- ----------------
- ----------------
- ------****------
- ------****------
- ------****------
- ------****------
- ----------------
- ----------------
- ----------------
- ----------------
- ----------------
- ----------------
- layer:4,5,6,7,8,9
- ----------------
- ----------------
- ----------------
- ----------------
- ----********----
- ----********----
- ----********----
- ----********----
- ----********----
- ----********----
- ----********----
- ----********----
- ----------------
- ----------------
- ----------------
- ----------------
- layer:10
- ****************
- ****************
- ****************
- ****************
- ****************
- ****************
- ****************
- ****************
- ****************
- ****************
- ****************
- ****************
- ****************
- ****************
- ****************
- ****************
- layer:11,12,13,14,15
- ****************
- ****************
- **------------**
- **------------**
- **------------**
- **------------**
- **------------**
- **------------**
- **------------**
- **------------**
- **------------**
- **------------**
- **------------**
- **------------**
- ****************
- ****************
-</code></pre><p>One the model is defined, the texture references are supplied in the same way as a simple, solid block - see [[Defining a Simple Block]] for details.  For the Hopper block, the definition is:</p>
-<pre><code> block:id=154,data=*,allsides=0:hopper_outside,top=0:hopper_inside,bottom=0:hopper_outside,stdrot=true
+                                <p>&#x57FA;&#x4E8E;&#x539F;&#x7248;&#x6A21;&#x578B;&#x7684;&#x65B9;&#x5757;&#x53EF;&#x4EE5;&#x5177;&#x6709;&#x76F8;&#x5BF9;&#x590D;&#x6742;&#x7684;&#x5F62;&#x72B6;&#xFF0C; &#x540C;&#x65F6;&#x4E5F;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x7EB9;&#x7406;&#x5B9A;&#x4E49;&#x65B9;&#x6848;&#xFF0C;&#x7528;&#x4E8E;<a href="Defining-a-Simple-Block.html">&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5757;</a>&#x4EA6;&#x6216;&#x662F;<a href="Defining-a-Cuboid-Block.html">&#x957F;&#x65B9;&#x4F53;&#x65B9;&#x5757;</a>&#x3002;&#x6750;&#x8D28;&#x8D44;&#x6E90;&#x5728;&#x6A21;&#x578B;&#x4E2D;&#x7684;&#x5E94;&#x7528;&#x9075;&#x5FAA;&#x4E0E;&#x5E38;&#x89C1;&#x65B9;&#x5757;&#x6A21;&#x578B;&#x548C;&#x77E9;&#x5F62;&#x65B9;&#x5757;&#x6A21;&#x578B;&#x76F8;&#x540C;&#x7684;&#x6A21;&#x5F0F; - &#x5373;&#x6A21;&#x578B;&#x7684;&#x516D;&#x4E2A;&#x9762;&#x5206;&#x522B;&#x5BF9;&#x5E94;&#x4E8E;&#x6750;&#x8D28;, &#x6750;&#x8D28;&#x4E5F;&#x4F1A;&#x81EA;&#x52A8;&#x9002;&#x914D;&#x65B9;&#x5757;&#x6BCF;&#x4E2A;&#x9762;&#x7684;&#x5927;&#x5C0F;&#x3002; &#x56E0;&#x6B64;&#xFF0C;&#x6750;&#x8D28;&#x7684;&#x5B9A;&#x4E49;&#x4E0E;&#x5728; Texture Definition Files &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x5F0F;&#x90FD;&#x662F;&#x628A;&#x65B9;&#x5757;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x65B9;&#x5757;&#x548C;&#x77E9;&#x5F62;&#x65B9;&#x5757;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x5C06;&#x5B8C;&#x6574;&#x7684;&#x7ACB;&#x65B9;&#x4F53;&#x5207;&#x5272;&#x6210;&#x82E5;&#x5E72;&#x4E2A;&#x5B50;&#x5757;&#x6765;&#x5B9A;&#x4E49;&#x4F53;&#x79EF;&#x6A21;&#x578B;&#xFF0C;&#x5728; <em>scale</em> &#x7684;&#x6761;&#x4EF6;&#x4E0B;&#x5904;&#x7406; - &#x4F7F;&#x65B9;&#x5757;&#x88AB;&#x6E32;&#x67D3;&#x4E3A;&#x901A;&#x8FC7; <em>scale</em> &#xD7; <em>scale</em> &#xD7; <em>scale</em> &#x8BA1;&#x7B97;&#x5F97;&#x51FA;&#x7684;&#x5B50;&#x5757;&#x3002; &#x7136;&#x540E;&#xFF0C;&#x901A;&#x8FC7;&#x88AB;&#x5360;&#x7528;&#x6216;&#x586B;&#x5145;&#x7684;&#x6A21;&#x578B;&#x7684;&#x6BCF;&#x4E2A;&#x5B50;&#x5757;&#x90FD;&#x88AB;&#x6807;&#x8BB0;&#xFF0C;&#x5141;&#x8BB8;&#x521B;&#x5EFA;&#x5B50;&#x5757;&#x7684;&#x4EFB;&#x4F55;&#x5904;&#x7406;&#x3002;&#x8BE6;&#x60C5;&#x8BF7;&#x5728;<a href="Defining-volumetric-models.html">&#x5B9A;&#x4E49;&#x7ACB;&#x4F53;&#x6A21;&#x578B;</a>&#x4E2D;&#x67E5;&#x9605;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x5C55;&#x793A;&#x7684;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x662F;&#x7531;&#x4F53;&#x79EF;&#x6A21;&#x578B;&#x6E32;&#x67D3;&#x7684;&#x6F0F;&#x6597;&#xFF1A;</p>
+<pre><code>     block:id=154,data=*,scale=16
+     layer:0,1,2,3
+     ----------------
+     ----------------
+     ----------------
+     ----------------
+     ----------------
+     ----------------
+     ------****------
+     ------****------
+     ------****------
+     ------****------
+     ----------------
+     ----------------
+     ----------------
+     ----------------
+     ----------------
+     ----------------
+     layer:4,5,6,7,8,9
+     ----------------
+     ----------------
+     ----------------
+     ----------------
+     ----********----
+     ----********----
+     ----********----
+     ----********----
+     ----********----
+     ----********----
+     ----********----
+     ----********----
+     ----------------
+     ----------------
+     ----------------
+     ----------------
+     layer:10
+     ****************
+     ****************
+     ****************
+     ****************
+     ****************
+     ****************
+     ****************
+     ****************
+     ****************
+     ****************
+     ****************
+     ****************
+     ****************
+     ****************
+     ****************
+     ****************
+     layer:11,12,13,14,15
+     ****************
+     ****************
+     **------------**
+     **------------**
+     **------------**
+     **------------**
+     **------------**
+     **------------**
+     **------------**
+     **------------**
+     **------------**
+     **------------**
+     **------------**
+     **------------**
+     ****************
+     ****************
+</code></pre><p>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#xFF0C;&#x4EE5;&#x7B80;&#x5355;&#x65B9;&#x5757;&#x7684;&#x65B9;&#x6848;&#x63D0;&#x4F9B;&#x6750;&#x8D28;&#x5F15;&#x7528; - &#x8BE6;&#x60C5;&#x8BF7;&#x5728;<a href="Defining-a-Simple-Block.html">&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5757;</a>&#x4E2D;&#x67E5;&#x9605;&#x3002;&#x800C;&#x5BF9;&#x4E8E;&#x6F0F;&#x6597;&#x7684;&#x5B9A;&#x4E49;&#x5728;&#x4E0B;&#x65B9;&#x8D34;&#x51FA;&#xFF1A;</p>
+<pre><code>     block:id=154,data=*,allsides=0:hopper_outside,top=0:hopper_inside,bottom=0:hopper_outside,stdrot=true
 </code></pre>
                                 
                                 </section>
@@ -1109,7 +1097,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"使用立体方块模型","level":"1.11.7","depth":2,"next":{"title":"导出世界为WavefrontOBJ格式","level":"1.12","depth":1,"path":"Exporting-World-Data-in-Wavefront-OBJ-Format.md","ref":"Exporting-World-Data-in-Wavefront-OBJ-Format.md","articles":[]},"previous":{"title":"自定义方块着色器","level":"1.11.6","depth":2,"path":"Defining-a-Block-using-a-Custom-Block-Renderer.md","ref":"Defining-a-Block-using-a-Custom-Block-Renderer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Defining-a-block-using-a-volumetric-block-model.md","mtime":"2017-08-12T04:39:31.054Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T08:39:43.036Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"使用立体方块模型","level":"1.11.7","depth":2,"next":{"title":"导出世界为WavefrontOBJ格式","level":"1.12","depth":1,"path":"Exporting-World-Data-in-Wavefront-OBJ-Format.md","ref":"Exporting-World-Data-in-Wavefront-OBJ-Format.md","articles":[]},"previous":{"title":"自定义方块着色器","level":"1.11.6","depth":2,"path":"Defining-a-Block-using-a-Custom-Block-Renderer.md","ref":"Defining-a-Block-using-a-Custom-Block-Renderer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Defining-a-block-using-a-volumetric-block-model.md","mtime":"2017-09-04T05:10:06.540Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-04T05:10:56.684Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

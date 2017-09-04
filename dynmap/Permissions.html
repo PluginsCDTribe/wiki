@@ -181,19 +181,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
-            
-                <a href="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
-            
-                    
-                    Nginx
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -993,64 +980,64 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="permissions">Permissions</h1>
-<p>SuperPerms-based access control, including specific support for PermissionsEx, BukkitPermissions, bPermissions, and classic Permissions.  The following nodes are defined:</p>
+                                <h1 id="&#x6743;&#x9650;">&#x6743;&#x9650;</h1>
+<p>&#x57FA;&#x4E8E; SuperPerms &#x6743;&#x9650;&#x63A7;&#x5236;&#xFF0C;&#x5305;&#x62EC;&#x4E86;&#x5BF9; PermissionsEx, BukkitPermissions, bPermissions, &#x548C;&#x7ECF;&#x5178;&#x7684; Permissions &#x7684;&#x652F;&#x6301;&#x3001;&#x6709;&#x4EE5;&#x4E0B;&#x7684;&#x6743;&#x9650;&#x8282;&#x70B9;&#xFF1A;</p>
 <ul>
-<li><code>dynmap.render</code> - allows /dynmap render command</li>
-<li><code>dynmap.show.self</code> - allows /dynmap show (on self)</li>
-<li><code>dynmap.show.others</code> - allows /dynmap show <player></player></li>
-<li><code>dynmap.hide.self</code> - allows /dynmap hide (on self)</li>
-<li><code>dynmap.hide.others</code> - allows /dynmap hide <player></player></li>
-<li><code>dynmap.fullrender</code> - allows /dynmap fullrender or /dynmap fullrender <world></world></li>
-<li><code>dynmap.radiusrender</code> - allows /dynmap radiusrender</li>
-<li><code>dynmap.updaterender</code> - allows /dynmap updaterender</li>
-<li><code>dynmap.cancelrender</code> - allows /dynmap cancelrender <world></world></li>
-<li><code>dynmap.pause</code> - allows /dynmap pause</li>
-<li><code>dynmap.reload</code> - allows /dynmap reload</li>
-<li><code>dynmap.stats</code> - allows /dynmap stats or /dynmap stats <world> or /dynmap triggerstats</world></li>
-<li><code>dynmap.resetstats</code> - allows /dynmap resetstats or /dynmap resetstats <world></world></li>
-<li><code>dynmap.sendtoweb</code> - allows /dynmap sendtoweb</li>
-<li><code>dynmap.purgequeue</code> - allows /dynmap purgequeue</li>
-<li><code>dynmap.ids-for-ip</code> - allows /dynmap ids-for-ip</li>
-<li><code>dynmap.ips-for-id</code> - allows /dynmap ips-for-id</li>
-<li><code>dynmap.add-id-for-ip</code> - allows /dynmap add-id-for-ip</li>
-<li><code>dynmap.del-id-for-ip</code> - allows /dynmap del-id-for-ip</li>
-<li><code>dynmap.marker.add</code> - allows /dmarker add</li>
-<li><code>dynmap.marker.movehere</code> - allows /dmarker movehere</li>
-<li><code>dynmap.marker.update</code> - allows /dmarker update</li>
-<li><code>dynmap.marker.delete</code> - allows /dmarker delete</li>
-<li><code>dynmap.marker.list</code> - allows /dmarker list</li>
-<li><code>dynmap.marker.icons</code> - allows /dmarker icons</li>
-<li><code>dynmap.marker.addset</code> - allows /dmarker addset</li>
-<li><code>dynmap.marker.updateset</code> - allows /dmarker updateset</li>
-<li><code>dynmap.marker.deleteset</code> - allows /dmarker deleteset</li>
-<li><code>dynmap.marker.listsets</code> - allows /dmarker listsets</li>
-<li><code>dynmap.marker.addicon</code> - allows /dmarker addicon</li>
-<li><code>dynmap.marker.updateicon</code> - allows /dmarker updateicon</li>
-<li><code>dynmap.marker.deleteicon</code> - allows /dmarker deleteicon</li>
-<li><code>dynmap.marker.addarea</code> - allows /dmarker addarea</li>
-<li><code>dynmap.marker.updatearea</code> - allows /dmarker updatearea</li>
-<li><code>dynmap.marker.deletearea</code> - allows /dmarker deletearea</li>
-<li><code>dynmap.marker.listareas</code> - allows /dmarker listareas</li>
-<li><code>dynmap.marker.addline</code> - allows /dmarker addline</li>
-<li><code>dynmap.marker.updateline</code> - allows /dmarker updateline</li>
-<li><code>dynmap.marker.deleteline</code> - allows /dmarker deleteline</li>
-<li><code>dynmap.marker.listlines</code> - allows /dmarker listlines</li>
-<li><code>dynmap.dmap.worldlist</code> - allows /dmap worldlist</li>
-<li><code>dynmap.dmap.worldset</code> - allows /dmap worldset</li>
-<li><code>dynmap.dmap.worldreset</code> - allows /dmap worldreset</li>
-<li><code>dynmap.dmap.mapdelete</code> - allows /dmap mapdelete</li>
-<li><code>dynmap.dmap.mapset</code> - allows /dmap mapset</li>
-<li><code>dynmap.dmap.mapadd</code> - allows /dmap mapadd</li>
-<li><code>dynmap.dmap.perspectivelist</code> - allows /dmap perspectivelist</li>
-<li><code>dynmap.dmap.shaderlist</code> - allows /dmap shaderlist</li>
-<li><code>dynmap.dmap.lightinglist</code> - allows /dmap lightinglist</li>
-<li><code>dynmap.webregister</code> - allows /dynmap webregister</li>
-<li><code>dynmap.webregister.other</code> - allows /dynmap webregister player-id</li>
-<li><code>dynmap.webchat</code> - allows sending of chat messages from web interface (login or id-by-ip required)</li>
-<li><code>dynmap.playermarkers.showall</code> - allows user to see all player positions when protected-player-info has been set to restrict access</li>
-<li><code>dynmap.world.&lt;world-name&gt;</code> - allows user to see maps on world <world-name> if that world has been set to protected.</world-name></li>
-<li><code>dynmap.map.&lt;world-name&gt;.&lt;map-name&gt;</code> - allows user to see specific map <map-name> on specific world <world-name>, if that map has been set to be protected.</world-name></map-name></li>
+<li><code>dynmap.render</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap render &#x547D;&#x4EE4;</li>
+<li><code>dynmap.show.self</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap show &#xFF08;&#x81EA;&#x5DF1;&#xFF09;</li>
+<li><code>dynmap.show.others</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap show &lt;player&gt;</li>
+<li><code>dynmap.hide.self</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap hide &#x81EA;&#x5DF1;</li>
+<li><code>dynmap.hide.others</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap hide &lt;player&gt;</li>
+<li><code>dynmap.fullrender</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap fullrender &#x6216; /dynmap fullrender &lt;world&gt;</li>
+<li><code>dynmap.radiusrender</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap radiusrender</li>
+<li><code>dynmap.updaterender</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap updaterender</li>
+<li><code>dynmap.cancelrender</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap cancelrender &lt;world&gt;</li>
+<li><code>dynmap.pause</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap pause</li>
+<li><code>dynmap.reload</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap reload</li>
+<li><code>dynmap.stats</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap stats &#x6216; /dynmap stats &lt;world&gt; &#x6216; /dynmap triggerstats</li>
+<li><code>dynmap.resetstats</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap resetstats &#x6216; /dynmap resetstats &lt;world&gt;</li>
+<li><code>dynmap.sendtoweb</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap sendtoweb</li>
+<li><code>dynmap.purgequeue</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap purgequeue</li>
+<li><code>dynmap.ids-for-ip</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap ids-for-ip</li>
+<li><code>dynmap.ips-for-id</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap ips-for-id</li>
+<li><code>dynmap.add-id-for-ip</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap add-id-for-ip</li>
+<li><code>dynmap.del-id-for-ip</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap del-id-for-ip</li>
+<li><code>dynmap.marker.add</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker add</li>
+<li><code>dynmap.marker.movehere</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker movehere</li>
+<li><code>dynmap.marker.update</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker update</li>
+<li><code>dynmap.marker.delete</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker delete</li>
+<li><code>dynmap.marker.list</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker list</li>
+<li><code>dynmap.marker.icons</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker icons</li>
+<li><code>dynmap.marker.addset</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker addset</li>
+<li><code>dynmap.marker.updateset</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker updateset</li>
+<li><code>dynmap.marker.deleteset</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker deleteset</li>
+<li><code>dynmap.marker.listsets</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker listsets</li>
+<li><code>dynmap.marker.addicon</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker addicon</li>
+<li><code>dynmap.marker.updateicon</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker updateicon</li>
+<li><code>dynmap.marker.deleteicon</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker deleteicon</li>
+<li><code>dynmap.marker.addarea</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker addarea</li>
+<li><code>dynmap.marker.updatearea</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker updatearea</li>
+<li><code>dynmap.marker.deletearea</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker deletearea</li>
+<li><code>dynmap.marker.listareas</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker listareas</li>
+<li><code>dynmap.marker.addline</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker addline</li>
+<li><code>dynmap.marker.updateline</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker updateline</li>
+<li><code>dynmap.marker.deleteline</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker deleteline</li>
+<li><code>dynmap.marker.listlines</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmarker listlines</li>
+<li><code>dynmap.dmap.worldlist</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmap worldlist</li>
+<li><code>dynmap.dmap.worldset</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmap worldset</li>
+<li><code>dynmap.dmap.worldreset</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmap worldreset</li>
+<li><code>dynmap.dmap.mapdelete</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmap mapdelete</li>
+<li><code>dynmap.dmap.mapset</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmap mapset</li>
+<li><code>dynmap.dmap.mapadd</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmap mapadd</li>
+<li><code>dynmap.dmap.perspectivelist</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmap perspectivelist</li>
+<li><code>dynmap.dmap.shaderlist</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmap shaderlist</li>
+<li><code>dynmap.dmap.lightinglist</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dmap lightinglist</li>
+<li><code>dynmap.webregister</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap webregister</li>
+<li><code>dynmap.webregister.other</code> - &#x5141;&#x8BB8;&#x4F7F;&#x7528; /dynmap webregister player-id</li>
+<li><code>dynmap.webchat</code> - &#x5141;&#x8BB8;&#x901A;&#x8FC7;&#x7F51;&#x9875;&#x53D1;&#x9001;&#x804A;&#x5929;&#x6D88;&#x606F;&#xFF08;&#x9700;&#x8981;&#x767B;&#x5F55;&#x6216; ID-IP &#x6620;&#x5C04;&#xFF09;</li>
+<li><code>dynmap.playermarkers.showall</code> - &#x5141;&#x8BB8;&#x7528;&#x6237;&#x67E5;&#x770B;&#x9690;&#x85CF;&#x7684;&#x73A9;&#x5BB6;&#x7684;&#x8BB0;&#x53F7;</li>
+<li><code>dynmap.world.&lt;&#x4E16;&#x754C;&#x540D;&gt;</code> - &#x5982;&#x679C;&#x4E16;&#x754C;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;&#x4FDD;&#x62A4;&#xFF0C;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x67E5;&#x770B;&#x6307;&#x5B9A;&#x4E16;&#x754C;&#x7684;&#x5730;&#x56FE;</li>
+<li><code>dynmap.map.&lt;&#x4E16;&#x754C;&#x540D;&gt;.&lt;&#x5730;&#x56FE;&#x540D;&gt;</code> - &#x5982;&#x679C;&#x5730;&#x56FE;&#x88AB;&#x8BBE;&#x7F6E;&#x4E3A;&#x4FDD;&#x62A4;&#xFF0C;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x67E5;&#x770B;&#x6307;&#x5B9A;&#x4E16;&#x754C;&#x7684;&#x6307;&#x5B9A;&#x5730;&#x56FE;</li>
 </ul>
 
                                 
@@ -1095,7 +1082,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"权限","level":"1.8","depth":1,"next":{"title":"网页登录支持与权限","level":"1.8.1","depth":2,"path":"Web-ui-login-support-and-permissions.md","ref":"Web-ui-login-support-and-permissions.md","articles":[]},"previous":{"title":"使用dmap配置地图和世界","level":"1.7.1","depth":2,"path":"Configuring-Maps-and-Worlds-using-dmap.md","ref":"Configuring-Maps-and-Worlds-using-dmap.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Permissions.md","mtime":"2017-08-12T04:39:31.059Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T08:39:43.036Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"权限","level":"1.8","depth":1,"next":{"title":"网页登录支持与权限","level":"1.8.1","depth":2,"path":"Web-ui-login-support-and-permissions.md","ref":"Web-ui-login-support-and-permissions.md","articles":[]},"previous":{"title":"使用dmap配置地图和世界","level":"1.7.1","depth":2,"path":"Configuring-Maps-and-Worlds-using-dmap.md","ref":"Configuring-Maps-and-Worlds-using-dmap.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Permissions.md","mtime":"2017-08-20T08:53:17.229Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-04T05:10:56.684Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

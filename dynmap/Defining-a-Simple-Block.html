@@ -181,19 +181,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
-            
-                <a href="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
-            
-                    
-                    Nginx
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -993,54 +980,54 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>A simple block is a solid cubic block filling the whole cube where a block is placed.  This is the most common kind of block, and is best used whenever possible (for both simplicity of implementation, and for performance).  As the solid cubic block is the default <em>model</em> for a block, these blocks do not need corresponding definitions in the [[Model Definition Files]].  The block texture definition is defined via the &apos;block:&apos; directive.  </p>
-<p>A simple block has 6 faces, known by a number of equivalent attributes:</p>
+                                <p>&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5757;&#x662F;&#x4E00;&#x4E2A;&#x56FA;&#x4F53;&#x7ACB;&#x65B9;&#x4F53;&#xFF0C;&#x586B;&#x5145;&#x6574;&#x4E2A;&#x7ACB;&#x65B9;&#x4F53;&#x3002;&#x8FD9;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5757;&#x5F62;&#x5F0F;&#xFF0C;&#x6700;&#x597D;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x4F7F;&#x7528;&#xFF08;&#x65E0;&#x8BBA;&#x662F;&#x7B80;&#x5316;&#x5B9E;&#x73B0;&#x8FD8;&#x662F;&#x6027;&#x80FD;&#xFF09;&#x3002;&#x7531;&#x4E8E;&#x56FA;&#x4F53;&#x7ACB;&#x65B9;&#x4F53;&#x662F;&#x9ED8;&#x8BA4;&#x7684;<strong>&#x6A21;&#x578B;</strong>&#xFF0C;&#x8FD9;&#x4E9B;&#x65B9;&#x5757;&#x4E0D;&#x9700;&#x8981;&#x5728;<a href="Model-Definition-Files.html">&#x6A21;&#x578B;&#x5B9A;&#x4E49;&#x6587;&#x4EF6;</a>&#x4E2D;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x6A21;&#x578B;&#x3002;&#x65B9;&#x5757;&#x7684;&#x6750;&#x8D28;&#x901A;&#x8FC7; &apos;block:&apos; &#x884C;&#x8BBE;&#x7F6E;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5757;&#x6709; 6 &#x4E2A;&#x9762;&#xFF0C;&#x6709;&#x5F88;&#x591A;&#x7684;&#x7B49;&#x6548;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</p>
 <ul>
-<li><p><em>top</em> or <em>face1</em> or <em>patch4</em> (the top of the cube)</p>
+<li><p><em>top</em> &#x6216; <em>face1</em> &#x6216; <em>patch4</em> &#xFF08;&#x65B9;&#x5757;&#x9876;&#x90E8;&#xFF09;</p>
 </li>
-<li><p><em>bottom</em> or <em>face0</em> or <em>patch1</em> (the bottom of the cube)</p>
+<li><p><em>bottom</em> &#x6216; <em>face0</em> &#x6216; <em>patch1</em> &#xFF08;&#x65B9;&#x5757;&#x5E95;&#x90E8;&#xFF09;</p>
 </li>
-<li><p><em>north</em> or <em>face4</em> or <em>patch0</em> (the side in the negative X direction - currently west: it was north before Minecraft GA)</p>
+<li><p><em>north</em> &#x6216; <em>face4</em> &#x6216; <em>patch0</em> &#xFF08;&#x65B9;&#x5757;&#x897F;&#x9762;&#xFF0C;&#x8D1F; X &#x8F74;&#x65B9;&#x5411;&#xFF09;</p>
 </li>
-<li><p><em>south</em> or <em>face5</em> or <em>patch3</em> (the side in the positive X direction - currently east: it was south before Minecraft GA)</p>
+<li><p><em>south</em> &#x6216; <em>face5</em> &#x6216; <em>patch3</em> &#xFF08;&#x65B9;&#x5757;&#x4E1C;&#x9762;&#xFF0C;&#x6B63; X &#x8F74;&#x65B9;&#x5411;&#xFF09;</p>
 </li>
-<li><p><em>west</em> or <em>face3</em> or <em>patch5</em> (the side in the positive Z direction - currently south: it was west before Minecraft GA)</p>
+<li><p><em>west</em> &#x6216; <em>face3</em> &#x6216; <em>patch5</em> &#xFF08;&#x65B9;&#x5757;&#x5357;&#x9762;&#xFF0C;&#x8D1F; Z &#x8F74;&#x65B9;&#x5411;&#xFF09;</p>
 </li>
-<li><p><em>east</em> or <em>face2</em> or <em>patch2</em> (the side in the negative Z direction - currently north: it was east before Minecraft GA)</p>
+<li><p><em>east</em> &#x6216; <em>face2</em> &#x6216; <em>patch2</em> &#xFF08;&#x65B9;&#x5757;&#x5317;&#x9762;&#xFF0C;&#x6B63; Z &#x8F74;&#x65B9;&#x5411;&#xFF09;</p>
 </li>
 </ul>
-<p>The texture for each side is set by providing a texture reference for the corresponding attribute, in addition to the required block ID attribute, &apos;id=&apos;:</p>
-<pre><code>block:id=&lt;block-id&gt;,&lt;side&gt;=&lt;index-plus-function&gt;:&lt;texture-id&gt;,&lt;side&gt;=&lt;index-plus-function&gt;:&lt;texture-id&gt;,...
-</code></pre><p>There are also convenience attributes for common combinations of faces, allowing the same reference to be applied to multiple sides:</p>
+<p>&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#x8BBE;&#x7F6E;&#x5BF9;&#x5E94;&#x7684;&#x5C5E;&#x6027;&#x6765;&#x63D0;&#x4F9B;&#x6750;&#x8D28;&#x5F15;&#x7528;&#xFF0C;&#x9700;&#x8981;&#x6DFB;&#x52A0; &apos;id=&apos;&#xFF1A;</p>
+<pre><code>   block:id=&lt;block-id&gt;,&lt;side&gt;=&lt;index-plus-function&gt;:&lt;texture-id&gt;,&lt;side&gt;=&lt;index-plus-function&gt;:&lt;texture-id&gt;,...
+</code></pre><p>&#x6BCF;&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x9762;&#x7684;&#x7EC4;&#x5408;&#x4E5F;&#x6709;&#x65B9;&#x4FBF;&#x8BBE;&#x7F6E;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x5141;&#x8BB8;&#x4F60;&#x5C06;&#x76F8;&#x540C;&#x7684;&#x6750;&#x8D28;&#x5E94;&#x7528;&#x5230;&#x591A;&#x4E2A;&#x9762;&#xFF1A;</p>
 <ul>
-<li><p><em>allfaces</em> (all six faces use the same texture reference)</p>
+<li><p><em>allfaces</em> &#xFF08;&#x516D;&#x4E2A;&#x9762;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x6750;&#x8D28;&#xFF09;</p>
 </li>
-<li><p><em>allsides</em> (all four faces on the sides of the block - not the top or bottom - use the same texture reference)</p>
+<li><p><em>allsides</em> &#xFF08;&#x6240;&#x6709;&#x7684;&#x4FA7;&#x9762;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x6750;&#x8D28;&#xFF09;</p>
 </li>
-<li><p><em>topbottom</em> (the top and bottom faces use the same texture reference)</p>
+<li><p><em>topbottom</em> &#xFF08;&#x9876;&#x9762;&#x548C;&#x5E95;&#x9762;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x6750;&#x8D28;&#xFF09;</p>
 </li>
 </ul>
-<p>Due to legacy issues, standard simple blocks also need to have the attribute &apos;stdrot=true&apos; set.  This causes the rotation of the top and bottom textures to be correct - otherwise, those textures will be applied 90 degrees rotated from the in-game equivalent.</p>
-<p>If the same texture mapping applies to all metadata values, the &apos;data=*&apos; attribute should be specified (although this is also the default, when no other &apos;data=&apos; settings are present).  If only specific metadata values should use the given texture mapping, one or more &apos;data=\<number\>&apos; settings should also be provided.</number\></p>
-<p>If more than one block ID uses the same set of texture mappings, additional &apos;id=&apos; attributes can be specified on the same &quot;block:&quot; line.</p>
-<p>Several other special attributes may be specified, if needed:</p>
+<p>&#x7531;&#x4E8E;&#x9057;&#x7559;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6807;&#x51C6;&#x7684;&#x65B9;&#x5757;&#x4E5F;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x5C5E;&#x6027; <code>stdrot=true</code>&#xFF0C;&#x5426;&#x5219;&#x9876;&#x90E8;&#x548C;&#x5E95;&#x90E8;&#x7684;&#x6750;&#x8D28;&#x5C06;&#x4F1A;&#x4F7F;&#x7528;&#x9519;&#x8BEF;&#x7684;&#x65CB;&#x8F6C;(90&#x5EA6;)&#x3002;</p>
+<p>&#x5982;&#x679C;&#x76F8;&#x540C;&#x7684;&#x6750;&#x8D28;&#x6620;&#x5C04;&#x5E94;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x5E94;&#x8BE5;&#x8BBE;&#x7F6E;&#x5C5E;&#x6027; <code>data=</code>&#xFF08;&#x5C3D;&#x7BA1;&#x5F53;&#x6CA1;&#x6709;&#x5176;&#x4ED6;&#x7684; <code>data=</code> &#x5B58;&#x5728;&#x65F6;&#x8FD9;&#x662F;&#x9ED8;&#x8BA4;&#x503C;&#xFF09;&#x3002;&#x5982;&#x679C;&#x6709;&#x53EA;&#x6709;&#x7279;&#x5B9A;&#x7684;&#x5143;&#x6570;&#x636E;&#x4F7F;&#x7528;&#x7ED9;&#x5B9A;&#x7684;&#x6750;&#x8D28;&#x6620;&#x5C04;&#xFF0C;&#x90A3;&#x4E48;&#x5E94;&#x8BE5;&#x63D0;&#x4F9B;&#x591A;&#x4E2A; <code>data=&lt;&#x6570;&#x5B57;&gt;</code> &#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x591A;&#x4E2A;&#x65B9;&#x5757;&#x7684; ID &#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x6750;&#x8D28;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x540C;&#x4E00;&#x4E2A; <code>block:</code> &#x884C;&#x6307;&#x5B9A;&#x591A;&#x4E2A; <code>id=</code> &#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4EE5;&#x4E0B;&#x5176;&#x4ED6;&#x7684;&#x7279;&#x6B8A;&#x5C5E;&#x6027;&#xFF1A;</p>
 <ul>
-<li><p><em>txtid</em> - described above, this allows specifying of a default texture ID to be used by any texture references in the given &apos;block:&apos; definition that do not have the &apos;:<texture-id>&apos; suffix.</texture-id></p>
+<li><p><em>txtid</em> - &#x6B64;&#x9009;&#x9879;&#x5141;&#x8BB8;&#x5728;&#x6CA1;&#x6709; <code>: texture-id</code> &#x540E;&#x7F00;&#x7684; <code>block:</code> &#x5B9A;&#x4E49;&#x4E2D;&#x6307;&#x5B9A;&#x9ED8;&#x8BA4;&#x7684;&#x6750;&#x8D28;&#x3002;</p>
 </li>
-<li><p><em>transparency</em> - this affects how lighting is calculated for the block.  If OPAQUE (the default), the block&apos;s surfaces are lit based on the light levels of adjacent blocks.  If TRANSPARENT, the block&apos;s surfaces are lit based on the light levels of the block itself.  If SEMITRANSPARENT, the lighting of the block is a special case blend of the two (used by blocks that block light, but do not fill the cube - such as slabs and steps).  If LEAVES, the lighting is a special case corresponding to how leaves are handled (generally the same as TRANSPARENT, except on some versions of Spout).</p>
+<li><p><em>transparency</em> - &#x8FD9;&#x5C06;&#x4F1A;&#x5F71;&#x54CD;&#x65B9;&#x5757;&#x7167;&#x660E;&#x7684;&#x8BA1;&#x7B97;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A; OPAQUE&#xFF08;&#x9ED8;&#x8BA4;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x65B9;&#x5757;&#x7684;&#x8868;&#x9762;&#x4EAE;&#x5EA6;&#x5C06;&#x4F1A;&#x57FA;&#x4E8E;&#x76F8;&#x90BB;&#x65B9;&#x5757;&#x7684;&#x4EAE;&#x5EA6;&#x8BA1;&#x7B97;&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A; TRANSPARENCY&#xFF0C;&#x65B9;&#x5757;&#x7684;&#x4EAE;&#x5EA6;&#x57FA;&#x4E8E;&#x81EA;&#x8EAB;&#x7684;&#x5149;&#x7EBF;&#x4EAE;&#x5EA6;&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A; SEMITRANSPARENT&#xFF0C;&#x65B9;&#x5757;&#x7684;&#x4EAE;&#x5EA6;&#x4E3A;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x6DF7;&#x5408;&#x7684;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#xFF08;&#x4E00;&#x822C;&#x7531;&#x963B;&#x6321;&#x5149;&#x7EBF;&#x4F46;&#x6CA1;&#x6709;&#x5B8C;&#x5168;&#x586B;&#x5145;&#x7684;&#x7ACB;&#x65B9;&#x4F53;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x53F0;&#x9636;&#x548C;&#x534A;&#x7816;&#xFF09;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A; LEAVES&#xFF0C;&#x90A3;&#x4E48;&#x4F7F;&#x7528;&#x7279;&#x6B8A;&#x7684;&#x7167;&#x660E;&#x60C5;&#x51B5;&#xFF08;&#x901A;&#x5E38;&#x4E0E; TRANSPARENCY &#x76F8;&#x540C;&#xFF0C;&#x9664;&#x4E86;&#x67D0;&#x4E9B;&#x7248;&#x672C;&#x7684; Spout&#xFF09;&#x3002;</p>
 </li>
-<li><p><em>colorMult</em> - this affects any textures using the multiplier-tinting option (17000, 21000), and consists of a 6 digit hexadecimal value: RRGGBB, where RR is the red component (00-FF), GG is the green component, and BB is the blue component.</p>
+<li><p><em>colorMult</em> - &#x8FD9;&#x4F1A;&#x5F71;&#x54CD;&#x4F7F;&#x7528; <code>multiplier-tinting</code> &#x9009;&#x9879;&#x7684;&#x4EFB;&#x4F55;&#x6750;&#x8D28;&#xFF08;17000, 21000&#xFF09;&#xFF0C;&#x7531; 6 &#x4F4D;&#x7684;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x7EC4;&#x6210;&#xFF1A;RRGGBB&#xFF0C;RR &#x662F;&#x7EA2;&#x8272;&#x5206;&#x91CF;&#xFF08;00-FF&#xFF09;&#xFF0C;GG &#x662F;&#x7EFF;&#x8272;&#x5206;&#x91CF;&#xFF08;00-FF&#xFF09;&#xFF0C;BB &#x662F;&#x84DD;&#x8272;&#x5206;&#x91CF;&#xFF08;00-FF&#xFF09;&#x3002;</p>
 </li>
-<li><p>*customColorMult&quot; - this affects any textures using the multiplier-tinting option (17000, 21000), and consists of fully qualified classname of a tinting class.  Currently defined values include:</p>
+<li><p>*customColorMult&quot; - &#x8FD9;&#x4F1A;&#x5F71;&#x54CD;&#x4F7F;&#x7528; <code>multiplier-tinting</code> &#x9009;&#x9879;&#x7684;&#x4EFB;&#x4F55;&#x6750;&#x8D28;&#xFF08;17000, 21000&#xFF09;&#xFF0C;&#x7531;&#x4E00;&#x4E2A;&#x7740;&#x8272;&#x5668;&#x7C7B;&#x540D;&#x7EC4;&#x6210;&#xFF0C;&#x76EE;&#x524D;&#x6709;&#x8FD9;&#x4E9B;&#x503C;&#xFF1A; </p>
 <ul>
-<li>org.dynmap.hdmap.colormult.TFBandedWoodColorMultiplier - special tinting function for banded wood in Twilight Forest mod</li>
-<li>org.dynmap.hdmap.colormult.TFMagicLeafColorMultiplier - special tinting function used for magic tree leaves in Twilight Forest mod</li>
-<li>org.dynmap.hdmap.colormult.TFSpecialLeafColorMultiplier - special tinting function used for special leaves in Twilight Forest mod</li>
+<li><code>org.dynmap.hdmap.colormult.TFBandedWoodColorMultiplier</code> - &#x9488;&#x5BF9;&#x66AE;&#x8272;&#x68EE;&#x6797; Mod &#x7684; banded wood &#x7684;&#x7279;&#x6B8A;&#x7684;&#x7740;&#x8272;&#x5668;&#x7C7B;</li>
+<li><code>org.dynmap.hdmap.colormult.TFMagicLeafColorMultiplier</code> - &#x9488;&#x5BF9;&#x66AE;&#x8272;&#x68EE;&#x6797; Mod &#x7684;&#x94F6;&#x6811;&#x53F6;&#xFF08;Magic Tree Leaves&#xFF09;&#x7684;&#x7279;&#x6B8A;&#x7684;&#x7740;&#x8272;&#x5668;&#x7C7B;</li>
+<li><code>org.dynmap.hdmap.colormult.TFSpecialLeafColorMultiplier</code> - &#x9488;&#x5BF9;&#x66AE;&#x8272;&#x68EE;&#x6797; Mod &#x7684;&#x7279;&#x6B8A;&#x7684;&#x6811;&#x53F6;&#xFF08;Special Leaves&#xFF09;&#x7684;&#x7279;&#x6B8A;&#x7684;&#x7740;&#x8272;&#x5668;&#x7C7B;</li>
 </ul>
 </li>
-<li><p><em>layer\<m\></m\></em> or <em>layer\<m\>-\<n\></n\></m\></em> - this allows textures to be &apos;stacked&apos; - if any part of the texture on a given side is transparent, the texture from the next layer is applied to those transparent portions.  The value of the &apos;layer\<m\>&apos; or &apos;layer\<m\>-\<n\>&apos; attribute is the index of the corresponding &apos;patch\<index\>&apos; definition to use for the next layer behind the texture for the side matching &apos;patch\<m\>&apos; or all patches between &apos;patch\<m\>&apos; and &apos;patch\<n\>&apos;, respectively.  For standard simple cubes, the standard sides use patch0 through patch5, so any additional layer textures need to use patch6 or higher.</n\></m\></m\></index\></n\></m\></m\></p>
+<li><p><em>layer&lt;M&gt;</em> &#x6216; <em>layer&lt;M&gt;-&lt;N&gt;</em> - &#x6B64;&#x9009;&#x9879;&#x5141;&#x8BB8;&#x6750;&#x8D28;&#x88AB;&quot;&#x5806;&#x53E0;&quot; - &#x5982;&#x679C;&#x67D0;&#x4E2A;&#x9762;&#x7684;&#x6750;&#x8D28;&#x662F;&#x900F;&#x660E;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x4E0B;&#x4E00;&#x5C42;&#x7684;&#x6750;&#x8D28;&#x5C06;&#x88AB;&#x5E94;&#x7528;&#x4E8E;&#x90A3;&#x4E9B;&#x90E8;&#x5206;&#x3002;layer&lt;M&gt; &#x6216; layer&lt;M&gt;-&lt;N&gt; &#x5C5E;&#x6027;&#x7684;&#x503C;&#x662F;&#x5BF9;&#x5E94;&#x7684; <code>patch&lt;&#x5E8F;&#x6570;&gt;</code> &#x5B9A;&#x4E49;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x7528;&#x4E8E;&#x4E0B;&#x4E00;&#x5C42;&#x7684;&#x5BF9;&#x5E94; patch&lt;M&gt; &#x7684;&#x6750;&#x8D28;&#x6216;&#x8005;&#x5728; patch&lt;M&gt; &#x548C; patch&lt;N&gt; &#x4E4B;&#x95F4;&#x7684;&#x6750;&#x8D28;&#x3002;&#x5BF9;&#x4E8E;&#x6807;&#x51C6;&#x7684;&#x957F;&#x65B9;&#x4F53;&#xFF0C;&#x6807;&#x51C6;&#x7684;&#x9762;&#x4F7F;&#x7528; patch0 &#x5230; patch6&#xFF0C;&#x6240;&#x4EE5;&#x4EFB;&#x4F55;&#x9644;&#x52A0;&#x7684;&#x8986;&#x76D6;&#x5C42;&#x6750;&#x8D28;&#x5E94;&#x8BE5;&#x4F7F;&#x7528; patch6 &#x6216;&#x8005;&#x66F4;&#x9AD8;&#x7684;&#x503C;&#x3002;</p>
 </li>
-<li><p><em>patch\<m\></m\></em> or <em>patch\<m\>-\<n\></n\></m\></em> - these allow definition of additional texture references beyond the first 6 (patch0 through patch5, or the other aliases indicated earlier).  For simple cubes, these are only needed for defining layered textures.  The value is a texture reference, which is applied to the Mth patch, or to all patches between the Mth and Nth, respectively.</p>
+<li><p><em>patch&lt;M&gt;</em> &#x6216; <em>patch&lt;M&gt;-&lt;N&gt;</em> - &#x6B64;&#x9009;&#x9879;&#x5141;&#x8BB8;&#x8FD9;&#x662F;&#x9644;&#x52A0;&#x7684;&#x6750;&#x8D28;&#x5F15;&#x7528;&#xFF0C;&#x57FA;&#x4E8E;&#x8D85;&#x8FC7; 6 &#x7684;&#xFF08;patch0 &#x5230; patch5&#xFF0C;&#x6216;&#x4E4B;&#x524D;&#x6307;&#x5B9A;&#x7684;&#x5176;&#x4ED6;&#x522B;&#x540D;&#xFF09;&#x3002;&#x5BF9;&#x4E8E;&#x7B80;&#x5355;&#x7684;&#x7ACB;&#x65B9;&#x4F53;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x8986;&#x76D6;&#x7684;&#x6750;&#x8D28;&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x6750;&#x8D28;&#x5F15;&#x7528;&#xFF0C;&#x5E94;&#x7528;&#x5230;&#x7B2C; M &#x4E2A; patch &#x6216;&#x8005; M &#x5230; N &#x4E4B;&#x524D;&#x7684;&#x6240;&#x6709; patch&#x3002;</p>
 </li>
 </ul>
 
@@ -1086,7 +1073,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"定义一个简单的方块","level":"1.11.4","depth":2,"next":{"title":"定义长方体方块","level":"1.11.5","depth":2,"path":"Defining-a-Cuboid-Block.md","ref":"Defining-a-Cuboid-Block.md","articles":[]},"previous":{"title":"编写自定方块着色器","level":"1.11.3.5","depth":3,"path":"Coding-Custom-Block-Renderer.md","ref":"Coding-Custom-Block-Renderer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Defining-a-Simple-Block.md","mtime":"2017-08-12T04:39:31.053Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T08:39:43.036Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"定义一个简单的方块","level":"1.11.4","depth":2,"next":{"title":"定义长方体方块","level":"1.11.5","depth":2,"path":"Defining-a-Cuboid-Block.md","ref":"Defining-a-Cuboid-Block.md","articles":[]},"previous":{"title":"编写自定方块着色器","level":"1.11.3.5","depth":3,"path":"Coding-Custom-Block-Renderer.md","ref":"Coding-Custom-Block-Renderer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Defining-a-Simple-Block.md","mtime":"2017-08-25T05:15:30.423Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-04T05:10:56.684Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

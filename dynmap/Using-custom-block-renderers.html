@@ -181,19 +181,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
-            
-                <a href="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
-            
-                    
-                    Nginx
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -993,34 +980,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>A number of types of blocks require more complex rendering logic than simple static models tied to specific block ID and metadata values can allow.  These include blocks whose presentation is sensitive to neighboring blocks (redstone wire, fences, walls, glass panes, stairs) as well as those that depend upon TileEntity data or other information (skulls, Railcraft tracks, Immibis&apos; Microblocks).</p>
-<p>To define a model using a custom block renderer, a &quot;customblock:&quot; line needs to be defined.  The base attributes for this line include:</p>
+                                <p>&#x4E00;&#x4E9B;&#x7C7B;&#x578B;&#x7684;&#x65B9;&#x5757;&#x76F8;&#x6BD4;&#x8F83;&#x4E8E;&#x5C06;&#x9759;&#x6001;&#x6A21;&#x578B;&#x76F4;&#x63A5;&#x8D4B;&#x4E88;&#x6307;&#x5B9A;ID&#x548C;&#x6570;&#x636E;&#x503C;&#x7684;&#x65B9;&#x5757;&#x8FD9;&#x79CD;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x6CD5;&#x800C;&#x8A00;&#xFF0C;&#x5176;&#x6E32;&#x67D3;&#x7684;&#x903B;&#x8F91;&#x66F4;&#x52A0;&#x590D;&#x6742;&#x3002;&#x8FD9;&#x5305;&#x62EC;&#x4F9D;&#x7167;&#x76F8;&#x90BB;&#x65B9;&#x5757;&#x800C;&#x505A;&#x51FA;&#x6539;&#x53D8;&#x7684;&#x65B9;&#x5757;&#xFF08;&#x7EA2;&#x77F3;&#x7EBF;&#xFF0C;&#x6805;&#x680F;&#xFF0C;&#x56F4;&#x5899;&#xFF0C;&#x73BB;&#x7483;&#x677F;&#x548C;&#x697C;&#x68AF;&#x7B49;&#x7B49;&#xFF09;&#xFF0C;&#x540C;&#x65F6;&#x5B83;&#x4EEC;&#x7684;&#x6A21;&#x578B;&#x4E5F;&#x4F9D;&#x8D56;&#x4E8E;TileEntity&#x6570;&#x636E;&#x548C;&#x5176;&#x4ED6;&#x4FE1;&#x606F;&#xFF08;&#x4F8B;&#x5982;&#x5934;&#x9885;&#xFF0C;RailCraft&#x7684;&#x94C1;&#x8F68;&#xFF0C;&#x548C;Immibis&apos; Microblocks&#x7B49;&#x7B49;&#xFF09;&#x3002;</p>
+<p>&#x8981;&#x60F3;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x5757;&#x6E32;&#x67D3;&#x5668;&#x5B9A;&#x4E49;&#x6A21;&#x578B;&#x7684;&#x8BDD;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x63D0;&#x4F9B;&quot;customblock:&quot; &#x6587;&#x672C;&#x884C;&#x3002;&#x8FD9;&#x4E00;&#x884C;&#x5E94;&#x8BE5;&#x5305;&#x62EC;&#x8FD9;&#x4E9B;&#x57FA;&#x7840;&#x5C5E;&#x6027;&#xFF1A;</p>
 <ul>
-<li><em>id</em> - the block ID that the model is to be used for.  At least one <em>id</em> attribute is required, but as many as are needed can be used - allowing the same model to be used for multiple blocks.  See <a href="Texture-Definition-Files#block-id-numbers">Block ID Numbers</a> for details on specifying block ID numbers.</li>
-<li><em>data</em> - this provides the specific metadata values that the model is to be applied to.  The default, <em>data=**, indicates all metadata values for each of the blocks IDs indicated by the </em>id<em> attributes.  Otherwise, one or more </em>data=number* attributes can be used to select specific metadata values for the model.</li>
-<li><em>class</em> - this provides the fully qualified classname of the class for the custom block renderer.  This attribute is required.</li>
+<li><p><em>id</em> - &#x672C;&#x6A21;&#x578B;&#x6240;&#x7528;&#x4E8E;&#x7684;&#x65B9;&#x5757;ID&#x3002;&#x4F60;&#x6700;&#x5C11;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A; <em>id</em> &#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x8981;&#x4F60;&#x9700;&#x8981;&#x7684;&#x8BDD;&#x53EF;&#x4EE5;&#x6709;&#x65E0;&#x9650;&#x591A;&#x2014;&#x2014;&#x8FD9;&#x5141;&#x8BB8;&#x76F8;&#x540C;&#x7684;&#x6A21;&#x578B;&#x53EF;&#x4EE5;&#x4F5C;&#x7528;&#x4E8E;&#x591A;&#x4E2A;&#x65B9;&#x5757;&#x3002;&#x67E5;&#x770B;<a href="Texture-Definition-Files.html#block-id-numbers">&#x65B9;&#x5757;ID&#x6570;&#x5B57;</a>&#x6765;&#x83B7;&#x5F97;&#x5B9A;&#x4E49;&#x65B9;&#x5757;ID&#x7684;&#x6709;&#x5173;&#x7EC6;&#x8282;&#x3002;</p>
+</li>
+<li><p><em>data</em> - &#x8FD9;&#x9879;&#x63D0;&#x4F9B;&#x6A21;&#x578B;&#x5E94;&#x7528;&#x4E8E;&#x7684;&#x65B9;&#x5757;&#x7684;&#x6570;&#x636E;&#x503C;&#x3002;&#x9ED8;&#x8BA4;&#x5730;&#xFF0C;<em>data=** &#x4EE3;&#x8868;&#x6240;&#x6709;</em>id<em>&#x5C5E;&#x6027;&#x4E2D;&#x7684;&#x65B9;&#x5757;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x503C;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x591A;&#x4E2A; </em>data=number* &#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x7528;&#x4E8E;&#x4E3A;&#x6A21;&#x578B;&#x9009;&#x62E9;&#x591A;&#x4E2A;&#x6570;&#x636E;&#x503C;&#x3002;</p>
+</li>
+<li><p><em>class</em> - &#x8FD9;&#x9879;&#x63D0;&#x4F9B;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x5757;&#x6E32;&#x67D3;&#x5668;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x7C7B;&#x7684;&#x7C7B;&#x540D;&#xFF0C;&#x540C;&#x65F6;&#x8FD9;&#x4E00;&#x9879;&#x4E5F;&#x662F;&#x5FC5;&#x9700;&#x7684;&#x3002;</p>
+</li>
 </ul>
-<p>The &quot;customblock:&quot; line may also have additional attributes, as indicated by the specific custom block renderer selected.</p>
-<p>Custom block renderer always generate a defined sequence of patches (surfaces to which textures can be applied).  The indexes of the corresponding patches are defined by the custom block renderer.  The texture references supplied by the [[Texture Definition Files]] need to be specified by <em>patch\<n\></n\></em> attributes in the corresponding &quot;block:&quot; lines.</p>
-<h2 id="existing-custom-block-renderers">Existing Custom Block Renderers</h2>
-<p>The following Custom Block Renderers are provided by Dynmap, and can be used for new custom blocks when appropriate.  </p>
+<p>&quot;customblock:&quot; &#x884C;&#x53EF;&#x80FD;&#x4E5F;&#x6709;&#x5176;&#x4ED6;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x6807;&#x8BC6;&#x51FA;&#x6307;&#x5B9A;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x5757;&#x6E32;&#x67D3;&#x5668;&#x3002;</p>
+<p>&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x5757;&#x6E32;&#x67D3;&#x5668;&#x603B;&#x662F;&#x4F1A;&#x521B;&#x5EFA;&#x6E32;&#x67D3;&#x9762;&#xFF08;&#x5373;&#x6750;&#x8D28;&#x88AB;&#x5E94;&#x7528;&#x7684;&#x90A3;&#x4E2A;&#x8868;&#x9762;&#xFF09;&#x7684;&#x5E8F;&#x5217;&#x3002;&#x76F8;&#x5E94;&#x7684;&#x6E32;&#x67D3;&#x9762;&#x7684;&#x5E8F;&#x5217;&#x901A;&#x8FC7;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x5757;&#x6E32;&#x67D3;&#x5668;&#x800C;&#x5B9A;&#x4E49;&#x3002;&#x6750;&#x8D28;&#x7684;&#x53C2;&#x8003;&#x5185;&#x5BB9;&#x901A;&#x8FC7;<a href="Texture-Definition-Files.html">&#x6750;&#x8D28;&#x5B9A;&#x4E49;&#x6587;&#x4EF6;</a>&#x63D0;&#x4F9B;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x76F8;&#x5E94;&#x7684;&quot;block:&quot;&#x6587;&#x672C;&#x884C;&#x4E2D;&#x6307;&#x5B9A; <em>patch&lt;N&gt;</em> &#x5C5E;&#x6027;&#x3002;</p>
+<h2 id="&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x5757;&#x6E32;&#x67D3;&#x5668;">&#x521B;&#x5EFA;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x5757;&#x6E32;&#x67D3;&#x5668;</h2>
+<p>&#x4E0B;&#x9762;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x5757;&#x6E32;&#x67D3;&#x5668;&#x90FD;&#x662F;&#x7531;Dynmap&#x6240;&#x63D0;&#x4F9B;&#x7684;&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x6E32;&#x67D3;&#x9002;&#x5F53;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x65B9;&#x5757;&#x3002;</p>
 <ul>
-<li>[[Class org.dynmap.hdmap.renderer.BoxRenderer]] - the renderer used to implement <a href="Defining-cuboid-models">cubiod models</a></li>
+<li><a href="Class-org.dynmap.hdmap.renderer.boxrenderer.html">org.dynmap.hdmap.renderer.BoxRenderer &#x7C7B;</a> - &#x7528;&#x4E8E;&#x5B9E;&#x73B0;<a href="Defining-cuboid-models.html">&#x7ACB;&#x65B9;&#x4F53;&#x6A21;&#x578B;</a> &#x7684;&#x6E32;&#x67D3;&#x5668;</li>
 <li>Class org.dynmap.hdmap.renderer.CTMVertTextureRenderer</li>
-<li>[[Class org.dynmap.hdmap.renderer.FenceWallBlockRenderer]] - the renderer used for fences and walls</li>
+<li><a href="Class-org.dynmap.hdmap.renderer.FenceWallBlockRenderer.html">org.dynmap.hdmap.renderer.FenceWallBlockRenderer&#x7C7B;</a> - &#x7528;&#x4E8E;&#x6805;&#x680F;&#x548C;&#x56F4;&#x5899;&#x7684;&#x6E32;&#x67D3;&#x5668;</li>
 <li>Class org.dynmap.hdmap.renderer.FrameRenderer</li>
 <li>Class org.dynmap.hdmap.renderer.ImmibisMicroRenderer</li>
-<li>[[Class org.dynmap.hdmap.renderer.PaneRenderer]] - the renderer used for glass panes and iron fences</li>
+<li><a href="Class-org.dynmap.hdmap.renderer.PaneRenderer.html">org.dynmap.hdmap.renderer.PaneRenderer &#x7C7B;</a> - &#x7528;&#x4E8E;&#x73BB;&#x7483;&#x677F;&#x548C;&#x94C1;&#x6805;&#x680F;&#x7684;&#x6E32;&#x67D3;&#x5668;</li>
 <li>Class org.dynmap.hdmap.renderer.RailCraftSlabBlockRenderer</li>
 <li>Class org.dynmap.hdmap.renderer.RailCraftTrackRenderer</li>
-<li>[[Class org.dynmap.hdmap.renderer.RedstoneWireRenderer]] - the renderer used for redstone wire</li>
+<li><a href="Class-org.dynmap.hdmap.renderer.RedstoneWireRenderer.html">org.dynmap.hdmap.renderer.RedstoneWireRenderer &#x7C7B;</a> - &#x7528;&#x4E8E;&#x7EA2;&#x77F3;&#x7EBF;&#x7684;&#x6E32;&#x67D3;&#x5668;</li>
 <li>Class org.dynmap.hdmap.renderer.RotatedBoxRenderer</li>
 <li>Class org.dynmap.hdmap.renderer.RotatedPatchRenderer</li>
 <li>Class org.dynmap.hdmap.renderer.RPMicroRenderer</li>
 <li>Class org.dynmap.hdmap.renderer.RPRotatedBoxRenderer</li>
 <li>Class org.dynmap.hdmap.renderer.RPSupportFrameRenderer</li>
-<li>[[Class org.dynmap.hdmap.renderer.SkullRenderer]] - the renderer used for vanilla skulls/heads </li>
-<li>[[Class org.dynmap.hdmap.renderer.StairBlockRenderer]] - the renderer used for standard stairs blocks</li>
+<li><a href="Class-org.dynmap.hdmap.renderer.SkullRenderer.html">org.dynmap.hdmap.renderer.SkullRenderer &#x7C7B;</a> - &#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x539F;&#x7248;&#x5934;&#x9885;&#x7684;&#x6E32;&#x67D3;&#x5668;</li>
+<li><a href="Class-org.dynmap.hdmap.renderer.StairBlockRenderer.html">org.dynmap.hdmap.renderer.StairBlockRenderer &#x7C7B;</a> - &#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x666E;&#x901A;&#x697C;&#x68AF;&#x65B9;&#x5757;&#x7684;&#x6E32;&#x67D3;&#x5668;</li>
 <li>Class org.dynmap.hdmap.renderer.TFCLooseRockRenderer</li>
 <li>Class org.dynmap.hdmap.renderer.TFCSupportRenderer</li>
 <li>Class org.dynmap.hdmap.renderer.TFCWoodRenderer</li>
@@ -1069,7 +1059,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"使用自定方块着色器","level":"1.11.3.2","depth":3,"next":{"title":"BoxRender类","level":"1.11.3.2.1","depth":4,"path":"Class-org.dynmap.hdmap.renderer.boxrenderer.md","ref":"Class-org.dynmap.hdmap.renderer.boxrenderer.md","articles":[]},"previous":{"title":"定义长方体模型","level":"1.11.3.1","depth":3,"path":"Defining-cuboid-models.md","ref":"Defining-cuboid-models.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Using-custom-block-renderers.md","mtime":"2017-08-12T04:39:31.068Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T08:39:43.036Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"使用自定方块着色器","level":"1.11.3.2","depth":3,"next":{"title":"BoxRender类","level":"1.11.3.2.1","depth":4,"path":"Class-org.dynmap.hdmap.renderer.boxrenderer.md","ref":"Class-org.dynmap.hdmap.renderer.boxrenderer.md","articles":[]},"previous":{"title":"定义长方体模型","level":"1.11.3.1","depth":3,"path":"Defining-cuboid-models.md","ref":"Defining-cuboid-models.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Using-custom-block-renderers.md","mtime":"2017-08-25T10:00:18.993Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-04T05:10:56.684Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

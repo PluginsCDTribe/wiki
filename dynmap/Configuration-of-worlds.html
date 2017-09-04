@@ -181,19 +181,6 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
-            
-                <a href="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
-            
-                    
-                    Nginx
-            
-                </a>
-            
-
-            
-        </li>
-    
 
             </ul>
             
@@ -993,12 +980,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="configuration-of-worlds">Configuration of worlds</h1>
-<p>There are two parts in <code>configuration.txt</code> that need to be checked when setting up Dynmap for multiple worlds. The first one is only for server-side rendering of the maps, this has to do with what the server needs to do to render the maps. Another part (under web-section) is about how the browser should show the map (and of course what maps).</p>
-<p>Below are the sections from <code>configuration.txt</code>. You can see it contains two worlds: <code>world</code> and <code>nether</code>.
-The world <code>world</code> has two &apos;maps&apos;, this might not be too obvious since it looks like the server-side section only has one map, but it has two renderers. The maps have two <em>prefixes</em>, these determine the filename of the tiles in <code>minecraft_server/plugins/dynmap/web/tiles/world/</code>. These prefixes have to be unique for that world.</p>
-<p>The other world is called <code>nether</code>. It has only one map. Note that this map has a special option called <code>maximumheight</code> which makes the renderer not render the upper part of the world. This is handy for nether-like environments where the upper part of the nether is covered with bedrock.</p>
-<h2 id="server-side-section">Server-side section</h2>
+                                <h1 id="&#x4E16;&#x754C;&#x914D;&#x7F6E;">&#x4E16;&#x754C;&#x914D;&#x7F6E;</h1>
+<p><code>configuration.txt</code> &#x4EE5;&#x63B3;&#x7231;&#x90A3;&#x4E2A;&#x90E8;&#x5206;&#x5462;&#x9700;&#x8981;&#x5728;&#x8BBE;&#x7F6E; Dynmap &#x7684;&#x591A;&#x4E16;&#x754C;&#x65F6;&#x68C0;&#x67E5;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x4EC5;&#x7528;&#x4E8E;&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x5730;&#x56FE;&#x6E32;&#x67D3;&#xFF0C;&#x53E6;&#x4E00;&#x90E8;&#x5206;&#x662F;&#x5173;&#x4E8E;&#x6D4F;&#x89C8;&#x5668;&#x600E;&#x6837;&#x663E;&#x793A;&#x5730;&#x56FE;&#xFF08;&#x5F53;&#x7136;&#x8FD8;&#x6709;&#x4EC0;&#x4E48;&#x5730;&#x56FE;&#xFF09;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F; <code>configuration.txt</code> &#x7684;&#x8FD9;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x89C1;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x5305;&#x542B;&#x4E86;&#x4E24;&#x4E2A;&#x4E16;&#x754C;&#xFF1A;<code>world</code> &#x548C; <code>nether</code>&#x3002;
+&#x4E16;&#x754C; <code>world</code> &#x6709;&#x4E24;&#x5F20;&#x5730;&#x56FE;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x770B;&#x8D77;&#x6765;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x5F88;&#x663E;&#x800C;&#x6613;&#x89C1;&#xFF0C;&#x56E0;&#x4E3A;&#x770B;&#x8D77;&#x6765;&#x50CF;&#x662F;&#x53EA;&#x6709;&#x4E00;&#x5F20;&#x5730;&#x56FE;&#x3002;&#x5B9E;&#x9645;&#x4E0A;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x4E86;&#x4E24;&#x4E2A;&#x6E32;&#x67D3;&#x5668;&#xFF0C;&#x5730;&#x56FE;&#x6709;&#x4E24;&#x4E2A;&#x524D;&#x7F00;&#xFF0C;&#x8FD9;&#x6307;&#x5B9A;&#x4E86; <code>minecraft_server/plugins/dynmap/web/tiles/world/</code> &#x4E2D;&#x7684; tiles &#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x8FD9;&#x4E9B;&#x524D;&#x7F00;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E9B;&#x4E16;&#x754C;&#x5FC5;&#x987B;&#x662F;&#x72EC;&#x4E00;&#x65E0;&#x4E8C;&#x7684;&#x3002;</p>
+<p>&#x53E6;&#x4E00;&#x4E2A;&#x4E16;&#x754C;&#x53EB; <code>nether</code>&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x5F20;&#x5730;&#x56FE;&#x3002;&#x6CE8;&#x610F;&#x6B64;&#x5730;&#x56FE;&#x6709;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x8BBE;&#x7F6E; <code>maximumheight</code>&#xFF0C;&#x8FD9;&#x6307;&#x5B9A;&#x4E86;&#x6E32;&#x67D3;&#x5668;&#x4E0D;&#x6E32;&#x67D3;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x8FD9;&#x662F;&#x4E3A;&#x5730;&#x72F1;&#x73AF;&#x5883;&#x51C6;&#x5907;&#x7684;&#x9009;&#x9879;&#xFF0C;&#x56E0;&#x4E3A;&#x5730;&#x72F1;&#x7684;&#x4E0A;&#x65B9;&#x5168;&#x662F;&#x57FA;&#x5CA9;&#xFF0C;&#x4E0D;&#x7528;&#x6E32;&#x67D3;&#x3002;</p>
+<h2 id="&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x90E8;&#x5206;">&#x670D;&#x52A1;&#x7AEF;&#x7684;&#x90E8;&#x5206;</h2>
 <pre><code class="lang-yaml"><span class="hljs-comment"># The maptypes Dynmap will use to render.</span>
 <span class="hljs-attr">worlds:</span>
 <span class="hljs-attr">  - name:</span> world
@@ -1019,7 +1006,7 @@ The world <code>world</code> has two &apos;maps&apos;, this might not be too obv
 <span class="hljs-attr">            prefix:</span> nt
 <span class="hljs-attr">            maximumheight:</span> <span class="hljs-number">64</span>
 </code></pre>
-<h2 id="web-section">Web section</h2>
+<h2 id="&#x7F51;&#x9875;&#x7684;&#x90E8;&#x5206;">&#x7F51;&#x9875;&#x7684;&#x90E8;&#x5206;</h2>
 <pre><code class="lang-yaml"><span class="hljs-attr">web:</span>
 <span class="hljs-attr">    defaultworld:</span> world
 <span class="hljs-attr">    worlds:</span>
@@ -1042,16 +1029,16 @@ The world <code>world</code> has two &apos;maps&apos;, this might not be too obv
 <span class="hljs-attr">            name:</span> nether
 <span class="hljs-attr">            prefix:</span> nt
 </code></pre>
-<h2 id="how-to-proceed">How to proceed</h2>
-<p>Make sure that:</p>
+<h2 id="&#x5982;&#x4F55;&#x8FDB;&#x884C;">&#x5982;&#x4F55;&#x8FDB;&#x884C;</h2>
+<p>&#x4FDD;&#x8BC1;&#xFF1A;</p>
 <ul>
-<li>Your world directories are in the root of <code>minecraft_server</code>, for example <code>minecraft_server/world</code> and <code>minecraft_server/nether</code>.</li>
-<li>Your world directories are places in <code>minecraft_server</code> next to <code>craftbukkit*.jar</code> and not in a subdirectory.</li>
-<li>Your world directories do not contain weird characters and only letters, numbers and <code>_</code>.</li>
-<li>The <code>name</code> of the world in both the server-side-section and the web-section correctly match the name of your world directory, for example <code>world</code> or <code>nether</code>. Please note that these names are <em>case-sensitive</em>!</li>
-<li><code>defaultmap</code> matches a name of a map in the web-section. Again note that these names are <em>case-sensitive</em>!</li>
-<li>If you change the <code>prefix</code> variable, the prefix in both the server-side section AND the web-section matches.</li>
-<li>After you start the server, place and remove blocks and see whether the tile is visible. Your character should also be visible on the map. You can click your character to quickly go to the world where your character is located.</li>
+<li>&#x4F60;&#x7684;&#x4E16;&#x754C;&#x6587;&#x4EF6;&#x5939;&#x5728; <code>minecraft_server</code> &#x7684;&#x6839;&#x90E8;&#x76EE;&#x5F55;&#xFF0C;&#x6BD4;&#x5982; <code>minecraft_server/world</code> &#x548C; <code>minecraft_server/nether</code>&#x3002;</li>
+<li>&#x4F60;&#x7684;&#x4E16;&#x754C;&#x6587;&#x4EF6;&#x5939;&#x5C31;&#x5728; <code>minecraft_server</code> &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#xFF0C;&#x548C; <code>craftbukkit*.jar</code> &#x540C;&#x7EA7;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4EC0;&#x4E48;&#x5B50;&#x76EE;&#x5F55;&#x3002;</li>
+<li>&#x4F60;&#x7684;&#x4E16;&#x754C;&#x6587;&#x4EF6;&#x5939;&#x6CA1;&#x6709;&#x53BB;&#x602A;&#x7684;&#x7B26;&#x53F7;&#xFF0C;&#x53EA;&#x6709;&#x6570;&#x5B57;&#x5B57;&#x6BCD;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#x3002;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x90E8;&#x5206;&#x548C;&#x7F51;&#x9875;&#x90E8;&#x5206;&#x7684;&#x4E16;&#x754C;&#x7684; <code>name</code> &#x8BBE;&#x7F6E;&#x90FD;&#x5339;&#x914D;&#x4F60;&#x7684;&#x4E16;&#x754C;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x6BD4;&#x5982; <code>world</code> &#x6216; <code>nether</code>&#x3002;&#x6CE8;&#x610F;&#x8FD9;&#x4E9B;&#x540D;&#x79F0;&#x662F;<strong>&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;</strong>&#x7684;&#x3002;</li>
+<li><code>defaultmap</code> &#x5339;&#x914D;&#x7F51;&#x9875;&#x90E8;&#x5206;&#x7684;&#x4E00;&#x5F20;&#x5730;&#x56FE;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x518D;&#x6B21;&#x6CE8;&#x610F;&#x8FD9;&#x4E9B;&#x540D;&#x79F0;&#x662F;<strong>&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;</strong>&#x7684;&#xFF01;</li>
+<li>&#x5982;&#x679C;&#x4F60;&#x66F4;&#x6539;&#x4E86; <code>prefix</code> &#x53D8;&#x91CF;&#xFF0C;&#x90A3;&#x4E48;&#x5E94;&#x8BE5;&#x5728;&#x670D;&#x52A1;&#x7AEF;&#x90E8;&#x5206;&#x548C;&#x7F51;&#x9875;&#x90E8;&#x5206;&#x540C;&#x65F6;&#x66F4;&#x6539;&#x3002;</li>
+<li>&#x91CD;&#x542F;&#x670D;&#x52A1;&#x5668;&#x540E;&#xFF0C;&#x5728;&#x4E16;&#x754C;&#x4E2D;&#x653E;&#x7F6E;&#x548C;&#x7834;&#x574F;&#x4E00;&#x4E9B;&#x65B9;&#x5757;&#x770B;&#x770B;&#x6548;&#x679C;&#x3002;&#x4F60;&#x7684;&#x89D2;&#x8272;&#x5E94;&#x8BE5;&#x5728;&#x4E16;&#x754C;&#x4E0A;&#x53EF;&#x89C1;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x4F60;&#x7684;&#x89D2;&#x8272;&#x6765;&#x5FEB;&#x901F;&#x5230;&#x8FBE;&#x89D2;&#x8272;&#x6240;&#x5728;&#x7684;&#x4E16;&#x754C;&#x3002;</li>
 </ul>
 
                                 
@@ -1096,7 +1083,7 @@ The world <code>world</code> has two &apos;maps&apos;, this might not be too obv
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"世界配置","level":"1.6.3.2","depth":3,"next":{"title":"高分辨率地图设定","level":"1.6.4","depth":2,"path":"HD-Map-Configuration.md","ref":"HD-Map-Configuration.md","articles":[{"title":"所有可用的预设","level":"1.6.4.1","depth":3,"path":"Full-list-of-predefined-perspectives.md","ref":"Full-list-of-predefined-perspectives.md","articles":[]},{"title":"自定义预设","level":"1.6.4.2","depth":3,"path":"Defining-custom-perspectives.md","ref":"Defining-custom-perspectives.md","articles":[]},{"title":"自定义着色器","level":"1.6.4.3","depth":3,"path":"Defining-custom-shaders.md","ref":"Defining-custom-shaders.md","articles":[]},{"title":"自定义光照","level":"1.6.4.4","depth":3,"path":"Defining-custom-lightings.md","ref":"Defining-custom-lightings.md","articles":[]}]},"previous":{"title":"颜色主题","level":"1.6.3.1","depth":3,"path":"Color-Schemes.md","ref":"Color-Schemes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Configuration-of-worlds.md","mtime":"2017-08-12T04:39:31.051Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-20T08:39:43.036Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"世界配置","level":"1.6.3.2","depth":3,"next":{"title":"高分辨率地图设定","level":"1.6.4","depth":2,"path":"HD-Map-Configuration.md","ref":"HD-Map-Configuration.md","articles":[{"title":"所有可用的预设","level":"1.6.4.1","depth":3,"path":"Full-list-of-predefined-perspectives.md","ref":"Full-list-of-predefined-perspectives.md","articles":[]},{"title":"自定义预设","level":"1.6.4.2","depth":3,"path":"Defining-custom-perspectives.md","ref":"Defining-custom-perspectives.md","articles":[]},{"title":"自定义着色器","level":"1.6.4.3","depth":3,"path":"Defining-custom-shaders.md","ref":"Defining-custom-shaders.md","articles":[]},{"title":"自定义光照","level":"1.6.4.4","depth":3,"path":"Defining-custom-lightings.md","ref":"Defining-custom-lightings.md","articles":[]}]},"previous":{"title":"颜色主题","level":"1.6.3.1","depth":3,"path":"Color-Schemes.md","ref":"Color-Schemes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Configuration-of-worlds.md","mtime":"2017-08-25T07:58:36.928Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-04T05:10:56.684Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
