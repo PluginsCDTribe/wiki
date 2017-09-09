@@ -5,9 +5,11 @@
 ## 已完成的项目
 * [Fast Async WorldEdit](https://pluginscdtribe.github.io/wiki/fast-async-worldedit/)
 * [LuckPerms](https://pluginscdtribe.github.io/wiki/luckperms/)
+* [MythicMobs](https://pluginscdtribe.github.io/wiki/mythicmobs/)
 
 ## WIP
 * [Dynmap](https://pluginscdtribe.github.io/wiki/dynmap/)
+* [GriefPrevention]()
 
 ## 关于我们
 
