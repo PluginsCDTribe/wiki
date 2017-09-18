@@ -181,6 +181,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.5" data-path="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
+            
+                <a href="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -980,16 +993,16 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>Volumetric models are intended to provide a relatively convenient way to produce relatively complex shapes.  The application of textures to the volumetric models follow the same pattern as is done for simple cubes and for <a href="Defining-cuboid-models">cubiod models</a> - the texture for each of the 6 faces is applied to the corresponding side of any of the subblocks within the model, with the texture scaled to the full size of the cube face.  Consequently, the texture definitions in the [[Texture Definition Files]] are defined in the same way as for simple solid blocks and for <a href="Defining-cuboid-models">cubiod models</a>.</p>
-<p>The volumetric models are based on dividing each dimension of the block by a provided constant (the <em>scale</em>), which can be any power-of-2 up to 16 (1, 2, 4, 8, or 16).  This results in the cube being divided into a set of cubes, each of which is 1/<em>scale</em> x 1/<em>scale</em> x 1/<em>scale</em>.  The model is then defined by indicating which of these smaller blocks are filled by the model versus being empty.  </p>
-<p>The model is defined in a number of lines: the first line is a &quot;block:&quot; line, and has the following attributes:</p>
+                                <p>&#x4F53;&#x79EF;&#x6A21;&#x578B;&#x7528;&#x4E8E;&#x63D0;&#x4F9B;&#x590D;&#x6742;&#x7684;&#x5F62;&#x72B6;&#x3002;&#x4F53;&#x79EF;&#x6A21;&#x578B;&#x7684;&#x6750;&#x8D28;&#x4E0E;<a href="Defining-cuboid-models.html">&#x957F;&#x65B9;&#x4F53;&#x6A21;&#x578B;</a>&#x4E2D;&#x7684;&#x683C;&#x5F0F;&#x76F8;&#x540C; - &#x6BCF; 6 &#x4E2A;&#x9762;&#x7684;&#x6750;&#x8D28;&#x5BF9;&#x5E94;&#x65B9;&#x5757;&#x7684;&#x9762;&#xFF0C;&#x6750;&#x8D28;&#x9650;&#x5236;&#x4E86;&#x65B9;&#x5757;&#x9762;&#x7684;&#x6700;&#x5927;&#x5927;&#x5C0F;&#x3002;<a href="Texture-Definition-Files.html">&#x6750;&#x8D28;&#x5B9A;&#x4E49;&#x6587;&#x4EF6;</a>&#x4E2D;&#x7684;&#x5B9A;&#x4E49;&#x4E0E;<a href="Defining-cuboid-models.html">&#x957F;&#x65B9;&#x4F53;&#x6A21;&#x578B;</a>&#x7684;&#x65B9;&#x6CD5;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x3002;</p>
+<p>&#x4F53;&#x79EF;&#x6A21;&#x578B;&#x57FA;&#x4E8E;&#x5C06;&#x5757;&#x7684;&#x6BCF;&#x4E2A;&#x7EF4;&#x5EA6;&#x9664;&#x4EE5;&#x6240;&#x63D0;&#x4F9B;&#x7684;&#x5E38;&#x6570;&#xFF08; <em>scale</em> &#xFF09;&#xFF0C;&#x53EF;&#x4EE5;&#x662F; -2 &#x81F3;&#x9AD8;&#x8FBE; 16&#xFF08;1,2,4,8&#x6216;16&#xFF09; &#x7684;&#x4EFB;&#x4F55;&#x5E42;&#x3002;&#x8FD9;&#x5C06;&#x4F7F;&#x7ACB;&#x65B9;&#x4F53;&#x88AB;&#x5206;&#x6210;&#x4E00;&#x7EC4;&#x66F4;&#x5C0F;&#x7684;&#x7ACB;&#x65B9;&#x4F53;&#xFF0C;&#x6BCF;&#x4E2A;&#x7ACB;&#x65B9;&#x4F53;&#x90FD;&#x662F; 1/<em>scale</em> x 1/<em>scale</em> x 1/<em>scale</em> &#x3002;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x8FD9;&#x4E9B;&#x8F83;&#x5C0F;&#x7684;&#x65B9;&#x5757;&#x4E2D;&#x7684;&#x54EA;&#x4E00;&#x4E2A;&#x88AB;&#x586B;&#x5145;&#x800C;&#x4E0D;&#x662F;&#x7A7A;&#x7684;&#x6765;&#x5B9A;&#x4E49;&#x6A21;&#x578B;&#x3002;</p>
+<p>&#x6A21;&#x578B;&#x901A;&#x8FC7;&#x5F88;&#x591A;&#x884C;&#x914D;&#x7F6E;&#x6765;&#x8BBE;&#x7F6E;&#xFF0C;&#x7B2C;&#x4E00;&#x884C;&#x662F; &quot;block:&quot; &#x884C;&#xFF0C;&#x6709;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#xFF1A;</p>
 <ul>
-<li><em>id</em> - the block ID that the model is to be used for.  At least one <em>id</em> attribute is required, but as many as are needed can be used - allowing the same model to be used for multiple blocks.  See <a href="Texture-Definition-Files#block-id-numbers">Block ID Numbers</a> for details on specifying block ID numbers.</li>
-<li><em>data</em> - this provides the specific metadata values that the model is to be applied to.  The default, <em>data=**, indicates all metadata values for each of the blocks IDs indicated by the </em>id<em> attributes.  Otherwise, one or more </em>data=number* attributes can be used to select specific metadata values for the model.</li>
-<li><em>scale</em> - this is the number of divisions used for each axis of the model.  This results in the cube being divided into <em>scale</em> layers of subblocks, each of which is <em>scale</em> by <em>scale</em> subblocks.</li>
+<li><em>id</em> - &#x8BBE;&#x7F6E;&#x6A21;&#x578B;&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x5757; ID&#xFF0C;&#x81F3;&#x5C11;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x65B9;&#x5757;id&#xFF0C;&#x4F46;&#x662F;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x66F4;&#x591A;&#x7684; - &#x5141;&#x8BB8;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x65B9;&#x5757;&#x7EC4;&#x6210;&#x3002;&#x67E5;&#x770B;<a href="Texture-Definition-Files.html">&#x65B9;&#x5757;ID&#x90E8;&#x5206;</a>&#x6765;&#x67E5;&#x770B;&#x66F4;&#x591A;&#x6307;&#x5B9A;&#x65B9;&#x5757;ID&#x7684;&#x7EC6;&#x8282;&#x3002;</li>
+<li><em>data</em> - &#x6307;&#x5B9A;&#x65B9;&#x5757;&#x4F7F;&#x7528;&#x7684;&#x5143;&#x6570;&#x636E;&#x3002;&#x9ED8;&#x8BA4; <em>data=**&#xFF0C;&#x6307;&#x5B9A;&#x6240;&#x6709;&#x65B9;&#x5757;id&#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x66F4;&#x591A;&#x4E2A; </em>data=number* &#x5C5E;&#x6027;&#x6307;&#x5B9A;&#x8BE6;&#x7EC6;&#x7684;&#x5143;&#x6570;&#x636E;&#x3002;</li>
+<li><em>scale</em> - &#x6A21;&#x578B;&#x7684;&#x7EC6;&#x5206;&#x7684;&#x5927;&#x5C0F;&#x8BBE;&#x5B9A;&#x3002;</li>
 </ul>
-<p>For example, the model for the piston extension facing down can be produced by a volumetric model by first dividing the cube into 8 parts on each axis:</p>
-<pre><code> block:id=34,data=0,data=8,scale=8
+<p>&#x6BD4;&#x5982;&#x5411;&#x4E0B;&#x7684;&#x6D3B;&#x585E;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x8BBE;&#x5B9A;&#xFF1A;</p>
+<pre><code>     block:id=34,data=0,data=8,scale=8
 </code></pre><p>After the &quot;block:&quot; record, one or more layers of blocks can be defined - ranging from layer 0 (the bottom layer) to layer (<em>scale</em>-1) (the top layer).  Each layer is defined by a &quot;layer:&quot; line, which has a comma separated list of numbers indicating which of the layers are being defined (if more than one layer uses the same pattern of subblocks, only the pattern only needs to be defined once).  The next <em>scale</em> lines after the &quot;layer:&quot; line define the pattern of the subblocks: each line represents one step of blocks in the Z axis (first is lowest, last is highest), and each has <em>scale</em> characters (representing the subblocks from the lowest to the highest on the X axis) - a &apos;*&apos; for a subblock filled by the model, or a &apos;-&apos; for a subblock left empty in the model.  Any layer not specified is assumed to consist of empty subblocks.</p>
 <p>For the piston extension facing down, the full definition is:</p>
 <pre><code> block:id=34,data=0,data=8,scale=8
@@ -1064,7 +1077,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"定义立体模型","level":"1.11.3.3","depth":3,"next":{"title":"定义补丁模型","level":"1.11.3.4","depth":3,"path":"Defining-patch-models.md","ref":"Defining-patch-models.md","articles":[]},"previous":{"title":"StairBlockRenderer类","level":"1.11.3.2.6","depth":4,"path":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","ref":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Defining-volumetric-models.md","mtime":"2017-08-12T04:39:31.055Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-04T05:10:56.684Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"定义立体模型","level":"1.11.3.3","depth":3,"next":{"title":"定义补丁模型","level":"1.11.3.4","depth":3,"path":"Defining-patch-models.md","ref":"Defining-patch-models.md","articles":[]},"previous":{"title":"StairBlockRenderer类","level":"1.11.3.2.6","depth":4,"path":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","ref":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Defining-volumetric-models.md","mtime":"2017-09-18T05:19:46.377Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-18T05:19:57.452Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -1072,10 +1085,6 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>

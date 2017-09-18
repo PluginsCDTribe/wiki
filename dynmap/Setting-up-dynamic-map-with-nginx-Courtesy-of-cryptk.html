@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>网页参数 · GitBook</title>
+        <title>Nginx · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Using-markers.html" />
+    <link rel="next" href="Setting-up-the-Dynamic-Map-plugin-under-Windows.html" />
     
     
-    <link rel="prev" href="Web-ui-login-support-and-permissions.html" />
+    <link rel="prev" href="Setting-up-with-Nginx-server-on-Centos.html" />
     
 
     </head>
@@ -181,7 +181,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
+        <li class="chapter active" data-level="1.3.5" data-path="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
             
                 <a href="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
             
@@ -546,7 +546,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.9" data-path="Web-UI-Parameters.html">
+        <li class="chapter " data-level="1.9" data-path="Web-UI-Parameters.html">
             
                 <a href="Web-UI-Parameters.html">
             
@@ -978,7 +978,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >网页参数</a>
+        <a href="." >Nginx</a>
     </h1>
 </div>
 
@@ -993,42 +993,73 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x7528;&#x4E8E;&#x542F;&#x52A8;Web&#x754C;&#x9762;&#x7684;URL&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x6539;&#x53D8;&#x53D1;&#x9001;&#x7ED9;&#x73A9;&#x5BB6;&#x7684;&#x9ED8;&#x8BA4;&#x754C;&#x9762;&#x6548;&#x679C;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5728;&#x52A0;&#x8F7D;WebUI&#x65F6;&#x52A0;&#x8F7D;&#x6307;&#x5B9A;&#x7684;&#x4E16;&#x754C;&#x6216;&#x8005;&#x5730;&#x56FE;&#xFF0C;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x7F29;&#x653E;&#x5927;&#x5C0F;&#xFF0C;&#x6216;&#x8005;&#x5C06;&#x5730;&#x56FE;&#x7684;&#x4E2D;&#x5FC3;&#x8BBE;&#x7F6E;&#x4E3A;&#x67D0;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x4E16;&#x754C;&#x5750;&#x6807;&#x3002;</p>
-<p>&#x53C2;&#x6570;&#x7531;&#x4E00;&#x4E32;&#x5C5E;&#x6027;-&#x503C;&#x7EC4;&#x6210;&#xFF0C;&#x6BCF;&#x4E2A;&#x7684;&#x53C2;&#x6570;&#x683C;&#x5F0F;&#x5C31;&#x50CF;&#x8FD9;&#x6837;:</p>
-<pre><code>attribute-id=value
-</code></pre><p>&#x57FA;&#x7840;&#x7684;URL&#x5FC5;&#x987B;&#x542B;&#x6709;&#x4E00;&#x4E2A;&#x95EE;&#x53F7; (?) &#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4E4B;&#x524D;&#xFF0C;&#x6BCF;&#x4E2A;&#x53C2;&#x6570;&#x4E4B;&#x95F4;&#x5FC5;&#x987B;&#x4EE5;&#x8FD9;&#x4E2A;&#x7B26;&#x53F7;&#x95F4;&#x9694;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x662F;&#x9ED8;&#x8BA4;&#x7684;dynmap&#x94FE;&#x63A5;:</p>
-<pre><code>http://mygreatserver:8123/
-</code></pre><p>&#x90A3;&#x4E48;&#xFF0C;&#x76F4;&#x63A5;&#x6253;&#x5F00; &apos;fred&apos; &#x4E16;&#x754C;&#x5E76;&#x4E14;&#x663E;&#x793A; &apos;surface&apos; &#x5730;&#x56FE;&#x7684;&#x7F51;&#x9875;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x50CF;&#x8FD9;&#x6837;:</p>
-<pre><code>http://mygreatserver:8123/?worldname=fred&amp;mapname=surface
-</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5916;&#x7F6E;&#x7684;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x683C;&#x5F0F;&#x4E5F;&#x662F;&#x4E00;&#x6837;&#x7684; - &#x6DFB;&#x52A0;&#x95EE;&#x53F7;&#xFF0C;&#x4F7F;&#x7528; &amp; &#x5206;&#x5272;:</p>
-<pre><code>http://mycoolapacheserver.com/dynmap?worldname=fred&amp;mapname=surface
-</code></pre><p>&#x53EF;&#x7528;&#x7684;&#x53C2;&#x6570;&#x6709;&#x4E00;&#x4E0B;:</p>
+                                <p>&#x8FD9;&#x91CC;&#x4ECB;&#x7ECD;&#x4E86;&#x5982;&#x4F55;&#x4F7F;&#x7528;Nginx&#x4F5C;&#x4E3A;&#x5916;&#x90E8;Web&#x670D;&#x52A1;&#x5668;&#x642D;&#x5EFA;Dynmap &#x7F51;&#x9875;&#x670D;&#x52A1;&#xFF08;&#x975E;&#x4EE3;&#x7406;&#x670D;&#x52A1;&#x5668;&#xFF09;&#x3002; 
+&#x6211;&#x4EEC;&#x63A8;&#x6D4B;&#x4F60;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x4E86;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#xFF1A;</p>
 <ul>
-<li><p><strong>worldname</strong> - &#x8FD9;&#x4E2A;&#x6307;&#x5B9A;&#x4E86;&#x4E16;&#x754C;&#x7684;&#x540D;&#x79F0;(&#x4E0D;&#x662F;&#x6807;&#x9898;)&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x663E;&#x793A;&#x7B2C;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684;&#x4E16;&#x754C;(&#x9664;&#x975E;&#x5728; _configuration.txt&#x91CC;&#x8BBE;&#x7F6E;&#x4E86;&#x663E;&#x793A;&#x54EA;&#x4E2A;&#x4E16;&#x754C;)&#x3002;</p>
-</li>
-<li><p><strong>mapname</strong> - &#x8FD9;&#x4E2A;&#x6307;&#x5B9A;&#x4E86;&#x663E;&#x793A;&#x7684;&#x5730;&#x56FE;&#x7684;&#x540D;&#x79F0;(&#x4E0D;&#x662F;&#x6807;&#x9898;)&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x4F1A;&#x663E;&#x793A;&#x9009;&#x4E2D;&#x7684;&#x4E16;&#x754C;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5730;&#x56FE;&#xFF01;(&#x9664;&#x975E;&#x5728;_configuration.txt&#x4E2D;&#x8BBE;&#x7F6E;&#x4E86;&#x663E;&#x793A;&#x54EA;&#x5F20;&#x5730;&#x56FE;)&#x3002;</p>
-</li>
-<li><p><strong>zoom</strong> - &#x6307;&#x5B9A;&#x7684;&#x7F29;&#x653E;&#x5927;&#x5C0F;(0&#x4E3A;&#x6700;&#x9AD8;&#x7684;&#x7F29;&#x653E;)&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#xFF0C;&#x3002;&#x90A3;&#x4E48;&#x5C06;&#x4F1A;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x7F29;&#x653E;&#x5927;&#x5C0F;(&#x9664;&#x975E;&#x5728;_configuration.txt&#x4E2D;&#x6307;&#x5B9A;&#x4E86;&#x9ED8;&#x8BA4;&#x7684;&#x7F29;&#x653E;&#x5927;&#x5C0F;)&#x3002;</p>
-</li>
-<li><p><strong>x</strong> - &#x8FD9;&#x4E2A;&#x6307;&#x5B9A;&#x4E86;X&#x5750;&#x6807;(&#x5C55;&#x793A;&#x7684;&#x4E16;&#x754C;&#x7684;&#x5750;&#x6807;)&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x4F1A;&#x663E;&#x793A;<em>center</em>&#x5B9A;&#x4E49;&#x7684;<em>x</em>&#x5750;&#x6807;(&#x4E00;&#x822C;&#x4E3A;0)&#x3002;</p>
-</li>
-<li><p><strong>y</strong> - &#x8FD9;&#x4E2A;&#x6307;&#x5B9A;&#x4E86;Y&#x5750;&#x6807;(&#x5C55;&#x793A;&#x7684;&#x4E16;&#x754C;&#x7684;&#x5750;&#x6807;)&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x4F1A;&#x663E;&#x793A;<em>center</em>&#x5B9A;&#x4E49;&#x7684;<em>y</em>&#x5750;&#x6807;(&#x4E00;&#x822C;&#x4E3A;0)&#x3002;</p>
-</li>
-<li><p><strong>z</strong> - &#x8FD9;&#x4E2A;&#x6307;&#x5B9A;&#x4E86;Z&#x5750;&#x6807;(&#x5C55;&#x793A;&#x7684;&#x4E16;&#x754C;&#x7684;&#x5750;&#x6807;)&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x4F1A;&#x663E;&#x793A;<em>center</em>&#x5B9A;&#x4E49;&#x7684;<em>z</em>&#x5750;&#x6807;(&#x4E00;&#x822C;&#x4E3A;0)&#x3002;</p>
-</li>
-<li><p><strong>nopanel</strong> - &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;true&#xFF0C;&#x90A3;&#x4E48;&#x5730;&#x56FE;&#x663E;&#x793A;&#x7684;&#x4FA7;&#x8FB9;&#x680F;&#x5C06;&#x4F1A;&#x79FB;&#x9664;&#x3002;</p>
-</li>
-<li><p><strong>chatname</strong> - &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;WebUI&#x5C06;&#x4F1A;&#x5C06;&#x5176;&#x8F6C;&#x53D8;&#x4E3A;&#x53D1;&#x9001;&#x8005;&#x53D1;&#x9001;&#x7684;&#x804A;&#x5929;&#x6D88;&#x606F;&#x4F7F;&#x7528;&#x7684;&#x540D;&#x79F0;&#x3002;&#x8FD9;&#x5C06;&#x53EA;&#x6709;&#x5728; &apos;trustclientname&apos; &#x8BBE;&#x7F6E;&#x4E3A; true&#x65F6;&#x624D;&#x4F1A;&#x751F;&#x6548;&#xFF0C;&#x4F5C;&#x4E3A; &apos;allowurlname&apos; &#x7684;&#x9644;&#x52A0;&#x3002;&#x5728;0.28&#x53CA;&#x4EE5;&#x540E;&#x7684;&#x7248;&#x672C;&#x4E2D;&#x652F;&#x6301;&#x3002;</p>
-</li>
-<li><p><strong>playername</strong> - &#x5982;&#x679C;&#x5B9A;&#x4E49;&#x4E86;&#x5E76;&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;&#x73A9;&#x5BB6;&#x7684;&#x8D26;&#x6237;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5E76;&#x4E14;&#x73A9;&#x5BB6;&#x5728;&#x7EBF;&#x6216;&#x8005;&#x5F00;&#x542F;WebUI&#x540E;&#x4E00;&#x4F1A;&#x513F;&#x73A9;&#x5BB6;&#x52A0;&#x5165;&#x4E86;&#x670D;&#x52A1;&#x5668;&#xFF0C;WebUI&#x5C06;&#x4F1A;&#x5C06;&#x5730;&#x56FE;&#x521D;&#x59CB;&#x5316;&#x5728;&#x7ED9;&#x5B9A;&#x73A9;&#x5BB6;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
-</li>
-<li><p><strong>hidechat</strong> - &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A; &apos;true&apos;&#xFF0C;&#x90A3;&#x4E48;WebUI&#x5C06;&#x4F1A;&#x5173;&#x95ED;&#x6240;&#x6709;&#x7684;&#x804A;&#x5929;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x6A21;&#x5757;(&#x6C14;&#x6CE1;&#xFF0C;&#x8F93;&#x5165;&#x6846;&#xFF0C;&#x804A;&#x5929;&#x680F;)&#x3002;</p>
-</li>
-<li><p><strong>nogui</strong> - &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A; &apos;true&apos;&#xFF0C;&#x90A3;&#x4E48;WebUI&#x5C06;&#x4F1A;&#x5173;&#x95ED;&#x6240;&#x6709;&#x7684;&#x63A7;&#x5236;&#x9762;&#x677F;&#xFF0C;&#x5C31;&#x50CF;&#x53EA;&#x663E;&#x793A;&#x5730;&#x56FE;&#x5C42;&#x4E00;&#x6837;&#x3002;</p>
-</li>
-<li><p><strong>nocompass</strong> - &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A; &apos;true&apos;&#xFF0C;&#x90A3;&#x4E48;UI&#x4E0A;&#x7684;&#x6307;&#x5357;&#x9488;&#x5C06;&#x4F1A;&#x9690;&#x85CF;&#x3002;(v2.2-alpha-1)</p>
-</li>
+<li>&#x4F60;&#x6240;&#x5B89;&#x88C5;&#x7684; Dynmap &#x6839;&#x76EE;&#x5F55;&#x5728; /srv/dynmap</li>
+<li>&#x4F60;&#x6B63;&#x786E;&#x5730;&#x5B89;&#x88C5;&#x4E86; Nginx &#x670D;&#x52A1;&#xFF0C;&#x5E76;&#x4E14;&#x61C2;&#x5F97;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5B83;&#x6765;&#x642D;&#x5EFA;&#x4E00;&#x53F0;PHP&#x5728;&#x7EBF;&#x804A;&#x5929;&#x7CFB;&#x7EDF;</li>
+<li>&#x4F60;&#x6240;&#x5B89;&#x88C5;&#x7684; Dynmap &#x548C;&#x5185;&#x7F6E;&#x7F51;&#x9875;&#x670D;&#x52A1;&#x5668;&#x5DF2;&#x7ECF;&#x6B63;&#x786E;&#x8FD0;&#x884C;&#x5728; 8123 &#x7AEF;&#x53E3;</li>
 </ul>
+<p>&#x4EE5;&#x4E0B;&#x5C55;&#x793A;&#x51FA; Dynmap &#x8FD0;&#x884C;&#x5728;Nginx&#x65F6;&#x7684;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;&#x4E3A;&#x4E86;&#x66F4;&#x597D;&#x7684;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x5904;&#x7406;&#xFF0C;&#x6211;&#x7279;&#x610F;&#x5C06;Nginx&#x4E2D;&#x7684;php-fpm&#x914D;&#x7F6E;&#x547D;&#x540D;&#x4E3A; &quot;php5-fpm.sock&quot;&#x3002;</p>
+<pre><code>server {
+    listen       80;
+    server_name  minecraft.example.com;
+    root         /srv/dynmap/;
+
+    index index.html;
+
+    access_log /var/log/nginx/minecraft.example.com-access_log;
+    error_log /var/log/nginx/minecraft.example.com-error_log;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_index index.php;
+        fastcgi_pass php5-fpm-sock;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include /etc/nginx/fastcgi_params;
+    }
+}
+</code></pre><p>&#x8FD9;&#x4E9B;&#x914D;&#x7F6E;&#x4F1A;&#x8FD0;&#x7528;&#x5230; Dynmap &#x4E0B;&#x6240;&#x6709;&#x7684;URL&#x884C;&#x4E2D;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4F7F;&#x7528; MultiCraft &#x4F5C;&#x4E3A; Dynmap &#x7684;&#x540E;&#x53F0;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x4E5F;&#x662F;&#x6781;&#x597D;&#x7684;&#x3002; &#x4EE5;&#x4E0B;&#x662F;&#x4F7F;&#x7528;Nginx&#x642D;&#x5EFA; Dynmap &#x65F6;&#x4F7F;&#x7528; MultiCraft &#x7BA1;&#x7406;&#x7684;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code>server {
+    listen       80;
+    server_name  minecraft.example.com;
+    root         /srv/dynmap/;
+
+    index index.html;
+
+    access_log /var/log/nginx/minecraft.example.com-access_log;
+    error_log /var/log/nginx/minecraft.example.com-error_log;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location /admin {
+        alias /srv/multicraft/;
+        index index.php;
+    }
+
+    location ~ ^/admin/(.*\.php)$ {
+        alias /srv/multicraft/$1;
+        fastcgi_pass php5-fpm-sock;
+        fastcgi_param SCRIPT_FILENAME $request_filename;
+        include /etc/nginx/fastcgi_params;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        fastcgi_index index.php;
+        fastcgi_pass php5-fpm-sock;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include /etc/nginx/fastcgi_params;
+    }
+}
+</code></pre><p>&#x4F60;&#x9700;&#x8981;&#x5728;&#x786E;&#x4FDD;&#x4EE5;&#x4E0A;&#x6240;&#x6709;&#x6B65;&#x9AA4;&#x6B63;&#x786E;&#x5B8C;&#x6210;&#x4EE5;&#x53CA;&#x914D;&#x7F6E;&#x9879;&#x65E0;&#x8BEF;&#x540E;&#xFF0C;&#x4F60;&#x8FD8;&#x9700;&#x8981;&#x7ED9; Dynmap &#x548C;&#x7F51;&#x9875;&#x670D;&#x52A1;&#x5668;&#x5BF9; <em>standalone/dynmap_webchat.json</em> &#x6587;&#x4EF6;&#x8D4B;&#x4E88;&#x8DB3;&#x591F;&#x7684;&#x8BFB;&#x5199;&#x6743;&#x9650;&#x7528;&#x4E8E;&#x7F51;&#x9875;&#x5728;&#x7EBF;&#x804A;&#x5929;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x4EEC;&#x6709;&#x5173;&#x4E8E;Nginx+PHP5 FPM&#x7B49;&#x7684;&#x975E; Dynmap&#x7C7B;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4EE5;&#x524D;&#x5F80; <a href="http://www.cryptkcoding.com/2011/08/running-wordpress-with-nginx-php-fpm-apc-and-varnish/" target="_blank">&#x539F;&#x4F5C;&#x8005;&#x7684;&#x535A;&#x5BA2;</a> &#x8FDB;&#x884C;&#x8BE6;&#x7EC6;&#x7684;&#x63D0;&#x95EE;&#x3002;</p>
 
                                 
                                 </section>
@@ -1056,12 +1087,12 @@
 
             
                 
-                <a href="Web-ui-login-support-and-permissions.html" class="navigation navigation-prev " aria-label="Previous page: 网页登录支持与权限">
+                <a href="Setting-up-with-Nginx-server-on-Centos.html" class="navigation navigation-prev " aria-label="Previous page: Centos+Nginx">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Using-markers.html" class="navigation navigation-next " aria-label="Next page: 使用标记">
+                <a href="Setting-up-the-Dynamic-Map-plugin-under-Windows.html" class="navigation navigation-next " aria-label="Next page: 在Windows下建立动态地图插件">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1072,7 +1103,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"网页参数","level":"1.9","depth":1,"next":{"title":"使用标记","level":"1.10","depth":1,"path":"Using-markers.md","ref":"Using-markers.md","articles":[]},"previous":{"title":"网页登录支持与权限","level":"1.8.1","depth":2,"path":"Web-ui-login-support-and-permissions.md","ref":"Web-ui-login-support-and-permissions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Web-UI-Parameters.md","mtime":"2017-08-12T04:39:31.069Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-18T05:19:57.452Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Nginx","level":"1.3.5","depth":2,"next":{"title":"在Windows下建立动态地图插件","level":"1.4","depth":1,"path":"Setting-up-the-Dynamic-Map-plugin-under-Windows.md","ref":"Setting-up-the-Dynamic-Map-plugin-under-Windows.md","articles":[{"title":"IIS+URL重写+ARR模块","level":"1.4.1","depth":2,"path":"Setting-up-dynamic-map-with-iis-using-url-rewrite-and-applicationrequestrouting.md","ref":"Setting-up-dynamic-map-with-iis-using-url-rewrite-and-applicationrequestrouting.md","articles":[]},{"title":"IIS","level":"1.4.2","depth":2,"path":"Setting-up-Dynamic-Map-with-IIS.md","ref":"Setting-up-Dynamic-Map-with-IIS.md","articles":[]}]},"previous":{"title":"Centos+Nginx","level":"1.3.4","depth":2,"path":"Setting-up-with-Nginx-server-on-Centos.md","ref":"Setting-up-with-Nginx-server-on-Centos.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.md","mtime":"2017-09-08T05:21:54.888Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-18T05:19:57.452Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

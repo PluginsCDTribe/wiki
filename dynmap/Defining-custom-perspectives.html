@@ -181,6 +181,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.5" data-path="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
+            
+                <a href="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -980,33 +993,33 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>If the standard, predefined perspectives are not suitable for a user&apos;s needs, custom perspectives can be defined.  With custom perspectives, a user is free to utilize the full flexibility and capabilities of the rendering engine.</p>
-<p>Custom perspective definitions can be made by modifying the standard perspective definitions, found in <strong>perspectives.txt</strong>, or by adding new or updated definitions to the <strong>custom-perspectives.txt</strong> file (the preferred method).</p>
-<p>At present, only one class of perspective is supported: the IsoHDPerspective class.  This class defines an isometric viewpoint, with full control of the direction of view, angle of view, and scale of view.  The definition of a perspective is structured as follows:</p>
-<pre><code>perspectives:
-  - class: org.dynmap.hdmap.IsoHDPerspective
-    name: my_custom_perspective
-    azimuth: 124
-    inclination: 55
-    scale: 16
-</code></pre><p>The required parameters for the isometric perspectives include the following:</p>
+                                <p>&#x5982;&#x679C; Dynmap &#x9644;&#x5E26;&#x7684;&#x9ED8;&#x8BA4;&#x9884;&#x5B9A;&#x4E49;&#x900F;&#x89C6;&#x56FE;&#x4E0D;&#x9002;&#x5408;&#x4F7F;&#x7528;&#x8005;&#x7684;&#x9700;&#x8981;&#xFF0C;&#x4F7F;&#x7528;&#x8005;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x900F;&#x89C6;&#x56FE;&#x3002; &#x5982;&#x679C;&#x4F7F;&#x7528;&#x8005;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x900F;&#x89C6;&#x56FE;&#xFF0C;&#x4F7F;&#x7528;&#x8005;&#x53EF;&#x4EE5;&#x5145;&#x5206;&#x5730;&#x81EA;&#x7531;&#x5730;&#x53D1;&#x6325;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x7684;&#x5168;&#x90E8;&#x7075;&#x6D3B;&#x6027;&#x548C;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x81EA;&#x5B9A;&#x4E49;&#x900F;&#x89C6;&#x56FE;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x900F;&#x89C6;&#x56FE;&#x5B9A;&#x4E49;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x8BE6;&#x89C1; <strong>perspectives.txt</strong>&#xFF0C;&#x6216;&#x901A;&#x8FC7;&#x6DFB;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5168;&#x65B0;&#x7684;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#x5230; <strong>custom-perspectives.txt</strong> &#x6587;&#x4EF6;&#x4E2D;&#x53BB;&#xFF08;&#x539F;&#x4F5C;&#x8005;&#x5EFA;&#x8BAE;&#x7684;&#x9996;&#x9009;&#x65B9;&#x6CD5;&#xFF09;&#x3002;</p>
+<p>&#x76EE;&#x524D;&#xFF0C;Dynmap &#x4EC5;&#x652F;&#x6301;&#x4E00;&#x7C7B;&#x900F;&#x89C6;&#x56FE;&#xFF1A;IsoHDPerspective &#x7C7B;&#x3002;&#x8FD9;&#x4E2A;&#x7C7B;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x7B49;&#x8DDD;&#x89C6;&#x56FE;&#xFF0C;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x63A7;&#x5236;&#x89C6;&#x56FE;&#x7684;&#x65B9;&#x5411;&#x3001;&#x89C6;&#x89D2;&#x548C;&#x89C6;&#x56FE;&#x7684;&#x5927;&#x5C0F;&#x3002;  &#x8BE5;&#x900F;&#x89C6;&#x56FE;&#x7C7B;&#x7684;&#x8BE6;&#x7EC6;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code>    perspectives:
+      - class: org.dynmap.hdmap.IsoHDPerspective
+        name: my_custom_perspective
+        azimuth: 124
+        inclination: 55
+        scale: 16
+</code></pre><p>&#x540C;&#x7B49;&#x89C4;&#x683C;&#x7684;&#x900F;&#x89C6;&#x56FE;&#x6240;&#x9700;&#x5B9A;&#x4E49;&#x7684;&#x53C2;&#x6570;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x914D;&#x7F6E;&#x9879;&#xFF1A;</p>
 <ul>
-<li><p><em>name</em> : the unique name for the perspective.  If a custom perspective has the same name as an existing standard perspective, it will replace it.</p>
+<li><p><em>name</em> : &#x6BCF;&#x4E2A;&#x900F;&#x89C6;&#x56FE;&#x7684;&#x552F;&#x4E00;&#x540D;&#x79F0;&#x3002;  &#x5982;&#x679C;&#x4F7F;&#x7528;&#x8005;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x900F;&#x89C6;&#x56FE;&#x540D;&#x79F0;&#x4E0E;&#x73B0;&#x6709;&#x7684;&#x5DF2;&#x4F7F;&#x7528;&#x7684;&#x900F;&#x89C6;&#x56FE;&#x91CD;&#x540D;&#xFF0C;&#x5219;&#x66F4;&#x65B0;&#x90E8;&#x7F72;&#x7684;&#x900F;&#x89C6;&#x56FE;&#x5C06;&#x4F1A;&#x66FF;&#x6362;&#x6389;&#x65E7;&#x90E8;&#x7F72;&#x7684;&#x900F;&#x89C6;&#x56FE;&#x3002;</p>
 </li>
-<li><p><em>azimuth</em> : the angle, in degrees clockwise from north, of the viewpoint for the map : 0 = north, 90 = east, 180 = south, 270 = west.  Any angle value is allowed.</p>
+<li><p><em>azimuth</em> : &#x4ECE;&#x5730;&#x56FE;&#x7684;&#x89D2;&#x5EA6;&#x770B;&#xFF08;&#x4E0A;&#x5317;&#x4E0B;&#x5357;&#x5DE6;&#x897F;&#x53F3;&#x4E1C;&#xFF09;&#xFF0C;&#x4ECE;&#x6B63;&#x5317;&#x65B9;&#x5F00;&#x59CB;&#x987A;&#x65F6;&#x9488;&#x7684;&#x89D2;&#x5EA6;&#x4E0A;&#xFF1A;0 = &#x5317;&#x65B9;&#xFF0C;90 = &#x4E1C;&#x65B9;, 180 = &#x5357;&#x65B9;&#xFF0C; 270 = &#x897F;&#x65B9;&#x3002;&#x4EFB;&#x4F55;&#x89D2;&#x5EA6;&#x7684;&#x503C;&#x90FD;&#x662F;&#x88AB;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x7684;&#x3002;</p>
 </li>
-<li><p><em>inclination</em> : the angle, in degrees below horizontal, of the viewpoint for the map: 90 = top view, 0 = horizontal (not allowed).  Permitted values are any value from 20 to 90 degrees.</p>
+<li><p><em>inclination</em> : &#x4ECE;&#x5730;&#x56FE;&#x7684;&#x503E;&#x659C;&#x89D2;&#x5EA6;&#x6765;&#x770B;&#xFF1A; 90 = &#x4FEF;&#x89C6;&#x56FE;&#xFF0C; 0 = &#x6C34;&#x5E73;&#x9762; &#xFF08;&#x4E0D;&#x88AB;&#x5141;&#x8BB8;&#x7684;&#x503E;&#x659C;&#x89D2;&#x5EA6;&#xFF09;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x5141;&#x8BB8;&#x7684;&#x503E;&#x659C;&#x89D2;&#x5EA6;&#x5728;20&#x5230;90&#x5EA6;&#x4E4B;&#x95F4;&#x3002;</p>
 </li>
-<li><p><em>scale</em> : the scale or resolution used for rendering the scene, in pixels per block edge.  Values from 1 to 64 are supported, although 64 would correspond to a HUGE map - 16 yields a very high quality map (corresponding to <strong>hires</strong> in the standard perspectives), 8 yields a good quality map (corresponding to <strong>medres</strong>), and 4 yields a good quality map (corresponding to <strong>lowres</strong>) if a shader other than a texture pack shader is used (cave, biome, colorschemes).</p>
+<li><p><em>scale</em> : &#x7528;&#x4E8E;&#x6E32;&#x67D3;&#x573A;&#x666F;&#x7684;&#x5C3A;&#x5EA6;&#x6216;&#x5206;&#x8FA8;&#x7387;&#xFF0C;&#x4EE5;&#x6BCF;&#x5757;&#x8FB9;&#x7684;&#x50CF;&#x7D20;&#x4E3A;&#x5355;&#x4F4D;&#x3002; &#x652F;&#x6301;&#x4ECE;1&#x5230;64&#x7684;&#x503C;&#xFF0C;&#x5C3D;&#x7BA1;64&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x5DE8;&#x5927;&#x7684;&#x5730;&#x56FE; - 16&#x500D;&#x4E8E;&#x9ED8;&#x8BA4;&#x8D28;&#x91CF;&#x7684;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x9AD8;&#x8D28;&#x91CF;&#x7684;&#x5730;&#x56FE;&#xFF08;&#x4E0E;&#x6807;&#x51C6;&#x900F;&#x89C6;&#x56FE;&#x4E2D;&#x7684; <strong>hires</strong> &#x76F8;&#x5BF9;&#x5E94;&#xFF09;&#xFF0C;8&#x500D;&#x4E8E;&#x9ED8;&#x8BA4;&#x8D28;&#x91CF;&#x7684;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x9AD8;&#x8D28;&#x91CF;&#x7684;&#x5730;&#x56FE; &#xFF08;&#x4E0E;&#x6807;&#x51C6;&#x900F;&#x89C6;&#x56FE;&#x4E2D;&#x7684; <strong>medres</strong> &#x76F8;&#x5BF9;&#x5E94;&#xFF09;&#xFF0C; 4&#x500D;&#x4E8E;&#x9ED8;&#x8BA4;&#x8D28;&#x91CF;&#x7684;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x9AD8;&#x8D28;&#x91CF;&#x7684;&#x5730;&#x56FE; &#xFF08;&#x4E0E;&#x6807;&#x51C6;&#x900F;&#x89C6;&#x56FE;&#x4E2D;&#x7684; <strong>lowres</strong> &#x76F8;&#x5BF9;&#x5E94;&#xFF09;&#x3002; &#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;&#x6750;&#x8D28;&#x5305;&#x8D44;&#x6E90;&#x7684;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#x4EE5;&#x5916;&#x7684;&#x5176;&#x4ED6;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#xFF08;&#x6D1E;&#x7A74;&#x3001;&#x751F;&#x7269;&#x7FA4;&#x843D;&#x3001;&#x8272;&#x5F69;&#x8BBE;&#x8BA1;&#xFF09;&#x3002;</p>
 </li>
 </ul>
-<p>In addition to these core required parameters, additional optional parameters are supported to modify the processing of the perspective:</p>
+<p>&#x9664;&#x4E86;&#x8FD9;&#x4E9B;&#x5FC5;&#x987B;&#x586B;&#x5199;&#x5B8C;&#x5907;&#x7684;&#x6838;&#x5FC3;&#x53C2;&#x6570;&#x9879;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x652F;&#x6301;&#x989D;&#x5916;&#x7684;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x9879;&#x6765;&#x4F18;&#x5316;&#x548C;&#x6539;&#x8FDB;&#x900F;&#x89C6;&#x56FE;&#x7684;&#x5904;&#x7406;&#x6548;&#x679C;&#xFF1A;</p>
 <ul>
-<li><p><em>maximumheight</em> : if set, this sets a maximum height value (Y coordinate, in the Minecraft map) of blocks to be rendered.  If it is set below 127, all blocks above this height will be invisible - logically slicing the top off of the world as a selected height.  This can be used to show underground views.</p>
+<li><p><em>maximumheight</em> : &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x8BBE;&#x7F6E;&#x9700;&#x8981;&#x5448;&#x73B0;&#x7684;&#x65B9;&#x5757;&#x7684;&#x6700;&#x5927;&#x9AD8;&#x5EA6;&#x503C;&#xFF08;Y &#x5750;&#x6807;&#xFF0C;&#x4E8E;&#x6211;&#x7684;&#x4E16;&#x754C;&#x6E38;&#x620F;&#x5730;&#x56FE;&#x4E2D;&#xFF09;&#x3002;  &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x5728;127&#x4EE5;&#x4E0B;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x6B64;&#x9AD8;&#x5EA6;&#x4E4B;&#x4E0A;&#x7684;&#x6240;&#x6709;&#x65B9;&#x5757;&#x90FD;&#x5C06;&#x662F;&#x4E0D;&#x53EF;&#x89C1;&#x7684; - Dynmap &#x7684;&#x7F51;&#x9875;&#x5730;&#x56FE;&#x5728;&#x7EBF;&#x663E;&#x793A;&#x7CFB;&#x7EDF;&#x4F1A;&#x903B;&#x8F91;&#x5730;&#x5C06;&#x4E16;&#x754C;&#x7684;&#x9876;&#x90E8;&#x5206;&#x5272;&#x4E3A;&#x4F7F;&#x7528;&#x8005;&#x5728;&#x8BE5;&#x9879;&#x4E2D;&#x6240;&#x8BBE;&#x5B9A;&#x7684;&#x9AD8;&#x5EA6;&#x3002; &#x8FD9;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x663E;&#x793A;&#x5730;&#x4E0B;&#x89C6;&#x56FE;&#x3002;</p>
 </li>
-<li><p><em>minimumheight</em> : if set, this set a minimum height value (Y coordinate, in the Minecraft map) of the blocks to be rendered. If it is set above 0, all blocks below this height will be invisible - logically slicing the bottom off of the world at a selected height.  This can be used to show underground views.</p>
+<li><p><em>minimumheight</em> : &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x8BBE;&#x7F6E;&#x9700;&#x8981;&#x5448;&#x73B0;&#x7684;&#x65B9;&#x5757;&#x7684;&#x6700;&#x5C0F;&#x9AD8;&#x5EA6;&#x503C;&#xFF08;Y &#x5750;&#x6807;&#xFF0C;&#x4E8E;&#x6211;&#x7684;&#x4E16;&#x754C;&#x6E38;&#x620F;&#x5730;&#x56FE;&#x4E2D;&#xFF09;&#x3002;  &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x5728;0&#x4EE5;&#x4E0A;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x8FD9;&#x4E2A;&#x9AD8;&#x5EA6;&#x4EE5;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x533A;&#x5757;&#x90FD;&#x662F;&#x4E0D;&#x53EF;&#x89C1;&#x7684; - Dynmap &#x7684;&#x7F51;&#x9875;&#x5730;&#x56FE;&#x5728;&#x7EBF;&#x663E;&#x793A;&#x7CFB;&#x7EDF;&#x4F1A;&#x903B;&#x8F91;&#x5730;&#x5C06;&#x4E16;&#x754C;&#x7684;&#x4F4E;&#x90E8;&#x5206;&#x5272;&#x4E3A;&#x4F7F;&#x7528;&#x8005;&#x5728;&#x8BE5;&#x9879;&#x4E2D;&#x6240;&#x8BBE;&#x5B9A;&#x7684;&#x9AD8;&#x5EA6;&#x3002;  &#x8FD9;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x663E;&#x793A;&#x5730;&#x4E0B;&#x89C6;&#x56FE;&#x3002;</p>
 </li>
-<li><p><em>fence-to-block-join</em> : if set, this overrides the <em>fence-to-block-join</em> setting in <strong>configuration.txt</strong>.  If true, fences will be rendered to join other blocks (as is the case in 1.9 and later); if false, fences only join with other fences.</p>
+<li><p><em>fence-to-block-join</em> : &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x4F1A;&#x91CD;&#x5199;&#x914D;&#x7F6E;&#x9879; <em>fence-to-block-join</em> &#x7684;&#x8BBE;&#x5B9A;&#x4E8E;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <strong>configuration.txt</strong> &#x4E2D;&#x3002; &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;&#x771F;&#xFF0C;&#x5219;&#x5C06;&#x663E;&#x793A;&#x6805;&#x680F;&#x8FD8;&#x4F1A;&#x540C;&#x5176;&#x4ED6;&#x65B9;&#x5757;&#x8FDE;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#x3002;&#xFF08;&#x6548;&#x679C;&#x540C;1.9&#x7248;&#x672C;&#x4EE5;&#x4E0A;&#xFF09;; &#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;&#x5047;&#xFF0C;&#x5219;&#x5C06;&#x663E;&#x793A;&#x6805;&#x680F;&#x53EA;&#x4E0E;&#x5176;&#x4ED6;&#x6805;&#x680F;&#x8FDE;&#x63A5;&#x5728;&#x4E00;&#x8D77;&#x3002;</p>
 </li>
 </ul>
 
@@ -1052,7 +1065,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"自定义预设","level":"1.6.4.2","depth":3,"next":{"title":"自定义着色器","level":"1.6.4.3","depth":3,"path":"Defining-custom-shaders.md","ref":"Defining-custom-shaders.md","articles":[]},"previous":{"title":"所有可用的预设","level":"1.6.4.1","depth":3,"path":"Full-list-of-predefined-perspectives.md","ref":"Full-list-of-predefined-perspectives.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Defining-custom-perspectives.md","mtime":"2017-08-12T04:39:31.054Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-04T05:10:56.684Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"自定义预设","level":"1.6.4.2","depth":3,"next":{"title":"自定义着色器","level":"1.6.4.3","depth":3,"path":"Defining-custom-shaders.md","ref":"Defining-custom-shaders.md","articles":[]},"previous":{"title":"所有可用的预设","level":"1.6.4.1","depth":3,"path":"Full-list-of-predefined-perspectives.md","ref":"Full-list-of-predefined-perspectives.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Defining-custom-perspectives.md","mtime":"2017-09-08T05:27:25.389Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-18T05:19:57.452Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -1060,10 +1073,6 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>

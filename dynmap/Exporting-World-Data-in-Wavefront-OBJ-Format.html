@@ -181,6 +181,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.5" data-path="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
+            
+                <a href="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -995,21 +1008,21 @@
 <p>/dynmapexp &#x7684;&#x5B50;&#x547D;&#x4EE4;&#x5305;&#x62EC;&#x4E86;&#xFF1A;</p>
 <ul>
 <li>/dynmapexp set <attribute> <value> : &#x5141;&#x8BB8;&#x8BBE;&#x7F6E;&#x5BFC;&#x51FA;&#x7684;&#x5C5E;&#x6027;&#xFF08;&#x5982;&#x4E0A;&#xFF09;&#xFF0C;&#x9644;&#x52A0;&#x7684;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#xFF0C;&#x5982; <code>/dynmapexp set x0 0 y0 0 z0 100</code>&#x3002;</value></attribute></li>
-<li>/dynmapexp radius <value> : &#x53EA;&#x80FD;&#x7531;&#x4E00;&#x4E2A;&#x6E38;&#x620F;&#x4E2D;&#x7684;&#x73A9;&#x5BB6;&#x4F7F;&#x7528;&#xFF1A;&#x6B64;&#x547D;&#x4EE4;&#x4F1A;&#x6307;&#x5B9A;&#x5BFC;&#x51FA;&#x7684;&#x4E16;&#x754C;&#x4E3A;&#x73A9;&#x5BB6;&#x6240;&#x5728;&#x7684;&#x4E16;&#x754C;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x534A;&#x5F84;&#x4E3A;&#x73A9;&#x5BB6;&#x6240;&#x5728;&#x4F4D;&#x7F6E;&#x7684;&#x534A;&#x5F84;&#xFF0C;Y &#x8F74;this command can only be used by a player in-game: it allows specifying of an export on the current world, with a radius of <value> from the player&apos;s current position (in the X and Z axes), and from Y=0 to Y=255 vertically.</value></value></li>
-<li>/dynmapexp info : displays the current values of the export attributes</li>
-<li>/dynmapexp pos0 : this command can only be used by a player in-game: it sets the x0, y0, z0, and world attributes to the current position of the player.</li>
-<li>/dynmapexp pos1 : this command can only be used by a player in-game: it sets the x1, y1, z1, and world attributes to the current position of the player.</li>
-<li>/dynmapexp reset : resets the export attributes to their default</li>
-<li>/dynmapexp export <name> : this initiates an export, creating a file named <name>.zip in the export directory on the server (this defaults to a directory named &apos;export&apos; under the dynmap directory, but can be changed using the &apos;exportpath&apos; setting in configuration.txt).  This process runs asynchronously, and can take from a few seconds to many minutes to complete, depending upon the size of the area selected for export.</name></name></li>
-<li>/dynmapexp purge <name> : this deletes an previous export from from the export directory.</name></li>
+<li>/dynmapexp radius <value> : &#x53EA;&#x80FD;&#x7531;&#x4E00;&#x4E2A;&#x6E38;&#x620F;&#x4E2D;&#x7684;&#x73A9;&#x5BB6;&#x4F7F;&#x7528;&#xFF1A;&#x6B64;&#x547D;&#x4EE4;&#x4F1A;&#x6307;&#x5B9A;&#x5BFC;&#x51FA;&#x7684;&#x4E16;&#x754C;&#x4E3A;&#x73A9;&#x5BB6;&#x6240;&#x5728;&#x7684;&#x4E16;&#x754C;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x534A;&#x5F84;&#x4E3A;&#x73A9;&#x5BB6;&#x6240;&#x5728;&#x4F4D;&#x7F6E;&#x7684;&#x534A;&#x5F84;&#xFF0C;Y &#x8F74;&#x4E3A; 0-255 &#x7684;&#x6240;&#x6709;&#x65B9;&#x5757;&#x3002;</value></li>
+<li>/dynmapexp info : &#x663E;&#x793A;&#x5F53;&#x524D;&#x5BFC;&#x51FA;&#x7684;&#x5C5E;&#x6027;</li>
+<li>/dynmapexp pos0 : &#x6B64;&#x547D;&#x4EE4;&#x53EA;&#x80FD;&#x7531;&#x73A9;&#x5BB6;&#x5728;&#x6E38;&#x620F;&#x4E2D;&#x4F7F;&#x7528;&#xFF1A;&#x8BBE;&#x7F6E;&#x5BFC;&#x51FA;&#x8303;&#x56F4;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x70B9;</li>
+<li>/dynmapexp pos1 : &#x6B64;&#x547D;&#x4EE4;&#x53EA;&#x80FD;&#x7531;&#x73A9;&#x5BB6;&#x5728;&#x6E38;&#x620F;&#x4E2D;&#x4F7F;&#x7528;&#xFF1A;&#x8BBE;&#x7F6E;&#x5BFC;&#x51FA;&#x8303;&#x56F4;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x70B9;</li>
+<li>/dynmapexp reset : &#x91CD;&#x7F6E;&#x5BFC;&#x51FA;&#x5C5E;&#x6027;&#x4E3A;&#x9ED8;&#x8BA4;&#x503C;</li>
+<li>/dynmapexp export <name> : &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x5BFC;&#x51FA;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53EB; <name>.zip &#x7684;&#x6587;&#x4EF6;&#xFF08;&#x9ED8;&#x8BA4;&#x5728; dynmap &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684; export  &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; exportpath &#x4E2D;&#x8BBE;&#x7F6E;&#xFF09;&#x3002;&#x5BFC;&#x51FA;&#x662F;&#x5F02;&#x6B65;&#x5904;&#x7406;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x8017;&#x8D39;&#x51E0;&#x5206;&#x949F;&#x5B8C;&#x6210;&#xFF0C;&#x7528;&#x65F6;&#x53D6;&#x51B3;&#x4E8E;&#x9009;&#x533A;&#x7684;&#x5927;&#x5C0F;</name></name></li>
+<li>/dynmapexp purge <name> : &#x5220;&#x9664;&#x4E0A;&#x4E00;&#x4E2A;&#x5BFC;&#x51FA;</name></li>
 </ul>
-<p>Once completed, an exported ZIP file will contain the following:</p>
+<p>&#x5B8C;&#x6210;&#x540E;&#xFF0C;ZIP&#x6587;&#x4EF6;&#x4E2D;&#x5C06;&#x4F1A;&#x5305;&#x542B;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
 <ul>
-<li>A minecraft.obj file, containing the exported model (this can potentially be VERY big)</li>
-<li>A <shadername>.mtl file, containing the material library (corresponding to the minecraft textures) used for coloring the model in minecraft.obj</shadername></li>
-<li>A <shadername> directory, containing the texture files used by the material library</shadername></li>
+<li>&#x4E00;&#x4E2A; minecraft.obj &#x6587;&#x4EF6;&#xFF0C;&#x5305;&#x542B;&#x5BFC;&#x51FA;&#x7684;&#x6A21;&#x578B;&#xFF08;&#x53EF;&#x80FD;&#x975E;&#x5E38;&#x5927;&#xFF09;</li>
+<li>&#x4E00;&#x4E2A; <shadername>.mtl &#x6587;&#x4EF6;&#xFF0C;&#x5305;&#x542B;&#x6750;&#x8D28;&#x5217;&#x8868;&#xFF08;&#x5BF9;&#x5E94;&#x6BCF;&#x4E2A;minecraft&#x6750;&#x8D28;&#xFF09;</shadername></li>
+<li>&#x4E00;&#x4E2A; <shadername> &#x76EE;&#x5F55;&#xFF0C;&#x5305;&#x542B;&#x4F7F;&#x7528;&#x7684;&#x6750;&#x8D28;&#x6587;&#x4EF6;</shadername></li>
 </ul>
-<p>To use the file, extract the ZIP file and load the &apos;minecraft.obj&apos; file into the rendering tool.</p>
+<p>&#x89E3;&#x538B;&#x6587;&#x4EF6;&#x5E76;&#x5C06; minecraft.obj &#x5BFC;&#x5165;&#x5230;&#x6E32;&#x67D3;/&#x5EFA;&#x6A21;&#x8F6F;&#x4EF6;</p>
 
                                 
                                 </section>
@@ -1053,7 +1066,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"导出世界为WavefrontOBJ格式","level":"1.12","depth":1,"next":{"title":"如何编译Dynmap","level":"2.1","depth":1,"path":"How-to-compile-Dynmap.md","ref":"How-to-compile-Dynmap.md","articles":[]},"previous":{"title":"使用立体方块模型","level":"1.11.7","depth":2,"path":"Defining-a-block-using-a-volumetric-block-model.md","ref":"Defining-a-block-using-a-volumetric-block-model.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Exporting-World-Data-in-Wavefront-OBJ-Format.md","mtime":"2017-09-03T05:13:43.153Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-04T05:10:56.684Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"导出世界为WavefrontOBJ格式","level":"1.12","depth":1,"next":{"title":"如何编译Dynmap","level":"2.1","depth":1,"path":"How-to-compile-Dynmap.md","ref":"How-to-compile-Dynmap.md","articles":[]},"previous":{"title":"使用立体方块模型","level":"1.11.7","depth":2,"path":"Defining-a-block-using-a-volumetric-block-model.md","ref":"Defining-a-block-using-a-volumetric-block-model.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Exporting-World-Data-in-Wavefront-OBJ-Format.md","mtime":"2017-09-17T06:31:51.790Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-18T05:19:57.452Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -1061,10 +1074,6 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>

@@ -181,6 +181,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.5" data-path="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
+            
+                <a href="Setting-up-dynamic-map-with-nginx-Courtesy-of-cryptk.html">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -980,29 +993,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>Custom lighting definitions can be made by modifying the standard lighting definitions, found in <strong>lightings.txt</strong>, or by adding new or updated definitions to the <strong>custom-lightings.txt</strong> file (the preferred method).</p>
-<p>There are currently two type of lighting classes - the DefaultHDLighting class and the ShadowHDLighting class.  </p>
-<p>The DefaultHDLighting class does not modify the color data from the shader - yielding the equivalent of full daylight with no shadows - and has no configurable settings.</p>
-<p>The ShadowHDLighting class supports several configuration settings, allowing control of ambient light levels, shadow strength, and the option of generating both night and day versions of tiles for a single map.</p>
-<p>A typical lighting configuration is shown below:</p>
-<pre><code>lightings:
-  - class: org.dynmap.hdmap.ShadowHDLighting
-    name: my-custom-lighting
-    shadowstrength: 1.0
-    ambientlight: 4
-    night-and-day: true
-    smooth-lighting: false
-</code></pre><p>The settings defined for the ShadowHDLighting class include the following:</p>
+                                <p>&#x81EA;&#x5B9A;&#x4E49;&#x5149;&#x7167;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x9ED8;&#x8BA4;&#x7684;&#x5149;&#x7167;&#x5B9A;&#x4E49;&#x6587;&#x4EF6;&#x6765;&#x5B9E;&#x73B0;&#xFF0C; &#x8BE6;&#x60C5;&#x89C1; <strong>lightings.txt</strong>&#xFF0C;&#x6216;&#x901A;&#x8FC7;&#x6DFB;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5168;&#x65B0;&#x7684;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#x5230; <strong>custom-lightings.txt</strong> &#x6587;&#x4EF6;&#x4E2D;&#x53BB;&#xFF08;&#x539F;&#x4F5C;&#x8005;&#x5EFA;&#x8BAE;&#x7684;&#x9996;&#x9009;&#x65B9;&#x6CD5;&#xFF09;&#x3002;</p>
+<p>&#x76EE;&#x524D;&#xFF0C;Dynmap &#x652F;&#x6301;&#x4E24;&#x79CD;&#x5149;&#x7167;&#x7C7B;&#xFF1A; DefaultHDLighting &#x7C7B;&#x4EE5;&#x53CA; ShadowHDLighting &#x7C7B;&#x3002; </p>
+<p>DefaultHDLighting &#x7C7B;&#x4E0D;&#x4F1A;&#x4FEE;&#x6539;&#x65B9;&#x5757;&#x6750;&#x8D28;&#x4E2D;&#x7684;&#x989C;&#x8272;&#x6570;&#x636E; - &#x5728;&#x6CA1;&#x6709;&#x9634;&#x5F71;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6548;&#x679C;&#x76F8;&#x5F53;&#x4E8E;&#x767D;&#x5929;&#x7684;&#x65E5;&#x5149; - &#x5E76;&#x4E14;&#x6CA1;&#x6709;&#x53EF;&#x4EE5;&#x4F9B;&#x4F7F;&#x7528;&#x8005;&#x4FEE;&#x6539;&#x7684;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x3002;</p>
+<p>ShadowHDLighting &#x7C7B;&#x652F;&#x6301;&#x66F4;&#x591A;&#x7684;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x5141;&#x8BB8;&#x63A7;&#x5236;&#x73AF;&#x5883;&#x5149;&#x6E90;&#x7684;&#x503E;&#x659C;&#x89D2;&#x5EA6;&#xFF0C;&#x9634;&#x5F71;&#x5F3A;&#x5EA6;&#xFF0C; &#x4EE5;&#x53CA;&#x4E3A;&#x6BCF;&#x4E2A;&#x5730;&#x56FE;&#x751F;&#x6210;&#x591C;&#x95F4;&#x548C;&#x767D;&#x5929;&#x7684;&#x5149;&#x7167;&#x7248;&#x672C;&#x7684;&#x9009;&#x9879;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x5C55;&#x793A;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5178;&#x578B;&#x7684;&#x9ED8;&#x8BA4;&#x5149;&#x7167;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#xFF08;ShadowHDLighting &#x7C7B;&#xFF09;&#xFF1A;</p>
+<pre><code>    lightings:
+      - class: org.dynmap.hdmap.ShadowHDLighting
+        name: my-custom-lighting
+        shadowstrength: 1.0
+        ambientlight: 4
+        night-and-day: true
+        smooth-lighting: false
+</code></pre><p>&#x4F7F;&#x7528; ShadowHDLighting &#x7C7B;&#x4F5C;&#x4E3A; Dynmap &#x5149;&#x7167;&#x6E90;&#x65F6;&#x53EF;&#x9009;&#x7684;&#x914D;&#x7F6E;&#x9879;&#x5982;&#x4E0B;&#x5C55;&#x793A;&#xFF1A;</p>
 <ul>
-<li><p><em>name</em> : unique name of the lighting.  If a custom lighting in the <strong>custom-lightings.txt</strong> file matches a standard lighting definition&apos;s name, the standard lighting definition is replaced by the custom definition.</p>
+<li><p><em>name</em> : &#x5149;&#x7167;&#x914D;&#x7F6E;&#x7684;&#x552F;&#x4E00;&#x540D;&#x79F0;&#x3002;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x8005;&#x5728; <strong>custom-lightings.txt</strong> &#x6587;&#x4EF6;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5149;&#x7167;&#x540D;&#x79F0;&#x4E0E;&#x73B0;&#x6709;&#x7684;&#x5DF2;&#x4F7F;&#x7528;&#x7684;&#x5149;&#x7167;&#x91CD;&#x540D;&#xFF0C;&#x5219;&#x66F4;&#x65B0;&#x90E8;&#x7F72;&#x7684;&#x5149;&#x7167;&#x914D;&#x7F6E;&#x5C06;&#x4F1A;&#x66FF;&#x6362;&#x6389;&#x65E7;&#x90E8;&#x7F72;&#x7684;&#x5149;&#x7167;&#x914D;&#x7F6E;&#x3002;</p>
 </li>
-<li><p><em>shadowstrength</em> : this controls how strongly shadow data is applied when determining the brightness of shadowed areas.  The default is <strong>0.0</strong> (shadow data is ignored), while normal shadows correspond to <strong>1.0</strong>.  Values above 1.0 will result in artificially severe shadows, while less that 1.0 will result in softening of shadows.</p>
+<li><p><em>shadowstrength</em> : &#x6709;&#x5149;&#x7167;&#x65F6;&#x9634;&#x5F71;&#x533A;&#x57DF;&#x6240;&#x91C7;&#x53D6;&#x7684;&#x9634;&#x5F71;&#x5F3A;&#x5EA6;&#x3002;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <strong>0.0</strong> &#xFF08;&#x9634;&#x5F71;&#x5F3A;&#x5EA6;&#x53EF;&#x5FFD;&#x7565;&#x4E0D;&#x8BA1;&#xFF09;&#xFF0C;&#x6B63;&#x5E38;&#x7684;&#x9634;&#x5F71;&#x5F3A;&#x5EA6;&#x503C;&#x4E3A; <strong>1.0</strong>&#x3002; &#x8BBE;&#x7F6E;&#x5728;1.0&#x4EE5;&#x4E0A;&#x7684;&#x503C;&#x4F1A;&#x4EA7;&#x751F;&#x8F83;&#x4E3A;&#x660E;&#x663E;&#x7684;&#x4EBA;&#x4E3A;&#x9634;&#x5F71;&#x6548;&#x679C;&#xFF0C;&#x800C;&#x5C11;&#x4E8E;1.0&#x4F1A;&#x5BFC;&#x81F4;&#x9634;&#x5F71;&#x53D8;&#x5F31;&#x3002;</p>
 </li>
-<li><p><em>ambientlight</em> : this controls the relative amount of light coming from the sky.  Full daylight corresponds to <strong>15</strong> (the default), while normal moon-lit night is <strong>4</strong>.</p>
+<li><p><em>ambientlight</em> : &#x6709;&#x5149;&#x7167;&#x65F6;&#x5929;&#x7A7A;&#x5411;&#x5730;&#x9762;&#x6295;&#x5C04;&#x7684;&#x5149;&#x7167;&#x5F3A;&#x5EA6;&#x3002;&#x664C;&#x5348;&#x5149;&#x7167;&#x6700;&#x5F3A;&#x65F6;&#x7684;&#x503C;&#x4E3A; <strong>15</strong> &#xFF08;&#x9ED8;&#x8BA4;&#x503C;&#xFF09;&#xFF0C;&#x5348;&#x591C;&#x7684;&#x5149;&#x7167;&#x5F3A;&#x5EA6;&#x4E00;&#x822C;&#x4E3A; <strong>4</strong> &#x3002;</p>
 </li>
-<li><p><em>night-and-day</em> : Enabling this setting (by setting the value to <strong>true</strong>) results in the generation of both night and day versions of each tile, and in the map view automatically switching between them, based on the time-of-day of the corresponding world.  The difference between the &apos;night&apos; tiles and the &apos;day&apos; tiles is that the day tiles are rendered with <em>ambientlight</em> set to 15, while the night tiles use the provided <em>ambientlight</em> setting.  The default value is <strong>false</strong>.</p>
+<li><p><em>night-and-day</em> : &#x82E5;&#x542F;&#x7528;&#x6B64;&#x8BBE;&#x7F6E;&#xFF08;&#x901A;&#x8FC7;&#x5C06;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;<strong>true</strong>&#xFF09;&#xFF0C;Dynmap &#x7684;&#x5728;&#x7EBF;&#x5730;&#x56FE;&#x751F;&#x6210;&#x7CFB;&#x7EDF;&#x5C06;&#x4F1A;&#x4E3A;&#x6BCF;&#x4E2A;&#x5730;&#x56FE;&#x751F;&#x6210;&#x591C;&#x95F4;&#x548C;&#x767D;&#x5929;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x5149;&#x7167;&#x7248;&#x672C;&#xFF0C; &#x5E76;&#x4E14;&#x5982;&#x679C;&#x8BBF;&#x95EE;&#x8005;&#x5728;&#x7F51;&#x9875;&#x8BBF;&#x95EE;&#x5728;&#x7EBF;&#x5730;&#x56FE;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x6839;&#x636E;&#x6BCF;&#x4E2A;&#x5730;&#x56FE;&#x6E38;&#x620F;&#x5185;&#x7684;&#x771F;&#x5B9E;&#x65F6;&#x95F4;&#x6765;&#x8BBE;&#x7F6E;&#x663E;&#x793A;&#x5230;&#x5728;&#x7EBF;&#x5730;&#x56FE;&#x7684;&#x5149;&#x7167;&#x53C2;&#x6570;&#x3002;&#x767D;&#x5929;&#x4E0E;&#x591C;&#x665A;&#x6700;&#x5927;&#x7684;&#x533A;&#x522B;&#x662F;&#x767D;&#x5929;&#x5C06;&#x4F1A;&#x4F7F; <em>ambientlight</em> &#x8BBE;&#x7F6E;&#x5230;15&#xFF0C; &#x800C;&#x591C;&#x665A;&#x5219;&#x4F1A;&#x6839;&#x636E; <em>ambientlight</em> &#x7684;&#x73AF;&#x5883;&#x5149;&#x6E90;&#x8BBE;&#x5B9A;&#x800C;&#x6539;&#x53D8;&#x3002;  &#x6B64;&#x9009;&#x9879;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A; <strong>false</strong> &#x3002;</p>
 </li>
-<li><p><em>smooth-lighting</em> : this setting, a boolean, controls the enabling of the smooth lighting option.  Enabling this feature will add approximately 10% to rendering processing cost, but will result in much smoother shadows and lighting.  If not defined, the <em>smooth-lighting</em> setting from <em>configuration.txt</em> is used.</p>
+<li><p><em>smooth-lighting</em> : &#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5E03;&#x5C14;&#x503C;&#x7C7B;&#x578B;&#x7684;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x7528;&#x4E8E;&#x5F00;&#x542F;&#x6216;&#x5173;&#x95ED;&#x5E73;&#x6ED1;&#x5149;&#x7167;&#x6548;&#x679C;&#x3002;  &#x542F;&#x7528;&#x6B64;&#x529F;&#x80FD;&#x5C06;&#x589E;&#x52A0;&#x6D88;&#x8017;10%&#x7684;&#xFF08;&#x7F51;&#x9875;&#x670D;&#x52A1;&#x5668;&#xFF09;&#x6E32;&#x67D3;&#x5904;&#x7406;&#x6027;&#x80FD;&#xFF09;&#xFF0C;&#x4F46;&#x5E26;&#x6765;&#x7684;&#x662F;&#x66F4;&#x5E73;&#x6ED1;&#x7684;&#x9634;&#x5F71;&#x548C;&#x7167;&#x660E;&#x6548;&#x679C;&#x3002;&#x5982;&#x679C;&#x6B64;&#x5904;&#x672A;&#x8FDB;&#x884C;&#x5B9A;&#x4E49;&#xFF0C; <em>smooth-lighting</em> &#x7684;&#x914D;&#x7F6E;&#x5C06;&#x4F1A;&#x4ECE; <em>configuration.txt</em> &#x6587;&#x4EF6;&#x4E2D;&#x83B7;&#x53D6;&#x3002;</p>
 </li>
 </ul>
 
@@ -1048,7 +1061,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"自定义光照","level":"1.6.4.4","depth":3,"next":{"title":"支持的基于Forge的Mod","level":"1.6.5","depth":2,"path":"Support-for-MinecraftForge-based-mods.md","ref":"Support-for-MinecraftForge-based-mods.md","articles":[]},"previous":{"title":"自定义着色器","level":"1.6.4.3","depth":3,"path":"Defining-custom-shaders.md","ref":"Defining-custom-shaders.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Defining-custom-lightings.md","mtime":"2017-08-12T04:39:31.054Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-04T05:10:56.684Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"自定义光照","level":"1.6.4.4","depth":3,"next":{"title":"支持的基于Forge的Mod","level":"1.6.5","depth":2,"path":"Support-for-MinecraftForge-based-mods.md","ref":"Support-for-MinecraftForge-based-mods.md","articles":[]},"previous":{"title":"自定义着色器","level":"1.6.4.3","depth":3,"path":"Defining-custom-shaders.md","ref":"Defining-custom-shaders.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Defining-custom-lightings.md","mtime":"2017-09-08T05:26:20.070Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-18T05:19:57.452Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -1056,10 +1069,6 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
-    
-        
-        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>

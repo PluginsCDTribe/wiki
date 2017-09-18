@@ -6,9 +6,9 @@
 * [Fast Async WorldEdit](https://pluginscdtribe.github.io/wiki/fast-async-worldedit/)
 * [LuckPerms](https://pluginscdtribe.github.io/wiki/luckperms/)
 * [MythicMobs](https://pluginscdtribe.github.io/wiki/mythicmobs/)
+* [Dynmap](https://pluginscdtribe.github.io/wiki/dynmap/)
 
 ## WIP
-* [Dynmap](https://pluginscdtribe.github.io/wiki/dynmap/)
 * [GriefPrevention]()
 
 ## 关于我们
