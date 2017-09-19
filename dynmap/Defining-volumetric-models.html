@@ -1003,37 +1003,37 @@
 </ul>
 <p>&#x6BD4;&#x5982;&#x5411;&#x4E0B;&#x7684;&#x6D3B;&#x585E;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x8BBE;&#x5B9A;&#xFF1A;</p>
 <pre><code>     block:id=34,data=0,data=8,scale=8
-</code></pre><p>After the &quot;block:&quot; record, one or more layers of blocks can be defined - ranging from layer 0 (the bottom layer) to layer (<em>scale</em>-1) (the top layer).  Each layer is defined by a &quot;layer:&quot; line, which has a comma separated list of numbers indicating which of the layers are being defined (if more than one layer uses the same pattern of subblocks, only the pattern only needs to be defined once).  The next <em>scale</em> lines after the &quot;layer:&quot; line define the pattern of the subblocks: each line represents one step of blocks in the Z axis (first is lowest, last is highest), and each has <em>scale</em> characters (representing the subblocks from the lowest to the highest on the X axis) - a &apos;*&apos; for a subblock filled by the model, or a &apos;-&apos; for a subblock left empty in the model.  Any layer not specified is assumed to consist of empty subblocks.</p>
-<p>For the piston extension facing down, the full definition is:</p>
-<pre><code> block:id=34,data=0,data=8,scale=8
- layer:2,3,4,5,6,7
- --------
- --------
- --------
- ---**---
- ---**---
- --------
- --------
- --------
- layer:0,1
- ********
- ********
- ********
- ********
- ********
- ********
- ********
- ********
-</code></pre><p>In this case, the cube is cut into 8 x 8 x 8 pieces: 8 layers of 8 x 8 subblocks.  The head of the piston fill the bottom two layers (layer 0 and 1), while the pushrod of the piston occupies the center 1/4 of the other layers (layer 2 to 7).</p>
-<h2 id="volumetric-model-rotation">Volumetric Model Rotation</h2>
-<p>As an alternative to manually defining additional volumetric models manually, additional volumetric models can be defined by rotating an existing volumetric model around the Y axis by 0, 90, 180, or 270 degrees.</p>
-<p>To define a volumetric model by rotation, add the &quot;block:&quot; line as normal (be sure that the <em>scale</em> attribute matches the <em>scale</em> from the source model), and add a &quot;rotate:&quot; line immediately following it.  The attributes of the &quot;rotate:&quot; line include:</p>
+</code></pre><p>&#x5728; &quot;block:&quot; &#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x66F4;&#x591A;&#x7684;&#x65B9;&#x5757;&#x5C42; - &#x4ECE;&#x7B2C; 0 &#x5C42;&#xFF08;&#x5E95;&#x5C42;&#xFF09;&#x5F00;&#x59CB;&#x5230;&#x7B2C; (<em>scale</em>-1) &#x5C42;&#xFF08;&#x9876;&#x5C42;&#xFF09;&#x3002;&#x6BCF;&#x4E00;&#x4E2A;&#x5C42;&#x90FD;&#x662F;&#x901A;&#x8FC7;  &quot;layer:&quot; &#x6765;&#x5B9A;&#x4E49;&#xFF0C;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x3002;&#x4E0B;&#x4E00;&#x4E2A;&#x5728; &quot;layer:&quot; &#x4E4B;&#x540E;&#x7684; <em>scale</em> &#x5B9A;&#x4E49;&#x81EA;&#x65B9;&#x5757;&#xFF1A;&#x6BCF;&#x4E2A;&#x884C;&#x4EE3;&#x8868; Z &#x8F74;&#x4E0A;&#x65B9;&#x5757;&#x7684;&#x4E00;&#x4E2A;&#x5C42;&#xFF08;&#x7B2C;&#x4E00;&#x4E2A;&#x6700;&#x4F4E;&#xFF0C;&#x6700;&#x540E;&#x7684;&#x6700;&#x9AD8;&#xFF09;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x90FD;&#x6709; <em>scale</em> &#x5B57;&#x7B26;&#xFF08;&#x4EE3;&#x8868; X &#x8F74;&#x4E0A;&#x7684;&#x6700;&#x4F4E;&#x5230;&#x6700;&#x9AD8;&#x7684;&#x5B50;&#x65B9;&#x5757;&#xFF09; - &#x6BCF;&#x4E2A; &apos;*&apos; &#x4EE3;&#x8868;&#x4E00;&#x4E2A;&#x586B;&#x5145;&#x7684;&#x65B9;&#x5757;&#xFF0C;&#x6BCF;&#x4E2A; &apos;-&apos; &#x4EE3;&#x8868;&#x7559;&#x7A7A;&#x7684;&#x65B9;&#x5757;&#x3001;&#x4EFB;&#x4F55;&#x6307;&#x5B9A;&#x7684;&#x4F46;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x7684;&#x5C42;&#x90FD;&#x662F;&#x9ED8;&#x8BA4;&#x4E3A;&#x7A7A;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x4E00;&#x4E2A;&#x5411;&#x4E0B;&#x7684;&#x6D3B;&#x585E;&#x7684;&#x5B8C;&#x6574;&#x5B9A;&#x4E49;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<pre><code>     block:id=34,data=0,data=8,scale=8
+     layer:2,3,4,5,6,7
+     --------
+     --------
+     --------
+     ---**---
+     ---**---
+     --------
+     --------
+     --------
+     layer:0,1
+     ********
+     ********
+     ********
+     ********
+     ********
+     ********
+     ********
+     ********
+</code></pre><p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E2A;&#x7ACB;&#x65B9;&#x4F53;&#x88AB;&#x5207;&#x5272;&#x4E3A; 8 x 8 x 8 &#x7247;&#xFF1A; 8 &#x5C42; 8 x 8 &#x7684;&#x5B50;&#x65B9;&#x5757;&#x3002;&#x6D3B;&#x585E;&#x5934;&#x5360;&#x7528;&#x4E86;&#x5E95;&#x90E8;&#x7684;&#x4E24;&#x5C42; &#xFF08;0 &#x548C; 1 &#x5C42;&#xFF09;&#xFF0C;&#x63A8;&#x62C9;&#x6746;&#x6B63;&#x4E2D;&#x7684; 1/4 &#x7684;&#x90E8;&#x5206;&#xFF08;2 &#x5230; 7 &#x5C42;&#xFF09;&#x3002;</p>
+<h2 id="&#x4F53;&#x79EF;&#x6A21;&#x578B;&#x7684;&#x7FFB;&#x8F6C;">&#x4F53;&#x79EF;&#x6A21;&#x578B;&#x7684;&#x7FFB;&#x8F6C;</h2>
+<p>&#x4F5C;&#x4E3A;&#x624B;&#x52A8;&#x5B9A;&#x4E49;&#x4F53;&#x79EF;&#x6A21;&#x578B;&#x7684;&#x66FF;&#x4EE3;&#x65B9;&#x5F0F;&#xFF0C;&#x9644;&#x52A0;&#x7684;&#x4F53;&#x79EF;&#x6A21;&#x578B;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7FFB;&#x8F6C;&#x5DF2;&#x6709;&#x7684;&#x4F53;&#x79EF;&#x6A21;&#x578B;&#x6765;&#x5B8C;&#x6210;&#xFF0C;&#x53EF;&#x4EE5;&#x7FFB;&#x8F6C; Y &#x8F74;&#x7684; 0&#xFF0C;90&#xFF0C;180 &#x6216;&#x8005; 270 &#x5EA6;&#x3002;</p>
+<p>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7FFB;&#x8F6C;&#x7684;&#x4F53;&#x79EF;&#x6A21;&#x578B;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x50CF;&#x4EE5;&#x5F80;&#x4E00;&#x6837;&#x6DFB;&#x52A0;&#x4E00;&#x884C; &quot;block:&quot; &#xFF08;&#x4FDD;&#x8BC1; <em>scale</em> &#x5C5E;&#x6027;&#x5339;&#x914D;&#x6E90;&#x6A21;&#x578B;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x6DFB;&#x52A0; &quot;rotate:&quot; &#x884C;&#x7D27;&#x8DDF;&#x5176;&#x540E;&#x3002;&quot;rotate:&quot; &#x7684;&#x5C5E;&#x6027;&#x5305;&#x62EC;&#xFF1A;</p>
 <ul>
-<li><em>id</em> - the block ID of the source volumetric model (the model to be copied and rotated).  See <a href="Texture-Definition-Files#block-id-numbers">Block ID Numbers</a> for details on specifying block ID numbers.  One <em>id</em> attribute is required.</li>
-<li><em>data</em>  - the metadata value of the source volumetric model.  One <em>data</em> attribute is required, and is required to be a number.</li>
-<li><em>rot</em> - the rotation value, in degrees around the Y axis.  Valid values are 0, 90, 180, and 270.  The <em>rot</em> attribute is required.</li>
+<li><em>id</em> - &#x6E90;&#x6A21;&#x578B;&#x7684;&#x65B9;&#x5757; ID&#xFF08;&#x590D;&#x5236;&#x5E76;&#x7FFB;&#x8F6C;&#x7684;&#x6A21;&#x578B;&#xFF09;&#xFF0C;&#x81F3;&#x5C11;&#x9700;&#x8981;&#x4E00;&#x4E2A; <em>id</em></li>
+<li><em>data</em>  - &#x6E90;&#x6A21;&#x578B;&#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x81F3;&#x5C11;&#x9700;&#x8981;&#x4E00;&#x4E2A; <em>data</em>&#xFF0C;&#x5E76;&#x4E14;&#x4E3A;&#x6570;&#x5B57;</li>
+<li><em>rot</em> - &#x65CB;&#x8F6C;&#x7684;&#x503C;&#xFF0C;&#x6709;&#x6548;&#x7684;&#x503C;&#x4E3A; 0 90 180 270&#x3002;&#x6B64;&#x5C5E;&#x6027;&#x662F;&#x5FC5;&#x9700;&#x7684;</li>
 </ul>
-<p>Note: rotating the volumetric model has no effect on the application of textures to the model: a texture applied to the north face of the unrotated model would still be applied to the north face of the model after rotation, for example.</p>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x4F53;&#x79EF;&#x6A21;&#x578B;&#x7684;&#x65CB;&#x8F6C;&#x5BF9;&#x6750;&#x8D28;&#x7684;&#x5E94;&#x7528;&#x6CA1;&#x6709;&#x5F71;&#x54CD;&#xFF1A;&#x539F;&#x6765;&#x5E94;&#x7528;&#x5728;&#x5317;&#x9762;&#x7684;&#x6750;&#x8D28;&#x65CB;&#x8F6C;&#x540E;&#x4ECD;&#x4F1A;&#x5728;&#x5317;&#x9762;</p>
 
                                 
                                 </section>
@@ -1077,7 +1077,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"定义立体模型","level":"1.11.3.3","depth":3,"next":{"title":"定义补丁模型","level":"1.11.3.4","depth":3,"path":"Defining-patch-models.md","ref":"Defining-patch-models.md","articles":[]},"previous":{"title":"StairBlockRenderer类","level":"1.11.3.2.6","depth":4,"path":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","ref":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Defining-volumetric-models.md","mtime":"2017-09-18T05:19:46.377Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-18T05:19:57.452Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"定义立体模型","level":"1.11.3.3","depth":3,"next":{"title":"定义补丁模型","level":"1.11.3.4","depth":3,"path":"Defining-patch-models.md","ref":"Defining-patch-models.md","articles":[]},"previous":{"title":"StairBlockRenderer类","level":"1.11.3.2.6","depth":4,"path":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","ref":"Class-org.dynmap.hdmap.renderer.StairBlockRenderer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Defining-volumetric-models.md","mtime":"2017-09-19T05:24:40.250Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-19T05:25:18.274Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
