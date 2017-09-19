@@ -1,0 +1,870 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>权限 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Flags.html" />
+    
+    
+    <link rel="prev" href="Debugging.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    GriefPrevention
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">基础</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Getting-Started.html">
+            
+                <a href="Getting-Started.html">
+            
+                    
+                    快速入手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Claim-Management.html">
+            
+                <a href="Claim-Management.html">
+            
+                    
+                    创建管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">进阶使用</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Commands.html">
+            
+                <a href="Commands.html">
+            
+                    
+                    命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Debugging.html">
+            
+                <a href="Debugging.html">
+            
+                    
+                    Debug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.3" data-path="Permissions.html">
+            
+                <a href="Permissions.html">
+            
+                    
+                    权限
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="Flags.html">
+            
+                <a href="Flags.html">
+            
+                    
+                    标签
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="Options.html">
+            
+                <a href="Options.html">
+            
+                    
+                    选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="Claiminfo.html">
+            
+                <a href="Claiminfo.html">
+            
+                    
+                    所有者信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="Trust-System.html">
+            
+                <a href="Trust-System.html">
+            
+                    
+                    信任系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.8" data-path="WECUI-Improved-Visuals.html">
+            
+                <a href="WECUI-Improved-Visuals.html">
+            
+                    
+                    WECUI可见
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Mod 调整</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="Pixelmon.html">
+            
+                <a href="Pixelmon.html">
+            
+                    
+                    Pixelmon
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">开发者</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    使用API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >权限</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x26A0;&#xFE0F;  This wiki page is for version 2.3.0.207 or newer, for older versions and 1.8.9 permissions check <a href="https://github.com/MinecraftPortCentral/GriefPrevention/blob/1.8.9/src/me/ryanhamshire/griefprevention/GPPermissions.java#L25" target="_blank">this page</a>, update if you can since there is no support for older versions. &#x26A0;&#xFE0F; </p>
+<p>If you want to have a quickstart, there are 2 basic permissions you can give <code>griefprevention.user</code> to your players and <code>griefprevention.admin</code> to your staff.
+Obviously these permissions are rather rough and if you want a more fine control read all permissions below and assign accordingly.</p>
+<p>The recommended permission plugin is <a href="https://forums.spongepowered.org/t/luckperms-an-advanced-permissions-system/14274" target="_blank">LuckPerms</a>, but it will also work with other ones like <a href="https://forums.spongepowered.org/t/permissionsex-v2-0-api-5/6198" target="_blank">PermissionsEX</a>.</p>
+<h3 id="important">IMPORTANT</h3>
+<p>DO NOT give yourself <code>*</code> or <code>griefprevention.*</code> or it will break GP functionality.</p>
+<p>Admins should only have <code>griefprevention.admin</code> and <code>griefprevention.user</code></p>
+<p>If you alter any admin permissions while in-game, make sure you run /gpreload as GP caches various permissions for performance gains.</p>
+<h1 id="claims">Claims</h1>
+<table>
+<thead>
+<tr>
+<th>Permission Node</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>griefprevention.user.claim.command.abandon</td>
+<td>Allows to abandon claims</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.abandon-all</td>
+<td>Allows to abandon all claims</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.abandon-top-level</td>
+<td>Allows to abandon a claim and all its subdivisions</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.cuboid</td>
+<td>Allows to toggle cuboid claims mode</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.list</td>
+<td>Allows to list player claims</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.basic-mode</td>
+<td>Allows to use basic claim shovel mode</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.give.book</td>
+<td>Allows players to get a manual about claiming</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.give.pet</td>
+<td>Allows a player to give away a pet they tamed</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.info.others</td>
+<td>Allows to get information about others claims</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.info.base</td>
+<td>Allows to get information about claims</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.info.teleport.others</td>
+<td>Allows a user to use the teleport feature in claiminfo on other claims</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.info.teleport.base</td>
+<td>Allows a user to use the teleport feature in claiminfo</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.name</td>
+<td>Allows to set a claimname</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.farewell</td>
+<td>Allows to set a claim farewell</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.greeting</td>
+<td>Allows to set a claim greeting</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.set-spawn</td>
+<td>Allows to set claim spawn</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.spawn</td>
+<td>Allows to use claim spawn</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.subdivide-mode</td>
+<td>Allows to use subdivide shovel mode</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.transfer</td>
+<td>Allows to transfer own claims</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.buy-blocks</td>
+<td>Allows to buy claimblocks (needs economy plugin)</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.sell-blocks</td>
+<td>Allows to sell claimblocks (needs economy plugin)</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.list-flags</td>
+<td>Allows to list claim flags</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.ban-item</td>
+<td>Allows to ban items in claims</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.unban-item</td>
+<td>Allows to unban items in claims</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.siege</td>
+<td>Allows to use siege command</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.inherit</td>
+<td>Allows to toggle inheritance from parent claim</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.create</td>
+<td>Allows to create a basic claim</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.cuboid.basic</td>
+<td>Allows to create/resize basic claims in 3D mode</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.cuboid.subdivision</td>
+<td>Allows to create/resize subdivisions in 3D mode</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.resize</td>
+<td>Allows to resize claims</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.siege.immune</td>
+<td>Can&apos;t be target of a siege</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.visualize</td>
+<td>Allows player to visualize their claims</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.visualize.nearby</td>
+<td>Allows player to visualize nearby claims</td>
+</tr>
+<tr>
+<td>griefprevention.user.command.info.base</td>
+<td>Allows to get information about self</td>
+</tr>
+<tr>
+<td>griefprevention.user.command.info.others</td>
+<td>Allows to get information about another player</td>
+</tr>
+</tbody>
+</table>
+<h1 id="flags">Flags</h1>
+<table>
+<thead>
+<tr>
+<th>Permission Node</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>griefprevention.user.claim.flag</td>
+<td>Allows player to edit user-claim-flags in their own claim</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.flag.base</td>
+<td>Allows to use the claimflag command</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.flag.debug</td>
+<td>Allows to toggle claim flag debug mode</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.flag.player</td>
+<td>Allows to use the claimflag for players command</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.flag.group</td>
+<td>Allows to use the claimflag for groups command</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.flag.reset</td>
+<td>Allows to use the claimreset command</td>
+</tr>
+</tbody>
+</table>
+<h1 id="admin">Admin</h1>
+<table>
+<thead>
+<tr>
+<th>Permission Node</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>griefprevention.admin.claim.command.adjust-claim-blocks</td>
+<td>Allows to edit amount of bonus claim blocks</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.admin-mode</td>
+<td>Allows to use admin claim shovel mode</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.clear</td>
+<td></td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.permission-group</td>
+<td>Allows to use the claim command for group permissions</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.permission-player</td>
+<td>Allows to use the claim command for player permissions</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.debug</td>
+<td></td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.delete.base</td>
+<td>Allows to use the deleteclaim command</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.delete.basic</td>
+<td>Allows to delete basic claims</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.delete.admin</td>
+<td>Allows to delete admin claims</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.delete-claims</td>
+<td>Allows to delete all of another player&apos;s claims</td>
+</tr>
+<tr>
+<td>griefprevention.admin.command.delete-admin-claims</td>
+<td>Allows to delete all admin claims</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.list.admin</td>
+<td>Allows to list admin claims</td>
+</tr>
+<tr>
+<td>griefprevention.admin.command.set-accrued-claim-blocks</td>
+<td>Allows to edit amount of accrued claim blocks</td>
+</tr>
+<tr>
+<td>griefprevention.admin.command.restore-nature.base</td>
+<td></td>
+</tr>
+<tr>
+<td>griefprevention.admin.command.restore-nature.aggressive</td>
+<td></td>
+</tr>
+<tr>
+<td>griefprevention.admin.command.restore-nature.fill</td>
+<td></td>
+</tr>
+<tr>
+<td>griefprevention.admin.command.reload</td>
+<td>Allows to reload GP</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.set-admin-flags</td>
+<td>Allows to edit flags in an admin claim</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.list.basic</td>
+<td>Allows to list all basic claims</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.flag</td>
+<td>Allows to edit any flag</td>
+</tr>
+<tr>
+<td>griefprevention.admin.flag-defaults</td>
+<td>Allows to edit flag defaults</td>
+</tr>
+<tr>
+<td>griefprevention.admin.flag-overrides</td>
+<td>Allows to edit flag overrides</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.wilderness</td>
+<td>Allows to edit wilderness claims</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.manage.options</td>
+<td>Allows to set flags for players and groups</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.ignore.base</td>
+<td>Allows to use the ignore claims command</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.ignore.basic</td>
+<td>Allows to ignore basic claim flags</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.ignore.admin</td>
+<td>Allows to ignore admin claim flags</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.command.ignore.wilderness</td>
+<td>Allows to ignore wilderness claim flags</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.cuboid</td>
+<td></td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.resize.admin</td>
+<td>Allows to resize admin claims</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.resize.admin.subdivision</td>
+<td>Allows to resize admin claim subdivisions</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.resize.basic</td>
+<td>Allows to resize basic claims</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.resize.basic.subdivision</td>
+<td>Allows to resize basic claim subdivisions</td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.override.resize</td>
+<td></td>
+</tr>
+<tr>
+<td>griefprevention.admin.claim.override.limit</td>
+<td>Allows to ignore claimblock limit</td>
+</tr>
+<tr>
+<td>griefprevention.admin.eavesdrop.signs</td>
+<td></td>
+</tr>
+<tr>
+<td>griefprevention.admin.command.unlock-drops</td>
+<td></td>
+</tr>
+<tr>
+<td>griefprevention.admin.no-pvp-immunity</td>
+</tr>
+</tbody>
+</table>
+<h1 id="chat">Chat</h1>
+<table>
+<thead>
+<tr>
+<th>Permission Node</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>griefprevention.user.chat.command.ignore</td>
+<td>Allows to ignore players</td>
+</tr>
+<tr>
+<td>griefprevention.user.chat.command.unignore</td>
+<td>Allows to unignore players</td>
+</tr>
+<tr>
+<td>griefprevention.admin.chat.command.list</td>
+<td>Allows to list ignored players</td>
+</tr>
+<tr>
+<td>griefprevention.admin.chat.command.separate</td>
+<td>Allows to seperate players</td>
+</tr>
+<tr>
+<td>griefprevention.admin.chat.command.unseparate</td>
+<td>Allows to unseperate players</td>
+</tr>
+<tr>
+<td>griefprevention.admin.chat.command.softmute</td>
+<td>Allows to softmute players</td>
+</tr>
+<tr>
+<td>griefprevention.admin.chat.not-ignorable</td>
+<td>Player can&apos;t be ignored</td>
+</tr>
+<tr>
+<td>griefprevention.admin.chat.spam-override</td>
+<td>Player isn&apos;t affected by spam filter</td>
+</tr>
+<tr>
+<td>griefprevention.admin.chat.eavesdrop</td>
+<td>Player can see softmuted messages</td>
+</tr>
+</tbody>
+</table>
+<h1 id="misc">Misc</h1>
+<table>
+<thead>
+<tr>
+<th>Permission Node</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>griefprevention.user.command.help</td>
+<td>Allows to you the view the help</td>
+</tr>
+</tbody>
+</table>
+<h1 id="trust">Trust</h1>
+<table>
+<thead>
+<tr>
+<th>Permission Node</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>griefprevention.user.claim.command.trust.access</td>
+<td>Allows to add accessors</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.trust.container</td>
+<td>Allows to add containers</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.trust.build</td>
+<td>Allows to add builders</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.trust.permission</td>
+<td>Allows to add managers</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.trust.list</td>
+<td>Allows to list trusted players</td>
+</tr>
+<tr>
+<td>griefprevention.user.claim.command.trust.remove</td>
+<td>Allows to untrust players</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Debugging.html" class="navigation navigation-prev " aria-label="Previous page: Debug">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Flags.html" class="navigation navigation-next " aria-label="Next page: 标签">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"权限","level":"3.3","depth":1,"next":{"title":"标签","level":"3.4","depth":1,"path":"Flags.md","ref":"Flags.md","articles":[]},"previous":{"title":"Debug","level":"3.2","depth":1,"path":"Debugging.md","ref":"Debugging.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Permissions.md","mtime":"2017-09-19T05:15:17.794Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-09-19T05:40:17.422Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
