@@ -9,7 +9,7 @@
 * [Dynmap](https://pluginscdtribe.github.io/wiki/dynmap/)
 
 ## WIP
-* [GriefPrevention](https://pluginscdtribe.github.io/wiki/griefprevention/index.html)
+* [GriefPrevention](https://pluginscdtribe.github.io/wiki/griefprevention/)
 
 ## 关于我们
 
