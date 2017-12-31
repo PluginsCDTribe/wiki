@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>API · GitBook</title>
+        <title>⚠️高级设置 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="Claiminfo.html" />
     
-    <link rel="prev" href="Pixelmon.html" />
+    
+    <link rel="prev" href="Flags.html" />
     
 
     </head>
@@ -205,7 +207,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.4" data-path="Advanced-Options.html">
+        <li class="chapter active" data-level="3.4" data-path="Advanced-Options.html">
             
                 <a href="Advanced-Options.html">
             
@@ -284,7 +286,7 @@
         
         
     
-        <li class="chapter active" data-level="5.1" data-path="API.html">
+        <li class="chapter " data-level="5.1" data-path="API.html">
             
                 <a href="API.html">
             
@@ -327,7 +329,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >API</a>
+        <a href="." >⚠️高级设置</a>
     </h1>
 </div>
 
@@ -342,84 +344,138 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="getting-started">Getting Started</h1>
-<p>This wiki page will guide you through the steps of adding and utilizing the GriefPrevention developer API to your Sponge plugin.
-You will be expected to have at least basic knowledge of developing Java plugins for Sponge API in order to apply this information.
-If you are new to Sponge API more information can be found on the <a href="https://docs.spongepowered.org/master/en-GB/plugin/index.html" target="_blank">Sponge Docs</a>.</p>
-<h2 id="gradle">Gradle</h2>
-<p>Sponge and Forge developers should be familiar with Gradle and it&apos;s use in plugin/mod development.</p>
-<h3 id="buildgradle---dependencies">build.gradle - Dependencies</h3>
-<p>Below is an example of the dependencies block of your build.gradle that targets the GP API v0.6.</p>
-<pre><code>dependencies {
-    compile(&apos;org.spongepowered:spongeapi:5.1.0&apos;)
-    compile(&apos;me.ryanhamshire:griefprevention:1.10.2-4.0.0.379:api&apos;)
-}
-</code></pre><h2 id="sponge-api">Sponge API</h2>
-<h3 id="plugin-annotation">Plugin Annotation</h3>
-<p>If you are developing a plugin that will work with GriefPrevention, you must include 
-it as a dependency in your <code>@Plugin</code> declaration.</p>
-<pre><code class="lang-java"><span class="hljs-meta">@Plugin</span>(id = <span class="hljs-string">&quot;gpapiexample&quot;</span>,
-        name = <span class="hljs-string">&quot;My GP Addon&quot;</span>,
-        version = <span class="hljs-string">&quot;1.0.0&quot;</span>,
-        description = <span class="hljs-string">&quot;The best addon to the greatest protection plugin ever conceived&quot;</span>,
-        authors = {<span class="hljs-string">&quot;bloodshot&quot;</span>},
-        dependencies = {
-            <span class="hljs-meta">@Dependency</span>(id = <span class="hljs-string">&quot;griefprevention&quot;</span>)
-        })
-</code></pre>
-<h3 id="creating-an-instance">Creating an Instance</h3>
-<p>Example plugin main class:</p>
-<pre><code class="lang-java"><span class="hljs-keyword">import</span> me.ryanhamshire.griefprevention.GriefPrevention;
-<span class="hljs-keyword">import</span> me.ryanhamshire.griefprevention.api.GriefPreventionApi;
-<span class="hljs-keyword">import</span> org.spongepowered.api.event.game.state.GamePostInitializationEvent;
-
-<span class="hljs-keyword">import</span> java.util.Optional;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyAddon</span> </span>{
-
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> MyAddon instance;
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> GriefPreventionApi griefPrevention;
-
-    <span class="hljs-meta">@Listener</span>
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onPostInitialization</span><span class="hljs-params">(GamePostInitializationEvent event)</span> </span>{
-        instance = <span class="hljs-keyword">this</span>;
-        MyAddon.griefPrevention = GriefPrevention.getApi();
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> MyAddon <span class="hljs-title">getInstance</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">return</span> instance;
-    }
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> GriefPreventionApi <span class="hljs-title">getGriefPrevention</span><span class="hljs-params">()</span> </span>{
-        <span class="hljs-keyword">return</span> griefPrevention;
-    }
-}
-</code></pre>
-<h3 id="using-the-griefprevention-api">Using the GriefPrevention API</h3>
-<p>Example method on creating and saving a claim using the GP API:</p>
-<pre><code class="lang-java"><span class="hljs-keyword">import</span> me.ryanhamshire.griefprevention.api.claim.Claim;
-<span class="hljs-keyword">import</span> me.ryanhamshire.griefprevention.api.claim.ClaimResult;
-<span class="hljs-keyword">import</span> me.ryanhamshire.griefprevention.api.claim.ClaimType;
-
-<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClaimMaker</span> </span>{
-
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> MyAddon INSTANCE = MyAddon.getInstance();
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> GriefPreventionApi GP_INSTANCE = INSTANCE.getGriefPrevention();
-
-    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Optional&lt;Claim&gt; <span class="hljs-title">createBasicClaim</span><span class="hljs-params">(World world, Vector3i lesserBound, Vector3i greaterBound, UUID owner, <span class="hljs-keyword">boolean</span> cuboid)</span> </span>{
-        <span class="hljs-comment">// Create a ClaimResult by supplying the required data</span>
-        ClaimResult claimResult = Claim.builder()
-                                  .type(ClaimType.BASIC)
-                                  .world(world)
-                                  .bounds(lesserBound, greaterBound)
-                                  .cause(Cause.source(INSTANCE).build())
-                                  .owner(owner)
-                                  .build();
-        <span class="hljs-comment">// Return the Claim object from the result, if sucessful</span>
-        <span class="hljs-keyword">return</span> (claimResult.successful()) ? claimResult.getClaim() : Optional.empty();
-    }
-}
-</code></pre>
+                                <p>Options are a way to configure plugins using player/group contexts through your permission system, this gives you the benefit of being able to set different settings for different players, groups, worlds etc.</p>
+<h2 id="options-overview">Options Overview</h2>
+<table>
+<thead>
+<tr>
+<th>&#x9009;&#x9879;</th>
+<th>&#x9ED8;&#x8BA4;&#x503C;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>griefprevention.abandon-return-ratio-basic</code></td>
+<td>1.0</td>
+<td>The portion of basic claim blocks returned to a player when a basic claim is abandoned.</td>
+</tr>
+<tr>
+<td><code>griefprevention.abandon-return-ratio-town</code></td>
+<td>1.0</td>
+<td>The portion of town claim blocks returned to a player when a town claim is abandoned.</td>
+</tr>
+<tr>
+<td><code>griefprevention.blocks-accrued-per-hour</code></td>
+<td>120</td>
+<td>Blocks earned per hour. By default, each &apos;active&apos; player should receive 6 blocks every 5 min. Note: The player must have moved at least 3 blocks since last delivery. If using &apos;wilderness-cuboids&apos;, this value is 30720 by default with 1536 blocks every 5 min to players.</td>
+</tr>
+<tr>
+<td><code>griefprevention.claim-create-mode</code></td>
+<td>0</td>
+<td>The default claiming mode set for players on login. (0 = 2D, 1 = 3D)</td>
+</tr>
+<tr>
+<td><code>griefprevention.create-claim-limit-basic</code></td>
+<td>20</td>
+<td>Maximum number of basic claims per player. (0 = unlimited)</td>
+</tr>
+<tr>
+<td><code>griefprevention.create-claim-limit-town</code></td>
+<td>1</td>
+<td>Maximum number of town claims per player. (0 = unlimited)</td>
+</tr>
+<tr>
+<td><code>griefprevention.create-claim-limit-subdivision</code></td>
+<td>10</td>
+<td>Maximum number of subdivisions per player. (0 = unlimited)</td>
+</tr>
+<tr>
+<td><code>griefprevention.initial-claim-blocks</code></td>
+<td>100</td>
+<td>The number of claim blocks a player has initially, by default. Note: If using &apos;wilderness-cuboids&apos;, this value is 25600 by default.</td>
+</tr>
+<tr>
+<td><code>griefprevention.max-accrued-claim-blocks</code></td>
+<td>80000</td>
+<td>The limit on accrued blocks (over time). doesn&apos;t limit purchased or admin-gifted blocks. Note: If using &apos;wilderness-cuboids&apos;, this value is 20480000 by default.</td>
+</tr>
+<tr>
+<td><code>griefprevention.claim-expiration-chest</code></td>
+<td>7</td>
+<td>Number of days of inactivity before an automatic chest claim will be deleted.</td>
+</tr>
+<tr>
+<td><code>griefprevention.claim-expiration-basic</code></td>
+<td>14</td>
+<td>Number of days of inactivity before a basic claim will be deleted.</td>
+</tr>
+<tr>
+<td><code>griefprevention.claim-expiration-town</code></td>
+<td>14</td>
+<td>Number of days of inactivity before a town claim will be deleted.</td>
+</tr>
+<tr>
+<td><code>griefprevention.claim-expiration-subdivision</code></td>
+<td>14</td>
+<td>Number of days of inactivity before a subdivision claim will be deleted.</td>
+</tr>
+<tr>
+<td><code>griefprevention.min-claim-level</code><br><code>griefprevention.max-claim-level</code></td>
+<td>0/255</td>
+<td>The minimum/maximum level that a claim can be created in.</td>
+</tr>
+<tr>
+<td><code>griefprevention.min-claim-size-basic-x</code><br><code>griefprevention.max-claim-size-basic-x</code></td>
+<td>10/5000</td>
+<td>The min/max size in blocks that the x-axis can be.</td>
+</tr>
+<tr>
+<td><code>griefprevention.min-claim-size-basic-y</code><br><code>griefprevention.max-claim-size-basic-y</code></td>
+<td>5/256</td>
+<td>The min/max size in blocks that the y-axis can be.</td>
+</tr>
+<tr>
+<td><code>griefprevention.min-claim-size-basic-z</code><br><code>griefprevention.max-claim-size-basic-z</code></td>
+<td>10/5000</td>
+<td>The min/max size in blocks that the z-axis can be.</td>
+</tr>
+<tr>
+<td><code>griefprevention.min-claim-size-town-x</code><br><code>griefprevention.max-claim-size-town-x</code></td>
+<td>32/10000</td>
+<td>The min/max size in blocks that the x-axis can be.</td>
+</tr>
+<tr>
+<td><code>griefprevention.min-claim-size-town-y</code><br><code>griefprevention.max-claim-size-town-y</code></td>
+<td>32/256</td>
+<td>The min/max size in blocks that the y-axis can be.</td>
+</tr>
+<tr>
+<td><code>griefprevention.min-claim-size-town-z</code><br><code>griefprevention.max-claim-size-town-z</code></td>
+<td>32/10000</td>
+<td>The min/max size in blocks that the z-axis can be.</td>
+</tr>
+<tr>
+<td><code>griefprevention.max-claim-size-subdivision-x</code></td>
+<td>1000</td>
+<td>The max size in blocks that the x-axis can be.</td>
+</tr>
+<tr>
+<td><code>griefprevention.max-claim-size-subdivision-y</code></td>
+<td>256</td>
+<td>The max size in blocks that the y-axis can be.</td>
+</tr>
+<tr>
+<td><code>griefprevention.max-claim-size-subdivision-z</code></td>
+<td>1000</td>
+<td>The max size in blocks that the z-axis can be.</td>
+</tr>
+</tbody>
+</table>
+<p>Note: Options are only set once during server startup. If you change it after startup you MUST run /gpreload for changes to work.</p>
+<h2 id="examples-for-different-permission-plugins">Examples for different permission plugins</h2>
+<h3 id="luckperms">LuckPerms</h3>
+<p><code>/lp user/group &lt;user|group&gt; meta set &lt;option&gt; &lt;value&gt; [server] [world]</code></p>
 
                                 
                                 </section>
@@ -447,10 +503,14 @@ it as a dependency in your <code>@Plugin</code> declaration.</p>
 
             
                 
-                <a href="Pixelmon.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Pixelmon">
+                <a href="Flags.html" class="navigation navigation-prev " aria-label="Previous page: ⚠️管理选项">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="Claiminfo.html" class="navigation navigation-next " aria-label="Next page: 领地信息">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -459,7 +519,7 @@ it as a dependency in your <code>@Plugin</code> declaration.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"API","level":"5.1","depth":1,"previous":{"title":"Pixelmon","level":"4.1","depth":1,"path":"Pixelmon.md","ref":"Pixelmon.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"API.md","mtime":"2017-09-19T05:15:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-31T13:57:43.967Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"⚠️高级设置","level":"3.4","depth":1,"next":{"title":"领地信息","level":"3.5","depth":1,"path":"Claiminfo.md","ref":"Claiminfo.md","articles":[]},"previous":{"title":"⚠️管理选项","level":"3.3","depth":1,"path":"Flags.md","ref":"Flags.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"fontsettings":{"family":"sans","size":2,"theme":"white"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Advanced-Options.md","mtime":"2017-12-31T13:24:59.980Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-31T13:57:43.967Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
