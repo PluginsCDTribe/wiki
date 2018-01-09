@@ -343,21 +343,20 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="getting-started">Getting Started</h1>
-<p>This wiki page will guide you through the steps of adding and utilizing the GriefPrevention developer API to your Sponge plugin.
-You will be expected to have at least basic knowledge of developing Java plugins for Sponge API in order to apply this information.
-If you are new to Sponge API more information can be found on the <a href="https://docs.spongepowered.org/master/en-GB/plugin/index.html" target="_blank">Sponge Docs</a>.</p>
+<p>这个 Wiki 页面将会引导你使用 GriefPrevention 的 API 到你的 Sponge 插件中。
+你至少需要有基础的 Java 开发 Sponge 插件技能，以理解一下文字。
+如果你第一次接触 Sponge API，请在 <a href="https://docs.spongepowered.org/master/en-GB/plugin/index.html" target="_blank">Sponge Docs</a> 获取更多信息。</p>
 <h2 id="gradle">Gradle</h2>
-<p>Sponge and Forge developers should be familiar with Gradle and it&apos;s use in plugin/mod development.</p>
-<h3 id="buildgradle---dependencies">build.gradle - Dependencies</h3>
-<p>Below is an example of the dependencies block of your build.gradle that targets the GP API v0.6.</p>
+<p>Sponge 和 Forge 的开发者应该熟悉 Gradle 的使用和在 Forge 和 Sponge 方面的用途。</p>
+<h3 id="buildgradle---dependencies">build.gradle - 依赖项</h3>
+<p>下方是一个在 build.gradle 使用 GP API v0.6 的实例代码块。</p>
 <pre><code>dependencies {
     compile(&apos;org.spongepowered:spongeapi:5.1.0&apos;)
     compile(&apos;me.ryanhamshire:griefprevention:1.10.2-4.0.0.379:api&apos;)
 }
 </code></pre><h2 id="sponge-api">Sponge API</h2>
-<h3 id="plugin-annotation">Plugin Annotation</h3>
-<p>If you are developing a plugin that will work with GriefPrevention, you must include 
-it as a dependency in your <code>@Plugin</code> declaration.</p>
+<h3 id="plugin-annotation">插件 Annotation</h3>
+<p>如果想、你正在开发一个和 GriefPrevention 协同工作的插件，你需要将其添加为 <code>@Plugin</code> 中的依赖。</p>
 <pre><code class="lang-java"><span class="hljs-meta">@Plugin</span>(id = <span class="hljs-string">&quot;gpapiexample&quot;</span>,
         name = <span class="hljs-string">&quot;My GP Addon&quot;</span>,
         version = <span class="hljs-string">&quot;1.0.0&quot;</span>,
@@ -367,8 +366,8 @@ it as a dependency in your <code>@Plugin</code> declaration.</p>
             <span class="hljs-meta">@Dependency</span>(id = <span class="hljs-string">&quot;griefprevention&quot;</span>)
         })
 </code></pre>
-<h3 id="creating-an-instance">Creating an Instance</h3>
-<p>Example plugin main class:</p>
+<h3 id="creating-an-instance">创建一个实例</h3>
+<p>实力插件主类：</p>
 <pre><code class="lang-java"><span class="hljs-keyword">import</span> me.ryanhamshire.griefprevention.GriefPrevention;
 <span class="hljs-keyword">import</span> me.ryanhamshire.griefprevention.api.GriefPreventionApi;
 <span class="hljs-keyword">import</span> org.spongepowered.api.event.game.state.GamePostInitializationEvent;
@@ -395,8 +394,8 @@ it as a dependency in your <code>@Plugin</code> declaration.</p>
     }
 }
 </code></pre>
-<h3 id="using-the-griefprevention-api">Using the GriefPrevention API</h3>
-<p>Example method on creating and saving a claim using the GP API:</p>
+<h3 id="using-the-griefprevention-api">使用 GriefPrevention API</h3>
+<p>使用 GP API 创建并保存一个领地的实例：</p>
 <pre><code class="lang-java"><span class="hljs-keyword">import</span> me.ryanhamshire.griefprevention.api.claim.Claim;
 <span class="hljs-keyword">import</span> me.ryanhamshire.griefprevention.api.claim.ClaimResult;
 <span class="hljs-keyword">import</span> me.ryanhamshire.griefprevention.api.claim.ClaimType;
