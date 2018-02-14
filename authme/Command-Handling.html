@@ -1,0 +1,644 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Command handling · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Dependency-Injection.html" />
+    
+    
+    <link rel="prev" href="AuthMe-Coding-Styleguide.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对于插件使用者</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Commands.html">
+            
+                <a href="Commands.html">
+            
+                    
+                    命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Config.html">
+            
+                <a href="Config.html">
+            
+                    
+                    配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Hash-Algorithm.html">
+            
+                <a href="Hash-Algorithm.html">
+            
+                    
+                    Hash Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="Permissions.html">
+            
+                <a href="Permissions.html">
+            
+                    
+                    权限节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="Translations.html">
+            
+                <a href="Translations.html">
+            
+                    
+                    语言翻译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="AuthMe-Releases-Jenkins.html">
+            
+                <a href="AuthMe-Releases-Jenkins.html">
+            
+                    
+                    AuthMe Releases (Jenkins)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="Breaking-Changes.html">
+            
+                <a href="Breaking-Changes.html">
+            
+                    
+                    大更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="Spawn-Handling.html">
+            
+                <a href="Spawn-Handling.html">
+            
+                    
+                    Spawn handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="Name-Restrictions.html">
+            
+                <a href="Name-Restrictions.html">
+            
+                    
+                    玩家ID限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="Registration.html">
+            
+                <a href="Registration.html">
+            
+                    
+                    Registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="Limbo-players.html">
+            
+                <a href="Limbo-players.html">
+            
+                    
+                    未登录玩家
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="Converters.html">
+            
+                <a href="Converters.html">
+            
+                    
+                    转换数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="Configuring-logging.html">
+            
+                <a href="Configuring-logging.html">
+            
+                    
+                    登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="Argon2-as-Password-Hash.html">
+            
+                <a href="Argon2-as-Password-Hash.html">
+            
+                    
+                    Use Argon2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="Forum-integrations.html">
+            
+                <a href="Forum-integrations.html">
+            
+                    
+                    联动论坛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="Development-team.html">
+            
+                <a href="Development-team.html">
+            
+                    
+                    开发团队
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17" data-path="Translators.html">
+            
+                <a href="Translators.html">
+            
+                    
+                    翻译者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="5.4-Changelog.html">
+            
+                <a href="5.4-Changelog.html">
+            
+                    
+                    5.4 更新记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19" data-path="5.3-Changelog.html">
+            
+                <a href="5.3-Changelog.html">
+            
+                    
+                    5.3 更新记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.20" data-path="5.2-Changelog.html">
+            
+                <a href="5.2-Changelog.html">
+            
+                    
+                    5.2 更新记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对于使用 AuthMe 的开发者</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Hooking-into-AuthMe.html">
+            
+                <a href="Hooking-into-AuthMe.html">
+            
+                    
+                    Hooking into AuthMe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Plugins-hooking-into-AuthMe.html">
+            
+                <a href="Plugins-hooking-into-AuthMe.html">
+            
+                    
+                    Plugins hooking into AuthMe
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对于开发者</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="AuthMe-Coding-Styleguide.html">
+            
+                <a href="AuthMe-Coding-Styleguide.html">
+            
+                    
+                    Coding styleguide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="Command-Handling.html">
+            
+                <a href="Command-Handling.html">
+            
+                    
+                    Command handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Dependency-Injection.html">
+            
+                <a href="Dependency-Injection.html">
+            
+                    
+                    Dependency injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Development-Setup.html">
+            
+                <a href="Development-Setup.html">
+            
+                    
+                    Development setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Limbo-architecture.html">
+            
+                <a href="Limbo-architecture.html">
+            
+                    
+                    Limbo architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="Tool-tasks.html">
+            
+                <a href="Tool-tasks.html">
+            
+                    
+                    Tool tasks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="Unit-Testing.html">
+            
+                <a href="Unit-Testing.html">
+            
+                    
+                    Unit testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Command handling</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x6B64;&#x9875;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x63CF;&#x8FF0; AuthMe &#x7684;&#x547D;&#x4EE4;&#x662F;&#x5982;&#x4F55;&#x6CE8;&#x518C;&#x5E76;&#x5904;&#x7406;&#x7684;&#x6280;&#x672F;&#x6027;&#x6587;&#x7AE0;&#x3002;</p>
+<h3 id="&#x6982;&#x89C8;">&#x6982;&#x89C8;</h3>
+<p>&#x4EE5;&#x4E0B;&#x6982;&#x89C8;&#x5C55;&#x793A;&#x4E86;&#x547D;&#x4EE4;&#x5904;&#x7406;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x4E9B;&#x90E8;&#x5206;&#x3002;</p>
+<p><img src="http://s33.postimg.org/t45b4jxbj/Untitled_Diagram.png" alt="Command handling overview"></p>
+<h3 id="&#x547D;&#x4EE4;&#x6CE8;&#x518C;">&#x547D;&#x4EE4;&#x6CE8;&#x518C;</h3>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>CommandDescription</code> &#x5BF9;&#x8C61;&#x6765;&#x5B9A;&#x4E49; AuthMe &#x4E2D;&#x53EF;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x4E0D;&#x542B;&#x6709;&#x4EFB;&#x4F55;&#x547D;&#x4EE4;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x4F46;&#x662F;&#x542B;&#x6709;&#x6240;&#x6709;&#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;&#x5FC5;&#x987B;&#x7684;&#x4FE1;&#x606F;&#xFF1A;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x7684; label&#xFF08;&#x6BD4;&#x5982;&#x5FC5;&#x987B;&#x4F7F;&#x7528; <code>/authme register</code> &#x6216;&#x8005; <code>/authme reg</code>&#xFF09;&#xFF0C;&#x53C2;&#x6570;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x5230;&#x5B9E;&#x9645;&#x547D;&#x4EE4;&#x5B9E;&#x73B0;&#x7684;&#x5F15;&#x7528;&#x3002; </p>
+<h3 id="&#x6620;&#x5C04;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;">&#x6620;&#x5C04;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;</h3>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x88AB;&#x6267;&#x884C;&#x65F6;&#xFF0C;Bukkit&#xFF08;&#x6216;&#x8005; Spigot&#xFF09;&#x5C06;&#x63D2;&#x4EF6;&#x7684;&#x4FE1;&#x606F;&#x4F20;&#x9012;&#x7ED9;&#x63D2;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x53C2;&#x6570; <code>String commandLabel, String[] args</code>&#x3002;Bukkit &#x547D;&#x4EE4;&#x7684; label &#x53EA;&#x542B;&#x6709;&#x547D;&#x4EE4;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x300C;&#x8BCD;&#x300D;&#xFF08;&#x6BD4;&#x5982; <code>authme</code> &#x4E4B;&#x4E8E; <code>/authme reload</code>&#xFF09;&#x4EE5;&#x53CA;&#x5269;&#x4E0B;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<p>&#x5728; AuthMe &#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x79F0; <em>labels</em> &#x4E3A;&#x547D;&#x4EE4;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#xFF0C;&#x6240;&#x4EE5;&#x5728; <code>/authme register billy pass123</code> &#x4E2D;&#xFF0C;label &#x4E3A; <code>authme, register</code> &#x56E0;&#x4E3A;&#x4ED6;&#x4EEC;&#x6307;&#x5411;&#x4E86;&#x7BA1;&#x7406;&#x5458;&#x6CE8;&#x518C;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x5728;&#x4E00;&#x5F00;&#x59CB;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x4E0D;&#x77E5;&#x9053;&#x54EA;&#x4E2A;&#x662F; label &#x54EA;&#x4E2A;&#x662F;&#x53C2;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x4EE5; <em>&#x547D;&#x4EE4;&#x90E8;&#x5206;</em> &#x4EE3;&#x6307;&#x5B83;&#x4EEC;&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x4EF6;&#x4E8B;&#x662F;&#x51B3;&#x5B9A;&#x54EA;&#x4E2A;<em>&#x90E8;&#x5206;</em>&#x662F; <em>labels</em> &#x6291;&#x6216; <em>&#x53C2;&#x6570;</em> &#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x53EF;&#x4EE5;&#x6620;&#x5C04;&#x5230;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x63CF;&#x8FF0;&#x5BF9;&#x8C61;&#xFF08;<code>CommandDescription</code>&#xFF09;&#x5E76;&#x4E14;&#x53C2;&#x6570;&#x7684;&#x957F;&#x5EA6;&#x662F;&#x6B63;&#x786E;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x79F0;&#x4E4B;&#x4E3A;&#x4E00;&#x4E2A;&#x6210;&#x529F;&#x7684;&#x6620;&#x5C04;&#x3002;&#x6BD4;&#x5982;&#xFF0C;<code>/authme register billy pass123</code> &#x6307;&#x5411;&#x4E86;&#x5BF9;&#x4E8E;&#x7BA1;&#x7406;&#x6CE8;&#x518C;&#x7684;&#x547D;&#x4EE4;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x5E76;&#x4E14;&#x5269;&#x4E0B;&#x4E86;&#x4E24;&#x4E2A;&#x53C2;&#x6570; <code>billy, pass123</code> &#x3002;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x63CF;&#x8FF0;&#x5B9A;&#x4E49;&#x4E86;&#x4E24;&#x4E2A;&#x5F3A;&#x5236;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x53C2;&#x6570;&#x5339;&#x914D;&#xFF0C;&#x6211;&#x4EEC;&#x6210;&#x529F;&#x5730;&#x8FDB;&#x884C;&#x4E86;&#x4E00;&#x6B21;&#x6620;&#x5C04;&#x3002;</p>
+<p><strong>&#x5B89;&#x5168;&#x63A8;&#x6D4B;&#xFF1A;</strong> &#x5728;&#x7F16;&#x7A0B;&#x4E2D;&#xFF0C;&#x5047;&#x5B9A;&#x6700;&#x591A;&#x4E24;&#x4E2A; label &#x5C31;&#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x67D0;&#x4E2A;&#x547D;&#x4EE4;&#xFF08;&#x6BD4;&#x5982; <code>/authme register</code>&#xFF0C;&#x53C8;&#x6BD4;&#x5982;&#x8BF4; <code>/authme user register</code> - &#x8FD9;&#x6709;&#x4E09;&#x4E2A; label&#xFF0C;&#x662F;&#x4E0D;&#x53EF;&#x80FD;&#x53D1;&#x751F;&#x7684;&#xFF09;&#x3002;&#x4EFB;&#x4F55;&#x66F4;&#x591A;&#x7684;&#x53C2;&#x6570;&#x90FD;&#x53EF;&#x80FD;&#x590D;&#x6742;&#x5316;&#x6211;&#x4EEC;&#x7684;&#x547D;&#x4EE4;&#x7ED3;&#x6784;&#x548C;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x3002;&#x6709;&#x4E00;&#x4E2A;&#x6D4B;&#x8BD5;&#x68C0;&#x6D4B;&#x6211;&#x4EEC;&#x7684;&#x547D;&#x4EE4;&#x63CF;&#x8FF0;&#xFF08;<code>CommandDescription</code>&#xFF09;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x5927;&#x4E8E;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x3002;&#x5C3D;&#x7BA1;&#x5982;&#x6B64;&#xFF0C;&#x4F60;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x81EA;&#x884C;&#x7F16;&#x5199;&#x5904;&#x7406;&#x547D;&#x4EE4;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x592A;&#x590D;&#x6742;&#x7684;&#x8BDD;&#x3002;</p>
+<h3 id="&#x6743;&#x9650;&#x68C0;&#x67E5;">&#x6743;&#x9650;&#x68C0;&#x67E5;</h3>
+<p>&#x6709;&#x5173;&#x6743;&#x9650;&#x7684;&#x903B;&#x8F91;&#x5728; <code>permission</code> &#x5305;&#x4E2D;&#x5904;&#x7406;&#x3002;CommandHandler &#x7C7B;&#x5C06;&#x547D;&#x4EE4;&#x53D1;&#x9001;&#x8005;&#x548C;&#x547D;&#x4EE4;&#x63CF;&#x8FF0;&#x4F20;&#x9012;&#x7ED9; PermissionsManager &#x6765;&#x67E5;&#x8BE2;&#x7528;&#x6237;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x6B64;&#x547D;&#x4EE4;&#x3002;</p>
+<h3 id="&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;">&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;</h3>
+<p>&#x5982;&#x679C;&#x6743;&#x9650;&#x68C0;&#x67E5;&#x6210;&#x529F;&#xFF0C;&#x547D;&#x4EE4;&#x5C31;&#x53EF;&#x4EE5;&#x88AB;&#x6267;&#x884C;&#x3002;&#x6BCF;&#x4E2A;&#x547D;&#x4EE4;&#x63CF;&#x8FF0;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>ExecutableCommand</code> &#x7684;&#x5B50;&#x7C7B;&#xFF0C;&#x4E0E;&#x4E4B;&#x5173;&#x8054;&#xFF0C;&#x7528;&#x4E8E;&#x771F;&#x6B63;&#x7684;&#x5904;&#x7406;&#x547D;&#x4EE4;&#x903B;&#x8F91;&#x3002;&#x53C2;&#x6570;&#x5C06;&#x4F1A;&#x4F20;&#x9012;&#x7ED9;&#x8FD9;&#x4E2A;&#x7C7B;&#x3002;</p>
+<p>&#x4E00;&#x4E2A; <code>ExecutableCommand</code> &#x5B9E;&#x4F8B;&#x53EF;&#x80FD;&#x8C03;&#x7528;&#x66F4;&#x591A;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x4F7F;&#x7528;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5F02;&#x6B65;&#x5904;&#x7406;&#x4E5F;&#x5305;&#x542B;&#x5176;&#x4E2D;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E2A; <code>ExecutableCommand</code> &#x5E38;&#x5E38;&#x505A;&#x4E00;&#x4E9B;&#x4E0D;&#x9700;&#x8981; I/O &#x7684;&#x64CD;&#x4F5C;&#xFF08;&#x6BD4;&#x5982;&#xFF1A;&#x68C0;&#x67E5;&#x5BC6;&#x7801;&#x6B63;&#x786E;&#x4E0E;&#x5426;&#xFF1F;&#x73A9;&#x5BB6;&#x662F;&#x5426;&#x5728;&#x7EBF;&#xFF1F;&#xFF09;&#x63A5;&#x7740;&#x8BB2;&#x6570;&#x636E;&#x4F20;&#x9012;&#x7ED9;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#xFF0C;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x7684;&#x4EA4;&#x4E92;&#x3002;</p>
+<p><strong>&#x5B89;&#x5168;&#x731C;&#x6D4B;&#xFF1A;</strong> &#x5728; <code>ExecutableCommand</code> &#xFF0C;&#x6211;&#x4EEC;&#x63A8;&#x65AD;&#x5BF9;&#x5E94;&#x7684;&#x547D;&#x4EE4;&#x63CF;&#x8FF0;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5F3A;&#x5236;&#x53C2;&#x6570;&#x90FD;&#x662F;&#x5B58;&#x5728;&#x7684;&#x3002;&#x547D;&#x4EE4;&#x5904;&#x7406;&#x5668;&#x4E0D;&#x4F1A;&#x5728;&#x53C2;&#x6570;&#x4E0D;&#x5339;&#x914D;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="AuthMe-Coding-Styleguide.html" class="navigation navigation-prev " aria-label="Previous page: Coding styleguide">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Dependency-Injection.html" class="navigation navigation-next " aria-label="Next page: Dependency injection">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Command handling","level":"4.2","depth":1,"next":{"title":"Dependency injection","level":"4.3","depth":1,"path":"Dependency-Injection.md","ref":"Dependency-Injection.md","articles":[]},"previous":{"title":"Coding styleguide","level":"4.1","depth":1,"path":"AuthMe-Coding-Styleguide.md","ref":"AuthMe-Coding-Styleguide.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Command-Handling.md","mtime":"2018-01-28T03:39:26.728Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-14T05:43:20.465Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

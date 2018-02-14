@@ -1,0 +1,669 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Development setup · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Limbo-architecture.html" />
+    
+    
+    <link rel="prev" href="Dependency-Injection.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对于插件使用者</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Commands.html">
+            
+                <a href="Commands.html">
+            
+                    
+                    命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Config.html">
+            
+                <a href="Config.html">
+            
+                    
+                    配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Hash-Algorithm.html">
+            
+                <a href="Hash-Algorithm.html">
+            
+                    
+                    Hash Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="Permissions.html">
+            
+                <a href="Permissions.html">
+            
+                    
+                    权限节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="Translations.html">
+            
+                <a href="Translations.html">
+            
+                    
+                    语言翻译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="AuthMe-Releases-Jenkins.html">
+            
+                <a href="AuthMe-Releases-Jenkins.html">
+            
+                    
+                    AuthMe Releases (Jenkins)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="Breaking-Changes.html">
+            
+                <a href="Breaking-Changes.html">
+            
+                    
+                    大更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="Spawn-Handling.html">
+            
+                <a href="Spawn-Handling.html">
+            
+                    
+                    Spawn handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="Name-Restrictions.html">
+            
+                <a href="Name-Restrictions.html">
+            
+                    
+                    玩家ID限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="Registration.html">
+            
+                <a href="Registration.html">
+            
+                    
+                    Registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="Limbo-players.html">
+            
+                <a href="Limbo-players.html">
+            
+                    
+                    未登录玩家
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="Converters.html">
+            
+                <a href="Converters.html">
+            
+                    
+                    转换数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="Configuring-logging.html">
+            
+                <a href="Configuring-logging.html">
+            
+                    
+                    登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="Argon2-as-Password-Hash.html">
+            
+                <a href="Argon2-as-Password-Hash.html">
+            
+                    
+                    Use Argon2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="Forum-integrations.html">
+            
+                <a href="Forum-integrations.html">
+            
+                    
+                    联动论坛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="Development-team.html">
+            
+                <a href="Development-team.html">
+            
+                    
+                    开发团队
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17" data-path="Translators.html">
+            
+                <a href="Translators.html">
+            
+                    
+                    翻译者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="5.4-Changelog.html">
+            
+                <a href="5.4-Changelog.html">
+            
+                    
+                    5.4 更新记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19" data-path="5.3-Changelog.html">
+            
+                <a href="5.3-Changelog.html">
+            
+                    
+                    5.3 更新记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.20" data-path="5.2-Changelog.html">
+            
+                <a href="5.2-Changelog.html">
+            
+                    
+                    5.2 更新记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对于使用 AuthMe 的开发者</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Hooking-into-AuthMe.html">
+            
+                <a href="Hooking-into-AuthMe.html">
+            
+                    
+                    Hooking into AuthMe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Plugins-hooking-into-AuthMe.html">
+            
+                <a href="Plugins-hooking-into-AuthMe.html">
+            
+                    
+                    Plugins hooking into AuthMe
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对于开发者</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="AuthMe-Coding-Styleguide.html">
+            
+                <a href="AuthMe-Coding-Styleguide.html">
+            
+                    
+                    Coding styleguide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="Command-Handling.html">
+            
+                <a href="Command-Handling.html">
+            
+                    
+                    Command handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Dependency-Injection.html">
+            
+                <a href="Dependency-Injection.html">
+            
+                    
+                    Dependency injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.4" data-path="Development-Setup.html">
+            
+                <a href="Development-Setup.html">
+            
+                    
+                    Development setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Limbo-architecture.html">
+            
+                <a href="Limbo-architecture.html">
+            
+                    
+                    Limbo architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="Tool-tasks.html">
+            
+                <a href="Tool-tasks.html">
+            
+                    
+                    Tool tasks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="Unit-Testing.html">
+            
+                <a href="Unit-Testing.html">
+            
+                    
+                    Unit testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Development setup</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x4E00;&#x4E9B;&#x5BF9;&#x60F3;&#x8981;&#x5E2E;&#x52A9; AuthMe &#x7684;&#x4EBA;&#x4EEC;&#x7684;&#x63D0;&#x793A;&#x548C;&#x5EFA;&#x8BAE;&#x3002;</p>
+<h1 id="maven">Maven</h1>
+<p>&#x5982;&#x679C; <code>org.bukkit</code> &#x7C7B;&#x5728;&#x4F9D;&#x8D56;&#x4E2D;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x4FDD;&#x8BC1; maven &#x4E2D;&#x7684;&#x300C;spigot&#x300D;&#x542F;&#x7528;&#x4E86;&#x3002;&#x8FD9;&#x4F1A;&#x6DFB;&#x52A0; Spigot API &#x4F5C;&#x4E3A;&#x9879;&#x76EE;&#x4F9D;&#x8D56;&#x3002;&#x53E6;&#x5916;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x542F;&#x7528;&#x300C;bukkit&#x300D;&#xFF08;&#x63A5;&#x7740;&#x4FDD;&#x8BC1;&#x4F60;&#x628A;&#x300C;spigot&#x300D;&#x5173;&#x4E86;&#xFF09;&#x3002;&#x8FD9;&#x80FD;&#x8BA9;&#x4F60;&#x786E;&#x8BA4;&#x6211;&#x4EEC;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x5426;&#x4E0E;&#x8FD9;&#x4E24;&#x4E2A; API &#x51B2;&#x7A81;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x672C;&#x5730;&#x5F00;&#x53D1;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x542F;&#x7528;&#x300C;skipLongHashTests&#x300D;&#x3002;&#x8FD9;&#x5173;&#x95ED;&#x4E86;&#x90E8;&#x5206;&#x7684;&#x54C8;&#x5E0C;&#x7B97;&#x6CD5;&#x7684;&#x6D4B;&#x8BD5;&#xFF0C;&#x8282;&#x7701;&#x4E86;&#x90E8;&#x5206;&#x6784;&#x5EFA;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<h1 id="intellij">IntelliJ</h1>
+<ul>
+<li><p>&#x4FDD;&#x8BC1;&#x4F60;&#x5982;&#x679C;&#x662F; 64 &#x4F4D;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x8FD0;&#x884C;&#x7684;&#x662F; idea<strong>64</strong>.exe &#x3002;&#xFF08;&#x66F4;&#x5FEB;&#xFF09;</p>
+</li>
+<li><p>Maven&#xFF1A; &#x5982;&#x679C;&#x8BE2;&#x95EE;&#x5F00;&#x542F;&#x81EA;&#x52A8;&#x5BFC;&#x5165;&#xFF08;Enable Auto Import&#xFF09;&#xFF0C;&#x9009;&#x62E9;&#x5B83;&#x3002;&#x8FD9;&#x5C06;&#x5728; pom.xml &#x4E2D;&#x7684;&#x4F9D;&#x8D56;&#x6709;&#x4EFB;&#x4F55;&#x53D8;&#x5316;&#x65F6;&#x81EA;&#x52A8;&#x66F4;&#x65B0;&#x4F9D;&#x8D56;&#x3002;</p>
+</li>
+<li><p>&#x5982;&#x679C; <code>@Inject</code> &#x5B57;&#x6BB5;&#x88AB;&#x6807;&#x8BB0;&#x4E86;&#x300C;never declared&#x300D;&#x8B66;&#x544A;&#xFF0C;&#x524D;&#x5F80; &#x8BBE;&#x7F6E;&#xFF08;Settings&#xFF09; &gt; &#x641C;&#x7D22;&#x300C;unused declaration&#x300D;&#xFF0C;&#x9009;&#x62E9; Java &#x7684;&#x90A3;&#x4E00;&#x4E2A;&#xFF0C;&#x70B9;&#x51FB;&#x6309;&#x94AE;&#x300C;Configure annotations&#x300D;&#xFF0C;&#x6DFB;&#x52A0; <code>@Inject</code> &#x548C; <code>@InjectDelayed</code> &#x3002;</p>
+</li>
+<li><p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x914D;&#x7F6E;&#x4E2D;&#x641C;&#x7D22;&#x300C;issue navigation&#x300D;&#xFF0C;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x65B0;&#x7684;&#x89C4;&#x5219;&#xFF08;&#x5982;&#x4E0B;&#xFF09;&#xFF0C;&#x8BA9; issue &#x5E8F;&#x53F7;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x3002;</p>
+<pre><code>Issue ID: #(\d+)
+Issue link: https://github.com/AuthMe/AuthMeReloaded/issues/$1
+</code></pre></li>
+<li><p>&#x4F60;&#x662F;&#x5426;&#x5728;&#x8FDB;&#x884C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x65F6;&#x5F97;&#x5230;&#x4E86;&#x300C;missing argLine&#x300D;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF1F;&#x524D;&#x5F80; &#x8BBE;&#x7F6E; &gt; &#x641C;&#x7D22;&#x300C;Running Tests&#x300D;&#xFF0C;&#x53D6;&#x6D88;&#x52FE;&#x9009;&#x300C;argLine&#x300D;&#x3002;</p>
+</li>
+</ul>
+<h3 id="checkstyle">Checkstyle</h3>
+<p>IntelliJ &#x6709;&#x4E00;&#x4E2A; checkstyle &#x63D2;&#x4EF6;&#xFF0C;&#x8FD9;&#x548C;&#x6211;&#x4EEC;&#x7684; <a href="https://codeclimate.com/github/AuthMe/AuthMeReloaded/issues" target="_blank">Code Climate</a> &#x642D;&#x914D;&#x7684;&#x5F88;&#x597D;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x63D2;&#x4EF6;&#x4F60;&#x53EF;&#x4EE5;&#x5728; Code Climate &#x8FDC;&#x7A0B;&#x5B8C;&#x6210;&#x540E;&#x5728; IDE &#x4E0A;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x3002;</p>
+<ul>
+<li>Ctrl+Shift+A&#xFF0C;&#x8F93;&#x5165;&#x300C;Plugins&#x300D;&#xFF0C;&#x641C;&#x7D22;&#x300C;Checkstyle&#x300D;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x70B9;&#x300C;Search repositories&#x300D;</li>
+<li>&#x5B89;&#x88C5; Checkstyle-IDEA</li>
+<li>&#x5728; File &gt; Settings &gt; Other Settings &gt; Checkstyle&#xFF0C;&#x6DFB;&#x52A0;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF08;.checkstyle.xml&#xFF09;&#x3002;&#x4E0D;&#x8981;&#x5FD8;&#x4E86;&#x70B9;&#x4E00;&#x4E0B;&#x300C;Active&#x300D;&#x9009;&#x6846;&#x3002;</li>
+</ul>
+<p>&#x5728;&#x8FD9;&#x4E4B;&#x540E;&#xFF0C;checkstyle &#x5C06;&#x4F1A;&#x81EA;&#x52A8;&#x8FD0;&#x884C;&#x5728;&#x4F60;&#x7684; IDE &#x4E0A;&#xFF0C;&#x89C4;&#x5219;&#x9519;&#x8BEF;&#x5C06;&#x4F1A;&#x663E;&#x793A;&#x4E3A;&#x8B66;&#x544A;&#x3002;</p>
+<h1 id="fork-authme">Fork AuthMe</h1>
+<ul>
+<li><p>&#x63D0;&#x793A;&#xFF1A;&#x5728; Git Fork &#x4E4B;&#x540E;&#x6DFB;&#x52A0; AuthMe &#x7684;&#x4ED3;&#x5E93;&#x3002;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x6267;&#x884C; <code>git remote add upstream https://github.com/AuthMe/AuthMeReloaded.git</code> &#x3002;&#x5728; IntelliJ &#x4F7F;&#x7528; Ctrl+Shift+A &gt; &#x300C;fetch&#x300D;&#x7136;&#x540E;&#x4F60;&#x5C31;&#x80FD;&#x770B;&#x89C1;&#x4ED3;&#x5E93;&#x7684;&#x5206;&#x652F;&#x548C; AuthMe &#x56E2;&#x961F;&#x3002; </p>
+</li>
+<li><p>&#x4E0D;&#x8981;&#x5BF9; master &#x5206;&#x652F;&#x505A;&#x51FA;&#x4EFB;&#x4F55;&#x63D0;&#x4EA4;&#x3002;&#x5B83;&#x53EA;&#x7528;&#x6765;&#x548C;&#x4E0A;&#x6E38;&#x4ED3;&#x5E93;&#x540C;&#x6B65;&#x3002;&#x8FD9;&#x6837;&#x4F60;&#x5C31;&#x53EF;&#x4EE5;&#x4ECE;&#x7236;&#x4ED3;&#x5E93;&#x62C9;&#x53D6;&#x65B0;&#x7684;&#x53D8;&#x66F4;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x51B2;&#x7A81;&#x3002;&#x7136;&#x540E;&#x4F60;&#x5C31;&#x80FD;&#x5C06;&#x4F60;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x5206;&#x652F;&#x548C;&#x672C;&#x5730;&#x5206;&#x652F;&#x5408;&#x5E76;&#x6765;&#x4FDD;&#x6301;&#x5B83;&#x4EEC;&#x59CB;&#x7EC8;&#x6700;&#x65B0;&#x3002;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x4F60;&#x76F4;&#x63A5;&#x5411;&#x4F60;&#x7684; Fork &#x7684; master &#x5206;&#x652F;&#x63D0;&#x4EA4;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x6BCF;&#x6B21;&#x4ECE; AuthMe/AuthMeReloaded &#x62C9;&#x53D6;&#x65F6;&#x90FD;&#x4F1A;&#x751F;&#x6210; Merge &#x62A5;&#x544A;&#xFF0C;&#x8FD9;&#x4F1A;&#x5728; Git &#x5386;&#x53F2;&#x8BB0;&#x5F55;&#x589E;&#x52A0;&#x5F88;&#x591A;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x751F;&#x6210;&#x5F88;&#x96BE;&#x770B;&#x7684; PR&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h1 id="&#x5728;-intellij-debug-authme">&#x5728; IntelliJ Debug AuthMe</h1>
+<p>&#x5728; StackOverflow &#x67E5;&#x770B; <em><a href="http://stackoverflow.com/a/29945539" target="_blank">Run Configuration to Debug Bukkit/Minecraft Plugin in IntelliJ IDEA</a></em> </p>
+<p>&#x5982;&#x679C;&#x4F60;&#x5F97;&#x5230;&#x4E86; <code>ClassDefNotFoundError</code> &#xFF0C;&#x4FDD;&#x8BC1;&#x4F60;&#x89E3;&#x538B;&#x4E86;&#x6240;&#x6709;&#x7684;&#x4F9D;&#x8D56;&#x5230; JAR &#x91CC;&#x3002;&#x53F3;&#x952E;&#x53F3;&#x65B9;&#x7684; Dependencies &#x9009;&#x62E9;&#x300C;Extract Into Output Root.&#x300D;&#x7136;&#x540E;&#x5C06;&#x4ED6;&#x4EEC;&#x79FB;&#x52A8;&#x5230; JAR &#x6587;&#x4EF6;&#x91CC;&#x3002;</p>
+<p><img src="http://jalu.ch/ext/authme-docs/intellij_extracted_dependencies.png" alt="Screenshot dependencies setup"></p>
+<p>&#x4F7F;&#x7528; <code>-Dbstats.relocatecheck=false</code> &#x9009;&#x9879;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x5668;&#x6765;&#x907F;&#x514D; BStats &#x7531;&#x4E8E;&#x6CA1;&#x6709;&#x4F4D;&#x4E8E;&#x6B63;&#x786E;&#x7684; JAR &#x4F4D;&#x7F6E;&#x800C;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Dependency-Injection.html" class="navigation navigation-prev " aria-label="Previous page: Dependency injection">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Limbo-architecture.html" class="navigation navigation-next " aria-label="Next page: Limbo architecture">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Development setup","level":"4.4","depth":1,"next":{"title":"Limbo architecture","level":"4.5","depth":1,"path":"Limbo-architecture.md","ref":"Limbo-architecture.md","articles":[]},"previous":{"title":"Dependency injection","level":"4.3","depth":1,"path":"Dependency-Injection.md","ref":"Dependency-Injection.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Development-Setup.md","mtime":"2018-01-28T04:35:04.869Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-14T05:43:20.465Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,3 @@
+We use a `please-verify` label on issues to communicate to the reporter of the issue that we think we have solved his bug or satisfied his question. It's an invitation for the bug reporter to _close_ the issue if it's done, or to tell us what is still missing or unclear.
+
+Issues with a `please-verify` label can be closed by a developer if the issue reporter doesn't give any feedback within 9 days. This helps us keeping track of which issues still require work.

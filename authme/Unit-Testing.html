@@ -1,0 +1,675 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Unit testing · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="Tool-tasks.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对于插件使用者</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Commands.html">
+            
+                <a href="Commands.html">
+            
+                    
+                    命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Config.html">
+            
+                <a href="Config.html">
+            
+                    
+                    配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Hash-Algorithm.html">
+            
+                <a href="Hash-Algorithm.html">
+            
+                    
+                    Hash Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="Permissions.html">
+            
+                <a href="Permissions.html">
+            
+                    
+                    权限节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="Translations.html">
+            
+                <a href="Translations.html">
+            
+                    
+                    语言翻译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="AuthMe-Releases-Jenkins.html">
+            
+                <a href="AuthMe-Releases-Jenkins.html">
+            
+                    
+                    AuthMe Releases (Jenkins)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="Breaking-Changes.html">
+            
+                <a href="Breaking-Changes.html">
+            
+                    
+                    大更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="Spawn-Handling.html">
+            
+                <a href="Spawn-Handling.html">
+            
+                    
+                    Spawn handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="Name-Restrictions.html">
+            
+                <a href="Name-Restrictions.html">
+            
+                    
+                    玩家ID限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="Registration.html">
+            
+                <a href="Registration.html">
+            
+                    
+                    Registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="Limbo-players.html">
+            
+                <a href="Limbo-players.html">
+            
+                    
+                    未登录玩家
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="Converters.html">
+            
+                <a href="Converters.html">
+            
+                    
+                    转换数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="Configuring-logging.html">
+            
+                <a href="Configuring-logging.html">
+            
+                    
+                    登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="Argon2-as-Password-Hash.html">
+            
+                <a href="Argon2-as-Password-Hash.html">
+            
+                    
+                    Use Argon2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="Forum-integrations.html">
+            
+                <a href="Forum-integrations.html">
+            
+                    
+                    联动论坛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="Development-team.html">
+            
+                <a href="Development-team.html">
+            
+                    
+                    开发团队
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17" data-path="Translators.html">
+            
+                <a href="Translators.html">
+            
+                    
+                    翻译者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="5.4-Changelog.html">
+            
+                <a href="5.4-Changelog.html">
+            
+                    
+                    5.4 更新记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19" data-path="5.3-Changelog.html">
+            
+                <a href="5.3-Changelog.html">
+            
+                    
+                    5.3 更新记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.20" data-path="5.2-Changelog.html">
+            
+                <a href="5.2-Changelog.html">
+            
+                    
+                    5.2 更新记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对于使用 AuthMe 的开发者</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Hooking-into-AuthMe.html">
+            
+                <a href="Hooking-into-AuthMe.html">
+            
+                    
+                    Hooking into AuthMe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Plugins-hooking-into-AuthMe.html">
+            
+                <a href="Plugins-hooking-into-AuthMe.html">
+            
+                    
+                    Plugins hooking into AuthMe
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对于开发者</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="AuthMe-Coding-Styleguide.html">
+            
+                <a href="AuthMe-Coding-Styleguide.html">
+            
+                    
+                    Coding styleguide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="Command-Handling.html">
+            
+                <a href="Command-Handling.html">
+            
+                    
+                    Command handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Dependency-Injection.html">
+            
+                <a href="Dependency-Injection.html">
+            
+                    
+                    Dependency injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Development-Setup.html">
+            
+                <a href="Development-Setup.html">
+            
+                    
+                    Development setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Limbo-architecture.html">
+            
+                <a href="Limbo-architecture.html">
+            
+                    
+                    Limbo architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="Tool-tasks.html">
+            
+                <a href="Tool-tasks.html">
+            
+                    
+                    Tool tasks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.7" data-path="Unit-Testing.html">
+            
+                <a href="Unit-Testing.html">
+            
+                    
+                    Unit testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Unit testing</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h2>
+<p>&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x4E00;&#x4E2A;&#x5355;&#x5143;&#xFF1A;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x7C7B;&#x3001;&#x65B9;&#x6CD5;&#x88AB;&#x6D4B;&#x8BD5;&#xFF0C;&#x6765;&#x4FDD;&#x8BC1;&#x5176;&#x4E2D;&#x7684;&#x903B;&#x8F91;&#x5408;&#x4E4E;&#x6211;&#x4EEC;&#x7684;&#x9884;&#x671F;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;&#x4FDD;&#x8BC1;&#x4E24;&#x4E2A;&#x4EE5;&#x4E0A;&#x7684;&#x90E8;&#x4EF6;&#x4EA4;&#x4E92;&#x6B63;&#x5E38;&#x3002;</p>
+<p>&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x4E0D;&#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x8FD0;&#x884C;&#x7684;&#x987A;&#x5E8F; - &#x65E2;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x7684;&#x987A;&#x5E8F;&#x3001;&#x4E5F;&#x4E0D;&#x662F;&#x6D4B;&#x8BD5;&#x7C7B;&#x4E2D;&#x7684;&#x987A;&#x5E8F;&#x3002;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x4E0D;&#x5E94;&#x8BE5;&#x4F9D;&#x8D56;&#x4E8E;&#x5148;&#x524D;&#x7684;&#x6D4B;&#x8BD5;&#x5EFA;&#x7ACB;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x6D4B;&#x8BD5;&#x5168;&#x90E8;&#x901A;&#x8FC7;&#x4F46;&#x8FD0;&#x884C;&#x65F6;&#x51FA;&#x9519;&#x7ECF;&#x5E38;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x539F;&#x56E0;&#x3002;</p>
+<p>&#x4E0D;&#x5FC5;&#x591A;&#x8BF4;&#xFF0C;&#x5728; test/ &#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#x4E0D;&#x5E94;&#x8BE5;&#x5728;&#x5916;&#x90E8;&#x4F7F;&#x7528;&#x3002;&#x6D4B;&#x8BD5;&#x662F;&#x5206;&#x79BB;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x6784;&#x5EFA;&#x8F6F;&#x4EF6;&#x65F6;&#x4E0D;&#x5E94;&#x8BE5;&#x6709;&#x4EFB;&#x4F55;&#x6D4B;&#x8BD5;&#x7684;&#x8D44;&#x6E90;&#x88AB;&#x5305;&#x542B;&#x3002;</p>
+<h2 id="&#x6280;&#x672F;">&#x6280;&#x672F;</h2>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528; JUnit, Hamcrest &#x548C; Mockito &#x6765;&#x8FDB;&#x884C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x3002;<strong>JUnit</strong> &#x662F;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x6846;&#x67B6;&#x8FD0;&#x884C;&#x7684;&#x57FA;&#x7840;&#xFF1B;<strong>Hamcrest</strong> &#x63D0;&#x4F9B;&#x4E86;&#x6709;&#x529B;&#x7684;&#x5339;&#x914D;&#x5668;&#x6765;&#x6D4B;&#x8BD5;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#xFF1B;<strong>Mockito</strong> &#x8BA9;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6A21;&#x62DF;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x6BD4;&#x5982;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x7C7B;&#x63A5;&#x53E3;&#x4F46;&#x662F;&#x63D0;&#x4F9B;&#x4E86;&#x7279;&#x6B8A;&#x7684;&#x529F;&#x80FD;&#x6765;&#x6A21;&#x62DF;&#x67D0;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x8FD9;&#x8BA9;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x53D8;&#x5F97;&#x66F4;&#x65B9;&#x4FBF;&#xFF1A;&#x6211;&#x4EEC;&#x53EA;&#x60F3;&#x6D4B;&#x8BD5;&#x67D0;&#x4E00;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x5C31;&#x6A21;&#x62DF;&#xFF08;mock&#xFF09;&#x3002;</p>
+<h2 id="&#x60EF;&#x4F8B;">&#x60EF;&#x4F8B;</h2>
+<p>&#x6D4B;&#x8BD5;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x7C7B;&#x7684;&#x7C7B;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x5BF9;&#x5E94;&#x7C7B;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x7136;&#x540E;&#x8FFD;&#x52A0;&#x300C;Test&#x300D;&#xFF0C;&#x6BD4;&#x5982;&#x6D4B;&#x8BD5; <code>Player</code> &#x7C7B;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>PlayerTest</code> &#x7684;&#x6D4B;&#x8BD5;&#x7C7B;&#x3002;&#x6D4B;&#x8BD5;&#x7C7B;&#x7684; JavaDoc &#x4E0D;&#x662F;&#x5FC5;&#x9700;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#xFF08;&#x5E94;&#x8BE5;&#xFF09;&#x4E0D;&#x8A00;&#x800C;&#x55BB;&#x3002;&#x5F00;&#x59CB;&#x6D4B;&#x8BD5;&#x7684;&#x65B9;&#x6CD5;&#x5E94;&#x8BE5;&#x4F7F;&#x7528; <code>should</code> &#x52A0;&#x4E0A;&#x671F;&#x671B;&#x7684;&#x52A8;&#x4F5C;&#xFF0C;&#x6BD4;&#x5982; <code>shouldKickPlayer()</code> &#x662F;&#x671F;&#x671B;&#x7684;&#x6700;&#x7EC8;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x5C31;&#x7B97;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x7531;&#x884C;&#x4E3A;&#x9A71;&#x52A8;&#x7684;&#x5F00;&#x53D1;&#x65B9;&#x5F0F;&#xFF0C;&#x8FD9;&#x4E9B;&#x6D4B;&#x8BD5;&#x7684;&#x7ECF;&#x5178;&#x7C7B;&#x578B;&#x4ECD;&#x7136;&#x9002;&#x7528;&#x3002;&#x6BCF;&#x4E2A;&#x6D4B;&#x8BD5;&#x5206;&#x4E3A;&#x4E09;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x5206;&#x522B;&#x79F0;&#x4E3A; <code>given</code>, <code>when</code> &#x548C; <code>then</code>:</p>
+<ul>
+<li><code>given</code> &#x5B9E;&#x4F8B;&#x5316;&#x5E76;&#x5B9A;&#x4E49;&#x7C7B;&#x4E2D;&#x7684;&#x5FC5;&#x8981;&#x7684;&#x503C;&#x548C;&#x5BF9;&#x8C61;&#x6765;&#x8FD0;&#x884C;&#x6D4B;&#x8BD5;&#xFF08;&#x6BD4;&#x5982;&#x4EA7;&#x751F;&#x6D4B;&#x8BD5;&#x9700;&#x8981;&#x7684;&#x6761;&#x4EF6;&#xFF09;&#x3002;</li>
+<li><code>when</code> &#x662F;&#x6D4B;&#x8BD5;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x7ECF;&#x5E38;&#x6BCF;&#x4E2A;&#x6D4B;&#x8BD5;&#x7C7B;&#x4E00;&#x884C;&#x3002;</li>
+<li><code>then</code> &#x68C0;&#x9A8C;&#x6D4B;&#x8BD5;&#x7684;&#x7ED3;&#x679C;&#x3002;</li>
+</ul>
+<p>&#x4EE5;&#x4E0B;&#x7684;&#x5B9E;&#x4F8B;&#x5F62;&#x8C61;&#x7684;&#x5C55;&#x793A;&#x4E86;&#x8FD9;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#x3002;</p>
+<h2 id="&#x9759;&#x6001;&#x7684;&#x6CE8;&#x5165;&#x548C;&#x65B9;&#x6CD5;">&#x9759;&#x6001;&#x7684;&#x6CE8;&#x5165;&#x548C;&#x65B9;&#x6CD5;</h2>
+<p>Mockito &#x4E0D;&#x80FD;&#x6A21;&#x62DF;&#x6240;&#x6709;&#x7684;&#x7C7B;&#x548C;&#x65B9;&#x6CD5; - &#x7C7B;&#x548C;&#x65B9;&#x6CD5;&#x4E0D;&#x80FD;&#x662F; <code>final</code> &#x7684;&#xFF0C;&#x65B9;&#x6CD5;&#x4E5F;&#x4E0D;&#x80FD;&#x662F; <code>static</code> &#x7684;&#x3002;</p>
+<p>&#x9759;&#x6001;&#x7684;&#x65B9;&#x6CD5;&#x9002;&#x7528;&#x4E8E;&#x8F7B;&#x91CF;&#x7684;&#x5DE5;&#x5177;&#x7C7B;&#xFF08;&#x6CA1;&#x6709;&#x72B6;&#x6001;&#xFF0C;&#x6CA1;&#x6709;&#x91CD;&#x91CF;&#x7EA7;&#x64CD;&#x4F5C;&#x5982;&#x6267;&#x884C;I/O&#xFF09;&#x4EE5;&#x53CA; logger&#x3002;</p>
+<h2 id="&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</h2>
+<p>&#x6CE8;&#x610F;&#x4EE5;&#x4E0B;&#x7684;&#x6D4B;&#x8BD5;&#x4EC5;&#x4EC5;&#x4E3A;&#x6A21;&#x62DF;&#x7684;&#xFF0C;&#x4E0D;&#x5BF9;&#x5E94;&#x4EFB;&#x4F55; AuthMe &#x4E2D;&#x7684;&#x7C7B;&#x3002;&#x7ED9;&#x51FA;&#x4EE5;&#x4E0B;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isLoggedIn</span><span class="hljs-params">(CommandSender sender)</span> </span>{
+  <span class="hljs-keyword">if</span> (sender == <span class="hljs-keyword">null</span> || !(sender <span class="hljs-keyword">instanceof</span> Player)) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+  }
+  <span class="hljs-keyword">return</span> Status.LOGGED_IN.equals(((Player) sender).getStatus());
+}
+</code></pre>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x60F3;&#x8981;&#x6D4B;&#x8BD5;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5728; sender &#x4E0D;&#x662F; <code>Player</code> &#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x65F6;&#x8FD4;&#x56DE; <code>false</code> &#xFF0C;&#x6BD4;&#x5982;&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x4E3A; <code>Console</code> &#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shouldReturnFalseForNonPlayerSender</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">// given</span>
+  CommandSender sender = Mockito.mock(Console.class);
+
+  <span class="hljs-comment">// when</span>
+  <span class="hljs-keyword">boolean</span> result = Verifier.isLoggedIn(sender);
+
+  <span class="hljs-comment">// then</span>
+  assertThat(result, equalTo(<span class="hljs-keyword">false</span>));
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x6D4B;&#x8BD5;&#x73A9;&#x5BB6;&#x767B;&#x5F55;&#x65F6;&#x662F;&#x5426;&#x4F1A;&#x8FD4;&#x56DE;&#x6B63;&#x786E;&#x7684; <code>Status</code> &#x3002;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x5C55;&#x793A;&#x4E86; Mockito &#x7684;&#x529B;&#x91CF;&#xFF1A;&#x6211;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x5B9E;&#x9645;&#x7684;&#x73A9;&#x5BB6;&#xFF0C;&#x5C24;&#x5176;&#x8FD8;&#x662F;&#x8FD9;&#x6837;&#x505A;&#x65F6;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x4F1A;&#x9047;&#x5230;&#x8FD4;&#x56DE;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684; Status &#x7684;&#x95EE;&#x9898;&#xFF08;&#x6BD4;&#x5982;&#x6CA1;&#x6709;&#x63D0;&#x4F9B; setter&#xFF09;&#x3002;</p>
+<pre><code class="lang-java"><span class="hljs-meta">@Test</span>
+<span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">shouldReturnTrueForLoggedInPlayer</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-comment">// given</span>
+  Player player = Mockito.mock(Player.class);
+  given(player.getStatus()).willReturn(Status.LOGGED_IN);
+
+  <span class="hljs-comment">// when</span>
+  <span class="hljs-keyword">boolean</span> result = Verifier.isLoggedIn(sender);
+
+  <span class="hljs-comment">// then</span>
+  assertThat(result, equalTo(<span class="hljs-keyword">true</span>));
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Tool-tasks.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Tool tasks">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Unit testing","level":"4.7","depth":1,"previous":{"title":"Tool tasks","level":"4.6","depth":1,"path":"Tool-tasks.md","ref":"Tool-tasks.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Unit-Testing.md","mtime":"2018-02-06T14:06:46.142Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-14T05:43:20.465Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -7,9 +7,10 @@
 * [LuckPerms](https://pluginscdtribe.github.io/wiki/luckperms/)
 * [MythicMobs](https://pluginscdtribe.github.io/wiki/mythicmobs/)
 * [Dynmap](https://pluginscdtribe.github.io/wiki/dynmap/)
+* [GriefPrevention](https://pluginscdtribe.github.io/wiki/griefprevention/)
 
 ## WIP
-* [GriefPrevention](https://pluginscdtribe.github.io/wiki/griefprevention/)
+* [AuthMe](https://pluginscdtribe.github.io/wiki/authme/)
 
 ## 关于我们
 

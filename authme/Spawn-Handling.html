@@ -1,0 +1,677 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Spawn handling · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Name-Restrictions.html" />
+    
+    
+    <link rel="prev" href="Breaking-Changes.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    README
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对于插件使用者</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="Commands.html">
+            
+                <a href="Commands.html">
+            
+                    
+                    命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="Config.html">
+            
+                <a href="Config.html">
+            
+                    
+                    配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="Hash-Algorithm.html">
+            
+                <a href="Hash-Algorithm.html">
+            
+                    
+                    Hash Algorithm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="Permissions.html">
+            
+                <a href="Permissions.html">
+            
+                    
+                    权限节点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="Translations.html">
+            
+                <a href="Translations.html">
+            
+                    
+                    语言翻译
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="AuthMe-Releases-Jenkins.html">
+            
+                <a href="AuthMe-Releases-Jenkins.html">
+            
+                    
+                    AuthMe Releases (Jenkins)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="Breaking-Changes.html">
+            
+                <a href="Breaking-Changes.html">
+            
+                    
+                    大更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.8" data-path="Spawn-Handling.html">
+            
+                <a href="Spawn-Handling.html">
+            
+                    
+                    Spawn handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="Name-Restrictions.html">
+            
+                <a href="Name-Restrictions.html">
+            
+                    
+                    玩家ID限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.10" data-path="Registration.html">
+            
+                <a href="Registration.html">
+            
+                    
+                    Registration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.11" data-path="Limbo-players.html">
+            
+                <a href="Limbo-players.html">
+            
+                    
+                    未登录玩家
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.12" data-path="Converters.html">
+            
+                <a href="Converters.html">
+            
+                    
+                    转换数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.13" data-path="Configuring-logging.html">
+            
+                <a href="Configuring-logging.html">
+            
+                    
+                    登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.14" data-path="Argon2-as-Password-Hash.html">
+            
+                <a href="Argon2-as-Password-Hash.html">
+            
+                    
+                    Use Argon2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.15" data-path="Forum-integrations.html">
+            
+                <a href="Forum-integrations.html">
+            
+                    
+                    联动论坛
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.16" data-path="Development-team.html">
+            
+                <a href="Development-team.html">
+            
+                    
+                    开发团队
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.17" data-path="Translators.html">
+            
+                <a href="Translators.html">
+            
+                    
+                    翻译者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.18" data-path="5.4-Changelog.html">
+            
+                <a href="5.4-Changelog.html">
+            
+                    
+                    5.4 更新记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.19" data-path="5.3-Changelog.html">
+            
+                <a href="5.3-Changelog.html">
+            
+                    
+                    5.3 更新记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.20" data-path="5.2-Changelog.html">
+            
+                <a href="5.2-Changelog.html">
+            
+                    
+                    5.2 更新记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对于使用 AuthMe 的开发者</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="Hooking-into-AuthMe.html">
+            
+                <a href="Hooking-into-AuthMe.html">
+            
+                    
+                    Hooking into AuthMe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="Plugins-hooking-into-AuthMe.html">
+            
+                <a href="Plugins-hooking-into-AuthMe.html">
+            
+                    
+                    Plugins hooking into AuthMe
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">对于开发者</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="AuthMe-Coding-Styleguide.html">
+            
+                <a href="AuthMe-Coding-Styleguide.html">
+            
+                    
+                    Coding styleguide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="Command-Handling.html">
+            
+                <a href="Command-Handling.html">
+            
+                    
+                    Command handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Dependency-Injection.html">
+            
+                <a href="Dependency-Injection.html">
+            
+                    
+                    Dependency injection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Development-Setup.html">
+            
+                <a href="Development-Setup.html">
+            
+                    
+                    Development setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Limbo-architecture.html">
+            
+                <a href="Limbo-architecture.html">
+            
+                    
+                    Limbo architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="Tool-tasks.html">
+            
+                <a href="Tool-tasks.html">
+            
+                    
+                    Tool tasks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="Unit-Testing.html">
+            
+                <a href="Unit-Testing.html">
+            
+                    
+                    Unit testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Spawn handling</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>This page describes how teleportation is handled and configured in AuthMe. </p>
+<h2 id="settings">Settings</h2>
+<p>The following settings have an influence on the spawn feature, listed by priority:</p>
+<ol>
+<li><code>settings.restrictions.noTeleport</code> &#x2014; if set to true, AuthMe will <em>never</em> teleport players</li>
+<li><code>settings.restrictions.spawnPriority</code> &#x2014; list of spawns to consider by priority (supported: authme, essentials, multiverse, default)</li>
+<li><code>settings.restrictions.ForceSpawnLocOnJoin.enabled</code> &#x2014; if set to true, players are teleported to spawn <em>after</em> having logged in successfully</li>
+<li><code>settings.restrictions.ForceSpawnLocOnJoin.worlds</code> &#x2014; limits the above feature only to the given worlds (case-sensitive)</li>
+<li><code>settings.restrictions.teleportUnAuthedToSpawn</code> &#x2014; if set to true, teleports players to spawn when they join. Once they log in, they are teleported back to their original location</li>
+</ol>
+<p>--
+Related: <code>settings.restrictions.SaveQuitLocation</code> must be true for the quit location to be saved in the database. If <code>false</code>, players are teleported back to the location in which they would have joined without changes from AuthMe.</p>
+<h2 id="spawn-priority">Spawn Priority</h2>
+<p>Spawn priority is defined in <code>settings.restrictions.spawnPriority</code> (see above), i.e. this setting defines from where the spawn definition should be taken. Possible values:</p>
+<ul>
+<li><strong>authme</strong> &#x2014; Spawn points defined in spawn.yml (AuthMe folder). See below for details.</li>
+<li><strong>essentials</strong> &#x2014; Spawn as defined in Essentials&apos; spawn.yml. Only applicable if Essentials is loaded on the server.</li>
+<li><strong>multiverse</strong> &#x2014; Gets the spawn point saved in Multiverse for the given world. Only possible if Multiverse is loaded and the world is a Multiverse handled world.</li>
+<li><strong>default</strong> &#x2014; Spawn location of the world (vanilla Minecraft)</li>
+</ul>
+<p>Example:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">    spawnPriority:</span> <span class="hljs-string">&apos;essentials,authme,default&apos;</span>
+</code></pre>
+<p>If Essentials is available, the spawn defined in Essentials is used. If not, the AuthMe spawn is used as second choice. If this also fails, the default is taken.</p>
+<h2 id="authme-spawn">AuthMe Spawn</h2>
+<p>The AuthMe spawnpoint is defined in spawn.yml of the AuthMe plugin folder. Example:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">spawn:</span>
+<span class="hljs-attr">  world:</span> world
+<span class="hljs-attr">  x:</span> <span class="hljs-bullet">-171.77925533614896</span>
+<span class="hljs-attr">  y:</span> <span class="hljs-number">99.0</span>
+<span class="hljs-attr">  z:</span> <span class="hljs-number">171.8600493294933</span>
+<span class="hljs-attr">  yaw:</span> <span class="hljs-bullet">-180.43475</span>
+<span class="hljs-attr">  pitch:</span> <span class="hljs-number">13.7999935</span>
+<span class="hljs-attr">firstspawn:</span>
+<span class="hljs-attr">  world:</span> world
+<span class="hljs-attr">  x:</span> <span class="hljs-bullet">-167.00317045444243</span>
+<span class="hljs-attr">  y:</span> <span class="hljs-number">98.0</span>
+<span class="hljs-attr">  z:</span> <span class="hljs-number">142.33661923798473</span>
+<span class="hljs-attr">  yaw:</span> <span class="hljs-bullet">-342.2848</span>
+<span class="hljs-attr">  pitch:</span> <span class="hljs-number">11.849992</span>
+</code></pre>
+<p>Players who have never played on the server before are teleported to the <strong>firstspawn</strong>; otherwise they are teleported to the regular spawnpoint as defined by the spawn priority. You can delete the <code>firstspawn</code> section to disable this feature.</p>
+<h2 id="authme-spawn-commands">AuthMe Spawn Commands</h2>
+<ul>
+<li><code>/authme spawn</code> teleports you to the AuthMe spawn point</li>
+<li><code>/authme setspawn</code> sets the AuthMe spawn point</li>
+<li><code>/authme firstspawn</code> teleports you to the AuthMe first spawn point</li>
+<li><code>/authme setfirstspawn</code> sets the AuthMe first spawn point</li>
+</ul>
+<p>Permission nodes for the commands are listed on the <a href="https://github.com/AuthMe/AuthMeReloaded/blob/master/docs/commands.md" target="_blank">command list page</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Breaking-Changes.html" class="navigation navigation-prev " aria-label="Previous page: 大更新">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Name-Restrictions.html" class="navigation navigation-next " aria-label="Next page: 玩家ID限制">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Spawn handling","level":"2.8","depth":1,"next":{"title":"玩家ID限制","level":"2.9","depth":1,"path":"Name-Restrictions.md","ref":"Name-Restrictions.md","articles":[]},"previous":{"title":"大更新","level":"2.7","depth":1,"path":"Breaking-Changes.md","ref":"Breaking-Changes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Spawn-Handling.md","mtime":"2018-01-28T00:49:03.332Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-14T05:43:20.465Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
