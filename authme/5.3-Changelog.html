@@ -140,7 +140,7 @@
                 <a href="Hash-Algorithm.html">
             
                     
-                    Hash Algorithm
+                    哈希算法
             
                 </a>
             
@@ -179,7 +179,7 @@
                 <a href="AuthMe-Releases-Jenkins.html">
             
                     
-                    AuthMe Releases (Jenkins)
+                    AuthMe 发布版 (Jenkins)
             
                 </a>
             
@@ -205,7 +205,7 @@
                 <a href="Spawn-Handling.html">
             
                     
-                    Spawn handling
+                    出生处理
             
                 </a>
             
@@ -231,7 +231,7 @@
                 <a href="Registration.html">
             
                     
-                    Registration
+                    注册
             
                 </a>
             
@@ -244,7 +244,7 @@
                 <a href="Limbo-players.html">
             
                     
-                    未登录玩家
+                    未登录(Limbo)玩家
             
                 </a>
             
@@ -270,7 +270,7 @@
                 <a href="Configuring-logging.html">
             
                     
-                    登录
+                    配置登录
             
                 </a>
             
@@ -283,7 +283,7 @@
                 <a href="Argon2-as-Password-Hash.html">
             
                     
-                    Use Argon2
+                    使用 Argon2
             
                 </a>
             
@@ -381,7 +381,7 @@
                 <a href="Hooking-into-AuthMe.html">
             
                     
-                    Hooking into AuthMe
+                    Hook AuthMe
             
                 </a>
             
@@ -394,7 +394,7 @@
                 <a href="Plugins-hooking-into-AuthMe.html">
             
                     
-                    Plugins hooking into AuthMe
+                    使用 AuthMe 的插件
             
                 </a>
             
@@ -414,7 +414,7 @@
                 <a href="AuthMe-Coding-Styleguide.html">
             
                     
-                    Coding styleguide
+                    代码风格指南
             
                 </a>
             
@@ -427,7 +427,7 @@
                 <a href="Command-Handling.html">
             
                     
-                    Command handling
+                    命令处理
             
                 </a>
             
@@ -440,7 +440,7 @@
                 <a href="Dependency-Injection.html">
             
                     
-                    Dependency injection
+                    依赖注入
             
                 </a>
             
@@ -453,7 +453,7 @@
                 <a href="Development-Setup.html">
             
                     
-                    Development setup
+                    开发环境搭建
             
                 </a>
             
@@ -466,7 +466,7 @@
                 <a href="Limbo-architecture.html">
             
                     
-                    Limbo architecture
+                    Limbo 架构
             
                 </a>
             
@@ -479,7 +479,7 @@
                 <a href="Tool-tasks.html">
             
                     
-                    Tool tasks
+                    工具任务
             
                 </a>
             
@@ -492,7 +492,7 @@
                 <a href="Unit-Testing.html">
             
                     
-                    Unit testing
+                    单元测试
             
                 </a>
             
@@ -545,63 +545,63 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>This page lists all major changes introduced in AuthMe 5.3. It&apos;s a summarized list of all 
+                                <p>&#x8FD9;&#x91CC;&#x662F; AuthMe 5.3 &#x7684;&#x4E3B;&#x8981;&#x66F4;&#x65B0;&#x5217;&#x8868;&#x3002;
 <a href="https://github.com/AuthMe/AuthMeReloaded/milestone/2?closed=1" target="_blank">closed issues in the 5.3 milestone</a>. To see which 
 changes may require an action on your side, please refer to <a href="Breaking-Changes">Breaking Changes</a>.</p>
-<h3 id="532-bug-fixes">5.3.2: Bug fixes</h3>
+<h3 id="532-bug-&#x4FEE;&#x590D;">5.3.2: Bug &#x4FEE;&#x590D;</h3>
 <ul>
-<li>You can now use the same JAR for all Minecraft versions (too much confusion around our different JAR&apos;s)</li>
-<li>Fix players sometimes losing their speed on logout (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1238" target="_blank">#1238</a>)</li>
-<li>Add regex support for restricted users (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1227" target="_blank">#1227</a>)</li>
-<li>Group switching feature removes all groups instead of only the primary one (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1265" target="_blank">#1265</a>)</li>
-<li>Repair &apos;mySQLUseSSL&apos; option not working on some DB engines (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1261" target="_blank">#1261</a>)</li>
+<li>&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6240;&#x6709; Minecraft &#x7248;&#x672C;&#x4E2D;&#x4F7F;&#x7528;&#x540C;&#x4E00;&#x4E2A; Jar &#x6587;&#x4EF6;&#x4E86;</li>
+<li>&#x4FEE;&#x590D;&#x6709;&#x65F6;&#x73A9;&#x5BB6;&#x5728;&#x767B;&#x51FA;&#x65F6;&#x4E22;&#x5931;&#x4E86;&#x901F;&#x5EA6; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1238" target="_blank">#1238</a>)</li>
+<li>&#x6DFB;&#x52A0;&#x5BF9;&#x9650;&#x5236;&#x7528;&#x6237;&#x540D;&#x7684;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x652F;&#x6301; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1227" target="_blank">#1227</a>)</li>
+<li>&#x7EC4;&#x9009;&#x62E9;&#x529F;&#x80FD;&#x73B0;&#x5728;&#x4F1A;&#x79FB;&#x9664;&#x6240;&#x6709;&#x7684;&#x7EC4;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4EC5;&#x4EC5;&#x79FB;&#x9664;&#x4E3B;&#x7EC4; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1265" target="_blank">#1265</a>)</li>
+<li>&#x4FEE;&#x590D; &apos;mySQLUseSSL&apos; &#x4E0D;&#x5728;&#x67D0;&#x4E9B;&#x6570;&#x636E;&#x5E93;&#x5F15;&#x64CE;&#x751F;&#x6548; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1261" target="_blank">#1261</a>)</li>
 </ul>
-<h3 id="531-argon2-removal">5.3.1: Argon2 removal</h3>
-<p>We removed Argon2 in 5.3.1 due to some limitations of the devbukkit download page. We are sorry.</p>
-<h3 id="53-release">5.3 Release</h3>
-<p><strong>New features and changes</strong></p>
+<h3 id="531-argon2-&#x79FB;&#x9664;">5.3.1: Argon2 &#x79FB;&#x9664;</h3>
+<p>&#x6211;&#x4EEC;&#x5728; 5.3.1 &#x79FB;&#x9664;&#x4E86;&#x5BF9; Argon2 &#x7684;&#x652F;&#x6301;&#xFF0C;&#x7531;&#x4E8E;&#x67D0;&#x4E9B; dev bukkit  &#x7684;&#x4E0B;&#x8F7D;&#x9650;&#x5236;&#x3002;&#x6211;&#x4EEC;&#x5BF9;&#x8FD9;&#x70B9;&#x975E;&#x5E38;&#x62B1;&#x6B49;&#x3002;</p>
+<h3 id="53-&#x53D1;&#x5E03;">5.3 &#x53D1;&#x5E03;</h3>
+<p><strong>&#x65B0;&#x7684;&#x7279;&#x6027;&#x548C;&#x66F4;&#x6539;</strong></p>
 <ul>
-<li>Save yaw &amp; pitch in last location in database (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/815" target="_blank">#815</a>)</li>
-<li><del>Add support for Argon2 (hash algorithm) (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1150" target="_blank">#1150</a>)</del></li>
-<li>Fix dynamic permission groups based on auth status (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/761" target="_blank">#761</a>)</li>
-<li>Improve email recovery: allow to set password in-game after correct code (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1109" target="_blank">#1109</a>)</li>
-<li>Prevent players from spamming emails (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1073" target="_blank">#1073</a>)</li>
-<li>Add <code>onSessionLogin</code>, <code>onLogout</code> and <code>onUnregister</code> to commands.yml (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1090" target="_blank">#1090</a>, <a href="https://github.com/AuthMe/AuthMeReloaded/issues/1218" target="_blank">#1218</a>, <a href="https://github.com/AuthMe/AuthMeReloaded/issues/923" target="_blank">#923</a>)</li>
-<li>Add more replaceable tags for commands.yml (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1026" target="_blank">#1026</a>)</li>
-<li>Convert from LoginSecurity (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1023" target="_blank">#1023</a>)</li>
-<li>Create <code>/authme debug</code>: Various debug functions to view data &amp; troubleshoot issues (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1034" target="_blank">#1034</a>)</li>
-<li>Create <code>/authme purgeplayer</code>: command to purge a specific player (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/923" target="_blank">#923</a>)</li>
-<li>Create <code>/authme backup</code>: create a backup of the AuthMe data (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1180" target="_blank">#1180</a>)</li>
-<li>Email sending: allow to disable TLS for port 25 (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1075" target="_blank">#1075</a>)</li>
-<li>Create Wiki page for converters (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1146" target="_blank">#1146</a>)</li>
-<li>Bug fix: /changepassword&apos;s aliases not hidden from log (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1104" target="_blank">#1104</a>)</li>
-<li>Captcha code expires after configurable amount of time (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/949" target="_blank">#949</a>)</li>
-<li>Don&apos;t log warnings when help translations are missing (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1085" target="_blank">#1085</a>)</li>
-<li>Add specific messages when email commands are used with wrong arguments (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1116" target="_blank">#1116</a>)</li>
-<li>Bug fix: casing from converted data is wrong (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1120" target="_blank">#1120</a>)</li>
+<li>&#x5728;&#x6570;&#x636E;&#x5E93;&#x5B58;&#x50A8;&#x4E0A;&#x6B21;&#x7684; yaw &#x548C; pitch &#x4FE1;&#x606F; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/815" target="_blank">#815</a>)</li>
+<li><del>&#x6DFB;&#x52A0;&#x5BF9; Argon2 &#x54C8;&#x5E0C;&#x7B97;&#x6CD5;&#x7684;&#x652F;&#x6301; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1150" target="_blank">#1150</a>)</del></li>
+<li>&#x4FEE;&#x590D;&#x4E86;&#x57FA;&#x4E8E;&#x767B;&#x9646;&#x72B6;&#x6001;&#x7684;&#x52A8;&#x6001;&#x6743;&#x9650;&#x7EC4; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/761" target="_blank">#761</a>)</li>
+<li>&#x6539;&#x8FDB;&#x4E86;&#x90AE;&#x7BB1;&#x6062;&#x590D;&#x7CFB;&#x7EDF;&#xFF1A;&#x5141;&#x8BB8;&#x5728;&#x6B63;&#x786E;&#x586B;&#x5199;&#x4EE3;&#x7801;&#x540E;&#x5728;&#x6E38;&#x620F;&#x4E2D;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1109" target="_blank">#1109</a>)</li>
+<li>&#x9632;&#x6B62;&#x73A9;&#x5BB6;&#x6536;&#x5230;&#x5783;&#x573E;&#x90AE;&#x4EF6; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1073" target="_blank">#1073</a>)</li>
+<li>&#x6DFB;&#x52A0; <code>onSessionLogin</code>, <code>onLogout</code> &#x548C; <code>onUnregister</code> &#x5230; commands.yml (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1090" target="_blank">#1090</a>, <a href="https://github.com/AuthMe/AuthMeReloaded/issues/1218" target="_blank">#1218</a>, <a href="https://github.com/AuthMe/AuthMeReloaded/issues/923" target="_blank">#923</a>)</li>
+<li>&#x5728; commands.yml &#x6DFB;&#x52A0;&#x66F4;&#x591A;&#x53EF;&#x7528;&#x7684;&#x66FF;&#x6362;&#x6807;&#x7B7E; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1026" target="_blank">#1026</a>)</li>
+<li>&#x4ECE; LoginSecurity &#x8F6C;&#x6362;&#x81F3; AuthMe (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1023" target="_blank">#1023</a>)</li>
+<li>&#x521B;&#x5EFA; <code>/authme debug</code>&#xFF1A;&#x5404;&#x79CD;&#x67E5;&#x770B;&#x6570;&#x636E;&amp;&#x6392;&#x9519;&#x7684;&#x529F;&#x80FD; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1034" target="_blank">#1034</a>)</li>
+<li>&#x521B;&#x5EFA; <code>/authme purgeplayer</code> &#x547D;&#x4EE4;&#x79FB;&#x9664;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x73A9;&#x5BB6; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/923" target="_blank">#923</a>)</li>
+<li>&#x521B;&#x5EFA; <code>/authme backup</code> &#x547D;&#x4EE4;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; AuthMe &#x6570;&#x636E;&#x7684;&#x5907;&#x4EFD; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1180" target="_blank">#1180</a>)</li>
+<li>&#x90AE;&#x4EF6;&#x53D1;&#x9001;&#xFF1A;&#x5141;&#x8BB8;&#x505C;&#x7528; 25 &#x7AEF;&#x53E3;&#x7684; TLS &#x652F;&#x6301; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1075" target="_blank">#1075</a>)</li>
+<li>&#x521B;&#x5EFA;&#x5173;&#x4E8E;&#x8F6C;&#x6362;&#x5668;&#x7684; Wiki &#x9875;&#x9762; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1146" target="_blank">#1146</a>)</li>
+<li>BUG &#x4FEE;&#x590D;&#xFF1A;/changepassword&apos;s &#x7684;&#x522B;&#x79F0;&#x6CA1;&#x6709;&#x5728;&#x65E5;&#x5FD7;&#x4E2D;&#x9690;&#x85CF; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1104" target="_blank">#1104</a>)</li>
+<li>&#x5728;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x540E;&#x5931;&#x6548;&#x9A8C;&#x8BC1;&#x7801; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/949" target="_blank">#949</a>)</li>
+<li>&#x5E2E;&#x52A9;&#x7684;&#x7FFB;&#x8BD1;&#x7F3A;&#x5931;&#x65F6;&#x4E0D;&#x518D;&#x8BB0;&#x5F55;&#x8B66;&#x544A; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1085" target="_blank">#1085</a>)</li>
+<li>&#x6DFB;&#x52A0;&#x4E86;&#x5728;&#x90AE;&#x7BB1;&#x76F8;&#x5173;&#x7684;&#x547D;&#x4EE4;&#x4F7F;&#x7528;&#x9519;&#x8BEF;&#x65F6;&#x7684;&#x7279;&#x5B9A;&#x6D88;&#x606F; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1116" target="_blank">#1116</a>)</li>
+<li>BUG &#x4FEE;&#x590D;&#xFF1A;&#x8F6C;&#x6362;&#x7684;&#x6570;&#x636E;&#x7684;&#x5927;&#x5C0F;&#x5199;&#x662F;&#x9519;&#x8BEF;&#x7684; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1120" target="_blank">#1120</a>)</li>
 </ul>
-<p><strong>Pre-login properties handling improvements (a.k.a. limbo player)</strong></p>
+<p><strong> &#x767B;&#x5165;&#x524D;&#x7684;&#x5C5E;&#x6027;&#x5904;&#x7406;&#xFF0C;&#x6BD4;&#x5982; limbo &#x73A9;&#x5BB6;</strong></p>
 <ul>
-<li>Allow to configure how limbo players are saved (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1125" target="_blank">#1125</a>, <a href="https://github.com/AuthMe/AuthMeReloaded/issues/1147" target="_blank">#1147</a>, <a href="https://github.com/AuthMe/AuthMeReloaded/issues/1113" target="_blank">#1113</a>, <a href="https://github.com/AuthMe/AuthMeReloaded/issues/880" target="_blank">#880</a>)</li>
-<li>For each property, allow to configure how it should be restored (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1036" target="_blank">#1036</a>)</li>
-<li>Create documentation about the limbo player feature (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1139" target="_blank">#1139</a>)</li>
-<li>Handle read errors more gracefully (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1070" target="_blank">#1070</a>)</li>
+<li>&#x5141;&#x8BB8;&#x914D;&#x7F6E; limbo &#x73A9;&#x5BB6;&#x5982;&#x4F55;&#x5B58;&#x50A8; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1125" target="_blank">#1125</a>, <a href="https://github.com/AuthMe/AuthMeReloaded/issues/1147" target="_blank">#1147</a>, <a href="https://github.com/AuthMe/AuthMeReloaded/issues/1113" target="_blank">#1113</a>, <a href="https://github.com/AuthMe/AuthMeReloaded/issues/880" target="_blank">#880</a>)</li>
+<li>&#x5BF9;&#x4E8E;&#x6BCF;&#x4E2A;&#x914D;&#x7F6E;&#xFF0C;&#x5141;&#x8BB8;&#x5206;&#x522B;&#x914D;&#x7F6E;&#x5982;&#x4F55;&#x5B58;&#x50A8; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1036" target="_blank">#1036</a>)</li>
+<li>&#x521B;&#x5EFA;&#x5173;&#x4E8E; limbo &#x73A9;&#x5BB6;&#x7279;&#x6027;&#x7684;&#x6587;&#x6863; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1139" target="_blank">#1139</a>)</li>
+<li>&#x4F18;&#x96C5;&#x7684;&#x5904;&#x7406;&#x8BFB;&#x53D6;&#x9519;&#x8BEF; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1070" target="_blank">#1070</a>)</li>
 </ul>
-<p><strong>API changes</strong></p>
+<p><strong>API &#x66F4;&#x6539;</strong></p>
 <ul>
-<li>Add v3 API and delete the old API.java class (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1162" target="_blank">#1162</a>)</li>
-<li>Fire cancelable <code>RestoreSessionEvent</code> before session login (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/620" target="_blank">#620</a>)</li>
-<li>Fire <code>FailedLoginEvent</code> on wrong password (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/857" target="_blank">#857</a>)</li>
-<li>Fire <code>AbstractUnregisterEvent</code> when a player unregisters (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1169" target="_blank">#1169</a>)</li>
+<li>&#x589E;&#x52A0; v3 API &#xFF0C;&#x5220;&#x9664;&#x539F;&#x6709;&#x7684;&#x8001; API &#x7C7B; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1162" target="_blank">#1162</a>)</li>
+<li>&#x5728;&#x56DE;&#x8BDD;&#x767B;&#x5165;&#x524D;&#x89E6;&#x53D1;&#x53EF;&#x53D6;&#x6D88;&#x7684; <code>RestoreSessionEvent</code> &#x4E8B;&#x4EF6; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/620" target="_blank">#620</a>)</li>
+<li>&#x5728;&#x8F93;&#x5165;&#x9519;&#x8BEF;&#x5BC6;&#x7801;&#x65F6;&#x89E6;&#x53D1; <code>FailedLoginEvent</code> &#x4E8B;&#x4EF6; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/857" target="_blank">#857</a>)</li>
+<li>&#x5728;&#x73A9;&#x5BB6;&#x6CE8;&#x9500;&#x540E;&#x89E6;&#x53D1; <code>AbstractUnregisterEvent</code> &#x4E8B;&#x4EF6; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1169" target="_blank">#1169</a>)</li>
 </ul>
-<p><strong>Technical</strong></p>
+<p><strong>&#x6280;&#x672F;&#x6027;&#x66F4;&#x6539;</strong></p>
 <ul>
-<li>Switch to bStats (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1098" target="_blank">#1098</a>)</li>
-<li>Performance: don&apos;t get player country if not required (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1015" target="_blank">#1015</a>)</li>
-<li>Improve performance of restricted user handling (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1005" target="_blank">#1005</a>)</li>
-<li>Improve technical layout of registration process (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1037" target="_blank">#1037</a>)</li>
-<li>Improve efficiency of MessageTask (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1112" target="_blank">#1112</a>)</li>
-<li>Avoid creating EncryptionMethods excessively (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1188" target="_blank">#1188</a>)</li>
+<li>&#x66F4;&#x6362;&#x5230; bStats (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1098" target="_blank">#1098</a>)</li>
+<li>&#x6027;&#x80FD;&#xFF1A;&#x5982;&#x679C;&#x975E;&#x5FC5;&#x9700;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E0D;&#x518D;&#x83B7;&#x53D6;&#x73A9;&#x5BB6;&#x7684;&#x56FD;&#x5BB6; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1015" target="_blank">#1015</a>)</li>
+<li>&#x6539;&#x5584;&#x5904;&#x7406;&#x9650;&#x5236;&#x7528;&#x6237;&#x7684;&#x6027;&#x80FD; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1005" target="_blank">#1005</a>)</li>
+<li>&#x6539;&#x5584;&#x6CE8;&#x518C;&#x8FC7;&#x7A0B;&#x7684;&#x6280;&#x672F; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1037" target="_blank">#1037</a>)</li>
+<li>&#x6539;&#x5584; MessageTask &#x6027;&#x80FD; (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1112" target="_blank">#1112</a>)</li>
+<li>&#x907F;&#x514D;&#x8FC7;&#x5EA6;&#x521B;&#x5EFA; EncryptionMethods (<a href="https://github.com/AuthMe/AuthMeReloaded/issues/1188" target="_blank">#1188</a>)</li>
 </ul>
 
                                 
@@ -646,7 +646,7 @@ changes may require an action on your side, please refer to <a href="Breaking-Ch
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"5.3 更新记录","level":"2.19","depth":1,"next":{"title":"5.2 更新记录","level":"2.20","depth":1,"path":"5.2-Changelog.md","ref":"5.2-Changelog.md","articles":[]},"previous":{"title":"5.4 更新记录","level":"2.18","depth":1,"path":"5.4-Changelog.md","ref":"5.4-Changelog.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5.3-Changelog.md","mtime":"2018-01-28T00:49:03.319Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-14T05:43:20.465Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"5.3 更新记录","level":"2.19","depth":1,"next":{"title":"5.2 更新记录","level":"2.20","depth":1,"path":"5.2-Changelog.md","ref":"5.2-Changelog.md","articles":[]},"previous":{"title":"5.4 更新记录","level":"2.18","depth":1,"path":"5.4-Changelog.md","ref":"5.4-Changelog.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5.3-Changelog.md","mtime":"2018-03-11T08:19:04.476Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-11T08:24:49.008Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

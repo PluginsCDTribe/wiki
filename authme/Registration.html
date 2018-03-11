@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Registration · GitBook</title>
+        <title>注册 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -140,7 +140,7 @@
                 <a href="Hash-Algorithm.html">
             
                     
-                    Hash Algorithm
+                    哈希算法
             
                 </a>
             
@@ -179,7 +179,7 @@
                 <a href="AuthMe-Releases-Jenkins.html">
             
                     
-                    AuthMe Releases (Jenkins)
+                    AuthMe 发布版 (Jenkins)
             
                 </a>
             
@@ -205,7 +205,7 @@
                 <a href="Spawn-Handling.html">
             
                     
-                    Spawn handling
+                    出生处理
             
                 </a>
             
@@ -231,7 +231,7 @@
                 <a href="Registration.html">
             
                     
-                    Registration
+                    注册
             
                 </a>
             
@@ -244,7 +244,7 @@
                 <a href="Limbo-players.html">
             
                     
-                    未登录玩家
+                    未登录(Limbo)玩家
             
                 </a>
             
@@ -270,7 +270,7 @@
                 <a href="Configuring-logging.html">
             
                     
-                    登录
+                    配置登录
             
                 </a>
             
@@ -283,7 +283,7 @@
                 <a href="Argon2-as-Password-Hash.html">
             
                     
-                    Use Argon2
+                    使用 Argon2
             
                 </a>
             
@@ -381,7 +381,7 @@
                 <a href="Hooking-into-AuthMe.html">
             
                     
-                    Hooking into AuthMe
+                    Hook AuthMe
             
                 </a>
             
@@ -394,7 +394,7 @@
                 <a href="Plugins-hooking-into-AuthMe.html">
             
                     
-                    Plugins hooking into AuthMe
+                    使用 AuthMe 的插件
             
                 </a>
             
@@ -414,7 +414,7 @@
                 <a href="AuthMe-Coding-Styleguide.html">
             
                     
-                    Coding styleguide
+                    代码风格指南
             
                 </a>
             
@@ -427,7 +427,7 @@
                 <a href="Command-Handling.html">
             
                     
-                    Command handling
+                    命令处理
             
                 </a>
             
@@ -440,7 +440,7 @@
                 <a href="Dependency-Injection.html">
             
                     
-                    Dependency injection
+                    依赖注入
             
                 </a>
             
@@ -453,7 +453,7 @@
                 <a href="Development-Setup.html">
             
                     
-                    Development setup
+                    开发环境搭建
             
                 </a>
             
@@ -466,7 +466,7 @@
                 <a href="Limbo-architecture.html">
             
                     
-                    Limbo architecture
+                    Limbo 架构
             
                 </a>
             
@@ -479,7 +479,7 @@
                 <a href="Tool-tasks.html">
             
                     
-                    Tool tasks
+                    工具任务
             
                 </a>
             
@@ -492,7 +492,7 @@
                 <a href="Unit-Testing.html">
             
                     
-                    Unit testing
+                    单元测试
             
                 </a>
             
@@ -530,7 +530,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Registration</a>
+        <a href="." >注册</a>
     </h1>
 </div>
 
@@ -545,18 +545,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>AuthMe supports different types of registration. You can configure the type of registration by changing the <code>type</code> setting under <code>registration</code> in your config.yml.</p>
-<h2 id="password-registration">Password Registration</h2>
-<p>The default registration: the user provides the password he wants to use to <code>/register</code>. The account is registered with the given password.</p>
-<p>You can disable passwords from being used in <code>unsafePasswords</code> and length restrictions can be configured with <code>minPasswordLength</code> and <code>passwordMaxLength</code> in config.yml.</p>
-<p><strong>Example:</strong></p>
+                                <p>AuthMe &#x652F;&#x6301;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x66F4;&#x6539; config.yml &#x4E2D;&#x7684; <code>registration</code> &#x4E0B;&#x9762;&#x7684; <code>type</code> &#x6765;&#x66F4;&#x6539;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;&#x3002;</p>
+<h2 id="&#x5BC6;&#x7801;&#x6CE8;&#x518C;">&#x5BC6;&#x7801;&#x6CE8;&#x518C;</h2>
+<p>&#x8FD9;&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x6CE8;&#x518C;&#x65B9;&#x5F0F;&#xFF1A; &#x7528;&#x6237;&#x901A;&#x8FC7;&#x4F7F;&#x7528; <code>/register</code> &#x6765;&#x63D0;&#x4F9B;&#x5BC6;&#x7801;&#xFF0C;&#x8BE5;&#x8D26;&#x6237;&#x4F7F;&#x7528;&#x7ED9;&#x5B9A;&#x7684;&#x5BC6;&#x7801;&#x6765;&#x8FDB;&#x884C;&#x6CE8;&#x518C;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728; config.yml &#x4E2D;&#x7684; <code>unsafePasswords</code> &#x7981;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x5BC6;&#x7801;&#xFF0C;&#x4EE5;&#x53CA;&#x5728; <code>minPasswordLength</code> &#x548C; <code>passwordMaxLength</code> &#x4E2D;&#x9650;&#x5236;&#x5BC6;&#x7801;&#x957F;&#x5EA6;&#x3002;</p>
+<p><strong>&#x4F8B;&#x5982;&#xFF1A;</strong></p>
 <blockquote>
-<p>Player &quot;Bobby&quot; uses <code>/register s3cret s3cret</code> -&gt; AuthMe registers &quot;Bobby&quot; with password &quot;s3cret&quot;</p>
+<p>&#x73A9;&#x5BB6; &quot;Bobby&quot; &#x4F7F;&#x7528;&#x4E86; <code>/register s3cret s3cret</code> -&gt; AuthMe &#x5219;&#x4E3A; &quot;Bobby&quot; &#x8FDB;&#x884C;&#x6CE8;&#x518C;&#xFF0C;&#x5BC6;&#x7801;&#x4E3A; &quot;s3cret&quot;</p>
 </blockquote>
-<h2 id="email-registration">Email Registration</h2>
-<p>The user provides his email address to <code>/register</code>. AuthMe will generate a password for the account and email it to the given email address.</p>
-<h2 id="two-factor-registration">Two Factor Registration</h2>
-<p>:warning: <strong>Work in progress</strong> -- allows users to register with an authenticator app, i.e. each time they log in they have to enter a number generated by the app.</p>
+<h2 id="&#x7535;&#x5B50;&#x90AE;&#x7BB1;&#x6CE8;&#x518C;">&#x7535;&#x5B50;&#x90AE;&#x7BB1;&#x6CE8;&#x518C;</h2>
+<p>&#x7528;&#x6237;&#x901A;&#x8FC7;&#x4F7F;&#x7528; <code>/register</code> &#x6765;&#x63D0;&#x4F9B;&#x90AE;&#x7BB1;&#xFF0C;AuthMe &#x4F1A;&#x4E3A;&#x8BE5;&#x5E10;&#x6237;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5BC6;&#x7801;&#x5E76;&#x901A;&#x8FC7;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x53D1;&#x9001;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x7535;&#x5B50;&#x90AE;&#x7BB1;&#x3002;</p>
+<h2 id="&#x53CC;&#x91CD;&#x6CE8;&#x518C;">&#x53CC;&#x91CD;&#x6CE8;&#x518C;</h2>
+<p>:warning: <strong>&#x6B63;&#x5728;&#x5236;&#x4F5C;</strong> -- &#x5141;&#x8BB8;&#x7528;&#x6237;&#x6CE8;&#x518C;&#x8BA4;&#x8BC1;&#x7A0B;&#x5E8F;&#xFF0C;&#x5373;&#x6BCF;&#x6B21;&#x767B;&#x5F55;&#x65F6;&#x90FD;&#x5FC5;&#x987B;&#x8F93;&#x5165;&#x7531;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x751F;&#x6210;&#x7684;&#x53F7;&#x7801;&#x3002;</p>
 
                                 
                                 </section>
@@ -589,7 +589,7 @@
                 </a>
                 
                 
-                <a href="Limbo-players.html" class="navigation navigation-next " aria-label="Next page: 未登录玩家">
+                <a href="Limbo-players.html" class="navigation navigation-next " aria-label="Next page: 未登录(Limbo)玩家">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -600,7 +600,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Registration","level":"2.10","depth":1,"next":{"title":"未登录玩家","level":"2.11","depth":1,"path":"Limbo-players.md","ref":"Limbo-players.md","articles":[]},"previous":{"title":"玩家ID限制","level":"2.9","depth":1,"path":"Name-Restrictions.md","ref":"Name-Restrictions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Registration.md","mtime":"2018-01-28T00:49:03.331Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-14T05:43:20.465Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"注册","level":"2.10","depth":1,"next":{"title":"未登录(Limbo)玩家","level":"2.11","depth":1,"path":"Limbo-players.md","ref":"Limbo-players.md","articles":[]},"previous":{"title":"玩家ID限制","level":"2.9","depth":1,"path":"Name-Restrictions.md","ref":"Name-Restrictions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Registration.md","mtime":"2018-03-10T10:00:07.877Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-11T08:24:49.008Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

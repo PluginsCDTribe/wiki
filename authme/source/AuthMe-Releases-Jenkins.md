@@ -1,11 +1,11 @@
-You can get the latest versions ("Dev versions") of AuthMe from Jenkins:
+你可以在Jenkins 中获取 AuthMe 的最新版本 ("开发版本") :
 
-- [AuthMeReloaded Dev Jenkins](http://ci.xephi.fr/job/AuthMeReloaded/) – run after every change
+- [AuthMeReloaded Dev Jenkins](http://ci.xephi.fr/job/AuthMeReloaded/) – 每次更改都会运行
 
-#### How to find the downloads
-The panel "Build history" on the left shows the latest _builds_; if there is a blue circle next to the number, it means that the code could be successfully converted to a .jar file that you can use for your server.
+#### 如何找到下载地址
+左侧的 "Build history" 面板显示的是最新的_构建_ ，如果在数字的旁边有一个蓝色的圆圈，则表明该代码可成功转换为可以给你服务器使用的 .jar 文件 。
 
-Clicking on the build number will allow you to download the JAR file that was generated, allowing you to take the latest changes (e.g. Click on #347 and download the appropriate .jar file under "Build artifacts").
+点击构建版本号即可开始下载生成好的 JAR 文件，你可以获取最新的版本 (例如 点击 #347 并在 "Build artifacts" 中下载对应的 .jar 文件 ).
 
-Remember: the Jenkins runs after _every_ change, which means it may fix recent bugs but it may introduce new issues as well.
+记住: 在 Jenkins 中每次 _更改_ 都会运行一次，也就是说它可能会修复最近出现的一些错误或者是又出现了新的问题。
 

@@ -1,17 +1,17 @@
-You can hook into various forum tables to use the same users as in your forum software.
+你可以与各种各样的论坛挂钩来使用相同的用户名。
 
 ## phpBB 3
 
-### Feature overview
-Tested with phpBB 3.2.1 on 2017-11-04 using AuthMe 5.4.
+### 功能概述
+在 2017-11-04 使用 AuthMe 5.4 以及 phpBB 3.2.1 测试。
 
-- /login after forum registration: ✔️ 
-- In-game registration: ❌ 
-- In-game change password: ✔️ 
-- In-game unregister: ✔️
+- 在论坛注册后使用 /login : ✔️ 
+- 在游戏中注册: ❌ 
+- 在游戏中更改密码: ✔️ 
+- 在游戏中注销: ✔️
 
-### Sample column configuration
-MySQL columns in config.yml:
+### 配置栏示例
+config.yml 中的 MySQL 栏目：
 ```yml
     # Table of the database
     mySQLTablename: 'phpbb_users'
@@ -51,9 +51,9 @@ MySQL columns in config.yml:
     mySQLlastlocPitch: 'authme_loc_pitch'
 ```
 
-Note: cannot use registration date from phpBB because it is in seconds, while AuthMe stores the timestamp in milliseconds.
+注意：不能使用 phpBB 的注册数据，因为它是以秒为单位的，而 AuthMe 的时间存储方式是以毫秒为单位的。
 
-### Password hash
+### 密码哈希
 config.yml:
 ```yml
         passwordHash: 'PHPBB'

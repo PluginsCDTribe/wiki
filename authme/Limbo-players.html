@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>未登录玩家 · GitBook</title>
+        <title>未登录(Limbo)玩家 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -140,7 +140,7 @@
                 <a href="Hash-Algorithm.html">
             
                     
-                    Hash Algorithm
+                    哈希算法
             
                 </a>
             
@@ -179,7 +179,7 @@
                 <a href="AuthMe-Releases-Jenkins.html">
             
                     
-                    AuthMe Releases (Jenkins)
+                    AuthMe 发布版 (Jenkins)
             
                 </a>
             
@@ -205,7 +205,7 @@
                 <a href="Spawn-Handling.html">
             
                     
-                    Spawn handling
+                    出生处理
             
                 </a>
             
@@ -231,7 +231,7 @@
                 <a href="Registration.html">
             
                     
-                    Registration
+                    注册
             
                 </a>
             
@@ -244,7 +244,7 @@
                 <a href="Limbo-players.html">
             
                     
-                    未登录玩家
+                    未登录(Limbo)玩家
             
                 </a>
             
@@ -270,7 +270,7 @@
                 <a href="Configuring-logging.html">
             
                     
-                    登录
+                    配置登录
             
                 </a>
             
@@ -283,7 +283,7 @@
                 <a href="Argon2-as-Password-Hash.html">
             
                     
-                    Use Argon2
+                    使用 Argon2
             
                 </a>
             
@@ -381,7 +381,7 @@
                 <a href="Hooking-into-AuthMe.html">
             
                     
-                    Hooking into AuthMe
+                    Hook AuthMe
             
                 </a>
             
@@ -394,7 +394,7 @@
                 <a href="Plugins-hooking-into-AuthMe.html">
             
                     
-                    Plugins hooking into AuthMe
+                    使用 AuthMe 的插件
             
                 </a>
             
@@ -414,7 +414,7 @@
                 <a href="AuthMe-Coding-Styleguide.html">
             
                     
-                    Coding styleguide
+                    代码风格指南
             
                 </a>
             
@@ -427,7 +427,7 @@
                 <a href="Command-Handling.html">
             
                     
-                    Command handling
+                    命令处理
             
                 </a>
             
@@ -440,7 +440,7 @@
                 <a href="Dependency-Injection.html">
             
                     
-                    Dependency injection
+                    依赖注入
             
                 </a>
             
@@ -453,7 +453,7 @@
                 <a href="Development-Setup.html">
             
                     
-                    Development setup
+                    开发环境搭建
             
                 </a>
             
@@ -466,7 +466,7 @@
                 <a href="Limbo-architecture.html">
             
                     
-                    Limbo architecture
+                    Limbo 架构
             
                 </a>
             
@@ -479,7 +479,7 @@
                 <a href="Tool-tasks.html">
             
                     
-                    Tool tasks
+                    工具任务
             
                 </a>
             
@@ -492,7 +492,7 @@
                 <a href="Unit-Testing.html">
             
                     
-                    Unit testing
+                    单元测试
             
                 </a>
             
@@ -530,7 +530,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >未登录玩家</a>
+        <a href="." >未登录(Limbo)玩家</a>
     </h1>
 </div>
 
@@ -545,52 +545,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="introduction">Introduction</h3>
-<p>Before a player is logged in, we put the player in what we call a <em>limbo</em> state. In this limbo state, we remove various permissions from the user before he is logged in for security:</p>
+                                <h3 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h3>
+<p>&#x5728;&#x73A9;&#x5BB6;&#x767B;&#x5165;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x73A9;&#x5BB6;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E00;&#x4E2A;&#x6211;&#x4EEC;&#x79F0;&#x4E4B;&#x4E3A; Limbo &#x7684;&#x9636;&#x6BB5;&#x3002;&#x5728; limbo &#x9636;&#x6BB5;&#xFF0C;&#x6211;&#x4EEC;&#x79FB;&#x9664;&#x4E86;&#x73A9;&#x5BB6;&#x5728;&#x6B63;&#x786E;&#x767B;&#x9646;&#x4E4B;&#x524D;&#x7684;&#x8BB8;&#x591A;&#x6743;&#x9650;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;</p>
 <ul>
-<li>OP status (removed)</li>
-<li>ability to fly (removed)</li>
-<li>walk speed*</li>
-<li>fly speed*</li>
+<li>OP &#x72B6;&#x6001;&#xFF08;&#x79FB;&#x9664;&#xFF09;</li>
+<li>&#x98DE;&#x884C;&#x80FD;&#x529B;&#xFF08;&#x79FB;&#x9664;&#xFF09;</li>
+<li>&#x79FB;&#x52A8;&#x901F;&#x5EA6;*</li>
+<li>&#x98DE;&#x884C;&#x901F;&#x5EA6;*</li>
 </ul>
-<p>* Removed only if unauthenticated players may not move (<code>settings.restrictions.allowMovement</code>).</p>
-<h3 id="implementation">Implementation</h3>
-<p>To remove properties from unauthenticated players only temporarily, we need to ensure that we keep the values for when the player logs in. We store this data as a so-called <em>limbo player</em>. This is an object that contains the <em>limbo properties</em> we&apos;ve removed, i.e. OP status, flight ability, walk speed, and fly speed.</p>
-<p>A typical chain of events is:</p>
+<p>* &#x4EC5;&#x5728;&#x4E0D;&#x5141;&#x8BB8;&#x73A9;&#x5BB6;&#x79FB;&#x52A8;&#x65F6;&#x79FB;&#x9664; (<code>settings.restrictions.allowMovement</code>)&#x3002;</p>
+<h3 id="&#x5B9E;&#x73B0;">&#x5B9E;&#x73B0;</h3>
+<p>&#x4E3A;&#x4E86;&#x53EA;&#x4E34;&#x65F6;&#x7684;&#x79FB;&#x9664;&#x672A;&#x767B;&#x5F55;&#x7684;&#x73A9;&#x5BB6;&#x7684;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x6211;&#x4EEC;&#x5B58;&#x50A8;&#x4E86;&#x73A9;&#x5BB6;&#x767B;&#x9646;&#x65F6;&#x7684;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x7684;&#x786E;&#x5207;&#x7684;&#x503C;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x6211;&#x4EEC;&#x79F0;&#x4E4B;&#x4E3A; limbo &#x73A9;&#x5BB6;&#x4E2D;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E86;&#x6211;&#x4EEC;&#x79FB;&#x9664;&#x7684; limbo &#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6BD4;&#x5982; op&#xFF0C;&#x98DE;&#x884C;&#xFF0C;&#x79FB;&#x52A8;&#x901F;&#x5EA6;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x5178;&#x578B;&#x7684;&#x5904;&#x7406;&#x94FE;&#x5982;&#x4E0B;&#xFF1A;</p>
 <ol>
-<li>player joins</li>
-<li>we create a limbo player and remove <em>limbo properties</em> such as OP status</li>
-<li>player logs in</li>
-<li>we add back all properties from the limbo player to the now authenticated player</li>
+<li>&#x73A9;&#x5BB6;&#x52A0;&#x5165;&#x670D;&#x52A1;&#x5668;</li>
+<li>&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A; limbo &#x73A9;&#x5BB6;&#xFF0C;&#x79FB;&#x9664;&#x4E86;&#x7279;&#x5B9A;&#x5C5E;&#x6027;&#x6BD4;&#x5982; op</li>
+<li>&#x73A9;&#x5BB6;&#x767B;&#x5165;</li>
+<li>&#x6211;&#x4EEC;&#x5C06;&#x8FD9;&#x4E9B;&#x79FB;&#x9664;&#x7684;&#x5C5E;&#x6027;&#x91CD;&#x65B0;&#x6DFB;&#x52A0;&#x5230;&#x73B0;&#x5728;&#x5DF2;&#x7ECF;&#x767B;&#x5F55;&#x7684;&#x73A9;&#x5BB6;</li>
 </ol>
-<h3 id="timing--overriding-issues">Timing / overriding issues</h3>
-<p>One issue with this handling is that if things are changed for an unauthenticated player, we will override the new changes with the limbo player once he logs in. So a player who is set to be allowed to fly will no longer be able to fly after he logs in.</p>
-<p>Consider the following example:</p>
+<h3 id="timing--&#x8986;&#x5199;&#x9690;&#x60A3;">Timing / &#x8986;&#x5199;&#x9690;&#x60A3;</h3>
+<p>&#x6211;&#x4EEC;&#x8FD9;&#x822C;&#x5904;&#x7406;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x90A3;&#x5C31;&#x662F;&#x5982;&#x679C;&#x4F60;&#x5BF9;&#x672A;&#x767B;&#x5F55;&#x7684;&#x73A9;&#x5BB6;&#x505A;&#x51FA;&#x4E86;&#x4EC0;&#x4E48;&#x66F4;&#x6539;&#xFF0C;&#x8FD9;&#x4E9B;&#x66F4;&#x6539;&#x5C06;&#x5728;&#x73A9;&#x5BB6;&#x767B;&#x9646;&#x540E;&#x88AB;&#x8986;&#x76D6;&#xFF0C;&#x5BFC;&#x81F4;&#x66F4;&#x6539;&#x5931;&#x6548;&#x3002;&#x6240;&#x4EE5;&#x4E00;&#x4E2A;&#x8BBE;&#x7F6E;&#x4E86;&#x53EF;&#x4EE5;&#x98DE;&#x884C;&#x7684;&#x73A9;&#x5BB6;&#x53EF;&#x80FD;&#x5728;&#x767B;&#x9646;&#x540E;&#x5C31;&#x4E0D;&#x80FD;&#x98DE;&#x884C;&#x4E86;&#x3002;</p>
+<p>&#x8003;&#x8651;&#x4E00;&#x4E0B;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
 <ol>
-<li>player joins with walk speed 5</li>
-<li>we create a limbo player (keep walk speed = 5 in limbo player, set walk speed 0 on player)</li>
-<li>an admin sets walk speed 10 on the player</li>
-<li>player logs in</li>
-<li>we restore limbo properties -&gt; player has walk speed 5 again</li>
+<li>&#x73A9;&#x5BB6;&#x4EE5; 5 &#x79FB;&#x52A8;&#x901F;&#x5EA6;&#x52A0;&#x5165;&#x4E86;&#x670D;&#x52A1;&#x5668;</li>
+<li>&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A; limbo &#x73A9;&#x5BB6;&#xFF08;&#x5C06;&#x79FB;&#x52A8;&#x901F;&#x5EA6; 5 &#x4FDD;&#x5B58;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x73A9;&#x5BB6;&#x7684;&#x79FB;&#x52A8;&#x901F;&#x5EA6;&#x8BBE;&#x7F6E;&#x4E3A; 0&#xFF09;</li>
+<li>&#x4E00;&#x4E2A;&#x7BA1;&#x7406;&#x5458;&#x5728;&#x73A9;&#x5BB6;&#x6CA1;&#x767B;&#x5F55;&#x7684;&#x65F6;&#x5019;&#x5C06;&#x73A9;&#x5BB6;&#x7684;&#x79FB;&#x52A8;&#x901F;&#x5EA6;&#x8BBE;&#x7F6E;&#x4E3A; 10</li>
+<li>&#x73A9;&#x5BB6;&#x767B;&#x9646;</li>
+<li>&#x6211;&#x4EEC;&#x6062;&#x590D; limbo &#x73A9;&#x5BB6;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x73A9;&#x5BB6;&#x53C8;&#x6709;&#x4E86; 5 &#x7684;&#x79FB;&#x52A8;&#x901F;&#x5EA6;</li>
 </ol>
-<p>We try to combat such issues by allowing you to configure how we should restore the limbo properties. You can find these settings in your config.yml under &quot;limbo&quot;. For example, you may choose to keep the maximum speed from player and limbo player, or you can define to set &quot;allow flight&quot; always to <em>true</em> when a player logs in.</p>
-<p>Note that restoring the OP status is not configurable. For security reasons, if an unregistered player is OP, he will no longer be OP once he registers &amp; logs in. Similarly, an unregistered player who gets opped will no longer be OP when he logs in. In order to set someone as OP successfully, he needs to be authenticated.</p>
-<h3 id="persistence-saving-to-the-file-system">Persistence (saving to the file system)</h3>
-<p>If your server crashes, we may not get the chance to restore the properties we&apos;ve removed from the player. So after restarting a crashed server, it may happen that a player will have walk speed 0.</p>
-<p>To combat this, we store limbo players in the file system. So what we actually do is this:</p>
+<p>&#x6211;&#x4EEC;&#x5141;&#x8BB8;&#x4F60;&#x914D;&#x7F6E;&#x5982;&#x4F55;&#x5B58;&#x50A8;&#x8FD9;&#x4E9B; limbo &#x6570;&#x636E;&#x6765;&#x9632;&#x6B62;&#x8FD9;&#x7C7B;&#x4F3C;&#x7684;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x5728; config.yml &#x4E2D;&#x7684; limbo &#x9879;&#x91CC;&#x627E;&#x5230;&#x8FD9;&#x4E9B;&#x8BBE;&#x7F6E;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x60F3;&#x8981;&#x4FDD;&#x5B58;&#x73A9;&#x5BB6;&#x548C; limbo &#x73A9;&#x5BB6;&#x7684;&#x6700;&#x5927;&#x79FB;&#x52A8;&#x901F;&#x5EA6;&#xFF0C;&#x6216;&#x8005;&#x4F60;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x73A9;&#x5BB6;&#x767B;&#x9646;&#x65F6;&#x7684; <code>allow flight</code> &#x603B;&#x662F;&#x4E3A; true&#x3002;</p>
+<p>&#x6CE8;&#x610F; OP &#x72B6;&#x6001;&#x7684;&#x6062;&#x590D;&#x662F;&#x4E0D;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#x3002;&#x56E0;&#x4E3A;&#x7531;&#x4E8E;&#x4E00;&#x4E9B;&#x5B89;&#x5168;&#x95EE;&#x9898;&#xFF0C;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x6CE8;&#x518C;&#x7684;&#x73A9;&#x5BB6;&#x662F; OP &#x7684;&#x8BDD;&#xFF0C;&#x4ED6;&#x5C06;&#x5728;&#x767B;&#x9646;&#x540E;&#x5931;&#x53BB; op &#x6743;&#x9650;&#x3002;&#x4E3A;&#x4E86;&#x6210;&#x529F;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x73A9;&#x5BB6;&#x4E3A; op&#xFF0C;&#x8FD9;&#x540D;&#x73A9;&#x5BB6;&#x5FC5;&#x987B;&#x767B;&#x9646;&#x3002;</p>
+<h3 id="&#x6062;&#x590D;&#x6570;&#x636E;&#xFF08;&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF09;">&#x6062;&#x590D;&#x6570;&#x636E;&#xFF08;&#x4FDD;&#x5B58;&#x5230;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF09;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x670D;&#x52A1;&#x5668;&#x5D29;&#x6E83;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x6CA1;&#x6709;&#x673A;&#x4F1A;&#x6765;&#x5F97;&#x53CA;&#x6062;&#x590D;&#x6211;&#x4EEC;&#x4ECE;&#x73A9;&#x5BB6;&#x8EAB;&#x4E0A;&#x79FB;&#x9664;&#x7684;&#x90A3;&#x4E9B;&#x5C5E;&#x6027;&#x3002;&#x6240;&#x4EE5;&#x5F53;&#x91CD;&#x542F;&#x4E00;&#x4E2A;&#x5D29;&#x6E83;&#x7684;&#x670D;&#x52A1;&#x5668;&#x65F6;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x6709;&#x4E9B;&#x73A9;&#x5BB6;&#x7684;&#x79FB;&#x52A8;&#x901F;&#x5EA6;&#x5C31;&#x53EA;&#x6709; 0.</p>
+<p>&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x53D1;&#x751F;&#xFF0C;&#x6211;&#x4EEC;&#x5C06; limbo &#x73A9;&#x5BB6;&#x5B58;&#x50A8;&#x5230;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x8FD9;&#x6837;&#x5904;&#x7406;&#x7684;&#xFF1A;</p>
 <ol>
-<li>player joins</li>
+<li>&#x73A9;&#x5BB6;&#x52A0;&#x5165;</li>
+<li>&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A; limbo &#x73A9;&#x5BB6;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x4ECE;&#x539F;&#x6709;&#x73A9;&#x5BB6;&#x8EAB;&#x4E0A;&#x79FB;&#x9664;</li>
 <li>we create a limbo player and remove the limbo properties from the player<ul>
-<li>we keep the limbo player in memory, as well as in a file on the file system</li>
+<li>&#x6211;&#x4EEC;&#x5C06;&#x8FD9;&#x4E2A; limbo &#x73A9;&#x5BB6;&#x5B58;&#x50A8;&#x5728;&#x5185;&#x5B58;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x5B58;&#x5165;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</li>
 </ul>
 </li>
-<li>player logs in</li>
-<li>we restore the limbo properties<ul>
-<li>remove limbo player from memory, delete file</li>
+<li>&#x73A9;&#x5BB6;&#x767B;&#x5165;</li>
+<li>&#x6211;&#x4EEC;&#x6062;&#x590D;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;<ul>
+<li>&#x5C06; limbo &#x73A9;&#x5BB6;&#x4ECE;&#x5185;&#x5B58;&#x79FB;&#x9664;&#xFF0C;&#x5220;&#x9664;&#x6587;&#x4EF6;</li>
 </ul>
 </li>
 </ol>
-<p>The file is a backup so that this data is somewhere outside of memory, in case the server crashes. In config.yml, under <code>limbo</code>, you can configure if and how limbo players should be saved. We offer individual files, one huge file, or the possibility to distribute the data over a configurable number of files.</p>
+<p>&#x8FD9;&#x4EFD;&#x6587;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;&#x5907;&#x4EFD;&#xFF0C;&#x8FD9;&#x6837;&#x8FD9;&#x4EFD;&#x6570;&#x636E;&#x5C31;&#x5728;&#x5185;&#x5B58;&#x4EE5;&#x5916;&#x7684;&#x5730;&#x65B9;&#x5B58;&#x50A8;&#x4E86;&#x4E00;&#x4EFD;&#xFF0C;&#x4EE5;&#x9632;&#x670D;&#x52A1;&#x5668;&#x5D29;&#x6E83;&#x3002;&#x5728; config.yml &#x91CC;&#xFF0C;<code>limbo</code> &#x914D;&#x7F6E;&#x4E0B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x914D;&#x7F6E; limbo &#x73A9;&#x5BB6;&#x5982;&#x4F55;&#x88AB;&#x5B58;&#x50A8;&#x3002;&#x6211;&#x4EEC;&#x63A8;&#x8350;&#x7528;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x4F46;&#x662F;&#x5DE8;&#x5927;&#x7684;&#x6587;&#x4EF6;&#x5B58;&#x50A8;&#xFF0C;&#x4F46;&#x662F;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5728;&#x4E0D;&#x540C;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x91CC;&#x3002;</p>
 
                                 
                                 </section>
@@ -618,7 +619,7 @@
 
             
                 
-                <a href="Registration.html" class="navigation navigation-prev " aria-label="Previous page: Registration">
+                <a href="Registration.html" class="navigation navigation-prev " aria-label="Previous page: 注册">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -634,7 +635,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"未登录玩家","level":"2.11","depth":1,"next":{"title":"转换数据","level":"2.12","depth":1,"path":"Converters.md","ref":"Converters.md","articles":[]},"previous":{"title":"Registration","level":"2.10","depth":1,"path":"Registration.md","ref":"Registration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Limbo-players.md","mtime":"2018-01-28T00:49:03.329Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-14T05:43:20.465Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"未登录(Limbo)玩家","level":"2.11","depth":1,"next":{"title":"转换数据","level":"2.12","depth":1,"path":"Converters.md","ref":"Converters.md","articles":[]},"previous":{"title":"注册","level":"2.10","depth":1,"path":"Registration.md","ref":"Registration.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Limbo-players.md","mtime":"2018-03-11T08:14:40.163Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-11T08:24:49.008Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

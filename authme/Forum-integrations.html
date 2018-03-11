@@ -140,7 +140,7 @@
                 <a href="Hash-Algorithm.html">
             
                     
-                    Hash Algorithm
+                    哈希算法
             
                 </a>
             
@@ -179,7 +179,7 @@
                 <a href="AuthMe-Releases-Jenkins.html">
             
                     
-                    AuthMe Releases (Jenkins)
+                    AuthMe 发布版 (Jenkins)
             
                 </a>
             
@@ -205,7 +205,7 @@
                 <a href="Spawn-Handling.html">
             
                     
-                    Spawn handling
+                    出生处理
             
                 </a>
             
@@ -231,7 +231,7 @@
                 <a href="Registration.html">
             
                     
-                    Registration
+                    注册
             
                 </a>
             
@@ -244,7 +244,7 @@
                 <a href="Limbo-players.html">
             
                     
-                    未登录玩家
+                    未登录(Limbo)玩家
             
                 </a>
             
@@ -270,7 +270,7 @@
                 <a href="Configuring-logging.html">
             
                     
-                    登录
+                    配置登录
             
                 </a>
             
@@ -283,7 +283,7 @@
                 <a href="Argon2-as-Password-Hash.html">
             
                     
-                    Use Argon2
+                    使用 Argon2
             
                 </a>
             
@@ -381,7 +381,7 @@
                 <a href="Hooking-into-AuthMe.html">
             
                     
-                    Hooking into AuthMe
+                    Hook AuthMe
             
                 </a>
             
@@ -394,7 +394,7 @@
                 <a href="Plugins-hooking-into-AuthMe.html">
             
                     
-                    Plugins hooking into AuthMe
+                    使用 AuthMe 的插件
             
                 </a>
             
@@ -414,7 +414,7 @@
                 <a href="AuthMe-Coding-Styleguide.html">
             
                     
-                    Coding styleguide
+                    代码风格指南
             
                 </a>
             
@@ -427,7 +427,7 @@
                 <a href="Command-Handling.html">
             
                     
-                    Command handling
+                    命令处理
             
                 </a>
             
@@ -440,7 +440,7 @@
                 <a href="Dependency-Injection.html">
             
                     
-                    Dependency injection
+                    依赖注入
             
                 </a>
             
@@ -453,7 +453,7 @@
                 <a href="Development-Setup.html">
             
                     
-                    Development setup
+                    开发环境搭建
             
                 </a>
             
@@ -466,7 +466,7 @@
                 <a href="Limbo-architecture.html">
             
                     
-                    Limbo architecture
+                    Limbo 架构
             
                 </a>
             
@@ -479,7 +479,7 @@
                 <a href="Tool-tasks.html">
             
                     
-                    Tool tasks
+                    工具任务
             
                 </a>
             
@@ -492,7 +492,7 @@
                 <a href="Unit-Testing.html">
             
                     
-                    Unit testing
+                    单元测试
             
                 </a>
             
@@ -545,18 +545,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>You can hook into various forum tables to use the same users as in your forum software.</p>
+                                <p>&#x4F60;&#x53EF;&#x4EE5;&#x4E0E;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x8BBA;&#x575B;&#x6302;&#x94A9;&#x6765;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x7528;&#x6237;&#x540D;&#x3002;</p>
 <h2 id="phpbb-3">phpBB 3</h2>
-<h3 id="feature-overview">Feature overview</h3>
-<p>Tested with phpBB 3.2.1 on 2017-11-04 using AuthMe 5.4.</p>
+<h3 id="&#x529F;&#x80FD;&#x6982;&#x8FF0;">&#x529F;&#x80FD;&#x6982;&#x8FF0;</h3>
+<p>&#x5728; 2017-11-04 &#x4F7F;&#x7528; AuthMe 5.4 &#x4EE5;&#x53CA; phpBB 3.2.1 &#x6D4B;&#x8BD5;&#x3002;</p>
 <ul>
-<li>/login after forum registration: &#x2714;&#xFE0F; </li>
-<li>In-game registration: &#x274C; </li>
-<li>In-game change password: &#x2714;&#xFE0F; </li>
-<li>In-game unregister: &#x2714;&#xFE0F;</li>
+<li>&#x5728;&#x8BBA;&#x575B;&#x6CE8;&#x518C;&#x540E;&#x4F7F;&#x7528; /login : &#x2714;&#xFE0F; </li>
+<li>&#x5728;&#x6E38;&#x620F;&#x4E2D;&#x6CE8;&#x518C;: &#x274C; </li>
+<li>&#x5728;&#x6E38;&#x620F;&#x4E2D;&#x66F4;&#x6539;&#x5BC6;&#x7801;: &#x2714;&#xFE0F; </li>
+<li>&#x5728;&#x6E38;&#x620F;&#x4E2D;&#x6CE8;&#x9500;: &#x2714;&#xFE0F;</li>
 </ul>
-<h3 id="sample-column-configuration">Sample column configuration</h3>
-<p>MySQL columns in config.yml:</p>
+<h3 id="&#x914D;&#x7F6E;&#x680F;&#x793A;&#x4F8B;">&#x914D;&#x7F6E;&#x680F;&#x793A;&#x4F8B;</h3>
+<p>config.yml &#x4E2D;&#x7684; MySQL &#x680F;&#x76EE;&#xFF1A;</p>
 <pre><code class="lang-yml">    <span class="hljs-comment"># Table of the database</span>
 <span class="hljs-attr">    mySQLTablename:</span> <span class="hljs-string">&apos;phpbb_users&apos;</span>
     <span class="hljs-comment"># Column of IDs to sort data</span>
@@ -594,8 +594,8 @@
     <span class="hljs-comment"># Column for storing player LastLocation - Pitch</span>
 <span class="hljs-attr">    mySQLlastlocPitch:</span> <span class="hljs-string">&apos;authme_loc_pitch&apos;</span>
 </code></pre>
-<p>Note: cannot use registration date from phpBB because it is in seconds, while AuthMe stores the timestamp in milliseconds.</p>
-<h3 id="password-hash">Password hash</h3>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; phpBB &#x7684;&#x6CE8;&#x518C;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#x7684;&#xFF0C;&#x800C; AuthMe &#x7684;&#x65F6;&#x95F4;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#x662F;&#x4EE5;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#x7684;&#x3002;</p>
+<h3 id="&#x5BC6;&#x7801;&#x54C8;&#x5E0C;">&#x5BC6;&#x7801;&#x54C8;&#x5E0C;</h3>
 <p>config.yml:</p>
 <pre><code class="lang-yml"><span class="hljs-attr">        passwordHash:</span> <span class="hljs-string">&apos;PHPBB&apos;</span>
 </code></pre>
@@ -626,7 +626,7 @@
 
             
                 
-                <a href="Argon2-as-Password-Hash.html" class="navigation navigation-prev " aria-label="Previous page: Use Argon2">
+                <a href="Argon2-as-Password-Hash.html" class="navigation navigation-prev " aria-label="Previous page: 使用 Argon2">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -642,7 +642,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"联动论坛","level":"2.15","depth":1,"next":{"title":"开发团队","level":"2.16","depth":1,"path":"Development-team.md","ref":"Development-team.md","articles":[]},"previous":{"title":"Use Argon2","level":"2.14","depth":1,"path":"Argon2-as-Password-Hash.md","ref":"Argon2-as-Password-Hash.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Forum-integrations.md","mtime":"2018-01-28T00:49:03.327Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-14T05:43:20.465Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"联动论坛","level":"2.15","depth":1,"next":{"title":"开发团队","level":"2.16","depth":1,"path":"Development-team.md","ref":"Development-team.md","articles":[]},"previous":{"title":"使用 Argon2","level":"2.14","depth":1,"path":"Argon2-as-Password-Hash.md","ref":"Argon2-as-Password-Hash.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Forum-integrations.md","mtime":"2018-03-10T10:58:04.507Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-11T08:24:49.008Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

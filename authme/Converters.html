@@ -140,7 +140,7 @@
                 <a href="Hash-Algorithm.html">
             
                     
-                    Hash Algorithm
+                    哈希算法
             
                 </a>
             
@@ -179,7 +179,7 @@
                 <a href="AuthMe-Releases-Jenkins.html">
             
                     
-                    AuthMe Releases (Jenkins)
+                    AuthMe 发布版 (Jenkins)
             
                 </a>
             
@@ -205,7 +205,7 @@
                 <a href="Spawn-Handling.html">
             
                     
-                    Spawn handling
+                    出生处理
             
                 </a>
             
@@ -231,7 +231,7 @@
                 <a href="Registration.html">
             
                     
-                    Registration
+                    注册
             
                 </a>
             
@@ -244,7 +244,7 @@
                 <a href="Limbo-players.html">
             
                     
-                    未登录玩家
+                    未登录(Limbo)玩家
             
                 </a>
             
@@ -270,7 +270,7 @@
                 <a href="Configuring-logging.html">
             
                     
-                    登录
+                    配置登录
             
                 </a>
             
@@ -283,7 +283,7 @@
                 <a href="Argon2-as-Password-Hash.html">
             
                     
-                    Use Argon2
+                    使用 Argon2
             
                 </a>
             
@@ -381,7 +381,7 @@
                 <a href="Hooking-into-AuthMe.html">
             
                     
-                    Hooking into AuthMe
+                    Hook AuthMe
             
                 </a>
             
@@ -394,7 +394,7 @@
                 <a href="Plugins-hooking-into-AuthMe.html">
             
                     
-                    Plugins hooking into AuthMe
+                    使用 AuthMe 的插件
             
                 </a>
             
@@ -414,7 +414,7 @@
                 <a href="AuthMe-Coding-Styleguide.html">
             
                     
-                    Coding styleguide
+                    代码风格指南
             
                 </a>
             
@@ -427,7 +427,7 @@
                 <a href="Command-Handling.html">
             
                     
-                    Command handling
+                    命令处理
             
                 </a>
             
@@ -440,7 +440,7 @@
                 <a href="Dependency-Injection.html">
             
                     
-                    Dependency injection
+                    依赖注入
             
                 </a>
             
@@ -453,7 +453,7 @@
                 <a href="Development-Setup.html">
             
                     
-                    Development setup
+                    开发环境搭建
             
                 </a>
             
@@ -466,7 +466,7 @@
                 <a href="Limbo-architecture.html">
             
                     
-                    Limbo architecture
+                    Limbo 架构
             
                 </a>
             
@@ -479,7 +479,7 @@
                 <a href="Tool-tasks.html">
             
                     
-                    Tool tasks
+                    工具任务
             
                 </a>
             
@@ -492,7 +492,7 @@
                 <a href="Unit-Testing.html">
             
                     
-                    Unit testing
+                    单元测试
             
                 </a>
             
@@ -545,9 +545,9 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>To switch from another auth plugin to AuthMe, you can preserve your data by using one of our converters. Converters are run as a command, <code>/authme converter &lt;name&gt;</code>, and the converters are configured in the &quot;Converter&quot; section of config.yml.</p>
+                                <p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4ECE;&#x5176;&#x4ED6;&#x7684;&#x767B;&#x5F55;&#x63D2;&#x4EF6;&#x8F6C;&#x6362;&#x5230; AuthMe&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6211;&#x4EEC;&#x7684;&#x8F6C;&#x6362;&#x5668;&#x6765;&#x4FDD;&#x7559;&#x4F60;&#x7684;&#x6570;&#x636E;&#x3002;&#x8F6C;&#x6362;&#x5668;&#x662F;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x6765;&#x8FD0;&#x884C;&#x7684;&#xFF0C;<code>/authme converter &lt;name&gt;</code> &#xFF0C;&#x5E76;&#x5728; config.yml &#x7684; &#x201C;Converter&#x201D; &#x90E8;&#x5206;&#x914D;&#x7F6E;&#x8F6C;&#x6362;&#x5668;&#x3002;</p>
 <ul>
-<li><a href="#authme">AuthMe</a>: from one database type to another</li>
+<li><a href="#authme">AuthMe</a>: &#x5C06;&#x6570;&#x636E;&#x5E93;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x5230;&#x53E6;&#x4E00;&#x79CD;</li>
 <li><a href="#crazylogin">CrazyLogin</a></li>
 <li><a href="#loginsecurity">LoginSecurity</a></li>
 <li><a href="#rakamak">Rakamak</a></li>
@@ -556,23 +556,23 @@
 <li><a href="#xauth">xAuth</a></li>
 </ul>
 <h2 id="authme">AuthMe</h2>
-<p>It is possible to convert your data from one AuthMe database type to another.</p>
-<h4 id="sqlite-to-mysql">SQLite to MySQL</h4>
-<p>Command: <code>/authme converter sqliteToSql</code><br>Set your config.yml to use the MySQL database you want to convert to. The SQLite database must be in <code>plugins/AuthMe</code> and have the same name as the configured database name (&quot;DataSource.mySQLDatabase&quot; in config.yml).</p>
-<h4 id="mysql-to-sqlite">MySQL to SQLite</h4>
-<p>Command: <code>/authme converter mysqlToSqlite</code><br>Set your config.yml to use the SQLite database you want to convert to. The MySQL settings in config.yml are used to connect to the MySQL database.</p>
+<p>&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x636E;&#x4ECE; AuthMe &#x7684;&#x6570;&#x636E;&#x5E93;&#x7C7B;&#x578B;&#x4E2D;&#x8F6C;&#x6362;&#x6210;&#x53E6;&#x4E00;&#x79CD;&#x3002;</p>
+<h4 id="sqlite-&#x8F6C;-mysql">SQLite &#x8F6C; MySQL</h4>
+<p>&#x547D;&#x4EE4;&#xFF1A; <code>/authme converter sqliteToSql</code><br>&#x5728; config.yml &#x4E2D;&#x8BBE;&#x7F6E;&#x4E3A;&#x4F7F;&#x7528; MySQL &#x6570;&#x636E;&#x5E93;&#x4EE5;&#x53CA; MySQL &#x7684;&#x8FDE;&#x63A5;&#x4FE1;&#x606F;&#x3002;SQLite &#x6570;&#x636E;&#x5E93;&#x5FC5;&#x987B;&#x8981;&#x5728; <code>plugins/AuthMe</code> &#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x5E76;&#x4E14;&#x5FC5;&#x987B;&#x8981;&#x4E0E;&#x914D;&#x7F6E;&#x7684;&#x6570;&#x636E;&#x5E93;&#x540D;&#x5B57;&#x76F8;&#x540C;&#xFF08;&quot;DataSource.mySQLDatabase&quot; &#x5728; config.yml&#xFF09;&#x3002;</p>
+<h4 id="mysql-&#x8F6C;-sqlite">MySQL &#x8F6C; SQLite</h4>
+<p>&#x547D;&#x4EE4;&#xFF1A; <code>/authme converter mysqlToSqlite</code><br>&#x5728; config.yml &#x4E2D;&#x8BBE;&#x7F6E;&#x4E3A;&#x4F7F;&#x7528; SQLite &#x6570;&#x636E;&#x5E93;&#x3002;&#x5728; config.yml &#x4E2D;&#x8BBE;&#x7F6E; MySQL &#x8981;&#x8FDE;&#x63A5;&#x5230; MySQL &#x6570;&#x636E;&#x5E93;&#x7684;&#x8FDE;&#x63A5;&#x4FE1;&#x606F;&#x3002;</p>
 <h2 id="crazylogin">CrazyLogin</h2>
-<p>Command: <code>/authme converter crazylogin</code><br>Flat file support only. Copy the flat file DB in the plugins/AuthMe folder and configure <code>Converter.CrazyLogin.fileName</code> in config.yml to the name of your file.</p>
+<p>&#x547D;&#x4EE4;&#xFF1A; <code>/authme converter crazylogin</code><br>&#x4EC5;&#x652F;&#x6301;&#x5E73;&#x9762;&#x6587;&#x4EF6;&#x3002;&#x590D;&#x5236; DB &#x5E73;&#x9762;&#x6587;&#x4EF6;&#x5230; plugins/AuthMe &#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5E76;&#x5C06;config.yml&#x4E2D;&#x7684; <code>Converter.CrazyLogin.fileName</code> &#x914D;&#x7F6E;&#x4E3A;&#x4F60;&#x7684;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x5B57;&#x3002;</p>
 <h2 id="loginsecurity">LoginSecurity</h2>
-<p>Command: <code>/authme converter loginsecurity</code><br>Supports both flat file and MySQL &#x2013; as configured in config.yml (see &quot;Converter.loginSecurity&quot;). In case of flat file, the flat file DB must be at its regular location, namely at <code>plugins/LoginSecurity/LoginSecurity.db</code>.</p>
+<p>&#x547D;&#x4EE4;&#xFF1A; <code>/authme converter loginsecurity</code><br>&#x652F;&#x6301;&#x4E24;&#x79CD;&#x5E73;&#x9762;&#x6587;&#x4EF6;&#x4EE5;&#x53CA; MySQL &#x2013; &#x5728; config.yml &#x4E2D;&#x914D;&#x7F6E; (&#x53C2;&#x9605; &quot;Converter.loginSecurity&quot;)&#x3002;&#x5728;&#x5E73;&#x9762;&#x6587;&#x4EF6;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C; DB &#x5E73;&#x9762;&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x8981;&#x5728;&#x5E38;&#x89C4;&#x4F4D;&#x7F6E;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5728; <code>plugins/LoginSecurity/LoginSecurity.db</code> &#x3002;</p>
 <h2 id="rakamak">Rakamak</h2>
-<p>&#x1F578; Dead for years, probably not used by anyone anymore?<br>Command: <code>/authme converter rakamak</code><br>Supports flat file only, see &quot;Converter.rakamak&quot; in config.yml.</p>
+<p>&#x1F578; &#x5DF2;&#x7ECF;&#x6B7B;&#x4E86;&#x5F88;&#x591A;&#x5E74;&#x4E86;&#xFF0C;&#x6216;&#x8BB8;&#x4E0D;&#x4F1A;&#x518D;&#x6709;&#x4EBA;&#x7528;&#x4E86;&#xFF1F;<br>&#x547D;&#x4EE4;&#xFF1A; <code>/authme converter rakamak</code><br>&#x4EC5;&#x652F;&#x6301;&#x5E73;&#x9762;&#x6587;&#x4EF6;&#xFF0C;&#x5728; config.yml &#x4E2D;&#x89C1; &quot;Converter.rakamak&quot; &#x3002;</p>
 <h2 id="royalauth">RoyalAuth</h2>
-<p>Command: <code>/authme converter royalauth</code><br>Only migrates name, password and lastlogin.</p>
+<p>&#x547D;&#x4EE4;&#xFF1A; <code>/authme converter royalauth</code><br>&#x4EC5;&#x80FD;&#x8FC1;&#x79FB;&#x540D;&#x5B57;&#x3001;&#x5BC6;&#x7801;&#x548C;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x767B;&#x5F55;&#x4FE1;&#x606F;&#x3002;</p>
 <h2 id="vauth">vAuth</h2>
-<p>&#x1F578; Dead for years, probably not used by anyone anymore?<br>Command: <code>/authme converter vauth</code></p>
+<p>&#x1F578; &#x5DF2;&#x7ECF;&#x6B7B;&#x4E86;&#x5F88;&#x591A;&#x5E74;&#x4E86;&#xFF0C;&#x6216;&#x8BB8;&#x4E0D;&#x4F1A;&#x518D;&#x6709;&#x4EBA;&#x7528;&#x4E86;&#xFF1F;<br>&#x547D;&#x4EE4;&#xFF1A; <code>/authme converter vauth</code></p>
 <h2 id="xauth">xAuth</h2>
-<p>Command: <code>/authme converter xauth</code><br>This converter requires that the xAuth plugin be loaded in order to work! It migrates whatever database xAuth is configured to use.</p>
+<p>&#x547D;&#x4EE4;&#xFF1A; <code>/authme converter xauth</code><br>&#x8BE5;&#x8F6C;&#x6362;&#x5668;&#x9700;&#x8981;&#x52A0;&#x8F7D; xAuth &#x63D2;&#x4EF6;&#x624D;&#x80FD;&#x5DE5;&#x4F5C;&#xFF01;xAuth &#x65E0;&#x8BBA;&#x7528;&#x5565;&#x5B58;&#x50A8;&#x6570;&#x636E; AuthMe &#x90FD;&#x80FD;&#x8FC1;&#x79FB;&#x3002;</p>
 
                                 
                                 </section>
@@ -600,12 +600,12 @@
 
             
                 
-                <a href="Limbo-players.html" class="navigation navigation-prev " aria-label="Previous page: 未登录玩家">
+                <a href="Limbo-players.html" class="navigation navigation-prev " aria-label="Previous page: 未登录(Limbo)玩家">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Configuring-logging.html" class="navigation navigation-next " aria-label="Next page: 登录">
+                <a href="Configuring-logging.html" class="navigation navigation-next " aria-label="Next page: 配置登录">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -616,7 +616,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"转换数据","level":"2.12","depth":1,"next":{"title":"登录","level":"2.13","depth":1,"path":"Configuring-logging.md","ref":"Configuring-logging.md","articles":[]},"previous":{"title":"未登录玩家","level":"2.11","depth":1,"path":"Limbo-players.md","ref":"Limbo-players.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Converters.md","mtime":"2018-01-28T00:49:03.325Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-14T05:43:20.465Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"转换数据","level":"2.12","depth":1,"next":{"title":"配置登录","level":"2.13","depth":1,"path":"Configuring-logging.md","ref":"Configuring-logging.md","articles":[]},"previous":{"title":"未登录(Limbo)玩家","level":"2.11","depth":1,"path":"Limbo-players.md","ref":"Limbo-players.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Converters.md","mtime":"2018-03-10T10:41:03.269Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-03-11T08:24:49.008Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
