@@ -1,0 +1,33 @@
+All placeholders automatically register upon plugin load, and require **PlaceholderAPI **to work. You do not need to run any commands to initialize the placeholders. Keep in mind you can access PAPI placeholders from MVdWPlaceholderAPI using {{{{placeholderapi_mmocore_...}}}}.
+
+=== Main Placeholders
+| **Placeholder** | **Output** |
+| %mmocore_combat% | true/false based on if the player is in combat. |
+| %mmocore_attribute_<attribute>% | Current value of a [[player attribute|Player-Attributes]]. |
+| %mmocore_health% | Nicely formatted health number, rounded to 2 decimal places |
+| %mmocore_max_health% | This will return the players max health, rounded to 2 decimal places. |
+
+=== Points
+| %mmocore_skill_points% | More info on [[skill points|Player-Skills]]. |
+| %mmocore_class_points% | More info on [[class points|Player-Classes]]. |
+| %mmocore_attribute_points% | More info on [[attribute points|Player-Attributes]]. |
+| %mmocore_attribute_reallocation_points% | See above. |
+
+=== Class & Professions
+| %mmocore_level% | Main RPG player level. |
+| %mmocore_level_percent% | Progression to next level in %. |
+| %mmocore_experience% | Returns player experience. |
+| %mmocore_next_level% | Returns player experience needed for next level. Works well beside %rpg_experience%. |
+| %mmocore_profession_<profession>% | [[Profession|Custom-Professions]] player level. |
+| %mmocore_profession_percent_<profession>% | Current progression to next profession level in %. |
+| %mmocore_class% | Player class name, or name of default class. |
+
+=== Player Resources
+| %mmocore_<mana/stamina/stellium>% | How much resource you have, rounded to 1 digit. |
+| %mmocore_max_<mana/stamina/stellium>% | Resource cap, rounded. |
+| %mmocore_<mana/stamina/stellium>_bar% | Resource bar, good for visual representation. |
+
+=== Quests & Objectives
+| %mmocore_quest% | Ongoing [[quest|Quests]], or "None". |
+| %mmocore_quest_progress% | Progress of current quest, or "0" if no quest. |
+| %mmocore_quest_objective% | Current quest objective, or "None" if no quest. |

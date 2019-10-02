@@ -1,0 +1,5 @@
+| Permission | Description |
+| mmocore.admin | Grants access to /rpg |
+| mmocore.waypoints | Access to /waypoints |
+| mmocore.currency | Access to /deposit and /withdraw |
+| mmocore.class-select | Access to /class |

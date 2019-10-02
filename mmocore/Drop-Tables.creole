@@ -1,0 +1,33 @@
+The **/drop-tables** folder is where you setup all of your custom drop tables for block drops. Drop tables currently offer support for vanilla items, mmoitems, and other drop tables. So you can have drop tables within drop tables for different item probabilities.
+
+== Default Config
+```
+# You may create as many drop tables as you want. You can also
+# make drop tables refer to other drop tables.
+#
+# DON'T try to create recursive drop tables (drop tables which
+# call themselves to multiply items dropped). It will work, but
+# if you put a probability of 1 it will crash your server
+# instantly. The more the probability, the higher your chance
+# to slow down your server performances. Fun fact though :p
+
+diamond-drop-table:
+    items:
+    - 'vanilla{type=DIAMOND} 1 1-3'
+    - 'mmoitem{type=material;id=RARE_DIAMOND} .1 1-3'
+    - 'droptable{id=other-drop-table} .1'
+
+other-drop-table:
+    items: []
+```
+
+This section is very self explanatory, and is detailed well with comments within the file. First you name your drop table, in this example it is named {{{diamond-drop-table}}}. We know from reading the wiki on blocks.yml that this is the drop table that is called when breaking a diamond ore.
+
+The items it can drop is vanilla diamonds, a rare diamond from mmoitems, and an example drop table to see the format.  The numbers after the item mean the chance, and then the amount. Amount can be a range.
+
+== Available drop table items
+| Drop Item | Format |
+| Another Drop Table | {{{droptable{id=drop-table-id} <chance> <amount>}}} |
+| Vanilla Item | {{{vanilla{type=ITEM_MATERIAL} <chance> <amount>}}} |
+| Gold Coin | {{{gold{} <chance> <amount>}}} |
+| Note | {{{note{min=MIN_WORTH;max=MAX_WORTH} <chance> <amount>}}} |

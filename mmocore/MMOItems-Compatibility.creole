@@ -1,0 +1,50 @@
+MMOCore is built to be used with [[MMOItems|https://www.spigotmc.org/resources/mmoitems-premium.39267]] although it is not a dependency. MMOCore features a lot of compatibility options for MMOItems, here is the detailed list.
+
+=== Extra MMOItems Stats
+When using both MMOCore and MMOItems, extra item stats will automatically enable and will be added to the MMOItems item edition GUI.
+| Stat | Description |
+| Max Mana | This stat is a default MI stat but it **does** support MMOCore |
+| Max Stellium | Allows to add extra MMOCore stellium. |
+| Mana Regeneration | Increases mana regen by X%. |
+| Stellium Regeneration | Increases stellium regen by X%. |
+
+=== Extra drop table items
+| Item | Usage | Description |
+| mmoitem | {{{mmoitem{type=MMOITEM_TYPE;id=MMOITEM_ID} <chance> <min-max>}}} | Adds an mmoitem to an MMOCore [[drop table|Drop-Tables]]. |
+
+=== Quest Objectives & Triggers
+MMOItems add new quest [[objectives|Quest-Folder]] to MMOCore quests, where players have to get an item and give it to a specific Citizen NPC. You can also setup quest [[triggers|Quest-Folder]] which give an MMOItem when a specific quest objective is completed. Last but not least, you can add items from MI to MMOCore [[drop tables|Drop-Tables]].
+
+=== Item Restrictions, Mana
+MMOItems features item restrictions, including level and class restrictions which **do work** with MMOCore. MMOItems abilities wand weapons may also use mana or stamina/stellium which is also supported by MMOCore.
+
+=== Extra features for MMOItems crafting
+In MMOItems, some recipes have specific conditions which must be met for the player to be able to use the crafting recipe. MMOCore adds profession level crafting restrictions i.e players must be at least Lvl X in some profession like smithing or mining, in order to use the recipes.
+**Condition format:** {{{profession <profession-name> <level-required>}}}
+
+**Recipe example**, where the player must be at least Lvl 5 in //Smithing//.
+```
+    steel-sword:
+        output:
+            type: SWORD
+            id: STEEL_SWORD
+        conditions:
+        - 'profession smithing 5'
+        ingredients:
+        - 'vanilla STICK . 2 Steel_Ingot'
+        - 'mmoitem MATERIAL STEEL_INGOT 4 Steel_Ingot'
+```
+
+MMOCore also adds a new type of crafting trigger (actions made when a recipe is used), which can be used to give experience to a player (either main experience, or experience in a specific profession).
+**Trigger format:** {{{exp <profession-name> <experience-amount>}}}
+
+**Same example**, which grants 10 //Smithing //EXP when used
+```
+    steel-sword:
+        output:
+            type: SWORD
+            id: STEEL_SWORD
+        ...
+        triggers:
+        - 'exp smithing 10'
+```

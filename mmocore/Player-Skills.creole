@@ -1,0 +1,37 @@
+== General
+Skills are amazing and unique abilities that players can use to defeat their enemies or buff their party mates fighting and surviving. Skills are either **passive** i.e always active, in which case they don't need to be bound to take effect, or **active**. Active skills must be bound and cast in order to be used.
+
+== Upgrading a skill
+Upgrading a skill **increases its power**. Players can choose the skill they would like to upgrade based on their play style and skill path they decided to follow. Upgrading a skill takes **one skill point** which are earned when leveling up. You can upgrade your skills in the skill GUI ({{{/skills}}}).
+{{https://i.imgur.com/RMa1UTF.gif}}
+Select the skill you'd like to upgrade by scrolling through your class' skills at the top of the GUI, and click on the upgrade item. On the bottom of the GUI, you can see how powerful the spell would be with a higher level.
+
+== Binding active skills
+You have 6 skill slots which you can use to bind **active** skills to certain keybinds, therefore you can't have more than 6 active skills bound at a time. You may bind skills using the skill GUI, available using {{{/skills}}}. Once your skills are upgraded (see above), you can click the {{{Switch to Binding}}} item, in order to display your current available skill slots. You may also see your current bound active skills.
+You can bind the selected skill to a specific slot by clicking the corresponding item. As soon as you click it, it will update and display the newest skill. If slot X is unused, skills bound onto other skill slots will automatically refill empty slots so **lower keybinds are always used**.
+{{https://i.imgur.com/hZgSZ0O.gif}}
+
+**Once your skills are upgraded and bound, you may [[cast|Custom-Skill-Casting]] them.**
+
+== List
+| Skill | Description | Potential Class |
+| Ambers | Ambers drop when dealing magic damage. Grants X% max mana back when picked up. | Mage |
+| Combo Attack | Repeatedly slashes the target for X total damage. | Rogue, Warrior |
+| Control | Slows the target. When left clicking, knocks him back in target direction. | Mage |
+| Deep Wound | Punctures target, damaged is increased based on target's missing health | Warrior, Tank/Paladin |
+| Empowered Attack | Charges your weapon with lightning. Your next attack deals extra damage and spreads onto nearby enemies | Warrior, Mage |
+| Evade | You become immune to damage till you attack again/end of duration | Rogue, Mage |
+| Fire Storm | Fire projectiles cast on the target, dealing damage. | Mage |
+| Fireball | Damaging & igniting fireball. | Mage |
+| Furtive Strike | Deals damage, greatly increased if target is isolated | Rogue |
+| Ice Spikes | Ice spikes summon from the ground, damaging and slowing hit enemies. | Mage |
+| Greater Healings | Better version of skill above. | Healer, Mage, Any |
+| Human Shield | Reduces damage taken by ally, and redirect to your a portion of the block damage. | Paladin, Tank |
+| Minor Healings | Heals for X health target/self if crouching. | Healer, Mage, Any |
+| Power Mark | A mark spreads around initial target. Any damage dealt within mark radius accumulates damage. Mark explodes after Xsec, dealing X% of accumulated, stunning & knocking back nearby enemies. The higher the damage, the longer the stun. | Mage |
+| Telekinesy | Target's movement is taken over. Left click to knock him back and end skill. | Mage |
+| Warp | Point the ground & teleport to target location. | Any |
+| Weaken | Weakens target, increasing damage taken. | Any |
+
+== Creating skills using MythicMobs
+More info about that [[here|Skills-Folder]].

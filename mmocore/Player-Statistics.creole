@@ -1,0 +1,34 @@
+Player stats depend on the current player class, items (e.g some items give max mana), attributes (e.g dexterity gives more projectile damage), party (buffs when playing with your friends)..
+
+=== Main Stats (Vanilla MC Attributes)
+| Stat name | Description |
+| attack_damage | The damage basic attacks deal. |
+| attack_speed | Minecraft vanilla attack speed attribute. |
+| max_health | Minecraft vanilla max health. |
+| movement_speed | Player speed in meters/100s. |
+| knockback_resistance | Chance of negating knockback (vanilla player attribute). |
+| armor | Reduces damage taken, vanilla player attribute. |
+| armor_toughness | Vanilla armor toughness, reduces damage taken (see MC wiki). |
+
+=== Main Stats (MMOCore)
+| health_regeneration | Health [[regeneration|Combat-Log]] (default: in pts/second). |
+| speed_malus_reduction | More info [[here|Armor-Weight]] |
+
+=== Resources
+| max_mana | Maximum mana the player may have. |
+| max_stamina | Maximum stamina the player may have. |
+| max_stellium | Stellium is a resource used to travel using waypoints. |
+| mana_regeneration | Mana regen in pts/sec |
+| stamina_regeneration | Stamina regen in pts/sec |
+| stellium_regeneration | Mana regen in pts/sec |
+
+=== Utility
+| additional_experience | Extra experience the player earns.
+| cooldown_reduction | Reduces skills cooldowns by a specific % |
+
+=== Damage Stats
+| magical_damage | Additional magical skill damage. |
+| physical_damage | Additional physical skill/weapon damage. |
+| projectile_damage | Additional projectile based weapon & skill damage. |
+| weapon_damage | Additional weapon (range/melee) damage. |
+| skill_damage | Additional skill (magical/physical) damage. |

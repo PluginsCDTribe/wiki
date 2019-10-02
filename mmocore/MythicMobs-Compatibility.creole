@@ -1,0 +1,16 @@
+Most of our mob features and custom drops tie into MythicMobs, the #1 mob creation plugin. Also **one of the most important features**, in order to create your own skills through MMOCore, you will utilize MythicMobs to make any skills you want. More info [[here|Skills-Folder]] //(scroll all the way down)//.
+
+MythicMobs also adds more options to the quest system: you can setup quests where players must kill X mobs from MythicMobs, more info [[here|Quest-Folder]].
+
+Players may also earn main-class experience when killing mobs from MythicMobs, more info on that [[wiki page|https://github.com/Indyuce/mmocore/wiki/Custom-Professions]].
+
+=== MythicMobs drop table items
+MMOCore adds new drop item types to MythicMobs drop tables, here is the list:
+| Drop Item | Usage | Description |
+| Gold Pouch | {{{gold_pouch{min=10;max=100}}}} | Gold pouch containing a random amount of $$ between MIN and MAX |
+| Gold Coin| {{{gold_coin{}}}} | Drops a gold coin worth $1 |
+| Note | {{{note{min=20;max=30}}}} | Drops a note with random worth. |
+
+=== Gold Pouches
+Gold pouches are leather pieces you can right click in order to open a 2-rows GUI which contains randomly generated gold coins and notes. Players cannot place any item in there, they may only take items from it if they have some space left in their inventory. Pouches **are taken off the player inventory** when fully emptied.
+{{https://i.imgur.com/5aGwNQw.gif}}
