@@ -23,7 +23,7 @@
     * [自定义技能释放](Custom-Skill-Casting)
     * [经验加成](EXP-Boosters)
     * [战斗日志](Combat-Log)
-    * [Friends](Friends)
+    * [好友](Friends)
     * [队伍](Parties)
 
 - 小特性
