@@ -13,7 +13,7 @@ MMOCore is built to be used with [[MMOItems|https://www.spigotmc.org/resources/m
 ## 额外的掉落表物品
 | 物品 | 用法 | 描述 |
 | - | - | - |
-| mmoitem | {{{mmoitem{type=MMOITEM_TYPE;id=MMOITEM_ID} <几率> <min-max>}}} | 添加一个 MMOItems 到 MMOCore 的[掉落表](Drop-Tables)中 |
+| mmoitem | `mmoitem{type=MMOITEM_TYPE;id=MMOITEM_ID} <几率> <min-max>` | 添加一个 MMOItems 到 MMOCore 的[掉落表](Drop-Tables)中 |
 
 ## 任务目标及触发器
 MMOItems 添加新的[目标](Quest-Folder)到 MMOCore 的任务中，玩家需要获得一个物品并交到指定的 Citizens NPC 处。你可以设置[触发器](Quest-Folder)，指定需要给一个指定的 MMOItems 物品作为目标。最后，你可以添加 MMOItems 到 MMOCore 的掉落表中。
