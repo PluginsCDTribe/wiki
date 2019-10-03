@@ -1,4 +1,4 @@
-MMOCore is built to be used with [[MMOItems|https://www.spigotmc.org/resources/mmoitems-premium.39267]] although it is not a dependency. MMOCore features a lot of compatibility options for MMOItems, here is the detailed list.
+MMOCore 生来与 [MMOItems](https://www.spigotmc.org/resources/mmoitems-premium.39267) 一同使用，尽管它不是一个依赖。MMOCore 提供了大量与 MMOItems 的兼容选项，以下是一个详细的列表。
 
 ## 更多的 MMOItems 属性
 当同事使用 MMOCore 和 MMOItems 时，额外的物品属性将会自动启用并添加到 MMOItems 的物品编辑 GUI 中。
